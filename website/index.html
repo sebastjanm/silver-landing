@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaščitite Prihranke | Strateško Varčevanje v Plemenitih Kovinah</title>
+    <meta name="description" content="Preverjena strategija za zaščito prihrankov pred inflacijo. Brez DDV, švicarska hramba, osebno vodenje.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --bg-card: #ffffff;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --gold-light: #d69e2e;
+            --gold-bg: #faf5eb;
+            --green: #276749;
+            --green-light: #48bb78;
+            --green-bg: #f0fff4;
+            --red: #c53030;
+            --red-bg: #fff5f5;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 20px 40px -15px rgba(26, 54, 93, 0.15);
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(253, 252, 250, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+            text-decoration: none;
+            font-weight: 400;
+        }
+        
+        .nav-cta {
+            background: var(--navy);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-cta:hover {
+            background: var(--navy-light);
+            transform: translateY(-1px);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--navy);
+            border: 2px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--navy);
+            background: var(--bg-warm);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 140px 0 100px;
+            background: linear-gradient(180deg, var(--bg) 0%, var(--bg-warm) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(183, 121, 31, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-bg);
+            border: 1px solid rgba(39, 103, 73, 0.2);
+            color: var(--green);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.2em, 4.5vw, 3.2em);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+        
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .hero-sub {
+            font-size: 1.15em;
+            color: var(--text-muted);
+            max-width: 500px;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 900px) {
+            .hero-sub { margin-left: auto; margin-right: auto; }
+        }
+        
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        @media (max-width: 900px) {
+            .hero-cta { justify-content: center; }
+        }
+        
+        .hero-trust {
+            margin-top: 32px;
+            display: flex;
+            gap: 24px;
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+        
+        @media (max-width: 900px) {
+            .hero-trust { justify-content: center; flex-wrap: wrap; }
+        }
+        
+        .hero-trust span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .hero-trust svg {
+            color: var(--green);
+        }
+        
+        /* Hero Card */
+        .hero-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .hero-card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gold-bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+        
+        .hero-card-title {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+        }
+        
+        .hero-card-subtitle {
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+        
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .stat-row:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        
+        .stat-value {
+            font-family: var(--serif);
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+        
+        .stat-value.positive { color: var(--green); }
+        .stat-value.negative { color: var(--red); }
+        
+        .hero-card-footer {
+            margin-top: 20px;
+            padding: 16px;
+            background: var(--green-bg);
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--green);
+            font-weight: 500;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-label {
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-family: var(--serif);
+            font-size: clamp(1.8em, 3vw, 2.4em);
+            font-weight: 400;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .section-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            max-width: 600px;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header .section-desc {
+            margin: 0 auto;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: white;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        @media (max-width: 800px) {
+            .problem-grid { grid-template-columns: 1fr; }
+        }
+        
+        .problem-card {
+            background: var(--bg-warm);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        
+        .problem-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .problem-item:last-child {
+            border-bottom: none;
+        }
+        
+        .problem-item:first-child {
+            padding-top: 0;
+        }
+        
+        .problem-label {
+            font-size: 0.95em;
+        }
+        
+        .problem-value {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .problem-highlight {
+            background: var(--gold-bg);
+            margin: 20px -32px -32px;
+            padding: 24px 32px;
+            border-radius: 0 0 16px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .problem-highlight-label {
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        .problem-highlight-value {
+            font-family: var(--serif);
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--green);
+        }
+        
+        /* Social Proof */
+        .proof {
+            background: var(--navy);
+            padding: 60px 0;
+        }
+        
+        .proof-inner {
+            text-align: center;
+        }
+        
+        .proof-label {
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 24px;
+        }
+        
+        .proof-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .proof-logo {
+            font-family: var(--serif);
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+        }
+        
+        /* Solution */
+        .solution {
+            background: var(--bg-warm);
+        }
+        
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        @media (max-width: 800px) {
+            .pillars { grid-template-columns: 1fr; }
+        }
+        
+        .pillar {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+        
+        .pillar:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gold-bg);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        .pillar h3 {
+            font-family: var(--serif);
+            font-size: 1.25em;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        
+        .pillar p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .pillar-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            background: var(--green-bg);
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--green);
+        }
+        
+        /* Trust Section */
+        .trust {
+            background: white;
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        @media (max-width: 900px) {
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 500px) {
+            .trust-grid { grid-template-columns: 1fr; }
+        }
+        
+        .trust-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--bg-warm);
+            border-radius: 12px;
+        }
+        
+        .trust-icon {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+        }
+        
+        .trust-card h4 {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        
+        .trust-card p {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        /* Process */
+        .process {
+            background: var(--bg-warm);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        @media (max-width: 800px) {
+            .steps { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 500px) {
+            .steps { grid-template-columns: 1fr; }
+        }
+        
+        .step {
+            background: white;
+            border-radius: 12px;
+            padding: 28px 24px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        
+        .step-num {
+            width: 44px;
+            height: 44px;
+            background: var(--navy);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 16px;
+        }
+        
+        .step h4 {
+            font-family: var(--serif);
+            font-size: 1.05em;
+            font-weight: 400;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        
+        .step p {
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+        
+        /* FAQ */
+        .faq {
+            background: white;
+        }
+        
+        .faq-list {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .faq-item summary {
+            padding: 24px 0;
+            font-size: 1.05em;
+            font-weight: 500;
+            color: var(--navy);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-item summary::-webkit-details-marker { display: none; }
+        
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.5em;
+            color: var(--gold);
+            font-weight: 400;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-item p {
+            padding: 0 0 24px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 120px 0;
+            background: linear-gradient(180deg, var(--bg-warm) 0%, var(--bg) 100%);
+            text-align: center;
+        }
+        
+        .final-cta .section-title {
+            margin-bottom: 16px;
+        }
+        
+        .final-cta .section-desc {
+            max-width: 450px;
+            margin: 0 auto 36px;
+        }
+        
+        .cta-guarantees {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-guarantee {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+        
+        .cta-guarantee svg {
+            color: var(--green);
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: var(--navy);
+            text-align: center;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        footer p + p {
+            margin-top: 8px;
+        }
+        
+        /* Sticky Mobile CTA */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 16px 24px;
+            z-index: 100;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 600px) {
+            .mobile-cta { display: block; }
+            footer { padding-bottom: 100px; }
+        }
+        
+        .mobile-cta .btn {
+            width: 100%;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Strateško Varčevanje</a>
+            <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">✓ 5.000+ let dokazane varnosti</div>
+                    <h1>Srebro in zlato še nikoli nista izgubila <em>vse vrednosti.</em></h1>
+                    <p class="hero-sub">Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.</p>
+                    <div class="hero-cta">
+                        <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
+                        <a href="#kako" class="btn btn-secondary">Kako deluje?</a>
+                    </div>
+                    <div class="hero-trust">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Brez prodajnega pritiska
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Odgovor v 24 urah
+                        </span>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <div class="hero-card-header">
+                        <div class="hero-card-icon">📈</div>
+                        <div>
+                            <div class="hero-card-title">Donosnost v zadnjih 20 letih</div>
+                            <div class="hero-card-subtitle">Primerjava naložb</div>
+                        </div>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Zlato</span>
+                        <span class="stat-value positive">+450%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Srebro</span>
+                        <span class="stat-value positive">+300%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Denar na banki</span>
+                        <span class="stat-value negative">−35%</span>
+                    </div>
+                    <div class="hero-card-footer">
+                        🏛️ Število bankrotov v 5.000 letih: 0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <div class="problem-grid">
+                <div>
+                    <div class="section-label">Pravo tveganje</div>
+                    <h2 class="section-title">Nevarnost ni v srebru. Nevarnost je <em>v nedelovanju.</em></h2>
+                    <p class="section-desc">Denar na banki ni "varen" — tiho izgublja vrednost. Plemenite kovine so preživele vsako krizo, vojno in propad valut v zgodovini človeštva.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-item">
+                        <span class="problem-label">€10.000 na banki (10 let)</span>
+                        <span class="problem-value negative">−29%</span>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-label">€10.000 v srebru (10 let)</span>
+                        <span class="problem-value positive">+85%</span>
+                    </div>
+                    <div class="problem-item">
+                        <span class="problem-label">€10.000 v zlatu (10 let)</span>
+                        <span class="problem-value positive">+125%</span>
+                    </div>
+                    <div class="problem-highlight">
+                        <span class="problem-highlight-label">Plemenite kovine v 5.000 letih</span>
+                        <span class="problem-highlight-value">0 bankrotov</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="proof">
+        <div class="container">
+            <div class="proof-inner">
+                <p class="proof-label">Strategijo uporabljajo tudi</p>
+                <div class="proof-logos">
+                    <span class="proof-logo">NLB Banka</span>
+                    <span class="proof-logo">Univerza v Ljubljani</span>
+                    <span class="proof-logo">Olimpijski komite Slovenije</span>
+                    <span class="proof-logo">Narodni muzej</span>
+                    <span class="proof-logo">Gasilska zveza</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution" id="kako">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Vaša zaščita</div>
+                <h2 class="section-title">Ohranite vrednost. <em>In jo povečajte.</em></h2>
+                <p class="section-desc">Plemenite kovine niso špekulacija — so zavarovanje. A s pravo strategijo prinašajo tudi dobiček.</p>
+            </div>
+            
+            <div class="pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🔒</div>
+                    <h3>Zaščitena vrednost</h3>
+                    <p>Vaše kovine so v zavarovanem švicarskem trezorju. Brez DDV, z volumskimi popusti. Fizično premoženje, ki ga nobena banka ne more zamrzniti.</p>
+                    <span class="pillar-tag">100% vaše</span>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">📊</div>
+                    <h3>Preverjena zgodovina</h3>
+                    <p>Zlato in srebro sta preživela vse: rimski propad, svetovna vojna, hiperinflacije. V zadnjih 20 letih: +450% (zlato) in +300% (srebro).</p>
+                    <span class="pillar-tag">5.000 let dokazov</span>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">💰</div>
+                    <h3>Potencial za dobiček</h3>
+                    <p>S strategijo menjave zlato/srebro lahko povečate količino kovin brez dodatnega denarja. Trenutno razmerje je zgodovinsko ugodno.</p>
+                    <span class="pillar-tag">do +40% več</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="trust">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Zakaj je to varno?</div>
+                <h2 class="section-title">Fizično premoženje. <em>Brez tveganja propada.</em></h2>
+            </div>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">🏛️</div>
+                    <h4>Ne more bankrotirati</h4>
+                    <p>Za razliko od bank in podjetij, srebro in zlato ne moreta propasti.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🇨🇭</div>
+                    <h4>Švicarska varnost</h4>
+                    <p>Hramba v zavarovanem trezorju, ločeno od EU bančnega sistema.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">💧</div>
+                    <h4>Likvidno kadarkoli</h4>
+                    <p>Potrebujete denar? Prodate v nekaj klikih. Brez vezave.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🔐</div>
+                    <h4>100% vaše</h4>
+                    <p>Fizično premoženje na vaše ime. Nobena banka ga ne more zamrzniti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Potek</div>
+                <h2 class="section-title">Kako <em>začnemo?</em></h2>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>Brezplačen klic</h4>
+                    <p>15-minutni pogovor o vaši situaciji.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>Analiza</h4>
+                    <p>Skupaj ocenimo pravo strategijo za vas.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>Načrt</h4>
+                    <p>Pripravimo prilagojen varčevalni načrt.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4>Začetek</h4>
+                    <p>Vas vodim skozi vsak korak procesa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Pogosta vprašanja</div>
+                <h2 class="section-title">Imate <em>vprašanja?</em></h2>
+            </div>
+            
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Ali je to varno?</summary>
+                    <p>Da. Plemenite kovine so shranjene v zavarovanem švicarskem trezorju, ločeno od bančnega sistema. Imate popoln nadzor — lahko prodate kadarkoli, brez vezave ali čakalne dobe.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Koliko moram vložiti za začetek?</summary>
+                    <p>Začnete lahko že s 50€ mesečno. Bistvena je rednost, ne višina vložka. Tudi majhni zneski se sčasoma seštejejo — in z volumskimi popusti postajajo nakupi vedno ugodnejši.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Kaj pa DDV?</summary>
+                    <p>Pri strateškem nakupu s hrambo v Švici DDV ne plačate — to je 22% prihranka v primerjavi z nakupom v Sloveniji. Več kovin za isti denar.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Kako prodam, ko potrebujem denar?</summary>
+                    <p>Preprosto. Vaše kovine so likvidne — prodate jih lahko kadarkoli, denar prejmete v nekaj dneh. Ni vezave, ni kazni za predčasni izstop.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Zakaj srebro in ne samo zlato?</summary>
+                    <p>Srebro je trenutno zgodovinsko podcenjeno glede na zlato. Z izkoriščanjem nihanja razmerja med njima lahko povečate količino kovin brez dodatnih vlaganj.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Ali moram plačati za posvet?</summary>
+                    <p>Ne. Prvi posvet je popolnoma brezplačen in brez obveznosti. Želim razumeti vašo situacijo, preden vam karkoli svetujem.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="section-label">Naslednji korak</div>
+            <h2 class="section-title">Pravo tveganje je <em>nedelovanje.</em></h2>
+            <p class="section-desc">Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti, kako zaščititi prihranke — in jih povečati.</p>
+            <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Rezerviraj brezplačen posvet →</a>
+            
+            <div class="cta-guarantees">
+                <div class="cta-guarantee">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Srebro nikoli ni šlo na 0
+                </div>
+                <div class="cta-guarantee">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Brez vezave
+                </div>
+                <div class="cta-guarantee">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Prodate kadarkoli
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Strateško Varčevanje v Plemenitih Kovinah</p>
+            <p>Neodvisen svetovalec • Ljubljana, Slovenija</p>
+        </div>
+    </footer>
+
+    <!-- Mobile CTA -->
+    <div class="mobile-cta">
+        <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
