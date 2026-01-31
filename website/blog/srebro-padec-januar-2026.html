@@ -293,9 +293,9 @@
                     <div class="email-capture-icon">📘</div>
                     <h3>Brezplačen vodnik</h3>
                     <p>Prenesite: <strong>"Kako začeti z naložbo v srebro"</strong></p>
-                    <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <input type="email" name="email" placeholder="Vaš email" required>
-                        <button type="submit">Pošlji →</button>
+                    <form class="email-form" id="vodnik-form">
+                        <input type="email" name="email" id="vodnik-email" placeholder="Vaš email" required>
+                        <button type="submit" id="vodnik-btn">Pošlji →</button>
                     </form>
                     <p class="email-trust">
                         <span>✓ Brez spama</span>
@@ -317,5 +317,36 @@
             <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
         </div>
     </footer>
+
+    <!-- Email Subscription Handler -->
+    <script>
+        document.getElementById('vodnik-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const emailInput = document.getElementById('vodnik-email');
+            const btn = document.getElementById('vodnik-btn');
+            const email = emailInput.value;
+            btn.textContent = 'Pošiljam...';
+            btn.disabled = true;
+            try {
+                const response = await fetch('/api/subscribe', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email })
+                });
+                if (response.ok) {
+                    window.location.href = '/hvala.html';
+                } else {
+                    const data = await response.json();
+                    alert(data.error || 'Napaka. Poskusite ponovno.');
+                    btn.textContent = 'Pošlji →';
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                alert('Napaka pri povezavi. Poskusite ponovno.');
+                btn.textContent = 'Pošlji →';
+                btn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>

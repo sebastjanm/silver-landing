@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hvala! | Nakup Srebra</title>
+    <link rel="stylesheet" href="/styles/shared.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #FAF8F5;
+            --navy: #1a2b4a;
+            --gold: #c9a227;
+            --text: #2d3748;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .success-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+        
+        h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 32px;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: var(--text);
+            margin-bottom: 32px;
+        }
+        
+        .info-box {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            text-align: left;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        
+        .info-box h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        
+        .info-box p {
+            color: var(--text);
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .info-box ul {
+            margin-left: 20px;
+            color: var(--text);
+        }
+        
+        .info-box li {
+            margin-bottom: 6px;
+        }
+        
+        .cta-section {
+            margin-top: 24px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: white;
+        }
+        
+        .btn-gold:hover {
+            background: #b8922a;
+            transform: translateY(-1px);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--navy);
+            color: var(--navy);
+            background: transparent;
+            margin-left: 12px;
+        }
+        
+        .btn-outline:hover {
+            background: var(--navy);
+            color: white;
+        }
+        
+        .home-link {
+            margin-top: 40px;
+        }
+        
+        .home-link a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        
+        .home-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                display: block;
+                margin: 8px 0;
+            }
+            .btn-outline {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">✅</div>
+        <h1>Hvala za prijavo!</h1>
+        <p class="subtitle">Vodnik je na poti v vaš nabiralnik.</p>
+        
+        <div class="info-box">
+            <h3>📧 Preverite svoj email</h3>
+            <p>V naslednjih minutah boste prejeli email s PDF vodnikom v priponki.</p>
+            <p style="font-size: 13px; color: #666; margin-top: 12px;">
+                💡 Če emaila ne najdete, preverite mapo "Promocije" ali "Spam".
+            </p>
+        </div>
+        
+        <div class="info-box">
+            <h3>📖 Kaj boste izvedeli:</h3>
+            <ul>
+                <li>Zakaj je srebro zanimiva naložba v 2026</li>
+                <li>Kako in kje kupiti fizično srebro</li>
+                <li>Pravila hrambe in varnosti</li>
+                <li>5 najpogostejših napak začetnikov</li>
+            </ul>
+        </div>
+        
+        <div class="cta-section">
+            <p><strong>Želite osebno pomoč?</strong></p>
+            <a href="https://calendly.com/sebom/new-meeting" class="btn btn-gold">Rezerviraj brezplačen posvet</a>
+            <a href="/" class="btn btn-outline">Nazaj na stran</a>
+        </div>
+        
+        <div class="home-link">
+            <a href="/">← nakupsrebra.com</a>
+        </div>
+    </div>
+</body>
+</html>
