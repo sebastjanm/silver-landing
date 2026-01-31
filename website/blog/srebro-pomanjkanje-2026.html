@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaj se srebro poslavlja: Strukturno pomanjkanje in prihodnost cen | Nakup Srebra</title>
+    <meta name="description" content="Globalno povpraševanje po srebru presega ponudbo že 5. leto zapored. Analiza vzrokov in dolgoročne perspektive.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --gold-light: #d69e2e;
+            --green: #276749;
+            --red: #c53030;
+            --border: #e2e8f0;
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 18px;
+            padding-top: 61px;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(253, 252, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1140px;
+        }
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .nav-cta {
+            background: var(--navy);
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        .article-header {
+            padding: 60px 0 40px;
+        }
+        .article-meta {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 16px;
+        }
+        .article-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(1.8em, 4vw, 2.4em);
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .article-lead {
+            font-size: 1.15em;
+            color: var(--text-muted);
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+        }
+        .article-hero {
+            margin: 40px 0;
+        }
+        .article-hero img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        .article-hero figcaption {
+            text-align: center;
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        .article-content {
+            padding-bottom: 60px;
+        }
+        .article-content h2 {
+            font-family: var(--serif);
+            font-size: 1.4em;
+            color: var(--navy);
+            margin: 40px 0 20px;
+        }
+        .article-content h3 {
+            font-family: var(--serif);
+            font-size: 1.15em;
+            color: var(--navy);
+            margin: 30px 0 15px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 24px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .article-content a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+        .article-content a:hover {
+            text-decoration: underline;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0;
+        }
+        @media (max-width: 600px) {
+            .stat-grid { grid-template-columns: 1fr; }
+        }
+        .stat-card {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .stat-number.red { color: var(--red); }
+        .stat-number.green { color: var(--green); }
+        .stat-label {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        .chart-container {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+        .chart-title {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--navy);
+            text-align: center;
+        }
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .bar-label {
+            width: 80px;
+            font-size: 0.85em;
+            color: var(--text-muted);
+            text-align: right;
+        }
+        .bar-container {
+            flex: 1;
+            height: 24px;
+            background: #edf2f7;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+        .bar-fill.demand { background: var(--red); }
+        .bar-fill.supply { background: var(--green); }
+        .bar-value {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8em;
+            font-weight: 600;
+            color: white;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+        .highlight-box h3 {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: white;
+        }
+        .highlight-box p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        .info-box {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            border-left: 4px solid var(--navy);
+        }
+        .info-box h4 {
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--navy);
+        }
+        .sources {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 40px 0;
+        }
+        .sources h3 {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+        .sources ol {
+            padding-left: 20px;
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+        .sources li {
+            margin-bottom: 8px;
+        }
+        .sources a {
+            color: var(--gold);
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .cta-box {
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .cta-box h3 {
+            font-family: var(--serif);
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        .cta-box p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        footer {
+            padding: 40px 0;
+            background: var(--navy);
+            text-align: center;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Nakup Srebra</a>
+            <div class="nav-links">
+                <a href="/blog/">Blog</a>
+                <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            </div>
+        </div>
+    </nav>
+
+    <article>
+        <div class="container">
+            <header class="article-header">
+                <p class="article-meta">31. januar 2026 · 8 min branja</p>
+                <h1>Zakaj se količina srebra na svetu zmanjšuje — in zakaj bodo cene dolgoročno rasle</h1>
+                <p class="article-lead">Svet že peto leto zapored porabi več srebra, kot ga izkoplje. Povpraševanje zelene energije, elektronike in umetne inteligence narašča — ponudba pa stagnira. Poglejmo, kaj to pomeni za vlagatelje.</p>
+            </header>
+            
+            <figure class="article-hero">
+                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=1200&h=600&fit=crop" alt="Solarni paneli - glavni porabnik srebra">
+                <figcaption>Solarni paneli trenutno predstavljajo 14% svetovne porabe srebra — in ta delež hitro narašča</figcaption>
+            </figure>
+            
+            <div class="article-content">
+                
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-number red">−118M</div>
+                        <div class="stat-label">Letni primanjkljaj (unče)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5 let</div>
+                        <div class="stat-label">Zaporednega deficita</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number green">+170%</div>
+                        <div class="stat-label">Rast cene 2024-2026</div>
+                    </div>
+                </div>
+
+                <h2>Strukturni deficit: Povpraševanje presega ponudbo</h2>
+                
+                <p>Podatki <a href="https://silverinstitute.org/silver-supply-demand/" target="_blank">Silver Institute</a> kažejo jasno sliko: leto 2026 bo peto zaporedno leto, ko svetovno povpraševanje po srebru presega ponudbo. V letu 2025 je bil primanjkljaj ocenjen na <strong>118 milijonov unč</strong> — skupni primanjkljaj od leta 2021 pa presega <strong>800 milijonov unč</strong>.</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">📊 Ponudba vs. povpraševanje (milijarde unč, 2025)</div>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <span class="bar-label">Povpraševanje</span>
+                            <div class="bar-container">
+                                <div class="bar-fill demand" style="width: 100%;"></div>
+                                <span class="bar-value">1,15 Mrd</span>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">Ponudba</span>
+                            <div class="bar-container">
+                                <div class="bar-fill supply" style="width: 89%;"></div>
+                                <span class="bar-value">1,03 Mrd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Zakaj ponudba ne more slediti?</h2>
+                
+                <h3>1. Srebro je stranski produkt</h3>
+                <p>Za razliko od zlata, ki se večinoma izkopava v namenskih rudnikih, je srebro pretežno <strong>stranski produkt rudarjenja svinca, cinka in bakra</strong>. Po podatkih <a href="https://www.statista.com/topics/1335/silver/" target="_blank">Statista</a> le 28% srebra prihaja iz primarnih rudnikov srebra. To pomeni, da povečanje povpraševanja po srebru ne povzroči sorazmernega povečanja produkcije — rudarji ne bodo odpirali novih rudnikov bakra samo zato, ker je srebro dražje.</p>
+
+                <h3>2. Rudniška proizvodnja stagnira</h3>
+                <p>Svetovna proizvodnja srebra znaša okoli <strong>820 milijonov unč letno</strong> in že leta ostaja približno enaka. Po podatkih <a href="https://www.usgs.gov/centers/national-minerals-information-center/silver-statistics-and-information" target="_blank">USGS</a> (U.S. Geological Survey) so globalne rezerve srebra ocenjene na 610.000 ton — kar pri trenutni porabi zadostuje za približno 20 let.</p>
+
+                <h3>3. Recikliranje ne zadošča</h3>
+                <p>Čeprav se recikliranje povečuje — v letu 2024 je doseglo 194 milijonov unč, 12-letni rekord — še vedno ne more zapolniti vrzeli. Velik del industrijsko porabljenega srebra (v elektroniki, solarnih panelih) je <strong>praktično neobnovljiv</strong> zaradi majhnih količin v posameznih izdelkih.</p>
+
+                <div class="highlight-box">
+                    <h3>💡 Ključna ugotovitev</h3>
+                    <p>Srebro se ne "izdeluje" — izkopava se. In ko ga zmanjka v tleh, ga ni mogoče nadomestiti. Za razliko od papirnega denarja ali kripto valut, količina srebra na svetu je fizično omejena.</p>
+                </div>
+
+                <h2>Kaj poganja povpraševanje?</h2>
+
+                <h3>🔋 Zelena energija: Solarni paneli in električna vozila</h3>
+                <p>Največji gonilnik rasti povpraševanja je <strong>zelena tranzicija</strong>. Solarni paneli potrebujejo srebro za prevodne paste — trenutno predstavljajo 14% svetovne porabe, a ta delež hitro narašča. Po nekaterih ocenah bi lahko do leta 2028 solarni paneli porabili <strong>25% vse letne proizvodnje srebra</strong>.</p>
+                
+                <p>Električna vozila prav tako potrebujejo več srebra kot klasična vozila — za baterije, elektroniko in prevodne komponente.</p>
+
+                <h3>🤖 Umetna inteligenca in podatkovni centri</h3>
+                <p>Razmah AI zahteva ogromne podatkovne centre, ki porabljajo velike količine elektrike. To posredno povečuje povpraševanje po solarni energiji — in s tem po srebru. Nekateri analitiki ocenjujejo, da bi <strong>potrebe AI infrastrukture</strong> lahko dodatno obremenile trg srebra v prihodnjih letih.</p>
+
+                <h3>📱 Elektronika in 5G</h3>
+                <p>Srebro ima najboljšo električno prevodnost med vsemi kovinami. Uporablja se v pametnih telefonih, računalnikih, medicinskih napravah in 5G infrastrukturi. Industrijska poraba ostaja <strong>največji segment povpraševanja</strong> — več kot 50% vse porabe.</p>
+
+                <div class="info-box">
+                    <h4>📈 Zakaj ni poceni nadomestka?</h4>
+                    <p>Za mnoge industrijske aplikacije srebra <strong>ni učinkovitega nadomestka</strong>. Čeprav se v nekaterih aplikacijah uporabljajo alternativni materiali, srebrova kombinacija prevodnosti, obstojnosti in cene ostaja neprekosljiva za kritične uporabe.</p>
+                </div>
+
+                <h2>Kaj to pomeni za cene?</h2>
+
+                <p>Osnovna ekonomija je preprosta: ko povpraševanje presega ponudbo, cene rastejo. In ker strukturnega deficita ni mogoče hitro odpraviti (odpiranje novih rudnikov traja 10+ let), bodo <strong>cene dolgoročno verjetno rasle</strong>.</p>
+
+                <p>To ne pomeni, da ne bo kratkoročnih padcev — kot smo videli ta teden. Trgi so nestanovitni, na cene vplivajo tudi obrestne mere, vrednost dolarja in špekulacije. Toda <strong>dolgoročni trend</strong> je jasen: vedno več povpraševanja, vedno manj ponudbe.</p>
+
+                <div class="chart-container">
+                    <div class="chart-title">📈 Rast cene srebra (zadnjih 5 let)</div>
+                    <div class="bar-chart">
+                        <div class="bar-row">
+                            <span class="bar-label">2021</span>
+                            <div class="bar-container">
+                                <div class="bar-fill supply" style="width: 30%;"></div>
+                                <span class="bar-value" style="color: var(--navy); right: auto; left: 8px;">$25</span>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">2023</span>
+                            <div class="bar-container">
+                                <div class="bar-fill supply" style="width: 40%;"></div>
+                                <span class="bar-value" style="color: var(--navy); right: auto; left: 8px;">$35</span>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">2025</span>
+                            <div class="bar-container">
+                                <div class="bar-fill supply" style="width: 70%;"></div>
+                                <span class="bar-value">$58</span>
+                            </div>
+                        </div>
+                        <div class="bar-row">
+                            <span class="bar-label">2026</span>
+                            <div class="bar-container">
+                                <div class="bar-fill demand" style="width: 100%;"></div>
+                                <span class="bar-value">$85+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Zakaj so kratkoročni padci nepomembni?</h2>
+
+                <p>V zadnjem tednu je srebro izgubilo 25% vrednosti. Za kratkoročne trgovce je to katastrofa. Za dolgoročne vlagatelje? <strong>Priložnost za nakup.</strong></p>
+
+                <p>Razlogi za padec so tipični: okrepitev dolarja, jemanje dobičkov, tehnične prodaje. Toda <strong>fundamentalni dejavniki se niso spremenili</strong>:</p>
+
+                <ul>
+                    <li>Deficit še vedno obstaja</li>
+                    <li>Zelena tranzicija se pospešuje</li>
+                    <li>Novih velikih rudnikov ni na obzorju</li>
+                    <li>Zgodovinsko srebro še nikoli ni šlo na nič</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>🏛️ 5.000 let perspektive</h3>
+                    <p>Srebro se kot sredstvo menjave in hranilec vrednosti uporablja že od antičnih civilizacij. V tej zgodovini <strong>ni nikoli popolnoma izgubilo vrednosti</strong> — za razliko od številnih valut, delnic in obveznic, ki so propadle.</p>
+                </div>
+
+                <h2>Zaključek: Logika deficita</h2>
+
+                <p>Matematika je preprosta:</p>
+                <ul>
+                    <li><strong>Ponudba:</strong> omejena, stagnira, odvisna od drugih kovin</li>
+                    <li><strong>Povpraševanje:</strong> narašča zaradi zelene energije, AI, elektronike</li>
+                    <li><strong>Rezultat:</strong> strukturni deficit, ki bo trajal leta</li>
+                </ul>
+
+                <p>Kratkoročno bodo cene nihale — to je narava trgov. Dolgoročno pa <strong>osnovni ekonomski zakon ponudbe in povpraševanja</strong> nakazuje višje cene.</p>
+
+                <p>Za vlagatelje to pomeni: ne panikariti ob kratkoročnih padcih. Izkoristiti jih za postopno povečevanje pozicije. In gledati na srebro kot na <strong>dolgoročno zavarovanje</strong> — ne kot špekulativno stavo.</p>
+
+                <div class="sources">
+                    <h3>📚 Viri in reference</h3>
+                    <ol>
+                        <li><a href="https://silverinstitute.org/silver-supply-demand/" target="_blank">The Silver Institute — Silver Supply & Demand</a></li>
+                        <li><a href="https://www.usgs.gov/centers/national-minerals-information-center/silver-statistics-and-information" target="_blank">USGS — Silver Statistics and Information</a></li>
+                        <li><a href="https://www.statista.com/topics/1335/silver/" target="_blank">Statista — Global Silver Mining Statistics</a></li>
+                        <li><a href="https://www.cmegroup.com/markets/metals/precious/silver.html" target="_blank">CME Group — Silver Futures Overview</a></li>
+                        <li><a href="https://www.lbma.org.uk/prices-and-data/precious-metal-prices" target="_blank">LBMA — London Bullion Market Association Prices</a></li>
+                        <li><a href="https://www.worldbank.org/en/research/commodity-markets" target="_blank">World Bank — Commodity Markets Data</a></li>
+                        <li><a href="https://www.metalsfocus.com/" target="_blank">Metals Focus — Industry Research (World Silver Survey)</a></li>
+                        <li><a href="https://x.com/sprott/status/1921913281880416342" target="_blank">Sprott Asset Management — Silver Shortage Analysis (Twitter)</a></li>
+                        <li><a href="https://x.com/greglukosek/status/1975488752307835374" target="_blank">Greg Lukosek — Silver Supply Deficit Analysis (Twitter)</a></li>
+                        <li><a href="https://x.com/grok/status/1995534455440900163" target="_blank">Grok AI — Silver Market Overview (Twitter)</a></li>
+                        <li><a href="https://x.com/StockAnalyst007/status/2004909513296720347" target="_blank">Profit Pulse — Silver Structural Deficit (Twitter)</a></li>
+                        <li><a href="https://x.com/veroach/status/1996596356807536759" target="_blank">Eric Roach — Silver Supply Analysis (Twitter)</a></li>
+                        <li><a href="https://x.com/Moonligghtt11/status/2007393015623757887" target="_blank">Moonlight — Silver vs Gold Performance (Twitter)</a></li>
+                        <li><a href="https://x.com/DragonArc2025/status/1937192035238486267" target="_blank">Dragon Arc — Silver Outlook (Twitter)</a></li>
+                        <li><a href="https://x.com/bn_coresearch/status/1994776706125910116" target="_blank">Jim Bianco Research — Silver Industrial Demand (Twitter)</a></li>
+                        <li><a href="https://x.com/TheBean_media/status/1980955085757919692" target="_blank">The Bean Media — Green Tech Silver Demand (Twitter)</a></li>
+                        <li><a href="https://x.com/Geetu_Moza/status/1836718155999178873" target="_blank">Geetu Moza — Silver Investment Analysis (Twitter)</a></li>
+                        <li><a href="https://x.com/PrasadHeda/status/1866758864231919826" target="_blank">CA Prasad Heda — Silver Supply Deficit (Twitter)</a></li>
+                        <li><a href="https://x.com/grok/status/2012629214487363916" target="_blank">Grok AI — Silver Shortage Confirmation (Twitter)</a></li>
+                        <li><a href="https://x.com/grok/status/1999200761998201087" target="_blank">Grok AI — Solar Panel Silver Demand (Twitter)</a></li>
+                    </ol>
+                </div>
+
+                <div class="cta-box">
+                    <h3>Razmišljate o nakupu srebra?</h3>
+                    <p>Pogovoriva se o vaši situaciji in strategiji — brezplačno in brez obveznosti.</p>
+                    <a href="https://calendly.com/sebastjan/silver" class="cta-btn" target="_blank">Rezerviraj brezplačen posvet →</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
+        </div>
+    </footer>
+</body>
+</html>

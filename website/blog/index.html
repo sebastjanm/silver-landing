@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Nakup Srebra</title>
+    <meta name="description" content="Novice in analize s trga plemenitih kovin. Spremljajte gibanje cen srebra in zlata.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --gold-light: #d69e2e;
+            --border: #e2e8f0;
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 17px;
+            padding-top: 61px;
+        }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(253, 252, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1140px;
+        }
+        
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-cta {
+            background: var(--navy);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        .blog-header {
+            padding: 60px 0 40px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .blog-header h1 {
+            font-family: var(--serif);
+            font-size: 2.5em;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        
+        .blog-header p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+        }
+        
+        .blog-list {
+            padding: 60px 0;
+        }
+        
+        .blog-card {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 32px;
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s;
+        }
+        
+        .blog-card:hover { opacity: 0.8; }
+        
+        @media (max-width: 700px) {
+            .blog-card { grid-template-columns: 1fr; gap: 20px; }
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: var(--bg-warm);
+        }
+        
+        .blog-card-content h2 {
+            font-family: var(--serif);
+            font-size: 1.4em;
+            color: var(--navy);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        
+        .blog-card-content p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        
+        .blog-meta {
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+        
+        footer {
+            padding: 40px 0;
+            background: var(--navy);
+            text-align: center;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Nakup Srebra</a>
+            <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+        </div>
+    </nav>
+
+    <div class="blog-header">
+        <div class="container">
+            <h1>Blog</h1>
+            <p>Novice in analize s trga plemenitih kovin</p>
+        </div>
+    </div>
+
+    <div class="blog-list">
+        <div class="container">
+            <a href="/blog/srebro-pomanjkanje-2026.html" class="blog-card">
+                <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?w=600&h=400&fit=crop" alt="Solarni paneli">
+                <div class="blog-card-content">
+                    <h2>Zakaj se količina srebra na svetu zmanjšuje — in zakaj bodo cene dolgoročno rasle</h2>
+                    <p>Strukturni deficit, zelena energija in umetna inteligenca: Analiza 20 svetovnih virov o prihodnosti srebra.</p>
+                    <span class="blog-meta">31. januar 2026 · 8 min branja</span>
+                </div>
+            </a>
+
+            <a href="/blog/srebro-padec-januar-2026.html" class="blog-card">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Graf cene srebra">
+                <div class="blog-card-content">
+                    <h2>Zakaj je srebro ta teden izgubilo 25% vrednosti?</h2>
+                    <p>Analiza nenadnega padca cene srebra in kaj to pomeni za dolgoročne vlagatelje. Poglejmo vzroke in priložnosti.</p>
+                    <span class="blog-meta">31. januar 2026 · 3 min branja</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
+        </div>
+    </footer>
+</body>
+</html>

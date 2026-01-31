@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaj je srebro ta teden izgubilo 25% vrednosti? | Nakup Srebra</title>
+    <meta name="description" content="Analiza nenadnega padca cene srebra v januarju 2026. Razumemo vzroke in priložnosti za dolgoročne vlagatelje.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --gold-light: #d69e2e;
+            --green: #276749;
+            --red: #c53030;
+            --border: #e2e8f0;
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            font-size: 18px;
+            padding-top: 61px;
+        }
+        
+        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(253, 252, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 0;
+            z-index: 100;
+        }
+        
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1140px;
+        }
+        
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.1em;
+            color: var(--navy);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        
+        .nav-cta {
+            background: var(--navy);
+            color: white !important;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+        
+        .article-header {
+            padding: 60px 0 40px;
+        }
+        
+        .article-meta {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            margin-bottom: 16px;
+        }
+        
+        .article-header h1 {
+            font-family: var(--serif);
+            font-size: clamp(1.8em, 4vw, 2.4em);
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .article-lead {
+            font-size: 1.15em;
+            color: var(--text-muted);
+            border-left: 3px solid var(--gold);
+            padding-left: 20px;
+        }
+        
+        .article-hero {
+            margin: 40px 0;
+        }
+        
+        .article-hero img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+        
+        .article-hero figcaption {
+            text-align: center;
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        
+        .article-content {
+            padding-bottom: 60px;
+        }
+        
+        .article-content h2 {
+            font-family: var(--serif);
+            font-size: 1.4em;
+            color: var(--navy);
+            margin: 40px 0 20px;
+        }
+        
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        
+        .price-box {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        @media (max-width: 500px) {
+            .price-box { grid-template-columns: 1fr; }
+        }
+        
+        .price-item {
+            text-align: center;
+        }
+        
+        .price-label {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        
+        .price-value {
+            font-family: var(--serif);
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        
+        .price-value.down { color: var(--red); }
+        .price-value.up { color: var(--green); }
+        
+        .chart-container {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+        }
+        
+        .chart-title {
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--navy);
+        }
+        
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 8px;
+            height: 160px;
+        }
+        
+        .chart-bar {
+            flex: 1;
+            background: var(--navy);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+        }
+        
+        .chart-bar.current { background: var(--red); }
+        
+        .chart-bar-label {
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.75em;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+        
+        .chart-bar-value {
+            position: absolute;
+            top: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8em;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        .chart-bar.current .chart-bar-value { color: var(--red); }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .cta-box {
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .cta-box h3 {
+            font-family: var(--serif);
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        
+        .cta-box p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        footer {
+            padding: 40px 0;
+            background: var(--navy);
+            text-align: center;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Nakup Srebra</a>
+            <div class="nav-links">
+                <a href="/blog/">Blog</a>
+                <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            </div>
+        </div>
+    </nav>
+
+    <article>
+        <div class="container">
+            <header class="article-header">
+                <p class="article-meta">31. januar 2026 · 3 min branja</p>
+                <h1>Zakaj je srebro ta teden izgubilo 25% vrednosti?</h1>
+                <p class="article-lead">Cena srebra je v zadnjem tednu strmo padla — s €96 na €72 za unčo. Poglejmo, zakaj je do tega prišlo in kaj to pomeni za vlagatelje.</p>
+            </header>
+            
+            <figure class="article-hero">
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=600&fit=crop" alt="Finančni grafi">
+                <figcaption>Trg plemenitih kovin je ta teden doživel večjo korekcijo</figcaption>
+            </figure>
+            
+            <div class="article-content">
+                <div class="price-box">
+                    <div class="price-item">
+                        <div class="price-label">Prejšnji teden</div>
+                        <div class="price-value">€96,30</div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-label">Danes</div>
+                        <div class="price-value down">€71,90</div>
+                    </div>
+                </div>
+                
+                <p>Trg plemenitih kovin je ta teden doživel strm padec. Srebro je v enem tednu izgubilo približno <strong>25% vrednosti</strong> — s €96,30 na €71,90 za trojsko unčo. Za dolgoročne vlagatelje je to sicer neprijetno, a zgodovinsko gledano popolnoma normalno.</p>
+                
+                <h2>Glavni vzroki padca</h2>
+                
+                <p><strong>1. Močnejši dolar.</strong> Ameriški dolar se je ta teden okrepil zaradi pričakovanj o višjih obrestnih merah Fed. Ker se srebro kotira v dolarjih, višji dolar pomeni nižjo ceno v evrih.</p>
+                
+                <p><strong>2. Jemanje dobičkov.</strong> Po rekordni rasti v zadnjem letu so mnogi vlagatelji izkoristili visoke cene za prodajo. Takšne korekcije so zdrave — preprečujejo balone.</p>
+                
+                <p><strong>3. Tehnični signali.</strong> Cena je prebila ključno podporno raven, kar je sprožilo avtomatske prodaje pri institucionalnih vlagateljih.</p>
+                
+                <div class="chart-container">
+                    <div class="chart-title">📊 Cena srebra (EUR/oz) — zadnji teden</div>
+                    <div class="chart-bars">
+                        <div class="chart-bar" style="height: 85%;">
+                            <span class="chart-bar-value">€87</span>
+                            <span class="chart-bar-label">24.1.</span>
+                        </div>
+                        <div class="chart-bar" style="height: 90%;">
+                            <span class="chart-bar-value">€92</span>
+                            <span class="chart-bar-label">27.1.</span>
+                        </div>
+                        <div class="chart-bar" style="height: 95%;">
+                            <span class="chart-bar-value">€96</span>
+                            <span class="chart-bar-label">30.1.</span>
+                        </div>
+                        <div class="chart-bar current" style="height: 70%;">
+                            <span class="chart-bar-value">€72</span>
+                            <span class="chart-bar-label">31.1.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Kaj to pomeni za vas?</h2>
+                
+                <p>Če ste dolgoročni vlagatelj, je kratkoročna volatilnost <strong>nepomembna</strong>. Srebro je v zadnjih 5 letih še vedno pridobilo več kot 200%. Korekcije so del igre — in pogosto najboljša priložnost za nakup.</p>
+                
+                <div class="highlight-box">
+                    <h3>💡 Zgodovinska perspektiva</h3>
+                    <p>V 5.000 letih srebro še nikoli ni šlo na nič. Vsak padec je bil le začasna korekcija.</p>
+                </div>
+                
+                <p>Pametni vlagatelji ne prodajajo v paniki — pač pa <strong>izkoristijo nižje cene</strong> za povečanje pozicije. Če imate prihranke na banki, ki izgubljajo vrednost zaradi inflacije, je zdaj morda pravi čas za razmislek.</p>
+                
+                <div class="cta-box">
+                    <h3>Razmišljate o nakupu srebra?</h3>
+                    <p>Pogovoriva se o vaši situaciji — brezplačno in brez obveznosti.</p>
+                    <a href="https://calendly.com/sebastjan/silver" class="cta-btn" target="_blank">Rezerviraj brezplačen posvet →</a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
+        </div>
+    </footer>
+</body>
+</html>
