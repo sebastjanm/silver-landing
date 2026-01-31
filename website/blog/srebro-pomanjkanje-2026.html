@@ -8,70 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/shared.css">
     <style>
-        :root {
-            --bg: #fdfcfa;
-            --bg-warm: #f8f6f1;
-            --navy: #1a365d;
-            --navy-light: #2c5282;
-            --text: #2d3748;
-            --text-muted: #718096;
-            --gold: #b7791f;
-            --gold-light: #d69e2e;
-            --green: #276749;
-            --red: #c53030;
-            --border: #e2e8f0;
-            --serif: 'Libre Baskerville', Georgia, serif;
-            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: var(--sans);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            font-size: 18px;
-            padding-top: 61px;
-        }
-        .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(253, 252, 250, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-            z-index: 100;
-        }
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1140px;
-        }
-        .logo {
-            font-family: var(--serif);
-            font-size: 1.1em;
-            color: var(--navy);
-            text-decoration: none;
-        }
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95em;
-        }
-        .nav-cta {
-            background: var(--navy);
-            color: white !important;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-        }
+        /* Page-specific styles */
+        body { line-height: 1.8; font-size: 18px; }
+        .container { max-width: 720px; }
+        nav .container { max-width: 1140px; }
+        
         .article-header {
             padding: 60px 0 40px;
         }
@@ -299,22 +242,16 @@
             text-decoration: none;
             font-weight: 600;
         }
-        footer {
-            padding: 40px 0;
-            background: var(--navy);
-            text-align: center;
-            font-size: 0.9em;
-            color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
+        </style>
 </head>
 <body>
     <nav>
         <div class="container">
             <a href="/" class="logo">Nakup Srebra</a>
             <div class="nav-links">
-                <a href="/blog/">Blog</a>
-                <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+                <a href="/" class="nav-link">Domov</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://calendly.com/sebom/new-meeting" class="nav-cta" target="_blank">Brezplačen posvet</a>
             </div>
         </div>
     </nav>
@@ -504,10 +441,24 @@
                     </ol>
                 </div>
 
+                <div class="email-capture" style="margin-bottom: 40px;">
+                    <div class="email-capture-icon">📘</div>
+                    <h3>Brezplačen vodnik</h3>
+                    <p>Prenesite: <strong>"Kako začeti z naložbo v srebro"</strong></p>
+                    <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="email" name="email" placeholder="Vaš email" required>
+                        <button type="submit">Pošlji →</button>
+                    </form>
+                    <p class="email-trust">
+                        <span>✓ Brez spama</span>
+                        <span>✓ Odjava kadarkoli</span>
+                    </p>
+                </div>
+
                 <div class="cta-box">
                     <h3>Razmišljate o nakupu srebra?</h3>
                     <p>Pogovoriva se o vaši situaciji in strategiji — brezplačno in brez obveznosti.</p>
-                    <a href="https://calendly.com/sebastjan/silver" class="cta-btn" target="_blank">Rezerviraj brezplačen posvet →</a>
+                    <a href="https://calendly.com/sebom/new-meeting" class="cta-btn" target="_blank">Rezerviraj brezplačen posvet →</a>
                 </div>
             </div>
         </div>

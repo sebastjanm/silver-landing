@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brezplačen posvet | Nakup Srebra</title>
+    <meta name="description" content="Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/shared.css">
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: var(--bg-warm);
+        }
+        
+        .page-header h1 {
+            font-family: var(--serif);
+            font-size: 2.2em;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .calendly-section {
+            padding: 40px 0 80px;
+            background: var(--bg);
+        }
+        
+        .calendly-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .calendly-inline-widget {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .trust-points {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-point {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+        
+        .trust-point svg {
+            color: var(--green);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Nakup Srebra</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Domov</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="/posvet.html" class="nav-cta">Brezplačen posvet</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Brezplačen posvet</h1>
+            <p>Izberite termin za 15-minutni pogovor o vaših ciljih in strategiji varčevanja v plemenitih kovinah.</p>
+        </div>
+    </div>
+
+    <section class="calendly-section">
+        <div class="calendly-container">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/sebom/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+            
+            <div class="trust-points">
+                <div class="trust-point">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Brez obveznosti
+                </div>
+                <div class="trust-point">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Brez prodajnega pritiska
+                </div>
+                <div class="trust-point">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    15 minut vašega časa
+                </div>
+            </div>
+            
+            <div class="email-divider">ali</div>
+            
+            <div class="email-capture">
+                <div class="email-capture-icon">📘</div>
+                <h3>Še niste pripravljeni na klic?</h3>
+                <p>Prenesite brezplačen vodnik: <strong>"Kako začeti z naložbo v srebro"</strong></p>
+                <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Vaš email" required>
+                    <button type="submit">Pošlji →</button>
+                </form>
+                <p class="email-trust">
+                    <span>✓ Brez spama</span>
+                    <span>✓ Odjava kadarkoli</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
+        </div>
+    </footer>
+</body>
+</html>

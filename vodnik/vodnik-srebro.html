@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kako začeti z naložbo v srebro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --navy: #1a365d;
+            --navy-light: #2c5282;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --gold-light: #d69e2e;
+            --border: #e2e8f0;
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 11pt;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm 25mm;
+            margin: 0 auto;
+            background: var(--bg);
+            page-break-after: always;
+            position: relative;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        /* Cover Page */
+        .cover {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .cover-icon {
+            font-size: 72pt;
+            margin-bottom: 30mm;
+        }
+        
+        .cover h1 {
+            font-family: var(--serif);
+            font-size: 28pt;
+            font-weight: 400;
+            margin-bottom: 8mm;
+            line-height: 1.3;
+        }
+        
+        .cover .subtitle {
+            font-size: 14pt;
+            opacity: 0.8;
+            margin-bottom: 20mm;
+        }
+        
+        .cover .author {
+            font-size: 10pt;
+            opacity: 0.6;
+            margin-top: auto;
+            padding-top: 40mm;
+        }
+        
+        .cover .year {
+            font-size: 11pt;
+            opacity: 0.7;
+            margin-top: 5mm;
+            font-weight: 600;
+        }
+        
+        /* Typography */
+        h1 {
+            font-family: var(--serif);
+            font-size: 22pt;
+            color: var(--navy);
+            margin-bottom: 8mm;
+            line-height: 1.3;
+        }
+        
+        h2 {
+            font-family: var(--serif);
+            font-size: 16pt;
+            color: var(--navy);
+            margin-top: 10mm;
+            margin-bottom: 5mm;
+            line-height: 1.4;
+        }
+        
+        h3 {
+            font-family: var(--sans);
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--navy);
+            margin-top: 8mm;
+            margin-bottom: 3mm;
+        }
+        
+        p {
+            margin-bottom: 4mm;
+            text-align: justify;
+        }
+        
+        .lead {
+            font-size: 12pt;
+            color: var(--text-muted);
+            margin-bottom: 8mm;
+        }
+        
+        /* Chapter Header */
+        .chapter-num {
+            font-family: var(--serif);
+            font-size: 48pt;
+            color: var(--gold);
+            opacity: 0.3;
+            margin-bottom: -5mm;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 4mm 0;
+            padding-left: 6mm;
+        }
+        
+        li {
+            margin-bottom: 2mm;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background: var(--bg-warm);
+            border-left: 3px solid var(--gold);
+            padding: 5mm;
+            margin: 6mm 0;
+        }
+        
+        .highlight-title {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 2mm;
+        }
+        
+        /* Quote */
+        blockquote {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 12pt;
+            color: var(--navy);
+            border-left: 2px solid var(--gold);
+            padding-left: 5mm;
+            margin: 6mm 0;
+        }
+        
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 6mm 0;
+            font-size: 10pt;
+        }
+        
+        th {
+            background: var(--navy);
+            color: white;
+            padding: 3mm;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 3mm;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        tr:nth-child(even) {
+            background: var(--bg-warm);
+        }
+        
+        /* Warning/Tip Box */
+        .tip {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 2mm;
+            padding: 4mm;
+            margin: 5mm 0;
+        }
+        
+        .tip-title {
+            color: #276749;
+            font-weight: 600;
+            margin-bottom: 2mm;
+        }
+        
+        .warning {
+            background: #fff5f5;
+            border: 1px solid #feb2b2;
+            border-radius: 2mm;
+            padding: 4mm;
+            margin: 5mm 0;
+        }
+        
+        .warning-title {
+            color: #c53030;
+            font-weight: 600;
+            margin-bottom: 2mm;
+        }
+        
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 25mm;
+            right: 25mm;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9pt;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 3mm;
+        }
+        
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: 8mm;
+            border-radius: 3mm;
+            text-align: center;
+            margin: 10mm 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-family: var(--serif);
+            font-size: 14pt;
+            margin-bottom: 3mm;
+        }
+        
+        .cta-box p {
+            opacity: 0.9;
+            text-align: center;
+            margin-bottom: 4mm;
+        }
+        
+        .cta-box .url {
+            background: rgba(255,255,255,0.2);
+            padding: 2mm 4mm;
+            border-radius: 2mm;
+            font-weight: 600;
+        }
+        
+        /* Number highlight */
+        .stat {
+            font-family: var(--serif);
+            font-size: 24pt;
+            color: var(--gold);
+            display: block;
+            margin: 4mm 0;
+        }
+        
+        strong {
+            color: var(--navy);
+        }
+        
+        em {
+            color: var(--gold);
+            font-style: normal;
+            font-weight: 600;
+        }
+        
+        /* TOC */
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 2mm 0;
+            border-bottom: 1px dotted var(--border);
+        }
+        
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+        
+        .toc-chapter {
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        /* Two columns */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8mm;
+            margin: 5mm 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="page cover">
+    <div class="cover-icon">🥈</div>
+    <h1>Kako začeti<br>z naložbo v srebro</h1>
+    <p class="subtitle">Praktičen vodnik za začetnike</p>
+    <p class="author">nakupsrebra.com</p>
+    <p class="year">2026</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="page">
+    <h1>Vsebina</h1>
+    <p class="lead">Vse kar morate vedeti, preden kupite prvo unčo.</p>
+    
+    <div style="margin-top: 10mm;">
+        <div class="toc-item">
+            <span class="toc-chapter">1. Zakaj srebro v letu 2026</span>
+            <span>3</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">2. Osnove plemenitih kovin</span>
+            <span>5</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">3. Kdaj je pravi čas za nakup</span>
+            <span>8</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">4. Kako kupiti srebro</span>
+            <span>10</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">5. Hramba in varnost</span>
+            <span>13</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">6. Davki in zakonodaja v Sloveniji</span>
+            <span>15</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">7. Pet napak začetnikov</span>
+            <span>17</span>
+        </div>
+        <div class="toc-item">
+            <span class="toc-chapter">8. Vaši naslednji koraki</span>
+            <span>19</span>
+        </div>
+    </div>
+    
+    <div class="highlight" style="margin-top: 20mm;">
+        <p class="highlight-title">O tem vodniku</p>
+        <p>Ta vodnik je napisan za ljudi, ki razmišljajo o nakupu srebra, a ne vedo, kje začeti. Brez prodajnega pritiska. Brez skritih namenov. Samo informacije, ki bi jih želel imeti, ko sem sam začenjal.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>nakupsrebra.com</span>
+        <span>2</span>
+    </div>
+</div>
+
+<!-- CHAPTER 1: ZAKAJ SREBRO -->
+<div class="page">
+    <div class="chapter-num">1</div>
+    <h1>Zakaj srebro v letu 2026</h1>
+    <p class="lead">Tri prepričljive razloge, zakaj je zdaj pravi čas za razmislek o naložbi v plemenite kovine.</p>
+    
+    <h2>Inflacija ni začasna</h2>
+    <p>Centralne banke po vsem svetu so v zadnjih letih natisnile več denarja kot kadarkoli v zgodovini. Rezultat? Vaš denar na banki izgublja vrednost vsak dan. 1.000 € danes kupi manj kot 1.000 € pred petimi leti.</p>
+    
+    <p>Srebro je hranilo vrednost več kot <em>5.000 let</em>. Nobena valuta, banka ali vlada ne more tega trditi.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">💡 Dejstvo</p>
+        <p>Od leta 1971, ko je Nixon ukinil zlati standard, je ameriški dolar izgubil več kot 85% svoje kupne moči. Srebro? Še vedno tukaj.</p>
+    </div>
+    
+    <h2>Industrijska poraba raste</h2>
+    <p>Srebro ni samo "naložbena kovina" — je kritičen industrijski material. Uporablja se v:</p>
+    <ul>
+        <li><strong>Sončnih paneliih</strong> — vsak panel potrebuje srebro</li>
+        <li><strong>Električnih vozilih</strong> — več kot tradicionalna vozila</li>
+        <li><strong>Elektroniki</strong> — telefoni, računalniki, medicinska oprema</li>
+        <li><strong>5G infrastrukturi</strong> — antene in oprema</li>
+    </ul>
+    
+    <p>Povpraševanje raste, medtem ko so zaloge omejene. To je recept za rast cene.</p>
+    
+    <h2>Zgodovinsko podcenjeno</h2>
+    <p>Razmerje med ceno zlata in srebra (Gold/Silver Ratio) nam pove, koliko unč srebra lahko kupimo za eno unčo zlata.</p>
+    
+    <table>
+        <tr>
+            <th>Obdobje</th>
+            <th>Razmerje</th>
+            <th>Pomen</th>
+        </tr>
+        <tr>
+            <td>Zgodovinsko povprečje</td>
+            <td>15:1</td>
+            <td>Naravno razmerje v zemlji</td>
+        </tr>
+        <tr>
+            <td>20. stoletje povprečje</td>
+            <td>47:1</td>
+            <td>Moderno povprečje</td>
+        </tr>
+        <tr>
+            <td>Danes (2026)</td>
+            <td>~85:1</td>
+            <td>Srebro podcenjeno</td>
+        </tr>
+    </table>
+    
+    <p>Ko je razmerje visoko, to pomeni, da je srebro <em>podcenjeno</em> glede na zlato. Mnogi vlagatelji verjamejo, da se bo razmerje vrnilo bližje zgodovinskemu povprečju — kar pomeni velik potencial rasti za srebro.</p>
+    
+    <div class="page-footer">
+        <span>Zakaj srebro v letu 2026</span>
+        <span>3</span>
+    </div>
+</div>
+
+<!-- CHAPTER 1 CONTINUED -->
+<div class="page">
+    <h2>Za koga je naložba v srebro</h2>
+    
+    <p>Srebro ni za vsakogar. Je pa odlična izbira za ljudi, ki:</p>
+    
+    <ul>
+        <li>Želijo <strong>diverzificirati</strong> prihranke izven bančnega sistema</li>
+        <li>Iščejo <strong>zaščito pred inflacijo</strong></li>
+        <li>Razmišljajo <strong>dolgoročno</strong> (5+ let)</li>
+        <li>Cenijo <strong>fizično lastništvo</strong> premoženja</li>
+        <li>Želijo <strong>preprosto</strong> naložbo brez zapletenih finančnih produktov</li>
+    </ul>
+    
+    <div class="warning">
+        <p class="warning-title">⚠️ Pomembno opozorilo</p>
+        <p>Srebro ni shema za hitro bogastvo. Cena niha — včasih močno. Nikoli ne vlagajte denarja, ki ga potrebujete na kratki rok. To je dolgoročna strategija ohranjanja vrednosti.</p>
+    </div>
+    
+    <h2>Kaj boste izvedeli v tem vodniku</h2>
+    
+    <p>V naslednjih poglavjih vas bom vodil skozi:</p>
+    
+    <ol>
+        <li>Razlike med vrstami naložb v srebro</li>
+        <li>Kako prepoznati pravi čas za nakup</li>
+        <li>Praktične korake za prvi nakup</li>
+        <li>Kako varno hraniti srebro</li>
+        <li>Davčne implikacije v Sloveniji</li>
+        <li>Napake, ki se jim morate izogniti</li>
+    </ol>
+    
+    <blockquote>
+        "Najboljši čas za nakup srebra je bil pred 10 leti. Drugi najboljši čas je danes."
+    </blockquote>
+    
+    <p>Začnimo.</p>
+    
+    <div class="page-footer">
+        <span>Zakaj srebro v letu 2026</span>
+        <span>4</span>
+    </div>
+</div>
+
+<!-- CHAPTER 2: OSNOVE -->
+<div class="page">
+    <div class="chapter-num">2</div>
+    <h1>Osnove plemenitih kovin</h1>
+    <p class="lead">Preden kupite prvo unčo, morate razumeti osnove. Tukaj je vse, kar potrebujete.</p>
+    
+    <h2>Srebro vs Zlato vs Banka</h2>
+    
+    <p>Vsaka oblika varčevanja ima svoje prednosti in slabosti:</p>
+    
+    <table>
+        <tr>
+            <th></th>
+            <th>Banka</th>
+            <th>Zlato</th>
+            <th>Srebro</th>
+        </tr>
+        <tr>
+            <td><strong>Dostopnost</strong></td>
+            <td>Takojšnja</td>
+            <td>Srednja</td>
+            <td>Visoka</td>
+        </tr>
+        <tr>
+            <td><strong>Vstopni prag</strong></td>
+            <td>Nizek</td>
+            <td>Visok (~2.500€/oz)</td>
+            <td>Nizek (~28€/oz)</td>
+        </tr>
+        <tr>
+            <td><strong>Zaščita pred inflacijo</strong></td>
+            <td>Slaba</td>
+            <td>Odlična</td>
+            <td>Odlična</td>
+        </tr>
+        <tr>
+            <td><strong>Tveganje nasprotne stranke</strong></td>
+            <td>Da (banka)</td>
+            <td>Ne</td>
+            <td>Ne</td>
+        </tr>
+        <tr>
+            <td><strong>Potencial rasti</strong></td>
+            <td>Obresti ~0-2%</td>
+            <td>Zmeren</td>
+            <td>Visok</td>
+        </tr>
+    </table>
+    
+    <div class="tip">
+        <p class="tip-title">✅ Nasvet</p>
+        <p>Mnogi vlagatelji držijo kombinacijo vseh treh. Banka za likvidnost, zlato za stabilnost, srebro za potencial rasti.</p>
+    </div>
+    
+    <h2>Fizično vs "Papirnato" srebro</h2>
+    
+    <p>Obstajata dva osnovna načina za naložbo v srebro:</p>
+    
+    <h3>1. Fizično srebro</h3>
+    <p>Kovanci, palice in druge oblike, ki jih dejansko držite v rokah. Vi ste lastnik. Nobena banka, borza ali posrednik ne more vplivati na vaše premoženje.</p>
+    
+    <h3>2. "Papirnato" srebro</h3>
+    <p>ETF skladi, certifikati, terminske pogodbe. Lažje za trgovanje, a nikoli ne držite pravega srebra. Vedno obstaja nasprotna stranka, ki lahko odpove.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">📌 Moje priporočilo</p>
+        <p>Za začetnike vedno priporočam <strong>fizično srebro</strong>. Papirnato srebro je špekulacija — fizično srebro je varčevanje. Razlika je ključna.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Osnove plemenitih kovin</span>
+        <span>5</span>
+    </div>
+</div>
+
+<!-- CHAPTER 2 CONTINUED -->
+<div class="page">
+    <h2>Ključni pojmi, ki jih morate poznati</h2>
+    
+    <h3>Trojska unča (oz)</h3>
+    <p>Standardna merska enota za plemenite kovine. Ena trojska unča = 31,1 gramov. Ko vidite ceno "na unčo", gre za trojsko unčo.</p>
+    
+    <h3>Spot cena</h3>
+    <p>Trenutna tržna cena srebra na svetovnih borzah. To je "surova" cena — ko kupujete fizično srebro, vedno plačate nekaj več (premija).</p>
+    
+    <h3>Premija (premium)</h3>
+    <p>Razlika med spot ceno in dejansko ceno, ki jo plačate. Vključuje stroške predelave, distribucije in maržo prodajalca. Tipična premija je 15-30% nad spot ceno.</p>
+    
+    <div class="two-col">
+        <div>
+            <h3>Čistost (fineness)</h3>
+            <p>Koliko čistega srebra vsebuje izdelek:</p>
+            <ul>
+                <li><strong>.999</strong> — 99,9% čisto (standard)</li>
+                <li><strong>.9999</strong> — 99,99% čisto (premium)</li>
+                <li><strong>.925</strong> — Sterling srebro (nakit)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Likvidnost</h3>
+            <p>Kako hitro in enostavno lahko prodate. Standardni kovanci (npr. Maple Leaf, Philharmoniker) imajo visoko likvidnost. Eksotični izdelki so težje prodajljivi.</p>
+        </div>
+    </div>
+    
+    <h2>Kovanci vs Palice</h2>
+    
+    <table>
+        <tr>
+            <th></th>
+            <th>Kovanci</th>
+            <th>Palice</th>
+        </tr>
+        <tr>
+            <td><strong>Premija</strong></td>
+            <td>Višja (20-30%)</td>
+            <td>Nižja (8-15%)</td>
+        </tr>
+        <tr>
+            <td><strong>Likvidnost</strong></td>
+            <td>Zelo visoka</td>
+            <td>Visoka</td>
+        </tr>
+        <tr>
+            <td><strong>Prepoznavnost</strong></td>
+            <td>Takojšnja</td>
+            <td>Potrebna verifikacija</td>
+        </tr>
+        <tr>
+            <td><strong>Velikosti</strong></td>
+            <td>1 oz (standard)</td>
+            <td>100g, 500g, 1kg</td>
+        </tr>
+        <tr>
+            <td><strong>Idealno za</strong></td>
+            <td>Manjše nakupe</td>
+            <td>Večje količine</td>
+        </tr>
+    </table>
+    
+    <div class="tip">
+        <p class="tip-title">✅ Za začetnike</p>
+        <p>Začnite s standardnimi 1 oz kovanci priznanih kovnic (Avstrija, Kanada, ZDA). Imajo najboljšo kombinacijo prepoznavnosti, likvidnosti in vrednosti.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Osnove plemenitih kovin</span>
+        <span>6</span>
+    </div>
+</div>
+
+<!-- CHAPTER 2 CONTINUED - POPULAR COINS -->
+<div class="page">
+    <h2>Najbolj priljubljeni srebrniki</h2>
+    
+    <p>Te kovance boste najpogosteje srečali. Vsi so .999 čistosti in mednarodno priznani:</p>
+    
+    <h3>🇦🇹 Dunajski filharmonik (Vienna Philharmonic)</h3>
+    <p>Avstrijska kovnica. Najpopularnejši v Evropi. Oproščen DDV v EU kot naložbeno srebro. Odlična izbira za slovenske vlagatelje.</p>
+    
+    <h3>🇨🇦 Kanadski javorjev list (Maple Leaf)</h3>
+    <p>Kraljeva kanadska kovnica. .9999 čistost (najvišja na trgu). Izjemni varnostni elementi. Premium izbira.</p>
+    
+    <h3>🇺🇸 Ameriški orel (Silver Eagle)</h3>
+    <p>Kovnica ZDA. Najbolj prepoznaven na svetu. Višja premija, a tudi višja vrednost pri prodaji. Idealen za ameriške trge.</p>
+    
+    <h3>🇬🇧 Britanija (Britannia)</h3>
+    <p>Kraljeva kovnica Velike Britanije. Eleganten dizajn. Dobre varnostne funkcije. Priljubljen v Evropi.</p>
+    
+    <h3>🇦🇺 Avstralski kanguru (Kangaroo)</h3>
+    <p>Perth Mint. Vsako leto nov dizajn. Zbirateljska vrednost. Popularen med zbiratelji.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">💡 Moja izbira za Slovenijo</p>
+        <p><strong>Dunajski filharmonik</strong> — nizke premije, visoka likvidnost v EU, oproščen DDV kot naložbeno srebro, enostavna nabava iz sosednje Avstrije.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Osnove plemenitih kovin</span>
+        <span>7</span>
+    </div>
+</div>
+
+<!-- CHAPTER 3: KDAJ KUPITI -->
+<div class="page">
+    <div class="chapter-num">3</div>
+    <h1>Kdaj je pravi čas za nakup</h1>
+    <p class="lead">Nihče ne more napovedati dna. A obstajajo signali, ki vam lahko pomagajo.</p>
+    
+    <h2>Pozabite na "timing the market"</h2>
+    
+    <p>Naj vam povem skrivnost: <em>nihče</em> ne ve, kdaj bo srebro najcenejše. Profesionalni trgovci, analitiki, "gurui" — vsi ugibajo. Nekateri imajo srečo, večina ne.</p>
+    
+    <p>Namesto iskanja popolnega trenutka, uporabite strategijo, ki deluje:</p>
+    
+    <h2>DCA — Dollar Cost Averaging</h2>
+    
+    <p>Preprosta, a izjemno učinkovita strategija:</p>
+    
+    <ol>
+        <li>Določite mesečni znesek (npr. 200€)</li>
+        <li>Kupite srebro vsak mesec, ne glede na ceno</li>
+        <li>Ponavljajte leta</li>
+    </ol>
+    
+    <p>Rezultat? Vaša povprečna nakupna cena se izravna. Kupite več, ko je poceni, manj, ko je drago. Brez stresa, brez ugibanja.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">📊 Primer</p>
+        <p>Vlagatelj, ki bi vsak mesec kupil za 200€ srebra v zadnjih 5 letih, bi danes imel povprečno nakupno ceno ~22€/oz — precej pod trenutno ceno ~28€/oz.</p>
+    </div>
+    
+    <h2>Signali, ki nakazujejo dober čas</h2>
+    
+    <p>Čeprav ne morete "ujeti dna", lahko spremljate te indikatorje:</p>
+    
+    <h3>1. Razmerje zlato/srebro nad 80</h3>
+    <p>Ko razmerje preseže 80:1, je srebro zgodovinsko podcenjeno. Danes smo pri ~85:1 — to je signal.</p>
+    
+    <h3>2. Realne obrestne mere so negativne</h3>
+    <p>Ko je inflacija višja od bančnih obresti, denar na banki izgublja vrednost. Plemenite kovine postanejo privlačnejše.</p>
+    
+    <h3>3. Geopolitična negotovost</h3>
+    <p>V časih nestabilnosti ljudje iščejo "varne luke". Srebro in zlato sta zgodovinsko dokazani zaščiti.</p>
+    
+    <div class="page-footer">
+        <span>Kdaj je pravi čas za nakup</span>
+        <span>8</span>
+    </div>
+</div>
+
+<!-- CHAPTER 3 CONTINUED -->
+<div class="page">
+    <h2>Kdaj NE kupiti</h2>
+    
+    <p>Prav tako pomembno je vedeti, kdaj počakati:</p>
+    
+    <div class="warning">
+        <p class="warning-title">⚠️ Ne kupujte, če:</p>
+        <ul>
+            <li>Potrebujete denar v naslednjih 1-2 letih</li>
+            <li>Nimate vzpostavljenega varnostnega sklada (3-6 mesecev stroškov)</li>
+            <li>Kupujete iz panike ali FOMO</li>
+            <li>Ne razumete, kaj kupujete</li>
+            <li>Bi morali vzeti kredit za nakup</li>
+        </ul>
+    </div>
+    
+    <h2>Moja priporočena strategija</h2>
+    
+    <p>Za večino ljudi priporočam kombinacijo:</p>
+    
+    <ol>
+        <li><strong>Začetni nakup</strong> — Večji nakup za vzpostavitev pozicije (npr. 10-20 oz)</li>
+        <li><strong>Mesečno varčevanje</strong> — Reden nakup fiksnega zneska (DCA)</li>
+        <li><strong>Oportunistični nakupi</strong> — Dodatni nakupi ob večjih padcih cene (-10% ali več)</li>
+    </ol>
+    
+    <div class="highlight">
+        <p class="highlight-title">📌 Praktičen primer</p>
+        <p><strong>Marko, 35 let, Ljubljana:</strong></p>
+        <p>• Začetni nakup: 15 oz Filharmonikov (420€)</p>
+        <p>• Mesečno: 150€ (5-6 oz)</p>
+        <p>• Po enem letu: ~85 oz srebra</p>
+        <p>• Povprečna cena: izravnana čez vse tržne razmere</p>
+    </div>
+    
+    <blockquote>
+        "Najboljši dan za sajenje drevesa je bil pred 20 leti. Drugi najboljši dan je danes. Isto velja za srebro."
+    </blockquote>
+    
+    <div class="page-footer">
+        <span>Kdaj je pravi čas za nakup</span>
+        <span>9</span>
+    </div>
+</div>
+
+<!-- CHAPTER 4: KAKO KUPITI -->
+<div class="page">
+    <div class="chapter-num">4</div>
+    <h1>Kako kupiti srebro</h1>
+    <p class="lead">Praktični koraki od izbire prodajalca do prvega nakupa.</p>
+    
+    <h2>Kje kupiti srebro</h2>
+    
+    <h3>1. Specializirani trgovci s plemenitimi kovinami</h3>
+    <p>Najboljša izbira za začetnike. Ponujajo širok izbor, konkurenčne cene in strokovno svetovanje. Primeri v regiji:</p>
+    <ul>
+        <li><strong>Avstrija:</strong> Münze Österreich (državna kovnica), philoro, Goldvorsorge</li>
+        <li><strong>Nemčija:</strong> Degussa, pro auance</li>
+        <li><strong>Slovenija:</strong> Moro & Kunst, Elementum</li>
+    </ul>
+    
+    <h3>2. Online trgovci</h3>
+    <p>Pogosto najnižje cene, a dodajte stroške pošiljanja. Preverite zanesljivost pred nakupom. Ugledni: APMEX, JM Bullion, European Mint.</p>
+    
+    <h3>3. Banke</h3>
+    <p>Nekatere banke prodajajo naložbeno zlato, redkeje srebro. Višje premije, a zaupanja vreden vir.</p>
+    
+    <div class="warning">
+        <p class="warning-title">⚠️ Izogibajte se</p>
+        <ul>
+            <li>eBay in podobne platforme (tveganje ponaredkov)</li>
+            <li>Neznani prodajalci brez ugleda</li>
+            <li>"Predobrim" ponudbam (če je predobro, da bi bilo res...)</li>
+            <li>Prodajalcem, ki pritiskajo na hitro odločitev</li>
+        </ul>
+    </div>
+    
+    <h2>Kaj preveriti pred nakupom</h2>
+    
+    <table>
+        <tr>
+            <th>Kriterij</th>
+            <th>Kaj iskati</th>
+        </tr>
+        <tr>
+            <td><strong>Ugled</strong></td>
+            <td>Ocene, leta poslovanja, članstvo v združenjih</td>
+        </tr>
+        <tr>
+            <td><strong>Cena</strong></td>
+            <td>Primerjajte premijo nad spot ceno</td>
+        </tr>
+        <tr>
+            <td><strong>Zaloga</strong></td>
+            <td>Ali imajo izdelke na zalogi ali naročajo</td>
+        </tr>
+        <tr>
+            <td><strong>Dostava</strong></td>
+            <td>Stroški, zavarovanje, sledenje</td>
+        </tr>
+        <tr>
+            <td><strong>Odkup</strong></td>
+            <td>Ali odkupujejo nazaj in po kakšni ceni</td>
+        </tr>
+    </table>
+    
+    <div class="page-footer">
+        <span>Kako kupiti srebro</span>
+        <span>10</span>
+    </div>
+</div>
+
+<!-- CHAPTER 4 CONTINUED -->
+<div class="page">
+    <h2>Korak za korakom: Vaš prvi nakup</h2>
+    
+    <h3>Korak 1: Določite proračun</h3>
+    <p>Koliko lahko namenite brez da bi ogrozili svojo finančno varnost? Za začetek priporočam 500-1000€.</p>
+    
+    <h3>Korak 2: Izberite izdelek</h3>
+    <p>Za prvi nakup priporočam standardne 1 oz kovance (Filharmonik, Maple Leaf). Prepoznavni, likvidni, enostavni za shranjevanje.</p>
+    
+    <h3>Korak 3: Primerjajte cene</h3>
+    <p>Preverite 2-3 prodajalce. Primerjajte končno ceno vključno z dostavo. Razlike so lahko precejšnje.</p>
+    
+    <h3>Korak 4: Izvedite nakup</h3>
+    <p>Večina trgovcev sprejema bančno nakazilo (najnižja cena) ali kartico (višja cena, takojšnja izvedba). Izberite zavarovano dostavo.</p>
+    
+    <h3>Korak 5: Preverite dostavo</h3>
+    <p>Ob prevzemu preverite:</p>
+    <ul>
+        <li>Število kosov</li>
+        <li>Stanje embalaže</li>
+        <li>Originalno pakiranje kovnice</li>
+        <li>Potrdilo o nakupu shranite</li>
+    </ul>
+    
+    <div class="highlight">
+        <p class="highlight-title">💡 Pro nasvet: Nakup v Avstriji</p>
+        <p>Če ste blizu meje, razmislite o osebnem nakupu v Avstriji. Prednosti:</p>
+        <ul>
+            <li>Brez stroškov pošiljanja</li>
+            <li>Takojšen prevzem</li>
+            <li>Osebna verifikacija izdelkov</li>
+            <li>Münze Österreich v Dunaju — vir iz prve roke</li>
+        </ul>
+    </div>
+    
+    <div class="page-footer">
+        <span>Kako kupiti srebro</span>
+        <span>11</span>
+    </div>
+</div>
+
+<!-- CHAPTER 4 CONTINUED - VERIFICATION -->
+<div class="page">
+    <h2>Kako prepoznati pristno srebro</h2>
+    
+    <p>Ponaredki obstajajo. Tukaj so načini za verifikacijo:</p>
+    
+    <h3>1. Vizualni pregled</h3>
+    <ul>
+        <li>Ostre, jasne podrobnosti dizajna</li>
+        <li>Pravilna teža (1 oz = 31,1g)</li>
+        <li>Pravilne dimenzije (preverite specifikacije kovnice)</li>
+        <li>Konsistentna barva in sijaj</li>
+    </ul>
+    
+    <h3>2. Magnetni test</h3>
+    <p>Srebro je diamagnetno — ne privlači magneta. Če se kovanec prime magneta, ni pravo srebro. Pozor: ta test ne zazna vseh ponaredkov.</p>
+    
+    <h3>3. Zvočni test ("ping test")</h3>
+    <p>Pravo srebro ob udarcu proizvede jasen, visok, dolgotrajen zvok. Ponaredki zvenijo "mrtvo" ali topo.</p>
+    
+    <h3>4. Profesionalni testi</h3>
+    <p>Za večje nakupe razmislite o:</p>
+    <ul>
+        <li>XRF analiza (rentgenska fluorescenca)</li>
+        <li>Specifična teža test</li>
+        <li>Ultrazvočni test</li>
+    </ul>
+    
+    <div class="tip">
+        <p class="tip-title">✅ Najboljša zaščita</p>
+        <p>Kupujte samo pri uglednih prodajalcih in v originalnem pakiranju kovnice. To drastično zmanjša tveganje ponaredkov.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Kako kupiti srebro</span>
+        <span>12</span>
+    </div>
+</div>
+
+<!-- CHAPTER 5: HRAMBA -->
+<div class="page">
+    <div class="chapter-num">5</div>
+    <h1>Hramba in varnost</h1>
+    <p class="lead">Kupili ste srebro. Kam z njim?</p>
+    
+    <h2>Možnosti hrambe</h2>
+    
+    <h3>1. Doma</h3>
+    <p><strong>Prednosti:</strong> Takojšen dostop, brez stroškov hrambe, popolna zasebnost.</p>
+    <p><strong>Slabosti:</strong> Tveganje kraje, požara, naravnih nesreč.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">Če hranite doma:</p>
+        <ul>
+            <li>Investirajte v kakovosten sef (pritrjen v tla/steno)</li>
+            <li>Ne govorite o tem, da imate srebro doma</li>
+            <li>Razmislite o več lokacijah (ne vse na enem mestu)</li>
+            <li>Preverite zavarovanje stanovanja/hiše</li>
+        </ul>
+    </div>
+    
+    <h3>2. Bančni sef</h3>
+    <p><strong>Prednosti:</strong> Visoka varnost, zavarovanje, relativno dostopno.</p>
+    <p><strong>Slabosti:</strong> Omejen dostop (bančni urnik), mesečni stroški, banka ve kaj imate.</p>
+    
+    <h3>3. Specializirana hramba (trezorji)</h3>
+    <p><strong>Prednosti:</strong> Najvišja varnost, polno zavarovanje, pogosto izven bančnega sistema.</p>
+    <p><strong>Slabosti:</strong> Višji stroški, ni takojšnega dostopa.</p>
+    
+    <p>Ugledne opcije: Brinks, Loomis, Das Safe (Avstrija), Swiss Gold Safe.</p>
+    
+    <h3>4. Hramba v tujini</h3>
+    <p><strong>Prednosti:</strong> Geografska diverzifikacija, zaščita pred lokalnimi tveganji.</p>
+    <p><strong>Slabosti:</strong> Kompleksnost, stroški, morebitne davčne obveznosti.</p>
+    
+    <p>Popularne jurisdikcije: Švica, Singapur, Liechtenstein.</p>
+    
+    <div class="page-footer">
+        <span>Hramba in varnost</span>
+        <span>13</span>
+    </div>
+</div>
+
+<!-- CHAPTER 5 CONTINUED -->
+<div class="page">
+    <h2>Primerjava stroškov hrambe</h2>
+    
+    <table>
+        <tr>
+            <th>Možnost</th>
+            <th>Letni strošek</th>
+            <th>Primerno za</th>
+        </tr>
+        <tr>
+            <td>Doma (sef)</td>
+            <td>0€ + enkratni nakup sefa</td>
+            <td>&lt; 10.000€ vrednosti</td>
+        </tr>
+        <tr>
+            <td>Bančni sef</td>
+            <td>50-200€/leto</td>
+            <td>5.000-50.000€</td>
+        </tr>
+        <tr>
+            <td>Specializiran trezor</td>
+            <td>0,5-1% vrednosti/leto</td>
+            <td>> 50.000€</td>
+        </tr>
+    </table>
+    
+    <h2>Zavarovanje</h2>
+    
+    <p>Ne pozabite na zavarovanje:</p>
+    
+    <ul>
+        <li><strong>Stanovanjsko zavarovanje</strong> — preverite limite za dragocenosti (pogosto nizki)</li>
+        <li><strong>Posebno zavarovanje</strong> — za višje vrednosti potrebujete dodatno polico</li>
+        <li><strong>Dokumentacija</strong> — fotografije, računi, serijske številke</li>
+    </ul>
+    
+    <div class="tip">
+        <p class="tip-title">✅ Moje priporočilo</p>
+        <p>Za večino začetnikov: kakovosten sef doma za manjše količine (&lt; 100 oz) + bančni sef za rezervo. Ko presežete 10.000€ vrednosti, razmislite o specializirani hrambi.</p>
+    </div>
+    
+    <h2>Vzdrževanje srebra</h2>
+    
+    <p>Srebro s časom oksidira (patina). To je normalno in ne vpliva na vrednost. Vendar:</p>
+    
+    <ul>
+        <li>Hranite v suhem prostoru</li>
+        <li>Uporabljajte rokavice pri rokovanju</li>
+        <li>Ne čistite kovancev (lahko zmanjša vrednost)</li>
+        <li>Originalna embalaža je najboljša zaščita</li>
+    </ul>
+    
+    <div class="page-footer">
+        <span>Hramba in varnost</span>
+        <span>14</span>
+    </div>
+</div>
+
+<!-- CHAPTER 6: DAVKI -->
+<div class="page">
+    <div class="chapter-num">6</div>
+    <h1>Davki in zakonodaja v Sloveniji</h1>
+    <p class="lead">Kaj morate vedeti o davčnih obveznostih pri nakupu in prodaji srebra.</p>
+    
+    <div class="warning">
+        <p class="warning-title">⚠️ Opozorilo</p>
+        <p>Te informacije so splošne narave in ne predstavljajo davčnega svetovanja. Za vašo specifično situacijo se posvetujte z davčnim svetovalcem.</p>
+    </div>
+    
+    <h2>DDV pri nakupu</h2>
+    
+    <p>Tukaj je ključna razlika med zlatom in srebrom:</p>
+    
+    <table>
+        <tr>
+            <th></th>
+            <th>Zlato</th>
+            <th>Srebro</th>
+        </tr>
+        <tr>
+            <td><strong>Naložbeno (kovanci, palice)</strong></td>
+            <td>Oproščeno DDV</td>
+            <td>22% DDV*</td>
+        </tr>
+        <tr>
+            <td><strong>Industrijsko</strong></td>
+            <td>22% DDV</td>
+            <td>22% DDV</td>
+        </tr>
+    </table>
+    
+    <p>*V nekaterih državah EU obstajajo izjeme ali diferencialna obdavčitev za naložbeno srebro.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">💡 Nakup v tujini</p>
+        <p>Pri nakupu v drugi državi EU (npr. Avstrija) plačate DDV države nakupa. Estonija, na primer, ima diferenciran DDV sistem, ki lahko pomeni nižjo efektivno stopnjo.</p>
+    </div>
+    
+    <h2>Davek na kapitalski dobiček</h2>
+    
+    <p>Ko prodate srebro z dobičkom, ste načeloma zavezani za davek na kapitalski dobiček:</p>
+    
+    <ul>
+        <li>Stopnja: do 27,5% (odvisno od obdobja lastništva)</li>
+        <li>Po 15 letih lastništva: možna oprostitev</li>
+        <li>Obveznost prijave v letni napovedi</li>
+    </ul>
+    
+    <div class="tip">
+        <p class="tip-title">✅ Pomembno</p>
+        <p>Hranite vse račune in dokumentacijo o nakupih. Dokazilo o nakupni ceni je ključno za izračun kapitalskega dobička ob prodaji.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Davki in zakonodaja v Sloveniji</span>
+        <span>15</span>
+    </div>
+</div>
+
+<!-- CHAPTER 6 CONTINUED -->
+<div class="page">
+    <h2>Prijava premoženja</h2>
+    
+    <p>Fizično srebro, ki ga hranite doma ali v sefu, načeloma ni potrebno posebej prijavljati. Vendar:</p>
+    
+    <ul>
+        <li>Vrednost se upošteva pri oceni celotnega premoženja</li>
+        <li>Pri prodaji nastane davčna obveznost</li>
+        <li>Pri dedovanju se všteje v zapuščino</li>
+    </ul>
+    
+    <h2>Dedovanje plemenitih kovin</h2>
+    
+    <p>Srebro se deduje kot vsako drugo premoženje:</p>
+    
+    <ul>
+        <li>Bližnji sorodniki (otroci, zakonec): davčna olajšava do določene vrednosti</li>
+        <li>Oddaljeni sorodniki in drugi: višje stopnje davka na dedovanje</li>
+        <li>Oporoka lahko določi specifično razporeditev</li>
+    </ul>
+    
+    <div class="highlight">
+        <p class="highlight-title">📌 Praktičen nasvet</p>
+        <p>Vodite evidenco vaših naložb in hranite jo na varnem mestu. Ob morebitnem dedovanju bodo vaši dediči vedeli, kaj imate in kje je shranjeno.</p>
+    </div>
+    
+    <h2>Čezmejni nakupi in uvoz</h2>
+    
+    <p>Pri nakupu izven EU:</p>
+    
+    <ul>
+        <li>Carinske dajatve na srebro</li>
+        <li>Uvozni DDV</li>
+        <li>Obveznost prijave na carini</li>
+    </ul>
+    
+    <p>Za nakupe znotraj EU te obveznosti ne veljajo (prosti pretok blaga).</p>
+    
+    <div class="warning">
+        <p class="warning-title">⚠️ Spremembe zakonodaje</p>
+        <p>Davčna zakonodaja se lahko spremeni. Vedno preverite aktualne predpise ali se posvetujte s strokovnjakom pred večjimi transakcijami.</p>
+    </div>
+    
+    <div class="page-footer">
+        <span>Davki in zakonodaja v Sloveniji</span>
+        <span>16</span>
+    </div>
+</div>
+
+<!-- CHAPTER 7: NAPAKE -->
+<div class="page">
+    <div class="chapter-num">7</div>
+    <h1>Pet napak začetnikov</h1>
+    <p class="lead">Napake, ki sem jih videl (in nekatere naredil sam). Izognite se jim.</p>
+    
+    <h2>Napaka #1: Nakup iz panike</h2>
+    
+    <p>Ko cene rastejo ali ko so novice polne kriz, se zdi, da morate kupiti <em>zdaj</em>. To je FOMO (fear of missing out) — in je slab svetovalec.</p>
+    
+    <p><strong>Rešitev:</strong> Določite strategijo vnaprej. Kupujte po načrtu, ne po občutkih. DCA deluje ravno zato, ker odstrani emocije iz enačbe.</p>
+    
+    <h2>Napaka #2: Vsi prihranki v srebru</h2>
+    
+    <p>Srebro je del portfelja, ne celoten portfelj. Če imate vse prihranke v srebru in potrebujete denar zdaj, boste morda morali prodati v najslabšem trenutku.</p>
+    
+    <p><strong>Rešitev:</strong> Srebro naj predstavlja 5-20% vašega premoženja. Najprej vzpostavite varnostni sklad (3-6 mesecev stroškov) v gotovini.</p>
+    
+    <h2>Napaka #3: Lovljenje najnižjih premij</h2>
+    
+    <p>Najcenejši prodajalec ni vedno najboljši. Izjemno nizke premije pogosto pomenijo:</p>
+    <ul>
+        <li>Dolge dobavne roke</li>
+        <li>Vprašljivo kakovost ali pristnost</li>
+        <li>Slabo podporo in odkup</li>
+    </ul>
+    
+    <p><strong>Rešitev:</strong> Izberite ugled pred ceno. Plačajte malenkost več za miren spanec.</p>
+    
+    <div class="page-footer">
+        <span>Pet napak začetnikov</span>
+        <span>17</span>
+    </div>
+</div>
+
+<!-- CHAPTER 7 CONTINUED -->
+<div class="page">
+    <h2>Napaka #4: Eksotični izdelki</h2>
+    
+    <p>Zbirateljski kovanci, limitirane serije, eksotični dizajni — vse to je lahko zanimivo, a za naložbeno srebro je problematično:</p>
+    
+    <ul>
+        <li>Višje premije pri nakupu</li>
+        <li>Nižja likvidnost pri prodaji</li>
+        <li>Težje preveriti pristnost</li>
+    </ul>
+    
+    <p><strong>Rešitev:</strong> Za naložbene namene se držite standardnih, mednarodno priznanih kovancev (Filharmonik, Maple Leaf, itd.). Zbirateljstvo je ločen hobi.</p>
+    
+    <h2>Napaka #5: Govorjenje o tem</h2>
+    
+    <p>Razumljivo je, da ste navdušeni nad novo naložbo. Vendar obveščanje vseh naokoli o tem, da imate doma srebro, ni pametno.</p>
+    
+    <p><strong>Rešitev:</strong> Bodite diskretni. Vaši bližnji naj vedo (zaradi dedovanja), sicer pa je to vaša zasebna stvar.</p>
+    
+    <div class="highlight">
+        <p class="highlight-title">📌 Povzetek: 5 zapovedi</p>
+        <ol>
+            <li>Kupuj po načrtu, ne po občutkih</li>
+            <li>Diverzificiraj — srebro je del, ne celota</li>
+            <li>Izberi ugled pred najnižjo ceno</li>
+            <li>Drži se standardnih izdelkov</li>
+            <li>Bodi diskreten</li>
+        </ol>
+    </div>
+    
+    <blockquote>
+        "Najboljša naložba je tista, ob kateri mirno spite. Če vas srebro skrbi, imate ga preveč."
+    </blockquote>
+    
+    <div class="page-footer">
+        <span>Pet napak začetnikov</span>
+        <span>18</span>
+    </div>
+</div>
+
+<!-- CHAPTER 8: NASLEDNJI KORAKI -->
+<div class="page">
+    <div class="chapter-num">8</div>
+    <h1>Vaši naslednji koraki</h1>
+    <p class="lead">Prebrali ste vodnik. Kaj zdaj?</p>
+    
+    <h2>Korak 1: Ocenite svojo situacijo</h2>
+    
+    <p>Preden karkoli kupite, si odgovorite:</p>
+    
+    <ul>
+        <li>Ali imam varnostni sklad (3-6 mesecev stroškov)?</li>
+        <li>Koliko lahko namenim brez finančnega stresa?</li>
+        <li>Kakšen je moj časovni horizont? (Naj bo 5+ let)</li>
+        <li>Kam bom shranil srebro?</li>
+    </ul>
+    
+    <h2>Korak 2: Začnite majhno</h2>
+    
+    <p>Prvi nakup naj bo skromen — dovolj, da se naučite procesa, premalo, da bi vas skrbelo. 5-10 unč je odličen začetek.</p>
+    
+    <h2>Korak 3: Vzpostavite rutino</h2>
+    
+    <p>Določite mesečni znesek in se ga držite. Avtomatizirajte, če je mogoče. Konsistentnost je pomembnejša od poskusov ujeti pravi trenutek.</p>
+    
+    <h2>Korak 4: Izobražujte se naprej</h2>
+    
+    <p>Ta vodnik je začetek, ne konec. Spremljajte:</p>
+    <ul>
+        <li>Cene srebra in zlata</li>
+        <li>Razmerje zlato/srebro</li>
+        <li>Makroekonomske novice</li>
+        <li>Naš blog: nakupsrebra.com/blog</li>
+    </ul>
+    
+    <div class="page-footer">
+        <span>Vaši naslednji koraki</span>
+        <span>19</span>
+    </div>
+</div>
+
+<!-- FINAL CTA PAGE -->
+<div class="page">
+    <h2>Imate vprašanja?</h2>
+    
+    <p>Razumem, da je prvi korak najtežji. Zato ponujam brezplačen pogovor vsem, ki razmišljajo o naložbi v plemenite kovine.</p>
+    
+    <div class="cta-box">
+        <h3>Brezplačen posvet</h3>
+        <p>15-minutni pogovor o vaši situaciji in ciljih.<br>Brez obveznosti. Brez prodajnega pritiska.</p>
+        <p class="url">nakupsrebra.com/posvet</p>
+    </div>
+    
+    <p style="text-align: center; margin-top: 15mm;">Skupaj bova pregledala:</p>
+    
+    <ul>
+        <li>Vašo trenutno finančno situacijo</li>
+        <li>Cilje, ki jih želite doseči</li>
+        <li>Strategijo, ki ustreza vašim potrebam</li>
+        <li>Konkretne naslednje korake</li>
+    </ul>
+    
+    <div class="highlight" style="margin-top: 15mm;">
+        <p class="highlight-title">Zakaj brezplačno?</p>
+        <p>Verjamem, da informiran vlagatelj je dober vlagatelj. Če vam bom pomagal razumeti možnosti, se boste lažje odločili — pa naj bo to z mano ali brez mene.</p>
+    </div>
+    
+    <p style="text-align: center; margin-top: 15mm; font-size: 14pt;">
+        <strong>Rezervirajte termin:</strong><br>
+        <span style="color: var(--gold); font-size: 16pt;">nakupsrebra.com/posvet</span>
+    </p>
+    
+    <div class="page-footer">
+        <span>nakupsrebra.com</span>
+        <span>20</span>
+    </div>
+</div>
+
+</body>
+</html>

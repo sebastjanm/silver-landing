@@ -8,67 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/shared.css">
     <style>
-        :root {
-            --bg: #fdfcfa;
-            --bg-warm: #f8f6f1;
-            --navy: #1a365d;
-            --navy-light: #2c5282;
-            --text: #2d3748;
-            --text-muted: #718096;
-            --gold: #b7791f;
-            --gold-light: #d69e2e;
-            --border: #e2e8f0;
-            --serif: 'Libre Baskerville', Georgia, serif;
-            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: var(--sans);
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-            font-size: 17px;
-            padding-top: 61px;
-        }
-        
-        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-        
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(253, 252, 250, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-            z-index: 100;
-        }
-        
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1140px;
-        }
-        
-        .logo {
-            font-family: var(--serif);
-            font-size: 1.1em;
-            color: var(--navy);
-            text-decoration: none;
-        }
-        
-        .nav-cta {
-            background: var(--navy);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
+        /* Page-specific styles */
+        .container { max-width: 900px; }
+        nav .container { max-width: 1140px; }
         
         .blog-header {
             padding: 60px 0 40px;
@@ -134,21 +78,17 @@
             font-size: 0.85em;
             color: var(--text-muted);
         }
-        
-        footer {
-            padding: 40px 0;
-            background: var(--navy);
-            text-align: center;
-            font-size: 0.9em;
-            color: rgba(255, 255, 255, 0.6);
-        }
     </style>
 </head>
 <body>
     <nav>
         <div class="container">
             <a href="/" class="logo">Nakup Srebra</a>
-            <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Domov</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://calendly.com/sebom/new-meeting" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            </div>
         </div>
     </nav>
 

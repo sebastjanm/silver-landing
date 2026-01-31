@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/shared.css">
     <style>
         :root {
             --bg: #fdfcfa;
@@ -50,49 +51,7 @@
             padding: 0 24px;
         }
         
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(253, 252, 250, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            padding: 16px 0;
-            z-index: 100;
-        }
-        
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: var(--serif);
-            font-size: 1.1em;
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 400;
-        }
-        
-        .nav-cta {
-            background: var(--navy);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9em;
-            transition: all 0.2s ease;
-        }
-        
-        .nav-cta:hover {
-            background: var(--navy-light);
-            transform: translateY(-1px);
-        }
+        /* Navigation - styles in shared.css */
         
         /* Price Ticker - bar below nav */
         .price-ticker {
@@ -797,9 +756,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="#" class="logo">Strateško Varčevanje</a>
-            <a href="/blog/" style="color: var(--text-muted); text-decoration: none; margin-right: 16px;">Blog</a>
-            <a href="https://calendly.com/sebastjan/silver" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            <a href="/" class="logo">Nakup Srebra</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Domov</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+                <a href="https://calendly.com/sebom/new-meeting" class="nav-cta" target="_blank">Brezplačen posvet</a>
+            </div>
         </div>
     </nav>
     
@@ -832,7 +794,7 @@
                     <h1>Srebro in zlato še nikoli nista izgubila <em>vse vrednosti.</em></h1>
                     <p class="hero-sub">Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.</p>
                     <div class="hero-cta">
-                        <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
+                        <a href="https://calendly.com/sebom/new-meeting" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
                         <a href="#kako" class="btn btn-secondary">Kako deluje?</a>
                     </div>
                     <div class="hero-trust">
@@ -1061,13 +1023,32 @@
         </div>
     </section>
 
+    <!-- Email Capture -->
+    <section class="email-section">
+        <div class="container">
+            <div class="email-capture">
+                <div class="email-capture-icon">📘</div>
+                <h3>Brezplačen vodnik</h3>
+                <p>Prenesite: <strong>"Kako začeti z naložbo v srebro"</strong></p>
+                <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="email" name="email" placeholder="Vaš email" required>
+                    <button type="submit">Pošlji →</button>
+                </form>
+                <p class="email-trust">
+                    <span>✓ Brez spama</span>
+                    <span>✓ Odjava kadarkoli</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <div class="section-label">Naslednji korak</div>
             <h2 class="section-title">Pravo tveganje je <em>nedelovanje.</em></h2>
             <p class="section-desc">Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti, kako zaščititi prihranke — in jih povečati.</p>
-            <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Rezerviraj brezplačen posvet →</a>
+            <a href="https://calendly.com/sebom/new-meeting" class="btn btn-primary" target="_blank">Rezerviraj brezplačen posvet →</a>
             
             <div class="cta-guarantees">
                 <div class="cta-guarantee">
@@ -1096,7 +1077,7 @@
 
     <!-- Mobile CTA -->
     <div class="mobile-cta">
-        <a href="https://calendly.com/sebastjan/silver" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
+        <a href="https://calendly.com/sebom/new-meeting" class="btn btn-primary" target="_blank">Brezplačen posvet →</a>
     </div>
 
     <script>
