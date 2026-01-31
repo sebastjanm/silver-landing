@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "website",
   "functions": {
     "api/*.js": {
       "memory": 1024,
