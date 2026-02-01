@@ -196,5 +196,26 @@
     "seo": "State-of-the-art SEO + Gen AI optimization",
     "mobile": "Mobile-first design, excellent reading flow",
     "legal": "100% accurate, verifiable data - legally compliant"
+  },
+  "cro_principles": {
+    "psychology": {
+      "social_proof": "Include statistics, testimonials, 'X% of people already...' statements",
+      "scarcity_urgency": "Time-sensitive data, limited opportunities, historical comparisons",
+      "authority": "Academic sources, LBMA, central banks, Reuters - prominently displayed",
+      "reciprocity": "Free guide, free consultation, calculators - give value first",
+      "clarity_of_choice": "Single clear CTA, no multiple competing options"
+    },
+    "copywriting": {
+      "clarity_first": "Headlines instantly understandable, no jargon",
+      "benefits_over_features": "What they GAIN, not what product DOES",
+      "explicit_cta": "'Rezerviraj brezplačen posvet →' NOT 'Pošlji'",
+      "reassuring_microcopy": "Add: 'Brez obveznosti · 15 minut · Brezplačno' near CTAs"
+    },
+    "cta_format": {
+      "headline": "Benefit-oriented question or statement",
+      "subtext": "Brief reassurance",
+      "button": "Action verb + benefit (e.g., 'Rezerviraj brezplačen posvet →')",
+      "microcopy": "Trust signals below button"
+    }
   }
 }
