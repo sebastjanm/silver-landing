@@ -1,0 +1,200 @@
+{
+  "version": "1.0",
+  "created": "2026-02-01",
+  "description": "Content calendar for nakupsrebra.com blog - daily articles at 9:00 CET",
+  "articles": [
+    {
+      "day": 1,
+      "date": "2026-02-02",
+      "slug": "5-napak-pri-nakupu-srebra",
+      "title": "5 napak, ki jih 90% začetnikov naredi pri nakupu srebra (in kako se jim izogniti)",
+      "strategy": "Loss aversion - ljudje bolj reagirajo na izogibanje napakam. Članek pokaže probleme → rešitev = posvet.",
+      "status": "pending"
+    },
+    {
+      "day": 2,
+      "date": "2026-02-03",
+      "slug": "koliko-srebra-za-mini-pokojnino",
+      "title": "Koliko srebra rabite za 'mini pokojnino'? Izračun za Slovence",
+      "strategy": "Praktično + lokalizirano. Bralec vidi, da je dosegljivo → želi personaliziran načrt.",
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "date": "2026-02-04",
+      "slug": "kje-kupiti-srebro-brez-ddv",
+      "title": "Kje in kako kupiti srebro v Sloveniji — brez 22% DDV",
+      "strategy": "SEO + praktična informacija, ki jo vsi iščejo. Zakonite metode.",
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "date": "2026-02-05",
+      "slug": "razmerje-zlato-srebro-85",
+      "title": "Razmerje zlato-srebro je 85:1 — zgodovinsko najvišje. Kaj to pomeni za vas?",
+      "strategy": "Specifična številka = kredibilnost. Implicira priložnost + urgency.",
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "date": "2026-02-06",
+      "slug": "1000-eur-srebro-2000-vs-danes",
+      "title": "1.000€ v srebru leta 2000 vs. 1.000€ na banki: Kaj se je zgodilo?",
+      "strategy": "Konkreten, preverljiv primer. Vizualizacija dolgoročne vrednosti.",
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "date": "2026-02-07",
+      "slug": "prihranki-banka-izgubljajo-vrednost",
+      "title": "Zakaj vaši prihranki na banki izgubljajo vrednost — tudi ko 'ne delate nič'",
+      "strategy": "Strah pred nevidno izgubo. Inflacija kot tihi tat.",
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "date": "2026-02-08",
+      "slug": "bančni-svetovalec-plemenite-kovine",
+      "title": "3 stvari, ki jih vaš bančni svetovalec nikoli ne bo povedal o plemenitih kovinah",
+      "strategy": "Nezaupanje do obstoječih 'avtoritet' → potreba po neodvisnem mnenju.",
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "date": "2026-02-09",
+      "slug": "zadnja-priložnost-srebro-2026",
+      "title": "Zakaj 2026 morda zadnja priložnost za nakup srebra pod 50€/unčo",
+      "strategy": "Občutek omejenega časovnega okna. 'Morda' = verodostojno.",
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "date": "2026-02-10",
+      "slug": "kitajska-indija-kupujejo-srebro",
+      "title": "Kitajska in Indija kupujeta rekordne količine srebra. Kaj vedo, česar mi ne?",
+      "strategy": "Curiosity gap + FOMO. Bralec želi vedeti 'skrivnost'.",
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "date": "2026-02-11",
+      "slug": "družinsko-bogastvo-naslednje-generacije",
+      "title": "Kako zaščititi družinsko bogastvo za naslednje generacije — brez tveganih naložb",
+      "strategy": "Družinske vrednote + dolgoročno razmišljanje. Srebro = konzervativna izbira.",
+      "status": "pending"
+    },
+    {
+      "day": 11,
+      "date": "2026-02-12",
+      "slug": "srebro-5000-let-ni-slo-na-nic",
+      "title": "Srebro: Edina naložba, ki v 5000 letih ni šla na 0",
+      "strategy": "Zgodovinski argument za varnost. Preprosto, močno, preverljivo.",
+      "status": "pending"
+    },
+    {
+      "day": 12,
+      "date": "2026-02-13",
+      "slug": "zdravniki-odvetniki-kupujejo-srebro",
+      "title": "Zakaj zdravniki, odvetniki in podjetniki tiho kupujejo fizično srebro",
+      "strategy": "Social proof od 'pametnih' ljudi. Identifikacija.",
+      "status": "pending"
+    },
+    {
+      "day": 13,
+      "date": "2026-02-14",
+      "slug": "oče-mi-je-dal-50-unc-srebra",
+      "title": "Moj oče mi je dal 50 unč srebra. 20 let pozneje sem razumel zakaj.",
+      "strategy": "Osebna zgodba = čustvena povezava. Format 'lekcije od staršev'.",
+      "status": "pending"
+    },
+    {
+      "day": 14,
+      "date": "2026-02-15",
+      "slug": "30-odstotkov-prihrankov-v-srebro",
+      "title": "Zakaj sem 30% svojih prihrankov pretvoril v fizično srebro (in kaj sem se naučil)",
+      "strategy": "Transparentna osebna izkušnja. Specifičen odstotek = verodostojno.",
+      "status": "pending"
+    },
+    {
+      "day": 15,
+      "date": "2026-02-16",
+      "slug": "tesla-srebrni-kovanec-1920",
+      "title": "Kaj imata skupnega Tesla in srebrni kovanec iz leta 1920?",
+      "strategy": "Nenavadna primerjava = radovednost.",
+      "status": "pending"
+    },
+    {
+      "day": 16,
+      "date": "2026-02-17",
+      "slug": "prvi-nakup-srebra-vodnik",
+      "title": "Prvi nakup srebra: Koraki, stroški in kaj pričakovati (vodnik 2026)",
+      "strategy": "SEO-prijazno, praktično. Zmanjša strah pred neznanim.",
+      "status": "pending"
+    },
+    {
+      "day": 17,
+      "date": "2026-02-18",
+      "slug": "srebro-vs-bitcoin-vs-nepremicnine",
+      "title": "Srebro vs. Bitcoin vs. Nepremičnine: Katera naložba je prava za vas?",
+      "strategy": "Primerjava popularnih možnosti. Posvet pomaga izbrati.",
+      "status": "pending"
+    },
+    {
+      "day": 18,
+      "date": "2026-02-19",
+      "slug": "srebro-ni-spekulacija-zavarovanje",
+      "title": "Zakaj srebro ni 'špekulacija' — ampak najstarejše zavarovanje na svetu",
+      "strategy": "Reframe: od 'tvegano' do 'konzervativno'.",
+      "status": "pending"
+    },
+    {
+      "day": 19,
+      "date": "2026-02-20",
+      "slug": "kaj-pocnejo-premozni-slovenci",
+      "title": "Kaj počnejo premožni Slovenci, ko ne zaupajo bankam?",
+      "strategy": "Ekskluzivno znanje. Bralec se želi počutiti kot 'insider'.",
+      "status": "pending"
+    },
+    {
+      "day": 20,
+      "date": "2026-02-21",
+      "slug": "tiha-strategija-pametni-vlagatelji",
+      "title": "Tiha strategija: Zakaj pametni vlagatelji ne govorijo o svojem srebru",
+      "strategy": "Občutek ekskluzivnega kluba. Posvet = vstopnica.",
+      "status": "pending"
+    },
+    {
+      "day": 21,
+      "date": "2026-02-22",
+      "slug": "priprava-financna-kriza-5000-eur",
+      "title": "Kako se pripraviti na naslednjo finančno krizo — z manj kot 5.000€",
+      "strategy": "Strah + dostopnost. Tudi z malo denarja.",
+      "status": "pending"
+    },
+    {
+      "day": 22,
+      "date": "2026-02-23",
+      "slug": "slovenci-prihranki-banka-0-obresti",
+      "title": "Zakaj Slovenci prihranke še vedno držijo na bankah — kljub 0% obrestim",
+      "strategy": "Izzove status quo. Ali sem eden od njih?",
+      "status": "pending"
+    },
+    {
+      "day": 23,
+      "date": "2026-02-24",
+      "slug": "padec-cene-srebra-kupujem-vec",
+      "title": "Kaj pomeni padec cene srebra za 25% ta teden? (in zakaj kupujem več)",
+      "strategy": "Aktualen dogodek + kontraintuitivna reakcija.",
+      "status": "pending"
+    }
+  ],
+  "requirements": {
+    "research": "Deep research with 10-20 credible sources per article",
+    "sources": "Academic papers, Reuters, Bloomberg, World Silver Survey, LBMA, national statistics",
+    "visuals": "Diagrams, charts, tables, images from licensed sources",
+    "cta": "Every article ends with CTA to /posvet",
+    "seo": "State-of-the-art SEO + Gen AI optimization",
+    "mobile": "Mobile-first design, excellent reading flow",
+    "legal": "100% accurate, verifiable data - legally compliant"
+  }
+}
