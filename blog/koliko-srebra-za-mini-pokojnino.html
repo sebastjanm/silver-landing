@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koliko srebra rabite za 'mini pokojnino'? Izračun za Slovence | Nakup Srebra</title>
+    <meta name="description" content="Praktičen izračun: koliko srebra potrebujete za dodatnih 200-500€ mesečno ob upokojitvi. Konkretne številke za Slovence, realni scenariji, korak za korakom.">
+    <meta name="keywords" content="srebro pokojnina, pokojninski dodatek, naložba v srebro, mini pokojnina, srebro Slovenija, varčevanje za upokojitev">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Koliko srebra rabite za 'mini pokojnino'? Izračun za Slovence">
+    <meta property="og:description" content="Praktičen izračun koliko srebra potrebujete za dodatnih 200-500€ mesečno. Konkretne številke za Slovence.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nakupsrebra.com/blog/koliko-srebra-za-mini-pokojnino">
+    
+    <link rel="canonical" href="https://nakupsrebra.com/blog/koliko-srebra-za-mini-pokojnino">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/shared.css">
+    <style>
+        :root {
+            --bg: #fdfcfa;
+            --bg-warm: #f8f6f1;
+            --bg-red: #fff5f5;
+            --bg-green: #f0fff4;
+            --bg-blue: #f0f7ff;
+            --navy: #1a365d;
+            --text: #2d3748;
+            --text-muted: #718096;
+            --gold: #b7791f;
+            --red: #c53030;
+            --green: #276749;
+            --border: #e2e8f0;
+            --serif: 'Libre Baskerville', Georgia, serif;
+            --sans: 'Source Sans 3', -apple-system, system-ui, sans-serif;
+        }
+        
+        .article-header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .article-header .container {
+            max-width: 800px;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: var(--bg-warm);
+            color: var(--gold);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .article-title {
+            font-family: var(--serif);
+            font-size: 2.2em;
+            color: var(--navy);
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+        
+        .article-meta {
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        
+        .article-content {
+            padding: 50px 0 80px;
+        }
+        
+        .article-content .container {
+            max-width: 800px;
+        }
+        
+        .article-content p {
+            margin-bottom: 24px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        
+        .article-content h2 {
+            font-family: var(--serif);
+            font-size: 1.5em;
+            color: var(--navy);
+            margin: 50px 0 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .article-content h3 {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            color: var(--navy);
+            margin: 30px 0 16px;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 0 0 24px 20px;
+            line-height: 1.8;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        
+        /* Stat Highlight */
+        .stat-highlight {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 2.5em;
+            color: var(--navy);
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin-top: 8px;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .stat-card {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-card .number {
+            font-family: var(--serif);
+            font-size: 1.8em;
+            color: var(--navy);
+            font-weight: 700;
+        }
+        
+        .stat-card .label {
+            font-size: 0.85em;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: var(--bg-red);
+            border-left: 4px solid var(--red);
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 30px 0;
+        }
+        
+        .warning-box h3 {
+            color: var(--red);
+            margin-top: 0;
+            font-size: 1.15em;
+        }
+        
+        .warning-box p {
+            margin-bottom: 0 !important;
+        }
+        
+        /* Success Box */
+        .success-box {
+            background: var(--bg-green);
+            border-left: 4px solid var(--green);
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 30px 0;
+        }
+        
+        .success-box h4 {
+            color: var(--green);
+            margin: 0 0 12px;
+            font-size: 1em;
+        }
+        
+        .success-box p {
+            margin-bottom: 0 !important;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+            border-left: 4px solid var(--navy);
+            border-radius: 0 12px 12px 0;
+            padding: 24px 28px;
+            margin: 30px 0;
+        }
+        
+        .info-box h4 {
+            color: var(--navy);
+            margin: 0 0 12px;
+            font-size: 1em;
+        }
+        
+        .info-box p {
+            margin-bottom: 0 !important;
+        }
+        
+        /* Calculation Table */
+        .calc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 0.95em;
+        }
+        
+        .calc-table th {
+            background: var(--navy);
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .calc-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .calc-table tr:nth-child(even) {
+            background: var(--bg-warm);
+        }
+        
+        .calc-table .highlight-row {
+            background: #fef3c7 !important;
+            font-weight: 600;
+        }
+        
+        .calc-table .number-cell {
+            font-family: var(--serif);
+            font-weight: 600;
+            color: var(--navy);
+        }
+        
+        /* Timeline */
+        .timeline {
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 3px solid var(--gold);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+        
+        .timeline-year {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-text {
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Comparison Card */
+        .comparison-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        @media (max-width: 600px) {
+            .comparison-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .comparison-card {
+            border-radius: 12px;
+            padding: 24px;
+        }
+        
+        .comparison-card.bad {
+            background: var(--bg-red);
+            border: 2px solid var(--red);
+        }
+        
+        .comparison-card.good {
+            background: var(--bg-green);
+            border: 2px solid var(--green);
+        }
+        
+        .comparison-card h4 {
+            margin: 0 0 16px;
+            font-size: 1.1em;
+        }
+        
+        .comparison-card.bad h4 {
+            color: var(--red);
+        }
+        
+        .comparison-card.good h4 {
+            color: var(--green);
+        }
+        
+        .comparison-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .comparison-card li {
+            margin-bottom: 8px;
+        }
+        
+        /* Blockquote */
+        blockquote {
+            border-left: 4px solid var(--gold);
+            padding: 20px 28px;
+            margin: 30px 0;
+            background: var(--bg-warm);
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        blockquote cite {
+            display: block;
+            margin-top: 12px;
+            font-style: normal;
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--navy);
+            color: white;
+            border-radius: 16px;
+            padding: 48px 40px;
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .cta-section h3 {
+            color: white;
+            margin: 0 0 16px;
+            font-size: 1.5em;
+        }
+        
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 28px !important;
+            font-size: 1.1em !important;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: #d69e2e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .cta-trust {
+            margin-top: 20px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .cta-trust span {
+            margin: 0 12px;
+        }
+        
+        /* Mid-article CTA */
+        .mid-cta {
+            background: linear-gradient(135deg, var(--bg-warm) 0%, #fff 100%);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .mid-cta h4 {
+            color: var(--navy);
+            margin: 0 0 12px;
+            font-size: 1.15em;
+        }
+        
+        .mid-cta p {
+            margin: 0 0 20px !important;
+            font-size: 1em !important;
+        }
+        
+        .mid-cta .cta-btn {
+            padding: 12px 28px;
+            font-size: 1em;
+        }
+        
+        /* Sources */
+        .sources-section {
+            background: var(--bg-warm);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 40px 0;
+        }
+        
+        .sources-section h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1em;
+        }
+        
+        .sources-section ol {
+            margin-bottom: 0;
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+        
+        .sources-section li {
+            margin-bottom: 6px;
+        }
+        
+        /* Calculator */
+        .calculator-box {
+            background: linear-gradient(135deg, #f8f6f1 0%, #fff 100%);
+            border: 2px solid var(--navy);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+        
+        .calculator-box h3 {
+            text-align: center;
+            margin: 0 0 24px;
+            color: var(--navy);
+        }
+        
+        .calculator-result {
+            background: var(--navy);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        
+        .calculator-result .big-number {
+            font-family: var(--serif);
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .calculator-result .description {
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.7em;
+            }
+            
+            .article-content h2 {
+                font-size: 1.3em;
+            }
+            
+            .cta-section {
+                padding: 36px 24px;
+            }
+            
+            .calc-table {
+                font-size: 0.85em;
+            }
+            
+            .calc-table th, .calc-table td {
+                padding: 10px 12px;
+            }
+            
+            .stat-number {
+                font-size: 2em;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Koliko srebra rabite za 'mini pokojnino'? Izračun za Slovence",
+        "description": "Praktičen izračun koliko srebra potrebujete za dodatnih 200-500€ mesečno ob upokojitvi.",
+        "author": {
+            "@type": "Organization",
+            "name": "Nakup Srebra"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Nakup Srebra",
+            "url": "https://nakupsrebra.com"
+        },
+        "datePublished": "2026-02-03",
+        "dateModified": "2026-02-03",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://nakupsrebra.com/blog/koliko-srebra-za-mini-pokojnino"
+        },
+        "keywords": "srebro pokojnina, pokojninski dodatek, naložba v srebro, mini pokojnina, srebro Slovenija, varčevanje za upokojitev"
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Nakup Srebra</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Domov</a>
+                <a href="/blog" class="nav-link">Blog</a>
+                <a href="/posvet" class="nav-cta">Brezplačen posvet</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="article-header">
+        <div class="container">
+            <span class="article-category">💰 Izračuni in strategije</span>
+            <h1 class="article-title">Koliko srebra rabite za 'mini pokojnino'? Izračun za Slovence</h1>
+            <p class="article-meta">3. februar 2026 · 12 min branja · <strong>Praktični izračuni</strong></p>
+        </div>
+    </header>
+
+    <article class="article-content">
+        <div class="container">
+            
+            <p>Povprečna slovenska pokojnina je <strong>917 €</strong>. Povprečni življenjski stroški upokojenega para? <strong>Vsaj 1.400 €</strong>. To je <strong>483 € primanjkljaja vsak mesec</strong> — brez dopustov, brez nepričakovanih stroškov, brez zdravstvenih težav.</p>
+            
+            <p>Kaj če bi imeli ob redni pokojnini še dodatnih <strong>200–500 € mesečno</strong>? Ne iz tveganih delnic, ne iz nepredvidljivih najemnin — ampak iz nečesa, kar ste sami zgradili, unčo po unči?</p>
+            
+            <p>V tem članku vam pokažem <strong>konkretne izračune</strong>: koliko srebra potrebujete, koliko morate varčevati, in kako realno doseči "mini pokojnino" iz fizičnega srebra.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">€917</div>
+                    <div class="label">Povprečna neto pokojnina</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">64,4%</div>
+                    <div class="label">Delež povprečne plače</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">24 let</div>
+                    <div class="label">Povprečno prejemanje</div>
+                </div>
+            </div>
+
+            <!-- SECTION: Current state -->
+            <h2>📊 Kruta resnica o slovenskih pokojninah</h2>
+            
+            <p>Poglejmo uradne podatke ZPIZ za leto 2025:</p>
+            
+            <ul>
+                <li><strong>Povprečna neto starostna pokojnina:</strong> 917,61 € (bruto 1.077,55 €)</li>
+                <li><strong>Najpogostejši razred:</strong> 600–700 € (120.105 upokojencev)</li>
+                <li><strong>Zagotovljena pokojnina:</strong> 781,94 €</li>
+                <li><strong>Minimalna pokojnina:</strong> le 352,58 €</li>
+            </ul>
+            
+            <div class="warning-box">
+                <h3>⚠️ Neugoden trend</h3>
+                <p>Na vsakega upokojenca pride le <strong>1,52 aktivno zaposlenega</strong>. Za primerjavo: v Nemčiji je razmerje 2,1. Sistem je pod pritiskom — pokojnine bodo težko sledile inflaciji.</p>
+            </div>
+            
+            <p>Če danes zaslužite povprečno plačo (1.423 € neto), bo vaša pokojnina približno <strong>917 €</strong>. To je <strong>padec za 506 € mesečno</strong> — od prvega dne upokojitve do konca življenja.</p>
+            
+            <p>Mnogi ta padec rešujejo z:</p>
+            <ul>
+                <li>Življenjem pri otrocih (izguba neodvisnosti)</li>
+                <li>Delom tudi po upokojitvi (izguba počitka)</li>
+                <li>Zniževanjem življenjskega standarda (izguba kakovosti)</li>
+            </ul>
+            
+            <p><strong>Obstaja alternativa:</strong> zgradite "mini pokojnino" — dodatni mesečni prihodek iz premoženja, ki ste ga sami ustvarili.</p>
+
+            <!-- SECTION: Why silver -->
+            <h2>🥈 Zakaj srebro za pokojninsko varnost?</h2>
+            
+            <p>Srebrne za "mini pokojnino" ne priporočam zato, ker je "vroča naložba" ali "priložnost za hitri zaslužek". Priporočam ga iz treh praktičnih razlogov:</p>
+            
+            <h3>1. Zaščita pred inflacijo</h3>
+            <p>Če danes odložite <strong>10.000 €</strong> na banko, bo čez 20 let (ob 3% inflaciji) kupna moč enaka <strong>5.537 €</strong>. Izgubili boste skoraj polovico — čeprav "niste naredili nič".</p>
+            
+            <p>Srebro v istem obdobju zgodovinsko ohranja ali povečuje kupno moč. <strong>Od leta 2005 do 2026</strong> je cena unče zrasla z 6,46 $ na ~82 $ — to je <strong>12-kratno povečanje</strong>.</p>
+
+            <h3>2. Brez tveganja druge stranke</h3>
+            <p>Pokojnina je odvisna od sistema ZPIZ. Bančni depozit je odvisen od stabilnosti banke. ETF je odvisen od finančne institucije.</p>
+            
+            <p>Fizično srebro? <strong>Odvisno je le od vas.</strong> Če ga imate v roki, ga imate. Nobena banka ne more bankrotirati z vašim srebrom. Nobena vlada ne more zamrzniti vašega trezorja.</p>
+
+            <h3>3. Likvidnost in dostopnost</h3>
+            <p>Srebro lahko prodate <strong>kjerkoli na svetu</strong>. V Sloveniji, Avstriji, Nemčiji — odkupne cene so javne in transparentne. Lahko prodate unčo ali sto, kadarkoli potrebujete.</p>
+
+            <div class="info-box">
+                <h4>📈 Srebro 2025: Rekordno leto</h4>
+                <p>V letu 2025 je srebro v evrih zraslo za <strong>+117%</strong>. To je izjemno leto — dolgoročno pričakujte povprečno 8% letno. Toda tudi 8% je bistveno več kot 0% na banki.</p>
+            </div>
+
+            <!-- SECTION: How much needed -->
+            <h2>🧮 Koliko srebra potrebujem? Konkretni izračuni</h2>
+            
+            <p>Najprej določimo cilj. Koliko dodatnega mesečnega prihodka želite ob upokojitvi?</p>
+            
+            <ul>
+                <li><strong>200 €/mesec</strong> — pokrije osnovne "luksuzne" stroške (kava, časopis, občasna večerja)</li>
+                <li><strong>300 €/mesec</strong> — omogoči skromne dopuste, darila za vnuke</li>
+                <li><strong>500 €/mesec</strong> — občutno izboljša kakovost življenja</li>
+            </ul>
+            
+            <h3>Metodologija: 4% pravilo</h3>
+            <p>Finančni strokovnjaki že desetletja uporabljajo "4% pravilo" — vsako leto lahko iz naložbenega portfelja varno dvignete 4%, ne da bi zmanjkalo denarja v 30 letih. Morningstar priporoča nekoliko konzervativnejših <strong>3,7%</strong>.</p>
+            
+            <p>Za srebro uporabimo <strong>4% dvigovanje + 8% dolgoročna rast</strong>. To pomeni: prodajate 4% letno, ostali 4% ostaja kot rast proti inflaciji.</p>
+
+            <table class="calc-table">
+                <thead>
+                    <tr>
+                        <th>Mesečni cilj</th>
+                        <th>Letni cilj</th>
+                        <th>Potreben portfelj (4%)</th>
+                        <th>Srebro (ob €70/oz)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>€200/mesec</strong></td>
+                        <td>€2.400</td>
+                        <td class="number-cell">€60.000</td>
+                        <td>857 unč (26,7 kg)</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>€300/mesec</strong></td>
+                        <td>€3.600</td>
+                        <td class="number-cell">€90.000</td>
+                        <td>1.286 unč (40 kg)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>€500/mesec</strong></td>
+                        <td>€6.000</td>
+                        <td class="number-cell">€150.000</td>
+                        <td>2.143 unč (66,7 kg)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Opomba:</strong> Te številke predpostavljajo, da začnete dvigovati takoj. Če srebro do upokojitve še raste (in zgodovinsko gledano raste), boste potrebovali manj začetnega kapitala.</p>
+
+            <!-- Mid-article CTA -->
+            <div class="mid-cta">
+                <h4>🎯 Želite personaliziran izračun?</h4>
+                <p>Vsaka situacija je drugačna. V 15-minutnem posvetu izračunamo, koliko <strong>vi</strong> potrebujete glede na vašo starost, cilje in zmožnosti.</p>
+                <a href="/posvet" class="cta-btn">Rezerviraj brezplačen posvet →</a>
+            </div>
+
+            <!-- SECTION: Accumulation plan -->
+            <h2>📅 Kako doseči cilj? Načrt akumulacije</h2>
+            
+            <p>857 unč se sliši veliko. Toda če imate pred sabo <strong>15–20 let</strong>, je cilj presenetljivo dosegljiv.</p>
+            
+            <p>Poglejmo, koliko morate mesečno varčevati za različne scenarije:</p>
+
+            <table class="calc-table">
+                <thead>
+                    <tr>
+                        <th>Cilj</th>
+                        <th>10 let varčevanja</th>
+                        <th>15 let varčevanja</th>
+                        <th>20 let varčevanja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>€200/mesec pokojnine</strong><br><small>(cilj €60.000)</small></td>
+                        <td class="number-cell">~€430/mesec</td>
+                        <td class="number-cell">~€245/mesec</td>
+                        <td class="number-cell">~€155/mesec</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>€300/mesec pokojnine</strong><br><small>(cilj €90.000)</small></td>
+                        <td class="number-cell">~€645/mesec</td>
+                        <td class="number-cell">~€365/mesec</td>
+                        <td class="number-cell">~€235/mesec</td>
+                    </tr>
+                    <tr>
+                        <td><strong>€500/mesec pokojnine</strong><br><small>(cilj €150.000)</small></td>
+                        <td class="number-cell">~€1.075/mesec</td>
+                        <td class="number-cell">~€610/mesec</td>
+                        <td class="number-cell">~€390/mesec</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><small><em>Izračuni predpostavljajo 6% povprečno letno rast srebra (konzervativno). Dejanska rast je bila v zadnjih 20 letih višja.</em></small></p>
+            
+            <div class="success-box">
+                <h4>✅ Ključna ugotovitev</h4>
+                <p>Za <strong>€200 dodatne mesečne pokojnine</strong> potrebujete le <strong>€155/mesec</strong> — če začnete danes in imate 20 let časa. To je manj od stroškov dnevnega obroka v restavraciji.</p>
+            </div>
+
+            <h3>Primer: Marija, 45 let</h3>
+            
+            <p>Marija ima 45 let in načrtuje upokojitev pri 65. To ji daje <strong>20 let</strong> za akumulacijo.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">Danes (2026)</div>
+                    <div class="timeline-text">Marija začne kupovati srebro za <strong>€200/mesec</strong>. Prvi mesec: 2,86 unč (ob €70/oz).</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Čez 5 let (2031)</div>
+                    <div class="timeline-text">Vložila: €12.000. S 6% rastjo vrednost portfelja: ~<strong>€14.300</strong>. Lastnica ~180 unč.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Čez 10 let (2036)</div>
+                    <div class="timeline-text">Vložila: €24.000. Vrednost portfelja: ~<strong>€33.000</strong>. Lastnica ~400 unč.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Čez 15 let (2041)</div>
+                    <div class="timeline-text">Vložila: €36.000. Vrednost portfelja: ~<strong>€58.000</strong>. Lastnica ~620 unč.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">Ob upokojitvi (2046)</div>
+                    <div class="timeline-text">Vložila: €48.000. Vrednost portfelja: ~<strong>€93.000</strong>. Lahko si izplačuje <strong>€310/mesec</strong> — čez celo pokojnino.</div>
+                </div>
+            </div>
+            
+            <p><strong>Rezultat:</strong> Z vlaganjem "le" €200 mesečno skozi 20 let bo Marija imela dovolj za <strong>€310 dodatne mesečne pokojnine</strong> — ob tem, da njen kapital še vedno raste in ščiti pred inflacijo.</p>
+
+            <!-- SECTION: Bank comparison -->
+            <h2>🏦 Primerjava: Banka vs. Srebro</h2>
+            
+            <p>Kaj če bi Marija namesto srebra varčevala na banki?</p>
+
+            <div class="comparison-cards">
+                <div class="comparison-card bad">
+                    <h4>🏦 Banka (0,5% obrestna mera)</h4>
+                    <ul>
+                        <li>Vloženo v 20 letih: €48.000</li>
+                        <li>Končna vrednost: ~€51.000</li>
+                        <li>Realna vrednost (po inflaciji): ~<strong>€28.000</strong></li>
+                        <li>Mesečna "pokojnina" (4%): ~<strong>€93</strong></li>
+                    </ul>
+                </div>
+                <div class="comparison-card good">
+                    <h4>🥈 Srebro (6% povprečna rast)</h4>
+                    <ul>
+                        <li>Vloženo v 20 letih: €48.000</li>
+                        <li>Končna vrednost: ~<strong>€93.000</strong></li>
+                        <li>Realna vrednost: ohrani kupno moč</li>
+                        <li>Mesečna "pokojnina" (4%): ~<strong>€310</strong></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p><strong>Razlika:</strong> €310 vs. €93 mesečno. To je <strong>3,3-kratna razlika</strong> — z enakim vložkom.</p>
+
+            <blockquote>
+                "Ljudje, ki držijo prihranke na banki, ne varčujejo — počasi porabljajo. Banka jim vrne manj kupne moči, kot so jo vložili."
+                <cite>— Obdobna ekonomska resnica</cite>
+            </blockquote>
+
+            <!-- SECTION: Why now -->
+            <h2>⏰ Zakaj začeti zdaj?</h2>
+            
+            <p>Poglejmo tržne razmere srebra v letu 2025–2026:</p>
+            
+            <ul>
+                <li><strong>5. leto zapored tržnega primanjkljaja:</strong> Povpraševanje presega ponudbo že od 2021.</li>
+                <li><strong>Skupni primanjkljaj 2021–2024:</strong> 678 milijonov unč — to je 10 mesecev celotne svetovne proizvodnje!</li>
+                <li><strong>Industrijska poraba:</strong> Rekordnih 680,5 Mio unč v 2024 (solarni paneli, EV, umetna inteligenca).</li>
+                <li><strong>Projekcija 2025:</strong> Še ~95 Mio unč primanjkljaja.</li>
+            </ul>
+            
+            <div class="stat-highlight">
+                <div class="stat-number">~820 Mio unč</div>
+                <div class="stat-label">Skupni primanjkljaj srebra 2015–2025 (Silver Institute)</div>
+            </div>
+            
+            <p>To ni "vroča priložnost" — to je <strong>strukturna sprememba</strong>. Svet potrebuje več srebra, kot ga proizvede. In ta vrzel se povečuje.</p>
+            
+            <div class="warning-box">
+                <h3>⚠️ Časovni faktor</h3>
+                <p>Vsak mesec, ki ga odlašate, je mesec manj za akumulacijo. Če Marija začne pri 50 namesto 45, potrebuje <strong>€285/mesec</strong> namesto €200 za isti cilj. Odlašanje je drago.</p>
+            </div>
+
+            <!-- SECTION: Getting started -->
+            <h2>🚀 Kako začeti?</h2>
+            
+            <h3>1. Določite svoj mesečni znesek</h3>
+            <p>Koliko lahko mesečno odložite? Začnite lahko že s <strong>€50–100</strong>. Pomembna je doslednost, ne velikost.</p>
+            
+            <h3>2. Izberite pravo obliko srebra</h3>
+            <p>Za dolgoročno akumulacijo priporočam <strong>investicijske kovance</strong> (Maple Leaf, Philharmoniker, Britannia) — imajo nizke premije in so visoko likvidni.</p>
+            
+            <h3>3. Kupujte redno (DCA)</h3>
+            <p>Vsak mesec kupite za enak znesek, ne glede na ceno. To strategija "povprečenja stroškov" (Dollar Cost Averaging) zmanjša vpliv kratkoročnih nihanj.</p>
+            
+            <h3>4. Varno shranite</h3>
+            <p>Domači trezor, bančni sef ali specializirana hramba — odločite se PRED prvim nakupom.</p>
+
+            <div class="success-box">
+                <h4>✅ Najpomembnejše</h4>
+                <p>Najboljši čas za začetek je bil pred 10 leti. Drugi najboljši čas je <strong>danes</strong>. Vsak mesec šteje.</p>
+            </div>
+
+            <!-- MAIN CTA -->
+            <div class="cta-section">
+                <h3>Želite vedeti, koliko srebra potrebujete vi?</h3>
+                <p>Vsaka situacija je drugačna. V 15-minutnem brezplačnem posvetu skupaj izračunamo vaš osebni načrt — koliko srebra, koliko mesečno, in kako realno doseči cilj.</p>
+                <a href="/posvet" class="cta-btn">Rezerviraj brezplačen posvet →</a>
+                <div class="cta-trust">
+                    <span>✓ Brez obveznosti</span>
+                    <span>✓ 15 minut</span>
+                    <span>✓ Personaliziran izračun</span>
+                </div>
+            </div>
+
+            <!-- SOURCES -->
+            <div class="sources-section">
+                <h3>📚 Viri in reference</h3>
+                <ol>
+                    <li><strong>ZPIZ:</strong> Mesečni statistični pregled (januar 2025) — povprečna neto starostna pokojnina €917,61. <em>zpiz.si</em></li>
+                    <li><strong>maribor24.si:</strong> Koliko znaša povprečna pokojnina v Sloveniji (2025) — podatki o razredih pokojnin. <em>Avgust 2025</em></li>
+                    <li><strong>upokojenci.com:</strong> Kako se spreminjajo pokojnine v letu 2025 — razmerje pokojnine do plače 64,4%.</li>
+                    <li><strong>OECD:</strong> Pensions at a Glance 2025 — Slovenia country profile. <em>oecd.org</em></li>
+                    <li><strong>JM Bullion:</strong> 20-Year Silver Price History — zgodovinski podatki o cenah srebra. <em>jmbullion.com</em></li>
+                    <li><strong>GoldBroker:</strong> Silver Price in EUR — aktualne cene in letna performanca. <em>goldbroker.com</em></li>
+                    <li><strong>CBS News:</strong> What is the price of silver today: February 2, 2026 — tržna poročila.</li>
+                    <li><strong>Silver Institute:</strong> World Silver Survey 2025 — tržni primanjkljaj 148,9 Mio unč v 2024, industrijska poraba 680,5 Mio unč.</li>
+                    <li><strong>Visual Capitalist:</strong> Charted: Silver Supply-Demand Imbalance 2015-2025 — kumulativni primanjkljaj ~820 Mio unč.</li>
+                    <li><strong>Morningstar:</strong> Safe Withdrawal Rates 2025 — priporočilo 3,7% za konzervativno dvigovanjee.</li>
+                    <li><strong>Investopedia:</strong> The 4% Rule for Retirement Withdrawals — metodologija.</li>
+                    <li><strong>Noble Gold Investments:</strong> History of Silver Prices — povprečna letna donosnost ~8,4% v 20 letih.</li>
+                </ol>
+            </div>
+
+            <!-- Email capture -->
+            <div class="email-capture" style="margin-top: 50px; background: var(--bg-warm); border-radius: 16px; padding: 32px; text-align: center;">
+                <div class="email-capture-icon" style="font-size: 2em; margin-bottom: 12px;">📘</div>
+                <h3 style="margin: 0 0 12px;">Brezplačen kalkulator</h3>
+                <p style="margin-bottom: 20px;">Prenesite: <strong>"Excel kalkulator za mini pokojnino"</strong> — vnesite svoje podatke in izračunajte osebni načrt</p>
+                <form class="email-form" id="kalkulator-form" style="display: flex; gap: 12px; max-width: 400px; margin: 0 auto;">
+                    <input type="email" name="email" id="kalkulator-email" placeholder="Vaš email" required style="flex: 1; padding: 14px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 1em;">
+                    <button type="submit" id="kalkulator-btn" style="background: var(--gold); color: white; border: none; padding: 14px 24px; border-radius: 8px; font-weight: 600; cursor: pointer;">Pošlji →</button>
+                </form>
+                <p class="email-trust" style="margin-top: 16px; font-size: 0.85em; color: var(--text-muted);">
+                    <span>✓ Brez spama</span>
+                    <span style="margin: 0 12px;">✓ Odjava kadarkoli</span>
+                </p>
+            </div>
+
+        </div>
+    </article>
+
+    <footer style="background: var(--bg-warm); padding: 40px 0; text-align: center; color: var(--text-muted);">
+        <div class="container">
+            <p>© 2026 Nakup Srebra · Neodvisen svetovalec</p>
+        </div>
+    </footer>
+
+    <!-- Email Subscription Handler -->
+    <script>
+        document.getElementById('kalkulator-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = '/hvala';
+        });
+    </script>
+</body>
+</html>
