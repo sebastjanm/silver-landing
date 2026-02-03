@@ -437,6 +437,72 @@
             color: var(--green);
         }
         
+        /* Physical vs Paper */
+        .physical {
+            background: var(--bg-warm);
+            padding: 80px 0;
+        }
+        
+        .physical-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        @media (max-width: 800px) {
+            .physical-grid { grid-template-columns: 1fr; }
+        }
+        
+        .physical-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid var(--border);
+        }
+        
+        .physical-card.highlight {
+            border: 2px solid var(--gold);
+        }
+        
+        .physical-card-icon {
+            font-size: 2.5em;
+            margin-bottom: 16px;
+        }
+        
+        .physical-card h3 {
+            font-family: var(--serif);
+            font-size: 1.2em;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        
+        .physical-card p {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        
+        .physical-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+        }
+        
+        .physical-tag.negative { background: var(--red-bg); color: var(--red); }
+        .physical-tag.warning { background: var(--gold-bg); color: var(--gold); }
+        .physical-tag.positive { background: var(--green-bg); color: var(--green); }
+        
+        .physical-note {
+            text-align: center;
+            margin-top: 32px;
+            color: var(--text-muted);
+            font-size: 0.95em;
+        }
+        
         /* Social Proof */
         .proof {
             background: var(--navy);
@@ -864,6 +930,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Physical vs Paper -->
+    <section class="physical">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Ključna razlika</div>
+                <h2 class="section-title">Papir, koda ali <em>fizična kovina?</em></h2>
+                <p class="section-desc">Denar in bitcoin obstajata samo na papirju in v računalnikih. Srebro lahko primete v roke.</p>
+            </div>
+            
+            <div class="physical-grid">
+                <div class="physical-card">
+                    <div class="physical-card-icon">💶</div>
+                    <h3>Denar (EUR)</h3>
+                    <p>Papir, ki ga tiskajo centralne banke. Vrednost temelji na zaupanju v državo. Ko zaupanje pade — pade tudi vrednost.</p>
+                    <span class="physical-tag negative">−85% od 1971</span>
+                </div>
+                <div class="physical-card">
+                    <div class="physical-card-icon">₿</div>
+                    <h3>Bitcoin</h3>
+                    <p>Koda v računalniku. Ne morete ga prijeti. Če pozabite geslo ali vam ukradejo dostop — je za vedno izgubljen.</p>
+                    <span class="physical-tag warning">Volatilen</span>
+                </div>
+                <div class="physical-card highlight">
+                    <div class="physical-card-icon">🥈</div>
+                    <h3>Srebro</h3>
+                    <p>Fizična kovina z težo. Primete jo lahko v roke. Cene manipulirajo — a srebro samo ostaja. 5.000 let in šteje.</p>
+                    <span class="physical-tag positive">Fizično. Vaše.</span>
+                </div>
+            </div>
+            
+            <p class="physical-note">
+                Cene srebra na borzah manipulirajo z "paper silver" — papirnatimi pogodbami brez kritja. <br>A to ne spremeni dejstva: fizično srebro ima težo, vrednost in zgodovino.
+            </p>
         </div>
     </section>
 
