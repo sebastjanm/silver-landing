@@ -35,9 +35,13 @@
       "day": 4,
       "date": "2026-02-05",
       "slug": "razmerje-zlato-srebro-85",
-      "title": "Razmerje zlato-srebro je 85:1 — zgodovinsko najvišje. Kaj to pomeni za vas?",
+      "title": "Razmerje zlato-srebro: Kaj pomeni trenutnih 57:1 za vaše prihranke?",
+      "title_original": "Razmerje zlato-srebro je 85:1 — zgodovinsko najvišje. Kaj to pomeni za vas?",
       "strategy": "Specifična številka = kredibilnost. Implicira priložnost + urgency.",
-      "status": "pending"
+      "status": "published",
+      "draft_completed": "2026-02-05T01:00:00Z",
+      "published_at": "2026-02-05T07:30:00Z",
+      "notes": "Title updated to reflect current ratio (57:1 vs planned 85:1). Research showed ratio dropped significantly in 2025 after silver's 150% gain."
     },
     {
       "day": 5,
