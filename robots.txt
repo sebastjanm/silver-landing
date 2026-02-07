@@ -1,0 +1,9 @@
+# NakupSrebra.com Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.nakupsrebra.com/sitemap.xml
+
+# Block utility pages
+Disallow: /hvala
