@@ -155,4 +155,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- Vodnik -->
+  <url>
+    <loc>https://www.nakupsrebra.com/vodnik/vodnik-srebro</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
