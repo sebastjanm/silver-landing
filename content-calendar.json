@@ -60,7 +60,10 @@
       "slug": "prihranki-banka-izgubljajo-vrednost",
       "title": "Zakaj vaši prihranki na banki izgubljajo vrednost — tudi ko 'ne delate nič'",
       "strategy": "Strah pred nevidno izgubo. Inflacija kot tihi tat.",
-      "status": "pending"
+      "status": "published",
+      "draft_completed": "2026-02-07T01:06:00Z",
+      "published_at": "2026-02-07T07:30:00Z",
+      "notes": "Deep research complete. Key insight: Real interest rate is -1.93% (0.77% deposit rate - 2.7% inflation). €10,000 loses ~€193 purchasing power yearly. Sources: SURS, BSI, ECB, Eurostat, European Parliament NIRP study, Bampinas & Panagiotidis academic study (1791-2010)."
     },
     {
       "day": 7,
