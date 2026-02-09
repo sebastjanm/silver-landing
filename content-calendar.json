@@ -79,10 +79,13 @@
     {
       "day": 8,
       "date": "2026-02-09",
-      "slug": "zadnja-priložnost-srebro-2026",
-      "title": "Zakaj 2026 morda zadnja priložnost za nakup srebra pod 50€/unčo",
+      "slug": "zadnja-priloznost-srebro-2026",
+      "title": "Zakaj 2026 morda zadnja priložnost za nakup srebra pod 100€/unčo",
+      "title_original": "Zakaj 2026 morda zadnja priložnost za nakup srebra pod 50€/unčo",
       "strategy": "Občutek omejenega časovnega okna. 'Morda' = verodostojno.",
-      "status": "pending"
+      "status": "draft_ready",
+      "draft_completed": "2026-02-09T01:05:00Z",
+      "notes": "Deep research complete. Title updated: original said 'pod 50€' but silver already at €68. Reframed to 'pod 100€'. Key findings: 1) 150% YTD gain (€27→€68), 2) 5th consecutive supply deficit (820Moz cumulative), 3) China export controls Jan 1 2026 (44 companies only), 4) Industrial demand inelastic (solar 29% of demand, EVs 67-79% more silver), 5) Analyst targets $100-150/oz. Sources: Silver Institute, Reuters, PRISM MarketView, BullionStar, Oxford Economics, Citigroup."
     },
     {
       "day": 9,
