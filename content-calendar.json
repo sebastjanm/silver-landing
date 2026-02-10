@@ -100,10 +100,12 @@
     {
       "day": 10,
       "date": "2026-02-11",
-      "slug": "družinsko-bogastvo-naslednje-generacije",
+      "slug": "druzinsko-bogastvo-naslednje-generacije",
       "title": "Kako zaščititi družinsko bogastvo za naslednje generacije — brez tveganih naložb",
       "strategy": "Družinske vrednote + dolgoročno razmišljanje. Srebro = konzervativna izbira.",
-      "status": "pending"
+      "status": "draft_ready",
+      "draft_completed": "2026-02-10T01:02:00Z",
+      "notes": "Deep research complete. 16 sources verified. Key findings: Williams Group 20-year study (3,200 families) - 70% lose wealth by Gen 2, 90% by Gen 3. Only 3% due to poor financial planning. 60% due to communication breakdown. Central banks bought 863t gold in 2025. ECB survey: gold held for store of value, crisis performance, diversification."
     },
     {
       "day": 11,
