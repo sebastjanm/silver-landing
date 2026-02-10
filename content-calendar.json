@@ -94,8 +94,10 @@
       "slug": "razmerje-zlato-srebro-kdaj-kupiti",
       "title": "Razmerje zlato-srebro: Kdaj kupiti srebro in kdaj zlato?",
       "strategy": "Praktičen vodič za timing nakupov. Pravilo 80/50.",
-      "status": "draft_ready",
-      "notes": "Deep research complete. 8+ sources verified. Replaced original China/India topic per Sebastjan request."
+      "status": "published",
+      "draft_completed": "2026-02-10T01:05:00Z",
+      "published_at": "2026-02-10T07:30:00Z",
+      "notes": "Deep research complete. 25 sources verified. Key insight: 80/50 rule - buy silver when ratio >80, buy gold when <50. Current ratio 62:1 is normal range."
     },
     {
       "day": 10,
