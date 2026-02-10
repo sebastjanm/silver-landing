@@ -204,7 +204,8 @@ Preveri v: ChatGPT, Perplexity, Google SGE, Bing Copilot
 
 | # | Naslov | SEO Ključna Beseda | Status |
 |---|--------|-------------------|--------|
-| 8 | Kako zaščititi premoženje pred inflacijo | zaščita pred inflacijo | ⏳ |
+| 8 | Zakaj novi predsednik Fed ne more ustaviti zlata | fed zlato warsh | ✅ 10.2 |
+| 9 | Kako zaščititi premoženje pred inflacijo | zaščita pred inflacijo | ⏳ |
 | 9 | 5 razlogov zakaj mladi kupujejo srebro | mladi srebro | ⏳ |
 | 10 | Srebro za otroke: Kako začeti | srebro za otroke | ⏳ |
 | 11 | Dedovanje srebra: Pravni vidiki | dedovanje srebra | ⏳ |
