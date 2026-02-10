@@ -91,10 +91,11 @@
     {
       "day": 9,
       "date": "2026-02-10",
-      "slug": "kitajska-indija-kupujejo-srebro",
-      "title": "Kitajska in Indija kupujeta rekordne količine srebra. Kaj vedo, česar mi ne?",
-      "strategy": "Curiosity gap + FOMO. Bralec želi vedeti 'skrivnost'.",
-      "status": "pending"
+      "slug": "razmerje-zlato-srebro-kdaj-kupiti",
+      "title": "Razmerje zlato-srebro: Kdaj kupiti srebro in kdaj zlato?",
+      "strategy": "Praktičen vodič za timing nakupov. Pravilo 80/50.",
+      "status": "draft_ready",
+      "notes": "Deep research complete. 8+ sources verified. Replaced original China/India topic per Sebastjan request."
     },
     {
       "day": 10,
