@@ -124,12 +124,14 @@
     {
       "day": 12,
       "date": "2026-02-13",
-      "slug": "zdravniki-odvetniki-kupujejo-srebro",
-      "title": "Zakaj zdravniki, odvetniki in podjetniki tiho kupujejo fizično srebro",
-      "strategy": "Social proof od 'pametnih' ljudi. Identifikacija.",
-      "status": "draft_ready",
-      "draft_completed": "2026-02-12T01:00:00Z",
-      "notes": "Deep research complete. 16 sources verified. Key findings: 1) Bar & coin demand at 12-year high (1,374t, +16%), 2) Total gold investment demand +84% to 2,175t, 3) Ray Dalio recommends 10-15% gold allocation, Bridgewater invested $319M in GLD, 4) Morgan Stanley proposes 60/20/20 model, 5) Goldman Sachs: 24% of family offices hold gold as black-swan hedge, 6) Long Angle: HNW bonds <10% even for conservative investors, 7) Silver's 5th consecutive supply deficit (~820Moz cumulative). Sources: WGC, Goldman Sachs, Long Angle, Silver Institute, Fortune, FXStreet."
+      "slug": "kdo-kupuje-srebro-in-zakaj",
+      "title": "Kdo kupuje srebro in zakaj — podatki iz Evrope",
+      "title_original": "Zakaj zdravniki, odvetniki in podjetniki tiho kupujejo fizično srebro",
+      "strategy": "Regionalni podatki iz Evrope — BaFin, Silver Institute, WGC. Brez izmišljenega social proofa.",
+      "status": "published",
+      "draft_completed": "2026-02-12T14:55:00Z",
+      "published_at": "2026-02-13T07:30:00Z",
+      "notes": "REWRITE: Original rejected (invented social proof, US sources). New version uses 12 European primary sources. Key findings: 1) Germany is 3rd largest physical silver market (48.5 Moz/yr avg 2020-22), 2) Austrians own 220g gold per person (highest in DACH), Germans 205g, 3) BaFin survey: 83% see PM as safe, 78% safer than banks, 61% want physical, 4) Poland CB has more gold than ECB (550t vs 506t), Czech CB record 71.6t, 5) Global CB purchases 863t in 2025, 43% plan to increase, 6) Silver 5th consecutive deficit. Sources: Silver Institute/Metals Focus, BaFin, Steinbeis/Reisebank, Uni St.Gallen, WGC, Euronews, Radio Prague."
     },
     {
       "day": 13,
@@ -137,7 +139,9 @@
       "slug": "oče-mi-je-dal-50-unc-srebra",
       "title": "Moj oče mi je dal 50 unč srebra. 20 let pozneje sem razumel zakaj.",
       "strategy": "Osebna zgodba = čustvena povezava. Format 'lekcije od staršev'.",
-      "status": "pending"
+      "status": "draft_ready",
+      "draft_completed": "2026-02-13T01:05:00Z",
+      "notes": "Deep research complete. 12 sources verified. Key findings: 1) 50oz silver in 2005 (~€300) → ~€3,500 today (1,067% return, 12.8% annualized), 2) Bank deposit would be ~€400 nominal (€200 real), 3) Williams Group: 70% lose wealth by Gen 2, 60% due to communication failure, 4) Endowment effect (Reb & Connolly 2007): physical possession creates stronger ownership, 5) Silver 5th consecutive supply deficit (820Moz cumulative), 6) CB purchases 863t gold in 2025. Personal narrative format with 5 life lessons structure."
     },
     {
       "day": 14,
