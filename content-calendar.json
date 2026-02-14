@@ -139,8 +139,9 @@
       "slug": "oče-mi-je-dal-50-unc-srebra",
       "title": "Moj oče mi je dal 50 unč srebra. 20 let pozneje sem razumel zakaj.",
       "strategy": "Osebna zgodba = čustvena povezava. Format 'lekcije od staršev'.",
-      "status": "draft_ready",
+      "status": "published",
       "draft_completed": "2026-02-13T01:05:00Z",
+      "published_at": "2026-02-14T07:30:00Z",
       "notes": "Deep research complete. 12 sources verified. Key findings: 1) 50oz silver in 2005 (~€300) → ~€3,500 today (1,067% return, 12.8% annualized), 2) Bank deposit would be ~€400 nominal (€200 real), 3) Williams Group: 70% lose wealth by Gen 2, 60% due to communication failure, 4) Endowment effect (Reb & Connolly 2007): physical possession creates stronger ownership, 5) Silver 5th consecutive supply deficit (820Moz cumulative), 6) CB purchases 863t gold in 2025. Personal narrative format with 5 life lessons structure."
     },
     {
@@ -149,7 +150,9 @@
       "slug": "30-odstotkov-prihrankov-v-srebro",
       "title": "Zakaj sem 30% svojih prihrankov pretvoril v fizično srebro (in kaj sem se naučil)",
       "strategy": "Transparentna osebna izkušnja. Specifičen odstotek = verodostojno.",
-      "status": "pending"
+      "status": "published",
+      "draft_completed": "2026-02-14T01:05:00Z",
+      "published_at": "2026-02-15T07:30:00Z"
     },
     {
       "day": 15,
@@ -186,41 +189,33 @@
     {
       "day": 19,
       "date": "2026-02-20",
-      "slug": "kaj-pocnejo-premozni-slovenci",
-      "title": "Kaj počnejo premožni Slovenci, ko ne zaupajo bankam?",
-      "strategy": "Ekskluzivno znanje. Bralec se želi počutiti kot 'insider'.",
+      "slug": "kako-preveriti-pristnost-srebra",
+      "title": "Kako preveriti pristnost srebra doma — 5 preprostih testov",
+      "strategy": "Praktična vrednost. Visok SEO potencial — ljudje to aktivno iščejo. Gradi zaupanje (pomagamo, ne prodajamo).",
       "status": "pending"
     },
     {
       "day": 20,
       "date": "2026-02-21",
-      "slug": "tiha-strategija-pametni-vlagatelji",
-      "title": "Tiha strategija: Zakaj pametni vlagatelji ne govorijo o svojem srebru",
-      "strategy": "Občutek ekskluzivnega kluba. Posvet = vstopnica.",
+      "slug": "kako-varno-hraniti-srebro",
+      "title": "Kako varno hraniti fizično srebro — doma, v trezorju ali v Švici?",
+      "strategy": "Odstranjuje konkretno oviro za nakup. Praktični nasveti z varnostnimi in stroškovnimi primerjavami.",
       "status": "pending"
     },
     {
       "day": 21,
       "date": "2026-02-22",
-      "slug": "priprava-financna-kriza-5000-eur",
-      "title": "Kako se pripraviti na naslednjo finančno krizo — z manj kot 5.000€",
-      "strategy": "Strah + dostopnost. Tudi z malo denarja.",
+      "slug": "davki-na-srebro-slovenija",
+      "title": "Davki na srebro: Kaj morate vedeti pred nakupom",
+      "strategy": "Odstrani strah pred neznanim. DDV, kapitalski dobički, prijava — vse na enem mestu. Visok SEO potencial.",
       "status": "pending"
     },
     {
       "day": 22,
       "date": "2026-02-23",
-      "slug": "slovenci-prihranki-banka-0-obresti",
-      "title": "Zakaj Slovenci prihranke še vedno držijo na bankah — kljub 0% obrestim",
-      "strategy": "Izzove status quo. Ali sem eden od njih?",
-      "status": "pending"
-    },
-    {
-      "day": 23,
-      "date": "2026-02-24",
-      "slug": "padec-cene-srebra-kupujem-vec",
-      "title": "Kaj pomeni padec cene srebra za 25% ta teden? (in zakaj kupujem več)",
-      "strategy": "Aktualen dogodek + kontraintuitivna reakcija.",
+      "slug": "ko-cena-srebra-pade-ali-zraste",
+      "title": "Ko cena srebra pade ali zraste: Kaj pametni vlagatelji naredijo",
+      "strategy": "Evergreen nasvet za obe smeri trga. Uči disciplino namesto panike. Deluje ne glede na tržne razmere na dan objave.",
       "status": "pending"
     }
   ],
