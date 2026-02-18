@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/styles/shared.css">
     <style>
         /* Page-specific styles */
-        .container { max-width: 900px; }
+        .container { max-width: 1140px; }
         nav .container { max-width: 1140px; }
         
         .blog-header {
@@ -41,42 +41,65 @@
             padding: 60px 0;
         }
         
-        .blog-card {
+        .blog-grid {
             display: grid;
-            grid-template-columns: 280px 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
-            padding: 32px 0;
-            border-bottom: 1px solid var(--border);
-            text-decoration: none;
-            color: inherit;
-            transition: opacity 0.2s;
         }
         
-        .blog-card:hover { opacity: 0.8; }
+        @media (max-width: 900px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         
-        @media (max-width: 700px) {
-            .blog-card { grid-template-columns: 1fr; gap: 20px; }
+        @media (max-width: 560px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
         }
         
         .blog-card img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 12px;
             background: var(--bg-warm);
+        }
+        
+        .blog-card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .blog-card-content h2 {
             font-family: var(--serif);
-            font-size: 1.4em;
+            font-size: 1.15em;
             color: var(--navy);
-            margin-bottom: 12px;
-            line-height: 1.3;
+            margin-bottom: 10px;
+            line-height: 1.35;
         }
         
         .blog-card-content p {
             color: var(--text-muted);
             margin-bottom: 16px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            flex: 1;
         }
         
         .blog-meta {
@@ -130,6 +153,7 @@
 
     <div class="blog-list">
         <div class="container">
+          <div class="blog-grid">
             <a href="/blog/elementum-odkup-kako-prodate-srebro-nazaj" class="blog-card">
                 <img src="https://images.unsplash.com/photo-1610375461246-83df859d849d?w=600&h=400&fit=crop" alt="Elementum odkup srebra">
                 <div class="blog-card-content">
@@ -345,6 +369,7 @@
                     <span class="blog-meta">31. januar 2026 · 3 min branja</span>
                 </div>
             </a>
+          </div>
         </div>
     </div>
 
