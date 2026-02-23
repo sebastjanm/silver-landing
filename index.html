@@ -1319,9 +1319,32 @@
 
     <!-- Email Subscription Handler -->
     <script>
-        document.getElementById('vodnik-form').addEventListener('submit', function(e) {
+        document.getElementById('vodnik-form').addEventListener('submit', async function(e) {
             e.preventDefault();
-            window.location.href = '/hvala.html';
+            const btn = document.getElementById('vodnik-btn');
+            const email = document.getElementById('vodnik-email').value.trim();
+            const origText = btn.textContent;
+            
+            btn.textContent = 'Pošiljam...';
+            btn.disabled = true;
+            
+            try {
+                const resp = await fetch('/api/capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email }),
+                });
+                const data = await resp.json();
+                if (resp.ok && data.success) {
+                    window.location.href = '/hvala.html';
+                } else {
+                    btn.textContent = data.error || 'Napaka. Poskusite znova.';
+                    setTimeout(() => { btn.textContent = origText; btn.disabled = false; }, 3000);
+                }
+            } catch (err) {
+                btn.textContent = 'Napaka. Poskusite znova.';
+                setTimeout(() => { btn.textContent = origText; btn.disabled = false; }, 3000);
+            }
         });
     </script>
 </body>
