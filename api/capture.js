@@ -3,6 +3,8 @@ const path = require('path');
 
 const AGENTMAIL_KEY = 'am_us_31af73d7a0c25cff0d08c6215610aacd646e4dc74323ca40f9b7a8a9d6981109';
 const INBOX = 'srebro@agentmail.to';
+const VPS_WEBHOOK = 'https://ai.sebastjanm.com/silver/subscribe';
+const VPS_SECRET = 'silver_capture_2026';
 const SUBSCRIBERS_FILE = path.join('/tmp', 'silver-subscribers.json');
 
 function loadSubscribers() {
@@ -102,6 +104,17 @@ module.exports = async function handler(req, res) {
     }
   } catch (err) {
     console.error('AgentMail send failed:', err.message);
+  }
+
+  // Also register on VPS for persistent storage + drip sequence
+  try {
+    await fetch(VPS_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.toLowerCase(), secret: VPS_SECRET }),
+    });
+  } catch (e) {
+    console.error('VPS webhook failed (non-blocking):', e.message);
   }
 
   return res.status(200).json({ success: true });
