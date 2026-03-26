@@ -1,4 +1,19 @@
-.env*.local
+# Dependencies
 node_modules/
+
+# Next.js
+.next/
+out/
+
+# Env
+.env*.local
+
+# Vercel
 .vercel
-vodnik/node_modules/
+
+# Legacy
+_legacy/vodnik/node_modules/
+
+# Misc
+*.tsbuildinfo
+next-env.d.ts
