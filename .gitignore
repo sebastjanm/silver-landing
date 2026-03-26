@@ -17,3 +17,4 @@ _legacy/vodnik/node_modules/
 # Misc
 *.tsbuildinfo
 next-env.d.ts
+supabase/.temp/
