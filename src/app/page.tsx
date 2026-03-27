@@ -231,7 +231,7 @@ function ProofSection() {
   return (
     <section className="border-t border-border bg-navy py-12">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-        <p className="mb-6 text-sm text-white/60">
+        <p className="mb-6 text-sm text-white/70">
           Tisoče družin že varuje prihodnost s plemenitimi kovinami
         </p>
         <div className="flex flex-wrap items-center justify-center gap-10">

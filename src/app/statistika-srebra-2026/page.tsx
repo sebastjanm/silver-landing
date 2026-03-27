@@ -212,7 +212,7 @@ function StatCard({
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-gradient-to-br from-navy to-navy-light p-6 text-white">
         <div className="min-w-0 flex-1">
           <span className="text-white/90">{label}</span>
-          <p className="mt-1 text-xs text-white/60">{source}</p>
+          <p className="mt-1 text-xs text-white/70">{source}</p>
         </div>
         <span className="font-serif text-4xl font-bold text-gold-light">
           {value}

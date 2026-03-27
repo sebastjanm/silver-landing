@@ -38,17 +38,17 @@ export function PriceTicker() {
           <span className="font-serif text-lg font-bold text-gold-light">
             {silver}
           </span>
-          <span className="text-xs text-white/60">€/oz</span>
+          <span className="text-xs text-white/70">€/oz</span>
         </span>
         <span className="flex items-center gap-2">
           <span className="font-medium">🥇 Zlato</span>
           <span className="font-serif text-lg font-bold text-gold-light">
             {gold}
           </span>
-          <span className="text-xs text-white/60">€/oz</span>
+          <span className="text-xs text-white/70">€/oz</span>
         </span>
         {updated && (
-          <span className="text-xs text-white/50">{updated}</span>
+          <span className="text-xs text-white/70">{updated}</span>
         )}
       </div>
     </div>

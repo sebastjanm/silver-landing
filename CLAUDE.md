@@ -45,3 +45,11 @@ Every page has: `<meta>` description, canonical URL, Open Graph tags, Twitter ca
 - Research docs in `/research/` follow the naming pattern `{slug}-research.md`
 - When adding new pages, update `sitemap.xml` manually
 - The root `package.json` is minimal (name + version only) — the only real npm project is in `/vodnik/`
+
+
+
+Document does not have a main landmark.
+One main landmark helps screen reader users navigate a web page. Learn more about landmarks.
+Failing Elements
+html.libre_baskerville_2a17638f-module__q6JoQW__variable
+<html lang="sl" class="libre_baskerville_2a17638f-module__q6JoQW__variable source_sans_3_4947b95a…">

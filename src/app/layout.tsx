@@ -101,7 +101,7 @@ function Nav() {
 
 function Footer() {
   return (
-    <footer className="bg-navy py-10 text-center text-sm text-white/60">
+    <footer className="bg-navy py-10 text-center text-sm text-white/70">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <p>© {new Date().getFullYear()} NakupSrebra.com</p>
         <p className="mt-2">

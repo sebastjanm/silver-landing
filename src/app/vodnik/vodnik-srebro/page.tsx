@@ -71,7 +71,7 @@ export default function VodnikSrebroPage() {
           <p className="mb-8 text-lg text-white/80">
             Praktičen vodnik za začetnike
           </p>
-          <p className="text-sm text-white/60">nakupsrebra.com · 2026</p>
+          <p className="text-sm text-white/70">nakupsrebra.com · 2026</p>
         </div>
         </div>
       </div>
