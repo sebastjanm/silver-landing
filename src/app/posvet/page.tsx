@@ -37,13 +37,14 @@ export default function PosvetPage() {
               <Ornament />
             </p>
             <h1 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
-              Pogovorimo se{" "}
-              <em className="text-gold">o vaših prihrankih</em> — preden trg
-              naredi to namesto vas.
+              Pogovorimo se o{" "}
+              <em className="text-gold">strateški naložbi v srebro</em> —
+              preden trg naredi to namesto vas.
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg">
-              Pustite ime in telefon. Sebastjan vas v 24 urah pokliče in v 15
-              minutah razloži, kako srebro in zlato delujeta v vaši situaciji.
+              Pustite ime in telefon. Sebastjan vas v <span className="numerals">24</span> urah pokliče in v
+              <span className="numerals"> 15</span> minutah razloži, kako srebro deluje v vaši situaciji — in
+              zakaj je v <span className="numerals">2026</span> dostopnejše od zlata.
             </p>
           </div>
         </div>
