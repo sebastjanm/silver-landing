@@ -61,14 +61,11 @@ export default function CenaSrebraPage() {
         }}
       />
 
-      {/* Above-fold: live price + above-fold CTA. The CTA must be visible
-          before the first H2 on mobile so high-intent visitors have a
-          one-click path to conversion. */}
       <LivePriceCard />
 
       <CtaBox
         title="Razumeti, kaj cena pomeni za vašo situacijo"
-        text="V 15-minutnem klicu razložim, kaj trenutna cena pomeni za vaš nakup, in kako se izognete 22% DDV."
+        text="V 15-minutnem klicu vam naš svetovalec razloži, kaj trenutna cena pomeni za vaš nakup in kako se izognete 22% DDV."
       />
 
       <HighlightBox>
@@ -98,19 +95,10 @@ export default function CenaSrebraPage() {
         gre v industrijo. Največji porabniki:
       </p>
       <ul className="mb-4 ml-6 space-y-2">
-        <li>
-          <strong>Sončne celice</strong> — Hitro rastoče povpraševanje zaradi
-          prehoda na obnovljive vire
-        </li>
-        <li>
-          <strong>Elektronika</strong> — Srebro je najboljši prevodnik elektrike
-        </li>
-        <li>
-          <strong>Medicina</strong> — Antibakterijske lastnosti
-        </li>
-        <li>
-          <strong>Avtomobilska industrija</strong> — Električni avtomobili
-        </li>
+        <li><strong>Sončne celice</strong> — Hitro rastoče povpraševanje zaradi prehoda na obnovljive vire</li>
+        <li><strong>Elektronika</strong> — Srebro je najboljši prevodnik elektrike</li>
+        <li><strong>Medicina</strong> — Antibakterijske lastnosti</li>
+        <li><strong>Avtomobilska industrija</strong> — Električni avtomobili</li>
       </ul>
       <p className="mb-5 text-sm italic text-text-muted">
         Vir: The Silver Institute — World Silver Survey
@@ -118,8 +106,7 @@ export default function CenaSrebraPage() {
 
       <H3>2. Naložbeno povpraševanje</H3>
       <p className="mb-4">
-        V negotovih časih vlagatelji kupujejo srebro kot &quot;varno
-        zatočišče&quot;. Povpraševanje naraste v obdobjih:
+        V negotovih časih vlagatelji kupujejo srebro kot &quot;varno zatočišče&quot;. Povpraševanje naraste v obdobjih:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
         <li>Visoke inflacije</li>
@@ -130,16 +117,12 @@ export default function CenaSrebraPage() {
 
       <H3>3. Razmerje do zlata</H3>
       <p className="mb-5">
-        Razmerje zlato/srebro (kolikokrat je zlato dražje od srebra) zgodovinsko
-        niha med <span className="numerals">40</span> in{" "}
-        <span className="numerals">90</span>. Ko je razmerje visoko, nekateri
-        vlagatelji menijo, da je srebro podcenjeno.
+        Razmerje zlato/srebro (kolikokrat je zlato dražje od srebra) zgodovinsko niha med <span className="numerals">40</span> in <span className="numerals">90</span>. Ko je razmerje visoko, nekateri vlagatelji menijo, da je srebro podcenjeno.
       </p>
 
       <H3>4. Ponudba (rudniki)</H3>
       <p className="mb-5">
-        Večina srebra se pridobi kot stranski produkt pri rudarjenju cinka,
-        svinca in bakra. Težave v rudarstvu lahko vplivajo na ceno.
+        Večina srebra se pridobi kot stranski produkt pri rudarjenju cinka, svinca in bakra. Težave v rudarstvu lahko vplivajo na ceno.
       </p>
 
       <H2>Zgodovinski pregled cen</H2>
@@ -160,12 +143,10 @@ export default function CenaSrebraPage() {
 
       <H2>Cena srebra v evrih</H2>
       <p className="mb-5">
-        Mednarodna cena srebra je vedno v ameriških dolarjih (USD). Za ceno v
-        evrih morate upoštevati tudi tečaj EUR/USD.
+        Mednarodna cena srebra je vedno v ameriških dolarjih (USD). Za ceno v evrih morate upoštevati tudi tečaj EUR/USD.
       </p>
       <p className="mb-5">
-        To pomeni, da lahko cena srebra v evrih raste tudi, če cena v dolarjih
-        stagnira — če evro oslabi proti dolarju.
+        To pomeni, da lahko cena srebra v evrih raste tudi, če cena v dolarjih stagnira — če evro oslabi proti dolarju.
       </p>
 
       <H2>Razlika med spot ceno in nakupno ceno</H2>
@@ -173,57 +154,32 @@ export default function CenaSrebraPage() {
         Ko kupujete fizično srebro, plačate več kot je spot cena:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
-        <li>
-          <strong>Premija</strong> —{" "}
-          <span className="numerals">5–25%</span> nad spot ceno (odvisno od
-          oblike)
-        </li>
-        <li>
-          <strong>DDV</strong> — V Sloveniji{" "}
-          <span className="numerals">22%</span> (pri določenih načinih nakupa se
-          lahko izognete)
-        </li>
+        <li><strong>Premija</strong> — <span className="numerals">5–25%</span> nad spot ceno (odvisno od oblike)</li>
+        <li><strong>DDV</strong> — V Sloveniji <span className="numerals">22%</span> (pri določenih načinih nakupa se lahko izognete)</li>
       </ul>
       <p className="mb-5">
-        Primer: Če je spot cena <span className="numerals">25 €</span>/oz, lahko
-        za <span className="numerals">1</span> oz kovanec plačate{" "}
-        <span className="numerals">25 €</span> +{" "}
-        <span className="numerals">20%</span> premija +{" "}
-        <span className="numerals">22%</span> DDV ={" "}
-        <span className="numerals">~36 €</span>.
+        Primer: Če je spot cena <span className="numerals">25 €</span>/oz, lahko za <span className="numerals">1</span> oz kovanec plačate <span className="numerals">25 €</span> + <span className="numerals">20%</span> premija + <span className="numerals">22%</span> DDV = <span className="numerals">~36 €</span>.
       </p>
 
       <HighlightBox>
         <p>
-          <strong>Nasvet:</strong> Pri nakupu s hrambo v švicarskem carinskem
-          skladišču DDV ne plačate. To lahko predstavlja{" "}
-          <span className="numerals">22%</span> prihranka.
+          <strong>Nasvet:</strong> Pri nakupu s hrambo v švicarskem carinskem skladišču DDV ne plačate. To lahko predstavlja <span className="numerals">22%</span> prihranka.
         </p>
       </HighlightBox>
 
       <H2>Ali je zdaj pravi čas za nakup?</H2>
       <p className="mb-4">
-        Nihče — niti najboljši analitiki — ne more zanesljivo napovedati
-        kratkoročnih gibanj cene. Nekateri pristopi:
+        Nihče — niti najboljši analitiki — ne more zanesljivo napovedati kratkoročnih gibanj cene. Nekateri pristopi:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
-        <li>
-          <strong>Dollar-cost averaging</strong> — Kupujte vsak mesec enako
-          količino, ne glede na ceno. Povprečite ceno skozi čas.
-        </li>
-        <li>
-          <strong>Razmerje zlato/srebro</strong> — Nekateri kupujejo srebro, ko
-          je razmerje visoko (srebro relativno poceni).
-        </li>
-        <li>
-          <strong>Dolgoročni pogled</strong> — Če verjamete v dolgoročno
-          vrednost srebra, je kratkoročna cena manj pomembna.
-        </li>
+        <li><strong>Dollar-cost averaging</strong> — Kupujte vsak mesec enako količino, ne glede na ceno. Povprečite ceno skozi čas.</li>
+        <li><strong>Razmerje zlato/srebro</strong> — Nekateri kupujejo srebro, ko je razmerje visoko (srebro relativno poceni).</li>
+        <li><strong>Dolgoročni pogled</strong> — Če verjamete v dolgoročno vrednost srebra, je kratkoročna cena manj pomembna.</li>
       </ul>
 
       <CtaBox
         title="Želite kupiti srebro?"
-        text="Pojasnim vam možnosti, stroške in vam pomagam izbrati najboljšo pot za vašo situacijo."
+        text="Pojasnimo vam možnosti, stroške in pomagamo izbrati najboljšo pot za vašo situacijo."
       />
     </ArticleLayout>
   );

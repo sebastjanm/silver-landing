@@ -43,17 +43,13 @@ export default function SrebroVsEtfPage() {
 
       <div className="space-y-5">
         <p>
-          Če želite vlagati v srebro, imate dve osnovni možnosti: kupite fizično
-          srebro (kovance, palice) ali kupite delnice srebrnega ETF sklada (npr.
-          SLV, SIVR).
+          Če želite vlagati v srebro, imate dve osnovni možnosti: kupite fizično srebro (kovance, palice) ali kupite delnice srebrnega ETF sklada (npr. SLV, SIVR).
         </p>
         <p>
-          Obe možnosti vam dajeta izpostavljenost ceni srebra — toda z
-          različnimi prednostmi, tveganji in stroški.
+          Obe možnosti vam dajeta izpostavljenost ceni srebra — toda z različnimi prednostmi, tveganji in stroški.
         </p>
       </div>
 
-      {/* Comparison cards */}
       <div className="my-8 grid gap-6 sm:grid-cols-2">
         <div className="rounded-xl border border-border border-t-4 border-t-silver bg-white p-7">
           <h4 className="mb-4 font-serif text-xl text-navy">🥈 Fizično srebro</h4>
@@ -84,9 +80,7 @@ export default function SrebroVsEtfPage() {
 
       <H2>Kaj je srebrni ETF?</H2>
       <p className="mb-5">
-        ETF (Exchange-Traded Fund) je sklad, ki se trguje na borzi kot delnica.
-        Srebrni ETF naj bi bil podprt s fizičnim srebrom v trezorjih. Ko kupite
-        delnico ETF, posredno &quot;imate&quot; delež tega srebra.
+        ETF (Exchange-Traded Fund) je sklad, ki se trguje na borzi kot delnica. Srebrni ETF naj bi bil podprt s fizičnim srebrom v trezorjih. Ko kupite delnico ETF, posredno &quot;imate&quot; delež tega srebra.
       </p>
       <p className="mb-3">Najpopularnejši srebrni ETF skladi:</p>
       <ul className="mb-5 ml-6 space-y-2">
@@ -134,19 +128,14 @@ export default function SrebroVsEtfPage() {
       <H2>Ključna razlika: tveganje nasprotne stranke</H2>
       <WarningBox>
         <p className="mb-3">
-          <strong>Pri ETF imate nasprotno stranko.</strong> Zaupate upravljavcu
-          sklada, da ima dejansko srebro, da je varno, da bo sklad deloval tudi
-          v krizi. Če upravljavec goljufa ali propade — lahko izgubite.
+          <strong>Pri ETF imate nasprotno stranko.</strong> Zaupate upravljavcu sklada, da ima dejansko srebro, da je varno, da bo sklad deloval tudi v krizi. Če upravljavec goljufa ali propade — lahko izgubite.
         </p>
         <p>
-          Pri fizičnem srebru ni nasprotne stranke. Če imate srebro v sefu — ga
-          imate. Nihče drug ni vpleten.
+          Pri fizičnem srebru ni nasprotne stranke. Če imate srebro v sefu — ga imate. Nihče drug ni vpleten.
         </p>
       </WarningBox>
       <p className="mb-5">
-        To je glavni razlog, zakaj mnogi vlagatelji v plemenite kovine
-        preferirajo fizično srebro — zlasti tisti, ki kovine kupujejo kot
-        zaščito pred sistemskim tveganjem.
+        To je glavni razlog, zakaj mnogi vlagatelji v plemenite kovine preferirajo fizično srebro — zlasti tisti, ki kovine kupujejo kot zaščito pred sistemskim tveganjem.
       </p>
 
       <H2>Stroški: podrobna primerjava</H2>
@@ -171,10 +160,7 @@ export default function SrebroVsEtfPage() {
 
       <HighlightBox>
         <p>
-          <strong>Kdaj se fizično srebro izplača?</strong> Pri daljšem obdobju
-          (5+ let) in z izogibom DDV (švicarska hramba) fizično srebro postane
-          konkurenčno ali cenejše od ETF — hkrati pa imate dejansko lastništvo
-          in nobene nasprotne stranke.
+          <strong>Kdaj se fizično srebro izplača?</strong> Pri daljšem obdobju (5+ let) in z izogibom DDV (švicarska hramba) fizično srebro postane konkurenčno ali cenejše od ETF — hkrati pa imate dejansko lastništvo in nobene nasprotne stranke.
         </p>
       </HighlightBox>
 
@@ -189,25 +175,20 @@ export default function SrebroVsEtfPage() {
       <H2>Pogosta vprašanja</H2>
       <H3>Ali ETF res ima srebro?</H3>
       <p className="mb-5">
-        Večji ETF skladi (SLV, PSLV) objavljajo sezname palic. Toda revizije
-        niso popolne. PSLV (Sprott) ima najboljšo preglednost — omogoča celo
-        odkup fizičnega srebra.
+        Večji ETF skladi (SLV, PSLV) objavljajo sezname palic. Toda revizije niso popolne. PSLV (Sprott) ima najboljšo preglednost — omogoča celo odkup fizičnega srebra.
       </p>
       <H3>Kaj se zgodi z ETF v krizi?</H3>
       <p className="mb-5">
-        V finančni krizi lahko pride do zamrznitve trgovanja, likvidnostnih
-        težav ali celo propada sklada. Fizično srebro teh tveganj nima.
+        V finančni krizi lahko pride do zamrznitve trgovanja, likvidnostnih težav ali celo propada sklada. Fizično srebro teh tveganj nima.
       </p>
       <H3>Kateri ETF je najboljši?</H3>
       <p className="mb-5">
-        Za fizično kritje: PSLV (Sprott). Za likvidnost: SLV (iShares). Za
-        evropske vlagatelje: preverite dostopnost in davčno obravnavo v vaši
-        državi.
+        Za fizično kritje: PSLV (Sprott). Za likvidnost: SLV (iShares). Za evropske vlagatelje: preverite dostopnost in davčno obravnavo v vaši državi.
       </p>
 
       <CtaBox
         title="Razmišljate o fizičnem srebru?"
-        text="Pomagam vam razumeti možnosti in izbrati pravo pot. Brezplačen posvet."
+        text="Pomagamo vam razumeti možnosti in izbrati pravo pot. Brezplačen posvet."
       />
     </ArticleLayout>
   );

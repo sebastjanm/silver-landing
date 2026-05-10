@@ -49,17 +49,13 @@ export default function VrednostSrebraPage() {
 
       <div className="space-y-5">
         <p>
-          Srebro je imelo vrednost od začetka civilizacije. Za razliko od papirnatega
-          denarja, ki ga lahko tiskajo v neomejenih količinah, je srebro fizično
-          omejeno — na Zemlji ga je le toliko, kolikor ga je.
+          Srebro je imelo vrednost od začetka civilizacije. Za razliko od papirnatega denarja, ki ga lahko tiskajo v neomejenih količinah, je srebro fizično omejeno — na Zemlji ga je le toliko, kolikor ga je.
         </p>
         <p>
-          Toda vrednost srebra ne temelji samo na redkosti. Temelji na tisočletni
-          zgodovini, edinstvenih fizikalnih lastnostih in vse večji industrijski porabi.
+          Toda vrednost srebra ne temelji samo na redkosti. Temelji na tisočletni zgodovini, edinstvenih fizikalnih lastnostih in vse večji industrijski porabi.
         </p>
       </div>
 
-      {/* Stat cards */}
       <div className="my-8 grid gap-5 sm:grid-cols-3">
         <div className="rounded-xl border border-border bg-white p-6 text-center">
           <div className="font-serif text-4xl font-bold text-navy">5.000</div>
@@ -77,32 +73,27 @@ export default function VrednostSrebraPage() {
 
       <H2>Kratka zgodovina srebra</H2>
 
-      {/* Timeline */}
       <div className="my-8 border-l-4 border-gold pl-6">
         <TimelineItem date="3000 pr.n.š.">
-          Prvo rudarjenje srebra v Anatoliji (današnja Turčija). Srebro postane simbol
-          bogastva.
+          Prvo rudarjenje srebra v Anatoliji (današnja Turčija). Srebro postane simbol bogastva.
         </TimelineItem>
         <TimelineItem date="700 pr.n.š.">
           Lidijci izdelajo prve srebrne kovance. Začetek srebra kot denarja.
         </TimelineItem>
         <TimelineItem date="1500-1800">
-          Španska Amerika proizvede 85% svetovnega srebra. Srebro postane globalna
-          valuta.
+          Španska Amerika proizvede 85% svetovnega srebra. Srebro postane globalna valuta.
         </TimelineItem>
         <TimelineItem date="1971">
           ZDA zapusti zlati standard. Začetek obdobja fiat valut (denarja brez kritja).
         </TimelineItem>
         <TimelineItem date="2020+">
-          Eksplozija povpraševanja zaradi sončnih celic, elektronike in elektrifikacije
-          prometa.
+          Eksplozija povpraševanja zaradi sončnih celic, elektronike in elektrifikacije prometa.
         </TimelineItem>
       </div>
 
       <H2>Edinstvene lastnosti srebra</H2>
       <p className="mb-4">
-        Srebro ni dragoceno samo zato, ker je redko. Ima edinstvene fizikalne lastnosti,
-        ki ga delajo nezamenljivega:
+        Srebro ni dragoceno samo zato, ker je redko. Ima edinstvene fizikalne lastnosti, ki ga delajo nezamenljivega:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
         <li><strong>Najboljši prevodnik elektrike</strong> — Boljši od bakra, nenadomestljiv v elektroniki</li>
@@ -114,9 +105,7 @@ export default function VrednostSrebraPage() {
 
       <HighlightBox>
         <p>
-          <strong>Zakaj je to pomembno?</strong> Te lastnosti pomenijo, da industrija
-          POTREBUJE srebro. Ni ga mogoče zamenjati s cenejšimi materiali v mnogih
-          aplikacijah. Povpraševanje ni samo naložbeno — je strukturno.
+          <strong>Zakaj je to pomembno?</strong> Te lastnosti pomenijo, da industrija POTREBUJE srebro. Ni ga mogoče zamenjati s cenejšimi materiali v mnogih aplikacijah. Povpraševanje ni samo naložbeno — je strukturno.
         </p>
       </HighlightBox>
 
@@ -127,9 +116,7 @@ export default function VrednostSrebraPage() {
 
       <H3>Sončne celice (fotovoltaika)</H3>
       <p className="mb-3">
-        Sončna industrija je najhitreje rastoči porabnik srebra. Tipična sončna plošča
-        vsebuje približno 20 gramov srebra. S prehajanjem na obnovljive vire bo
-        povpraševanje še naraščalo.
+        Sončna industrija je najhitreje rastoči porabnik srebra. Tipična sončna plošča vsebuje približno 20 gramov srebra. S prehajanjem na obnovljive vire bo povpraševanje še naraščalo.
       </p>
       <p className="mb-5 text-sm italic text-text-muted">
         Vir: The Silver Institute — povpraševanje za fotovoltaiko raste 15-20% letno
@@ -137,20 +124,17 @@ export default function VrednostSrebraPage() {
 
       <H3>Elektronika</H3>
       <p className="mb-5">
-        Vsak pametni telefon, računalnik, televizor vsebuje srebro. Kot najboljši
-        prevodnik elektrike je ključna komponenta v vezjih.
+        Vsak pametni telefon, računalnik, televizor vsebuje srebro. Kot najboljši prevodnik elektrike je ključna komponenta v vezjih.
       </p>
 
       <H3>Električni avtomobili</H3>
       <p className="mb-5">
-        Električni avtomobil vsebuje približno 25-50 gramov srebra — več kot klasični
-        avtomobil. Z elektrifikacijo prometa raste povpraševanje.
+        Električni avtomobil vsebuje približno 25-50 gramov srebra — več kot klasični avtomobil. Z elektrifikacijo prometa raste povpraševanje.
       </p>
 
       <H3>Medicina</H3>
       <p className="mb-5">
-        Srebrove antibakterijske lastnosti se uporabljajo v obližih, prevlekah
-        medicinskih pripomočkov, čiščenju vode.
+        Srebrove antibakterijske lastnosti se uporabljajo v obližih, prevlekah medicinskih pripomočkov, čiščenju vode.
       </p>
 
       <H2>Srebro vs. fiat denar</H2>
@@ -162,15 +146,12 @@ export default function VrednostSrebraPage() {
         <li><strong>Fiat denar je neomejen</strong> — Centralne banke lahko tiskajo poljubne količine.</li>
       </ul>
       <p className="mb-5">
-        Ko centralne banke tiskajo denar, njegova vrednost pada (inflacija). Srebro —
-        kot fizična dobrina — ohranja kupno moč skozi čas.
+        Ko centralne banke tiskajo denar, njegova vrednost pada (inflacija). Srebro — kot fizična dobrina — ohranja kupno moč skozi čas.
       </p>
 
       <HighlightBox>
         <p>
-          <strong>Primer:</strong> Leta 1964 je srebrnik (1 USD) kupil 4 litre bencina.
-          Danes bi ta isti srebrnik kupil približno 8 litrov bencina. Papirnati dolar iz
-          1964 danes kupi manj kot pol litra.
+          <strong>Primer:</strong> Leta 1964 je srebrnik (1 USD) kupil 4 litre bencina. Danes bi ta isti srebrnik kupil približno 8 litrov bencina. Papirnati dolar iz 1964 danes kupi manj kot pol litra.
         </p>
       </HighlightBox>
 
@@ -185,9 +166,7 @@ export default function VrednostSrebraPage() {
         <li>Je časovno preizkušeno — 5.000 let</li>
       </ul>
       <p className="mb-5">
-        To ne pomeni, da cena srebra ne more pasti. Lahko — in občasno tudi za 30-50%.
-        Toda <strong>vrednost srebra nikoli ni šla na nič</strong>, za razliko od mnogih
-        delnic, obveznic ali valut.
+        To ne pomeni, da cena srebra ne more pasti. Lahko — in občasno tudi za 30-50%. Toda <strong>vrednost srebra nikoli ni šla na nič</strong>, za razliko od mnogih delnic, obveznic ali valut.
       </p>
 
       <H2>Tveganja</H2>
@@ -206,7 +185,7 @@ export default function VrednostSrebraPage() {
 
       <CtaBox
         title="Želite izvedeti več?"
-        text="Brezplačno vam pojasnim, kako vključiti plemenite kovine v vaš naložbeni načrt."
+        text="Brezplačno vam pojasnimo, kako vključiti plemenite kovine v vaš naložbeni načrt."
       />
     </ArticleLayout>
   );
