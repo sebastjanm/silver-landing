@@ -11,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Brezplačen posvet",
   description:
-    "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato. Sebastjan vas pokliče v 24 urah, brez prodajnega pritiska.",
+    "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro. Naš svetovalec vas pokliče v 24 urah, brez prodajnega pritiska.",
   alternates: { canonical: "/posvet" },
   openGraph: {
     title: "Brezplačen posvet | NakupSrebra.com",
@@ -42,9 +42,10 @@ export default function PosvetPage() {
               preden trg naredi to namesto vas.
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg">
-              Pustite ime in telefon. Sebastjan vas v <span className="numerals">24</span> urah pokliče in v
-              <span className="numerals"> 15</span> minutah razloži, kako srebro deluje v vaši situaciji — in
-              zakaj je v <span className="numerals">2026</span> dostopnejše od zlata.
+              Pustite ime in telefon. V{" "}
+              <span className="numerals">24</span> urah vas pokliče naš
+              svetovalec in v <span className="numerals">15</span> minutah
+              razloži, kako srebro deluje v vaši situaciji.
             </p>
           </div>
         </div>
@@ -116,7 +117,7 @@ const steps = [
   {
     n: 1,
     title: "Klic v 24 urah",
-    text: "Sebastjan vas pokliče v izbranem časovnem oknu. Klic traja 15 minut, brez vezave.",
+    text: "V izbranem časovnem oknu vas pokliče naš svetovalec. Klic traja 15 minut, brez vezave.",
     icon: <PhoneGlyph className="!h-7 !w-7" />,
   },
   {

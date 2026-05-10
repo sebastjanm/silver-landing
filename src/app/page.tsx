@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title:
     "NakupSrebra.com | Strateška naložba v srebro — brezplačen posvet",
   description:
-    "Srebro je najbolj dostopna pot do varnih prihrankov. Brezplačen 15-minutni posvet, švicarska hramba, brez DDV. Sebastjan vas nauči, kako začeti.",
+    "Srebro je najbolj dostopna pot do varnih prihrankov. Brezplačen 15-minutni posvet z izkušenim svetovalcem, švicarska hramba, brez DDV.",
   alternates: { canonical: "/" },
 };
 
@@ -60,9 +60,10 @@ function HeroSection() {
               <em className="text-gold">varnih prihrankov.</em>
             </h1>
             <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg lg:mx-0">
-              Sebastjan vas v <span className="numerals">15</span> minutah
-              brezplačno nauči, kako začeti — kaj kupiti, kje hraniti, kako se
-              izogniti <span className="numerals">22%</span> DDV.
+              Brezplačen <span className="numerals">15</span>-minutni posvet
+              z izkušenim svetovalcem: kaj kupiti, kje hraniti, kako se
+              izogniti <span className="numerals">22%</span> DDV — brez
+              prodajnega pritiska.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 max-lg:justify-center">
               <TrackedLink
@@ -550,7 +551,7 @@ function FinalCtaSection() {
             Pravo tveganje je <em className="text-gold">nedelovanje.</em>
           </SectionTitle>
           <p className="mb-9 text-base text-text-muted sm:text-lg">
-            Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti,
+            Pogovorimo se. Brezplačno, brez obveznosti. Pomagamo vam razumeti,
             kako zaščititi prihranke s srebrom.
           </p>
           <TrackedLink
@@ -744,38 +745,38 @@ const trustCards = [
   },
   {
     Glyph: PhoneGlyph,
-    title: "Osebni kontakt",
-    text: "Nisem korporacija, sem oseba. Pokličete, dobite mene — ne klicnega centra.",
+    title: "Resničen svetovalec",
+    text: "Govorite z izkušenim svetovalcem, ne s klicnim centrom. En kontakt, od posveta do nakupa.",
   },
 ];
 
 const steps = [
   {
     num: 1,
-    title: "Pogovoriva se",
-    text: "Kratek klic — poveste mi o svoji situaciji. Brez obveznosti.",
+    title: "Pogovorimo se",
+    text: "Kratek klic — povejte nam o svoji situaciji. Brez obveznosti.",
   },
   {
     num: 2,
-    title: "Poslušam",
-    text: "Kaj vas skrbi? Kakšni so vaši cilji? Skupaj najdeva pot.",
+    title: "Poslušamo",
+    text: "Kaj vas skrbi? Kakšni so vaši cilji? Skupaj najdemo pot.",
   },
   {
     num: 3,
     title: "Načrt za vas",
-    text: "Pripravim predlog, ki ustreza vaši družini — ne generično rešitev.",
+    text: "Pripravimo predlog, ki ustreza vaši družini — ne generično rešitev.",
   },
   {
     num: 4,
-    title: "Ob vas sem",
-    text: "Vodim vas skozi vsak korak. Vprašanja? Dvomi? Tu sem.",
+    title: "Ob vas smo",
+    text: "Vodimo vas skozi vsak korak. Vprašanja? Dvomi? Tu smo.",
   },
 ];
 
 const faqItems = [
   {
-    q: "Ali mi res lahko zaupate? Ne poznam vas.",
-    a: "Razumem. Zato je prvi pogovor brezplačen in brez obveznosti. Spoznajte me najprej. Nič ne podpišete, nič ne vložite — dokler niste prepričani, da je to prava pot za vašo družino.",
+    q: "Ali vam res lahko zaupam? Ne poznam vas.",
+    a: "Razumemo. Zato je prvi pogovor brezplačen in brez obveznosti. Spoznajte naš pristop najprej. Nič ne podpišete, nič ne vložite — dokler niste prepričani, da je to prava pot za vašo družino.",
   },
   {
     q: "Nimam veliko denarja. Je srebro sploh zame?",
@@ -787,7 +788,7 @@ const faqItems = [
   },
   {
     q: "Zakaj srebro namesto zlata?",
-    a: "Srebro je bolj dostopno — lahko začnete z manj denarja in kupujete manjše količine. Razmerje zlato/srebro je trenutno zgodovinsko ugodno. Večina mojih strank kombinira oboje — več srebra, malo zlata za razpršitev.",
+    a: "Srebro je bolj dostopno — lahko začnete z manj denarja in kupujete manjše količine. Razmerje zlato/srebro je trenutno zgodovinsko ugodno. Večina naših strank kombinira oboje — več srebra, malo zlata za razpršitev.",
   },
   {
     q: "Kje je moje srebro? Kako vem, da obstaja?",
@@ -795,7 +796,7 @@ const faqItems = [
   },
   {
     q: "Ali me boste pritiskali, da kupim več?",
-    a: 'Ne. Kupite toliko, kolikor vam ustreza, ko vam ustreza. Brez prodajnega pritiska, brez "omejenih ponudb". Sem tu za dolgoročno svetovanje — ne za enkratno prodajo.',
+    a: 'Ne. Kupite toliko, kolikor vam ustreza, ko vam ustreza. Brez prodajnega pritiska, brez "omejenih ponudb". Tu smo za dolgoročno svetovanje — ne za enkratno prodajo.',
   },
 ];
 

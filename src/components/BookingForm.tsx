@@ -157,12 +157,7 @@ export function BookingForm({
       </header>
 
       <div className="space-y-5">
-        <Field
-          id="bf-name"
-          label="Ime"
-          error={fieldErrors.name}
-          required
-        >
+        <Field id="bf-name" label="Ime" error={fieldErrors.name} required>
           <input
             id="bf-name"
             type="text"
@@ -175,12 +170,7 @@ export function BookingForm({
           />
         </Field>
 
-        <Field
-          id="bf-phone"
-          label="Telefon"
-          error={fieldErrors.phone}
-          required
-        >
+        <Field id="bf-phone" label="Telefon" error={fieldErrors.phone} required>
           <input
             id="bf-phone"
             type="tel"
@@ -193,11 +183,7 @@ export function BookingForm({
           />
         </Field>
 
-        <Field
-          id="bf-email"
-          label="Email (neobvezno)"
-          error={fieldErrors.email}
-        >
+        <Field id="bf-email" label="Email (neobvezno)" error={fieldErrors.email}>
           <input
             id="bf-email"
             type="email"
@@ -249,11 +235,7 @@ export function BookingForm({
               </div>
             </fieldset>
 
-            <Field
-              id="bf-message"
-              label="Sporočilo (neobvezno)"
-              error={fieldErrors.message}
-            >
+            <Field id="bf-message" label="Sporočilo (neobvezno)" error={fieldErrors.message}>
               <textarea
                 id="bf-message"
                 rows={3}
@@ -360,7 +342,7 @@ function SuccessState({
         Hvala — sporočilo prejeto.
       </h2>
       <p className="mx-auto mb-5 max-w-md text-text-muted">
-        Sebastjan vas pokliče v 24 urah
+        Naš svetovalec vas pokliče v <span className="numerals">24</span> urah
         {timeWindow ? (
           <>
             ,{" "}

@@ -87,11 +87,12 @@ export default function HvalaPage() {
               Naslednji korak
             </p>
             <h2 className="font-serif text-2xl text-navy sm:text-3xl">
-              Želite, da vas{" "}
-              <em className="text-gold">pokličem osebno?</em>
+              Želite{" "}
+              <em className="text-gold">osebni klic?</em>
             </h2>
             <p className="mt-3 text-text-muted">
-              Pustite številko — v 24 urah razložim, kaj točno ustreza vaši
+              Pustite številko — v <span className="numerals">24</span> urah
+              vas pokliče naš svetovalec in razloži, kaj točno ustreza vaši
               situaciji. Brezplačno, brez obveznosti.
             </p>
           </div>
