@@ -3,6 +3,8 @@ import Link from "next/link";
 import { PriceTicker } from "@/components/PriceTicker";
 import { EmailCapture } from "@/components/EmailCapture";
 import { CheckIcon } from "@/components/CheckIcon";
+import { TrackedLink } from "@/components/TrackedLink";
+import { Ornament, ShieldGlyph } from "@/components/Glyphs";
 
 export const metadata: Metadata = {
   title: "NakupSrebra.com | Posvetovanje za Naložbe v Srebro in Zlato",
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <SchemaOrg />
+      <FaqSchema />
       <PriceTicker />
       <HeroSection />
       <ProblemSection />
@@ -34,66 +36,75 @@ export default function HomePage() {
 /* ── Hero ── */
 function HeroSection() {
   return (
-    <section className="pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section className="bg-paper border-b border-gold/15 pt-12 pb-16 lg:pt-20 lg:pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7 max-lg:text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green/20 bg-green-bg px-4 py-2 text-sm font-medium text-green">
-              ✓ Brezplačen posvet
-            </div>
-            <h1 className="mb-6 font-serif text-4xl font-normal leading-tight text-navy lg:text-hero">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="hero-stagger lg:col-span-7 max-lg:text-center">
+            <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold max-lg:justify-center">
+              <Ornament />
+              <span>Brezplačen 15-minutni posvet</span>
+              <Ornament />
+            </p>
+            <h1 className="mt-4 font-serif text-3xl font-normal leading-[1.1] text-navy sm:text-4xl lg:text-hero">
               Srebro in zlato še nikoli nista izgubila{" "}
               <em className="text-gold">vrednosti.</em>
             </h1>
-            <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted lg:mx-0">
+            <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg lg:mx-0">
               Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine
               ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.
             </p>
-            <div className="flex flex-wrap gap-3 max-lg:justify-center">
-              <Link
+            <div className="mt-8 flex flex-wrap gap-3 max-lg:justify-center">
+              <TrackedLink
+                id="cta_posvet"
+                location="hero"
                 href="/posvet"
-                className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
+                className="inline-flex min-h-[56px] items-center gap-2 bg-navy px-8 py-4 font-serif text-base text-white transition-all hover:bg-navy-light hover:shadow-lg max-sm:w-full max-sm:justify-center"
               >
-                Brezplačen posvet →
-              </Link>
+                Rezerviraj posvet
+                <span aria-hidden="true" className="text-gold-light">→</span>
+              </TrackedLink>
               <a
                 href="#kako"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-white px-8 py-4 font-semibold text-navy transition-all hover:border-navy hover:bg-bg-warm"
+                className="inline-flex min-h-[56px] items-center gap-2 border border-navy/25 bg-transparent px-8 py-4 font-serif text-base text-navy transition-all hover:border-navy hover:bg-bg-warm max-sm:w-full max-sm:justify-center"
               >
                 Kako deluje?
               </a>
             </div>
-            <div className="mt-8 flex gap-6 text-sm text-text-muted max-lg:flex-wrap max-lg:justify-center">
+            <div className="mt-7 flex gap-6 text-sm text-text-muted max-lg:flex-wrap max-lg:justify-center">
               <span className="flex items-center gap-1.5">
                 <CheckIcon /> Brez prodajnega pritiska
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckIcon /> Odgovor v 24 urah
+                <CheckIcon /> Klic v <span className="numerals">24</span> urah
               </span>
             </div>
           </div>
 
-          {/* Hero Card */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-border bg-white p-9 shadow-lg">
-              <div className="mb-6 flex items-center gap-3 border-b border-border pb-5">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-gold-bg text-2xl">
-                  🛡️
-                </div>
+          {/* Hero Card — restored gravitas, hairline gold border, asymmetric break */}
+          <div className="lg:col-span-5 lg:grid-break-right">
+            <div className="bg-paper-cream relative border border-gold/30 p-7 shadow-md sm:p-9">
+              <span className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/60" />
+              <span className="pointer-events-none absolute right-3 top-3 h-3 w-3 border-r border-t border-gold/60" />
+              <span className="pointer-events-none absolute bottom-3 left-3 h-3 w-3 border-b border-l border-gold/60" />
+              <span className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/60" />
+
+              <div className="mb-5 flex items-center gap-3">
+                <ShieldGlyph className="!h-9 !w-9 text-gold" />
                 <div>
                   <div className="font-serif text-lg text-navy">
                     Kam gre vaš denar?
                   </div>
-                  <div className="text-sm text-text-muted">
-                    Primerjava v 20 letih
+                  <div className="font-serif text-sm italic text-text-muted">
+                    Primerjava v <span className="numerals">20</span> letih
                   </div>
                 </div>
               </div>
+              <div className="gold-rule-solid mb-2" />
               <StatRow label="V zlatu" value="+450%" positive />
               <StatRow label="V srebru" value="+300%" positive />
               <StatRow label="Na banki" value="−35%" positive={false} last />
-              <div className="mt-5 rounded-lg bg-green-bg p-4 text-center text-sm font-medium text-green">
-                🏛️ Srebro in zlato: 5.000 let brez propada
+              <div className="mt-5 border border-gold/30 bg-white/60 p-4 text-center font-serif text-sm italic text-navy">
+                <span className="numerals">5.000</span> let brez propada
               </div>
             </div>
           </div>
@@ -116,11 +127,11 @@ function StatRow({
 }) {
   return (
     <div
-      className={`flex items-center justify-between py-4 ${last ? "" : "border-b border-border"}`}
+      className={`flex items-baseline justify-between py-3.5 ${last ? "" : "border-b border-gold/15"}`}
     >
-      <span className="text-sm text-text-muted">{label}</span>
+      <span className="font-serif italic text-text-muted">{label}</span>
       <span
-        className={`font-serif text-xl font-bold ${positive ? "text-green" : "text-red"}`}
+        className={`serif-numerals text-xl ${positive ? "text-green" : "text-red"}`}
       >
         {value}
       </span>
@@ -404,24 +415,27 @@ function EmailSection() {
 /* ── Final CTA ── */
 function FinalCtaSection() {
   return (
-    <section className="border-t border-border bg-bg-warm pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section className="bg-paper border-t border-gold/15 pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-lg">
           <SectionLabel>Naslednji korak</SectionLabel>
           <SectionTitle>
             Pravo tveganje je <em className="text-gold">nedelovanje.</em>
           </SectionTitle>
-          <p className="mb-9 text-lg text-text-muted">
+          <p className="mb-9 text-base text-text-muted sm:text-lg">
             Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti,
             kako zaščititi prihranke — in jih povečati.
           </p>
-          <Link
+          <TrackedLink
+            id="cta_posvet"
+            location="final"
             href="/posvet"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
+            className="inline-flex min-h-[56px] items-center gap-3 bg-navy px-8 py-4 font-serif text-lg text-white transition-all hover:bg-navy-light hover:shadow-lg max-sm:w-full max-sm:justify-center"
           >
-            Rezerviraj brezplačen posvet →
-          </Link>
-          <div className="mt-8 flex flex-wrap justify-center gap-8">
+            Rezerviraj posvet
+            <span aria-hidden="true" className="text-gold-light">→</span>
+          </TrackedLink>
+          <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-3">
             {guarantees.map((text, i) => (
               <div
                 key={i}
@@ -437,16 +451,22 @@ function FinalCtaSection() {
   );
 }
 
-/* ── Mobile Sticky CTA ── */
+/* ── Mobile Sticky CTA — gold rule + serif label, not a flat bar ── */
 function MobileCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 hidden border-t border-border bg-white p-4 shadow-mobile-cta max-sm:block">
-      <Link
-        href="/posvet"
-        className="flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white"
-      >
-        Brezplačen posvet →
-      </Link>
+    <div className="fixed inset-x-0 bottom-0 z-50 hidden bg-bg-card/95 pt-px shadow-mobile-cta backdrop-blur-md max-sm:block">
+      <div className="gold-rule-solid" />
+      <div className="px-4 py-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+        <TrackedLink
+          id="cta_posvet"
+          location="sticky"
+          href="/posvet"
+          className="flex min-h-[52px] w-full items-center justify-center gap-2 bg-navy px-6 py-3 font-serif text-base text-white"
+        >
+          Brezplačen posvet
+          <span aria-hidden="true" className="text-gold-light">→</span>
+        </TrackedLink>
+      </div>
     </div>
   );
 }
@@ -462,49 +482,29 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-5 font-serif text-4xl font-normal leading-tight text-navy">
+    <h2 className="mb-5 font-serif text-2xl font-normal leading-tight text-navy sm:text-3xl lg:text-4xl">
       {children}
     </h2>
   );
 }
 
-/* ── Schema.org ── */
-function SchemaOrg() {
+/* ── FAQ schema only — Organization schema is emitted site-wide in layout.tsx ── */
+function FaqSchema() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "NakupSrebra.com",
-            url: "https://www.nakupsrebra.com",
-            description:
-              "Posvetovanje za naložbe v srebro in zlato. Brezplačen posvet, švicarska hramba, brez DDV.",
-            contactPoint: {
-              "@type": "ContactPoint",
-              contactType: "customer service",
-              availableLanguage: "Slovenian",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqItems.map((item) => ({
-              "@type": "Question",
-              name: item.q,
-              acceptedAnswer: { "@type": "Answer", text: item.a },
-            })),
-          }),
-        }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
+          })),
+        }),
+      }}
+    />
   );
 }
 

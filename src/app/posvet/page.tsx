@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { CheckIcon } from "@/components/CheckIcon";
-import { EmailCapture } from "@/components/EmailCapture";
+import Link from "next/link";
+import { BookingForm } from "@/components/BookingForm";
+import {
+  CertificateGlyph,
+  Ornament,
+  PhoneGlyph,
+  ShieldGlyph,
+} from "@/components/Glyphs";
 
 export const metadata: Metadata = {
   title: "Brezplačen posvet",
   description:
-    "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.",
+    "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato. Sebastjan vas pokliče v 24 urah, brez prodajnega pritiska.",
   alternates: { canonical: "/posvet" },
   openGraph: {
-    title: "Brezplačen posvet | Nakup Srebra",
+    title: "Brezplačen posvet | NakupSrebra.com",
     description:
       "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.",
     type: "website",
@@ -20,84 +25,141 @@ export const metadata: Metadata = {
 export default function PosvetPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Brezplačen posvet o naložbah v srebro",
-            description: "Rezervirajte brezplačen 15-minutni posvet.",
-            datePublished: "2026-02-01",
-            dateModified: "2026-02-01",
-            author: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-              url: "https://www.nakupsrebra.com",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-              url: "https://www.nakupsrebra.com",
-            },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": "https://www.nakupsrebra.com/posvet",
-            },
-          }),
-        }}
-      />
+      <FinancialServiceJsonLd />
 
-      {/* Page header */}
-      <div className="bg-bg-warm py-16 text-center">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="mb-3 font-serif text-4xl text-navy">
-            Brezplačen posvet
-          </h1>
-          <p className="mx-auto max-w-md text-lg text-text-muted">
-            Izberite termin za 15-minutni pogovor o vaših ciljih in strategiji
-            varčevanja v plemenitih kovinah.
-          </p>
+      {/* Hero — mobile-first, single column. Editorial heading + form below. */}
+      <section className="bg-paper border-b border-gold/15">
+        <div className="mx-auto max-w-7xl px-6 pt-14 pb-10 lg:px-8 lg:pt-20 lg:pb-16">
+          <div className="hero-stagger mx-auto max-w-2xl text-center">
+            <p className="mb-3 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+              <Ornament />
+              <span>15-minutni klic, brez obveznosti</span>
+              <Ornament />
+            </p>
+            <h1 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Pogovorimo se{" "}
+              <em className="text-gold">o vaših prihrankih</em> — preden trg
+              naredi to namesto vas.
+            </h1>
+            <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg">
+              Pustite ime in telefon. Sebastjan vas v 24 urah pokliče in v 15
+              minutah razloži, kako srebro in zlato delujeta v vaši situaciji.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Calendly section */}
-      <section className="bg-bg py-10 pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Calendly inline widget */}
-          <div className="overflow-hidden rounded-xl shadow-md">
-            <iframe
-              src="https://calendly.com/sebom/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Rezervirajte posvet"
-            />
+      {/* Booking form — primary conversion surface. Asymmetric grid-break on lg. */}
+      <section className="bg-bg-warm pt-12 pb-16 lg:pt-16 lg:pb-24">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="lg:grid-break-right">
+            <BookingForm source="posvet" heading="Rezerviraj brezplačen posvet" />
+          </div>
+        </div>
+      </section>
+
+      {/* What happens after you book */}
+      <section className="border-t border-gold/15 bg-bg pt-14 pb-16 lg:pt-20 lg:pb-24">
+        <div className="mx-auto max-w-5xl px-6 lg:px-8">
+          <div className="mb-10 text-center">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+              Kaj se zgodi po rezervaciji
+            </p>
+            <h2 className="font-serif text-2xl text-navy sm:text-3xl">
+              Trije koraki <em className="text-gold">brez presenečenj</em>
+            </h2>
           </div>
 
-          {/* Trust points */}
-          <div className="mt-10 flex flex-wrap justify-center gap-8">
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              Brez obveznosti
-            </div>
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              Brez prodajnega pritiska
-            </div>
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              15 minut vašega časa
-            </div>
-          </div>
+          <ol className="grid gap-5 sm:grid-cols-3">
+            {steps.map((s) => (
+              <li
+                key={s.n}
+                className="relative border border-gold/20 bg-white p-6 text-center"
+              >
+                <span className="serif-numerals absolute -top-4 left-1/2 -translate-x-1/2 bg-bg px-3 text-xl text-gold">
+                  {s.n}
+                </span>
+                <div className="mt-2 mb-3 flex justify-center text-gold">
+                  {s.icon}
+                </div>
+                <h3 className="mb-2 font-serif text-lg text-navy">{s.title}</h3>
+                <p className="text-sm leading-relaxed text-text-muted">
+                  {s.text}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
-          {/* Divider */}
-          <div className="my-10 text-center text-text-muted">ali</div>
-
-          {/* Email capture */}
-          <EmailCapture />
+      {/* Soft fallback: download guide instead. Quiet, low-priority. */}
+      <section className="border-t border-gold/15 bg-paper py-12">
+        <div className="mx-auto max-w-2xl px-6 text-center lg:px-8">
+          <p className="font-serif italic text-text-muted">
+            Niste pripravljeni na klic?{" "}
+            <Link
+              href="/vodnik/vodnik-srebro"
+              className="text-navy underline-offset-4 hover:underline"
+            >
+              Prenesite brezplačen 25-stranski vodnik
+            </Link>{" "}
+            in se odločite v miru.
+          </p>
         </div>
       </section>
     </>
+  );
+}
+
+const steps = [
+  {
+    n: 1,
+    title: "Klic v 24 urah",
+    text: "Sebastjan vas pokliče v izbranem časovnem oknu. Klic traja 15 minut, brez vezave.",
+    icon: <PhoneGlyph className="!h-7 !w-7" />,
+  },
+  {
+    n: 2,
+    title: "Pogovor brez prodaje",
+    text: "Vprašanja o vaši situaciji, pojasnila o trgu in razlagi. Brez ponudb, brez pritiska.",
+    icon: <ShieldGlyph className="!h-7 !w-7" />,
+  },
+  {
+    n: 3,
+    title: "Strategija po e-pošti",
+    text: "Po klicu prejmete pisni povzetek z osebno strategijo, ki ustreza vaši situaciji.",
+    icon: <CertificateGlyph className="!h-7 !w-7" />,
+  },
+];
+
+function FinancialServiceJsonLd() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    name: "Brezplačen posvet o naložbah v srebro in zlato",
+    serviceType: "Investment consulting",
+    description:
+      "15-minutni brezplačen posvet o naložbah v plemenite kovine. Brez prodajnega pritiska, klic v 24 urah.",
+    provider: {
+      "@type": "Organization",
+      name: "NakupSrebra.com",
+      url: "https://www.nakupsrebra.com",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Slovenia",
+    },
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "EUR",
+      availability: "https://schema.org/InStock",
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
   );
 }

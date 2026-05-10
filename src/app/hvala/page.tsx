@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookingForm } from "@/components/BookingForm";
+import { CertificateGlyph, Ornament } from "@/components/Glyphs";
 
 export const metadata: Metadata = {
   title: "Hvala za prijavo!",
@@ -8,9 +10,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/hvala" },
   robots: { index: false, follow: true },
   openGraph: {
-    title: "Hvala za prijavo! | Nakup Srebra",
-    description:
-      "Kmalu boste prejeli brezplačen vodnik o naložbah v srebro.",
+    title: "Hvala za prijavo! | NakupSrebra.com",
+    description: "Kmalu boste prejeli brezplačen vodnik o naložbah v srebro.",
     type: "website",
     url: "/hvala",
   },
@@ -37,76 +38,71 @@ export default function HvalaPage() {
         }}
       />
 
-      <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 py-16 text-center lg:px-8">
-        <div className="mb-6 text-hero leading-none">🥈</div>
-        <h1 className="mb-4 font-serif text-4xl text-navy">
-          Vaš vodnik je pripravljen!
-        </h1>
-        <p className="mb-8 text-xl text-text">
-          Kliknite spodaj za prenos PDF vodnika.
-        </p>
+      {/* Confirmation + download */}
+      <section className="bg-paper">
+        <div className="mx-auto max-w-3xl px-6 pt-16 pb-12 text-center lg:px-8 lg:pt-24">
+          <div className="hero-stagger">
+            <p className="mb-3 flex items-center justify-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+              <Ornament />
+              <span>Vodnik je pripravljen</span>
+              <Ornament />
+            </p>
+            <h1 className="font-serif text-3xl leading-tight text-navy sm:text-4xl lg:text-5xl">
+              Hvala. Vaš{" "}
+              <em className="text-gold">brezplačen vodnik</em> vas čaka.
+            </h1>
+            <p className="mx-auto mt-5 max-w-lg text-base text-text-muted sm:text-lg">
+              25 strani praktičnih nasvetov za začetnike — kako, kje in koliko
+              srebra kupiti, brez napak.
+            </p>
 
-        {/* Download box */}
-        <div className="mb-8 w-full rounded-xl bg-bg-card p-6 text-center shadow-sm">
-          <h3 className="mb-3 font-serif text-xl text-navy">
-            📥 Prenesite vodnik
-          </h3>
-          <p className="mb-5 text-sm text-text">
-            25 strani praktičnih nasvetov za začetnike
-          </p>
-          <a
-            href="/assets/vodnik-srebro-2026.pdf"
-            download
-            className="inline-block rounded-lg bg-gold px-10 py-4 text-xl font-semibold text-white transition-all hover:-translate-y-px hover:bg-gold-light"
-          >
-            Prenesi PDF vodnik →
-          </a>
-        </div>
-
-        {/* Info box */}
-        <div className="mb-8 w-full rounded-xl bg-bg-card p-6 text-left shadow-sm">
-          <h3 className="mb-3 font-serif text-xl text-navy">
-            📖 Kaj boste izvedeli:
-          </h3>
-          <ul className="ml-5 list-disc text-text">
-            <li className="mb-1.5">
-              Zakaj je srebro zanimiva naložba v 2026
-            </li>
-            <li className="mb-1.5">Kako in kje kupiti fizično srebro</li>
-            <li className="mb-1.5">Pravila hrambe in varnosti</li>
-            <li className="mb-1.5">
-              5 najpogostejših napak začetnikov
-            </li>
-          </ul>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-6">
-          <p className="mb-4 text-text">
-            <strong>Želite osebno pomoč?</strong>
-          </p>
-          <div className="flex flex-col justify-center gap-3 sm:flex-row">
-            <Link
-              href="/posvet"
-              className="inline-block rounded-lg bg-gold px-8 py-3.5 font-semibold text-white transition-all hover:-translate-y-px hover:bg-gold-light"
-            >
-              Rezerviraj brezplačen posvet
-            </Link>
-            <Link
-              href="/"
-              className="inline-block rounded-lg border-2 border-navy bg-transparent px-8 py-3.5 font-semibold text-navy transition-all hover:bg-navy hover:text-white"
-            >
-              Nazaj na stran
-            </Link>
+            <div className="mx-auto mt-9 max-w-lg border border-gold/25 bg-white p-7 text-left shadow-md sm:p-9">
+              <div className="mb-4 flex items-center gap-3 text-gold">
+                <CertificateGlyph className="!h-7 !w-7" />
+                <span className="font-serif italic text-text-muted">
+                  Kako začeti z naložbo v srebro
+                </span>
+              </div>
+              <a
+                href="/assets/vodnik-srebro-2026.pdf"
+                download
+                className="flex min-h-[56px] w-full items-center justify-center gap-3 bg-navy px-6 py-4 font-serif text-lg text-white transition-all hover:bg-navy-light"
+              >
+                <span>Prenesi PDF vodnik</span>
+                <span aria-hidden="true" className="text-gold-light">↓</span>
+              </a>
+              <p className="mt-3 text-center text-xs text-text-muted">
+                <span className="numerals">25</span> strani · PDF · brezplačno
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="mt-10">
-          <Link href="/" className="text-gold no-underline hover:underline">
-            ← nakupsrebra.com
-          </Link>
+      {/* Upsell to consultation — primary next action, single CTA */}
+      <section className="border-t border-gold/15 bg-bg-warm pt-12 pb-16 lg:pt-16 lg:pb-24">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="mx-auto mb-8 max-w-xl text-center">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold">
+              Naslednji korak
+            </p>
+            <h2 className="font-serif text-2xl text-navy sm:text-3xl">
+              Želite, da vas{" "}
+              <em className="text-gold">pokličem osebno?</em>
+            </h2>
+            <p className="mt-3 text-text-muted">
+              Pustite številko — v 24 urah razložim, kaj točno ustreza vaši
+              situaciji. Brezplačno, brez obveznosti.
+            </p>
+          </div>
+
+          <BookingForm source="hvala_upsell" heading="Pustite številko za klic" compact />
+
+          <p className="mt-8 text-center text-sm text-text-muted">
+            Ali se vrnite na <Link href="/" className="text-navy underline-offset-4 hover:underline">domačo stran</Link>.
+          </p>
         </div>
-      </div>
+      </section>
     </>
   );
 }
