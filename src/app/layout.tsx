@@ -4,6 +4,7 @@ import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Ornament } from "@/components/Glyphs";
+import { OrganizationJsonLd } from "@/components/JsonLd";
 
 const serif = Libre_Baskerville({
   subsets: ["latin", "latin-ext"],
@@ -46,7 +47,12 @@ export default function RootLayout({
   return (
     <html lang="sl" className={`${serif.variable} ${sans.variable}`}>
       <body className="pt-16">
-        <OrganizationJsonLd />
+        <OrganizationJsonLd
+          legalName={COMPANY.legalName}
+          registration={COMPANY.registration}
+          vatId={COMPANY.vatId}
+          address={COMPANY.address}
+        />
         <Nav />
         {children}
         <Footer />
@@ -184,6 +190,13 @@ function Footer() {
 
         <div className="gold-rule mt-12 mb-6" />
 
+        <p className="mb-4 text-xs leading-relaxed text-white/50">
+          Pri sklenitvi posla prejmemo provizijo od certificiranega
+          mednarodnega partnerja za nakup in hrambo plemenitih kovin. Cena za
+          vas se zaradi tega ne spremeni. Več o partnerju izveste v posvetu,
+          pred kakršno koli odločitvijo.
+        </p>
+
         <div className="flex flex-col items-center justify-between gap-4 text-xs text-white/55 sm:flex-row">
           <p>
             © <span className="numerals">{new Date().getFullYear()}</span>{" "}
@@ -204,33 +217,5 @@ function Row({ label, value }: { label: string; value: React.ReactNode }) {
       <dt className="font-serif italic text-white/45">{label}</dt>
       <dd className="text-right text-white/80">{value}</dd>
     </div>
-  );
-}
-
-function OrganizationJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: COMPANY.legalName,
-    alternateName: "NakupSrebra.com",
-    url: "https://www.nakupsrebra.com",
-    description:
-      "Posvetovanje za naložbe v srebro in zlato. Brezplačen posvet, švicarska hramba, brez DDV.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: COMPANY.address,
-      addressCountry: "SI",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      availableLanguage: "Slovenian",
-    },
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
   );
 }

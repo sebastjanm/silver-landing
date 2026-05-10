@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingForm } from "@/components/BookingForm";
+import { WebPageJsonLd } from "@/components/JsonLd";
 import { CertificateGlyph, Ornament } from "@/components/Glyphs";
 
 export const metadata: Metadata = {
@@ -20,22 +21,10 @@ export const metadata: Metadata = {
 export default function HvalaPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "Hvala za prijavo",
-            description:
-              "Potrditev prijave na vodnik o naložbah v srebro.",
-            isPartOf: {
-              "@type": "WebSite",
-              name: "NakupSrebra.com",
-              url: "https://www.nakupsrebra.com",
-            },
-          }),
-        }}
+      <WebPageJsonLd
+        name="Hvala za prijavo"
+        description="Potrditev prijave na vodnik o naložbah v srebro."
+        url="/hvala"
       />
 
       {/* Confirmation + download */}

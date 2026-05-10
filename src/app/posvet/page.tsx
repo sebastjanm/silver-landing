@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingForm } from "@/components/BookingForm";
+import { FinancialServiceJsonLd } from "@/components/JsonLd";
 import {
   CertificateGlyph,
   Ornament,
@@ -133,35 +134,3 @@ const steps = [
     icon: <CertificateGlyph className="!h-7 !w-7" />,
   },
 ];
-
-function FinancialServiceJsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    name: "Brezplačen posvet o naložbah v srebro in zlato",
-    serviceType: "Investment consulting",
-    description:
-      "15-minutni brezplačen posvet o naložbah v plemenite kovine. Brez prodajnega pritiska, klic v 24 urah.",
-    provider: {
-      "@type": "Organization",
-      name: "NakupSrebra.com",
-      url: "https://www.nakupsrebra.com",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "Slovenia",
-    },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "EUR",
-      availability: "https://schema.org/InStock",
-    },
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
