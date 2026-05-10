@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPublishedSlugs } from "@/lib/blog/actions";
 import { sanitizeBlogContent } from "@/lib/blog/sanitize";
-import { ArticleJsonLd } from "@/components/JsonLd";
+import { BlogArticleJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 
 interface BlogPostPageProps {
@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
-      <ArticleJsonLd post={post} />
+      <BlogArticleJsonLd post={post} />
       <main className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-3xl">
         {/* Breadcrumb */}

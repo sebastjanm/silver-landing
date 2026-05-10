@@ -4,6 +4,7 @@ import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
 import { HighlightBox } from "@/components/HighlightBox";
 import { LivePriceCard } from "@/components/LivePriceCard";
+import { ArticleJsonLd } from "@/components/JsonLd";
 import { Ornament } from "@/components/Glyphs";
 
 export const metadata: Metadata = {
@@ -34,31 +35,19 @@ export default function CenaSrebraPage() {
       title="Cena srebra danes"
       subtitle="Spot cena posodobljena vsakih 5 minut"
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Cena srebra danes — Aktualna cena v EUR",
-            description: "Trenutna cena srebra v evrih na gram in unčo.",
-            datePublished: "2026-02-01",
-            dateModified: "2026-02-01",
-            author: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-              url: "https://www.nakupsrebra.com",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-            },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": "https://www.nakupsrebra.com/cena-srebra",
-            },
-          }),
-        }}
+      <ArticleJsonLd
+        headline="Cena srebra danes — Aktualna cena v EUR"
+        description="Trenutna cena srebra v evrih na gram, unčo in kilogram. Spot cena posodobljena vsakih 5 minut."
+        url="/cena-srebra"
+        datePublished="2026-02-01"
+        dateModified="2026-05-10"
+        keywords={[
+          "cena srebra",
+          "cena srebra danes",
+          "spot cena srebra",
+          "cena srebra na gram",
+          "cena srebra EUR",
+        ]}
       />
 
       <LivePriceCard />
