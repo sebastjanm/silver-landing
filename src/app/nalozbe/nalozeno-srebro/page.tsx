@@ -39,24 +39,15 @@ export default function NalozenoSrebroPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: "Naložbeno srebro: Popoln vodnik za začetnike",
-            description:
-              "Vse o naložbenem srebru: kaj je, kako kupiti, kje hraniti, kakšni so stroški.",
+            description: "Vse o naložbenem srebru: kaj je, kako kupiti, kje hraniti, kakšni so stroški.",
             datePublished: "2026-02-04",
             dateModified: "2026-02-04",
-            author: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-              url: "https://www.nakupsrebra.com",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "NakupSrebra.com",
-            },
+            author: { "@type": "Organization", name: "NakupSrebra.com", url: "https://www.nakupsrebra.com" },
+            publisher: { "@type": "Organization", name: "NakupSrebra.com" },
           }),
         }}
       />
 
-      {/* TOC */}
       <nav className="mb-12 rounded-lg bg-bg-warm px-8 py-6">
         <h4 className="mb-4 font-serif text-navy">Vsebina</h4>
         <ul className="space-y-2">
@@ -73,23 +64,17 @@ export default function NalozenoSrebroPage() {
 
       <div className="space-y-5">
         <p>
-          Naložbeno srebro je fizično srebro, ki ga kupite z namenom ohranjanja
-          ali povečanja vrednosti. Za razliko od nakita ali industrijskega
-          srebra, gre za standardizirane izdelke z znano čistočo (tipično
-          999/1000), ki jih lahko kadarkoli prodate nazaj na trgu.
+          Naložbeno srebro je fizično srebro, ki ga kupite z namenom ohranjanja ali povečanja vrednosti. Za razliko od nakita ali industrijskega srebra, gre za standardizirane izdelke z znano čistočo (tipično 999/1000), ki jih lahko kadarkoli prodate nazaj na trgu.
         </p>
         <p>
-          Ta vodnik pojasni vse, kar morate vedeti, preden se odločite —
-          vključno s tveganji in stroški, ki jih nekateri prodajalci raje
-          zamolčijo.
+          Ta vodnik pojasni vse, kar morate vedeti, preden se odločite — vključno s tveganji in stroški, ki jih nekateri prodajalci raje zamolčijo.
         </p>
       </div>
 
       <section id="kaj-je">
         <H2>Kaj je naložbeno srebro?</H2>
         <p className="mb-5">
-          Naložbeno srebro je fizična kovina v obliki palic, ploščic ali
-          kovancev, izdelana za namen varčevanja. Ključne lastnosti:
+          Naložbeno srebro je fizična kovina v obliki palic, ploščic ali kovancev, izdelana za namen varčevanja. Ključne lastnosti:
         </p>
         <ul className="mb-5 ml-6 space-y-2">
           <li><strong>Čistost 999/1000</strong> — Vsebuje 99,9% čistega srebra</li>
@@ -99,9 +84,7 @@ export default function NalozenoSrebroPage() {
         </ul>
         <HighlightBox>
           <p>
-            <strong>Zakaj srebro?</strong> Srebro je hkrati plemenita kovina
-            (varno zatočišče) in industrijska surovina (povpraševanje). Ta
-            dvojna narava mu daje edinstveno pozicijo med naložbami.
+            <strong>Zakaj srebro?</strong> Srebro je hkrati plemenita kovina (varno zatočišče) in industrijska surovina (povpraševanje). Ta dvojna narava mu daje edinstveno pozicijo med naložbami.
           </p>
         </HighlightBox>
       </section>
@@ -111,15 +94,12 @@ export default function NalozenoSrebroPage() {
 
         <H3>Srebrne palice in ploščice</H3>
         <p className="mb-5">
-          Najcenejši način nakupa glede na gram srebra. Premija (razlika med
-          ceno in spot ceno) je tipično 5-15% nad spot ceno. Primerne za večje
-          nakupe.
+          Najcenejši način nakupa glede na gram srebra. Premija (razlika med ceno in spot ceno) je tipično 5-15% nad spot ceno. Primerne za večje nakupe.
         </p>
 
         <H3>Srebrni kovanci</H3>
         <p className="mb-3">
-          Državne kovnice izdelujejo kovance z garantirano čistočo. Najbolj
-          znani:
+          Državne kovnice izdelujejo kovance z garantirano čistočo. Najbolj znani:
         </p>
         <ul className="mb-5 ml-6 space-y-2">
           <li><strong>American Silver Eagle</strong> (ZDA) — 1 unča</li>
@@ -133,8 +113,7 @@ export default function NalozenoSrebroPage() {
 
         <H3>Srebrne runde</H3>
         <p className="mb-5">
-          Podobne kovancem, a jih izdelujejo zasebne kovnice. Nižja premija, a
-          manj prepoznavne.
+          Podobne kovancem, a jih izdelujejo zasebne kovnice. Nižja premija, a manj prepoznavne.
         </p>
 
         <ComparisonTable
@@ -162,9 +141,7 @@ export default function NalozenoSrebroPage() {
         <H3>Tveganja</H3>
         <WarningBox>
           <p>
-            <strong>Nihanje cen:</strong> Srebro je volatilno. V letu 2011 je
-            doseglo 49 USD/oz, nato padlo na 14 USD/oz (2015). Če potrebujete
-            denar v napačnem trenutku, lahko izgubite.
+            <strong>Nihanje cen:</strong> Srebro je volatilno. V letu 2011 je doseglo 49 USD/oz, nato padlo na 14 USD/oz (2015). Če potrebujete denar v napačnem trenutku, lahko izgubite.
           </p>
         </WarningBox>
         <ul className="mb-5 ml-6 space-y-2">
@@ -176,10 +153,7 @@ export default function NalozenoSrebroPage() {
 
         <div className="my-8 rounded-r-lg border-l-4 border-green bg-green-bg py-6 pr-6 pl-6">
           <p>
-            <strong>Naše mnenje:</strong> Naložbeno srebro ni za vsakogar.
-            Primerno je za dolgoročne vlagatelje (5+ let), ki želijo del
-            premoženja v fizični obliki, zunaj finančnega sistema. Ni za
-            kratkoročne špekulacije.
+            <strong>Naše mnenje:</strong> Naložbeno srebro ni za vsakogar. Primerno je za dolgoročne vlagatelje (5+ let), ki želijo del premoženja v fizični obliki, zunaj finančnega sistema. Ni za kratkoročne špekulacije.
           </p>
         </div>
       </section>
@@ -189,8 +163,7 @@ export default function NalozenoSrebroPage() {
 
         <H3>1. Kupite pri zaupanja vrednem prodajalcu</H3>
         <p className="mb-3">
-          Kupujte samo pri prodajalcih z dokazljivim poreklom blaga in
-          transparentnimi cenami. Preverite:
+          Kupujte samo pri prodajalcih z dokazljivim poreklom blaga in transparentnimi cenami. Preverite:
         </p>
         <ul className="mb-5 ml-6 space-y-2">
           <li>Ali navajajo premijo nad spot ceno?</li>
@@ -218,7 +191,7 @@ export default function NalozenoSrebroPage() {
 
       <CtaBox
         title="Potrebujete pomoč pri odločitvi?"
-        text="Brezplačno vam pojasnim možnosti, stroške in tveganja. Brez obveznosti, brez pritiska."
+        text="Brezplačno vam pojasnimo možnosti, stroške in tveganja. Brez obveznosti, brez pritiska."
         buttonText="Rezerviraj brezplačen posvet →"
       />
 
@@ -236,9 +209,7 @@ export default function NalozenoSrebroPage() {
           <li><strong>Likvidno</strong> — Prodaja možna kadarkoli</li>
         </ul>
         <p className="mb-5">
-          Slabost: stroški hrambe (tipično 0,5-1% vrednosti letno) in ne morete
-          fizično prijeti svojega srebra, razen če ga izvzamete (takrat plačate
-          DDV).
+          Slabost: stroški hrambe (tipično 0,5-1% vrednosti letno) in ne morete fizično prijeti svojega srebra, razen če ga izvzamete (takrat plačate DDV).
         </p>
 
         <H3>Hramba doma</H3>
@@ -255,19 +226,15 @@ export default function NalozenoSrebroPage() {
 
         <H3>DDV pri nakupu</H3>
         <p className="mb-5">
-          V Sloveniji je nakup naložbenega srebra obdavčen z 22% DDV. To
-          pomeni, da pri nakupu 100g srebra po spot ceni 100&euro; plačate
-          122&euro; + premija prodajalca.
+          V Sloveniji je nakup naložbenega srebra obdavčen z 22% DDV. To pomeni, da pri nakupu 100g srebra po spot ceni 100&euro; plačate 122&euro; + premija prodajalca.
         </p>
         <p className="mb-5">
-          <strong>Izjema:</strong> Če kupite srebro s hrambo v švicarskem
-          carinskem skladišču, DDV ne plačate, dokler srebro ostane tam.
+          <strong>Izjema:</strong> Če kupite srebro s hrambo v švicarskem carinskem skladišču, DDV ne plačate, dokler srebro ostane tam.
         </p>
 
         <H3>Davek na kapitalski dobiček</H3>
         <p className="mb-3">
-          Če srebro prodate z dobičkom, je ta obdavčen kot kapitalski dobiček.
-          Stopnja se znižuje z obdobjem lastništva:
+          Če srebro prodate z dobičkom, je ta obdavčen kot kapitalski dobiček. Stopnja se znižuje z obdobjem lastništva:
         </p>
         <ul className="mb-4 ml-6 space-y-2">
           <li>Do 5 let: 25%</li>
@@ -276,16 +243,14 @@ export default function NalozenoSrebroPage() {
           <li>Nad 15 let: 0%</li>
         </ul>
         <p className="text-sm italic text-text-muted">
-          Vir: FURS — Za aktualne informacije se posvetujte z davčnim
-          svetovalcem.
+          Vir: FURS — Za aktualne informacije se posvetujte z davčnim svetovalcem.
         </p>
       </section>
 
       <section id="koliko">
         <H2>Koliko vložiti?</H2>
         <p className="mb-5">
-          Splošno priporočilo finančnih svetovalcev: 5-15% premoženja v
-          plemenitih kovinah. To ni pravilo — odvisno od vaše situacije:
+          Splošno priporočilo finančnih svetovalcev: 5-15% premoženja v plemenitih kovinah. To ni pravilo — odvisno od vaše situacije:
         </p>
         <ul className="mb-5 ml-6 space-y-2">
           <li><strong>Konzervativni vlagatelji:</strong> 5-10%</li>
@@ -295,16 +260,13 @@ export default function NalozenoSrebroPage() {
 
         <WarningBox>
           <p>
-            <strong>Nikoli ne vlagajte denarja, ki ga potrebujete.</strong>{" "}
-            Srebro je dolgoročna naložba. Če boste morali prodati v napačnem
-            trenutku (recesija, osebna kriza), lahko izgubite.
+            <strong>Nikoli ne vlagajte denarja, ki ga potrebujete.</strong>{" "}Srebro je dolgoročna naložba. Če boste morali prodati v napačnem trenutku (recesija, osebna kriza), lahko izgubite.
           </p>
         </WarningBox>
 
         <H3>Redna mesečna vlaganja</H3>
         <p className="mb-3">
-          Namesto enkratnega nakupa lahko vsak mesec kupite manjšo količino.
-          Prednosti:
+          Namesto enkratnega nakupa lahko vsak mesec kupite manjšo količino. Prednosti:
         </p>
         <ul className="mb-5 ml-6 space-y-2">
           <li>Povprečenje cene skozi čas (dollar-cost averaging)</li>
@@ -319,38 +281,28 @@ export default function NalozenoSrebroPage() {
 
         <H3>Ali je srebro boljše od zlata?</H3>
         <p className="mb-5">
-          Odvisno od vaših ciljev. Srebro je cenejše (dostopnejše), bolj
-          volatilno (večji potencial, večje tveganje) in ima več industrijske
-          uporabe. Zlato je stabilnejše in bolj uveljavljeno kot varno
-          zatočišče. Mnogi vlagatelji imajo oboje.
+          Odvisno od vaših ciljev. Srebro je cenejše (dostopnejše), bolj volatilno (večji potencial, večje tveganje) in ima več industrijske uporabe. Zlato je stabilnejše in bolj uveljavljeno kot varno zatočišče. Mnogi vlagatelji imajo oboje.
         </p>
 
         <H3>Kdaj je pravi čas za nakup?</H3>
         <p className="mb-5">
-          Nihče ne more zanesljivo napovedati kratkoročnih gibanj cene. Namesto
-          da čakate na &quot;pravi trenutek&quot;, razmislite o rednih mesečnih
-          nakupih, ki povprečijo ceno skozi čas.
+          Nihče ne more zanesljivo napovedati kratkoročnih gibanj cene. Namesto da čakate na &quot;pravi trenutek&quot;, razmislite o rednih mesečnih nakupih, ki povprečijo ceno skozi čas.
         </p>
 
         <H3>Kako prodam srebro?</H3>
         <p className="mb-5">
-          Prodate pri prodajalcu, ki odkupuje nazaj, ali na platformah za
-          plemenite kovine. Upoštevajte spread — odkupna cena je nižja od
-          prodajne. Pri fizičnem srebru, shranjenem v trezorju, je prodaja
-          tipično možna z nekaj kliki.
+          Prodate pri prodajalcu, ki odkupuje nazaj, ali na platformah za plemenite kovine. Upoštevajte spread — odkupna cena je nižja od prodajne. Pri fizičnem srebru, shranjenem v trezorju, je prodaja tipično možna z nekaj kliki.
         </p>
 
         <H3>Ali lahko srebro izgubi vrednost?</H3>
         <p className="mb-5">
-          Kratkoročno da — cena lahko pade tudi za 30-50% v krizi. Dolgoročno
-          (desetletja) srebro nikoli ni šlo na ničlo, za razliko od posameznih
-          delnic ali valut. Toda zgodovina ni garancija za prihodnost.
+          Kratkoročno da — cena lahko pade tudi za 30-50% v krizi. Dolgoročno (desetletja) srebro nikoli ni šlo na ničlo, za razliko od posameznih delnic ali valut. Toda zgodovina ni garancija za prihodnost.
         </p>
       </section>
 
       <CtaBox
         title="Imate vprašanja?"
-        text="Pogovoriva se. Brezplačno, brez obveznosti. Pojasnim vam možnosti in vam pomagam pri odločitvi — tudi če ta odločitev je &quot;ne&quot;."
+        text="Pogovorimo se. Brezplačno, brez obveznosti. Pojasnimo vam možnosti in pomagamo pri odločitvi — tudi če ta odločitev je &quot;ne&quot;."
       />
     </ArticleLayout>
   );

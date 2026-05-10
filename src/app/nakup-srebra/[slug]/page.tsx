@@ -51,7 +51,7 @@ const cityData: Record<string, CityContent> = {
     cityNameLocative: "Ljubljani",
     demonym: "Ljubljančane",
     introText:
-      "Ljubljana kot glavno mesto ponuja več možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujem, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
+      "Ljubljana kot glavno mesto ponuja več možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujemo, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
     highlightDemonym: "Ljubljančane",
     purchaseLocationText: "Ljubljani",
     storageLocationText: "Ljubljani",
@@ -84,7 +84,7 @@ const cityData: Record<string, CityContent> = {
     cityNameLocative: "Mariboru",
     demonym: "Mariborčane",
     introText:
-      "Maribor kot drugo največje slovensko mesto ponuja več možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujem, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
+      "Maribor kot drugo največje slovensko mesto ponuja več možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujemo, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
     highlightDemonym: "Mariborčane",
     purchaseLocationText: "Mariboru",
     storageLocationText: "Mariboru",
@@ -117,7 +117,7 @@ const cityData: Record<string, CityContent> = {
     cityNameLocative: "Celju",
     demonym: "Celjane",
     introText:
-      "Celje kot tretje največje slovensko mesto ponuja možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujem, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
+      "Celje kot tretje največje slovensko mesto ponuja možnosti za nakup naložbenega srebra. V tem vodniku pojasnjujemo, kako se lotiti nakupa, na kaj paziti in katero možnost izbrati.",
     highlightDemonym: "Celjane",
     purchaseLocationText: "Celju",
     storageLocationText: "Celju",
@@ -211,7 +211,6 @@ export default async function NakupSrebraPage({
 
       <p className="mb-5">{city.introText}</p>
 
-      {/* Local info box */}
       <div className="my-7 rounded-xl bg-green-bg p-6">
         <h4 className="mb-3 font-semibold text-green">
           {city.localInfoTitle}
@@ -223,31 +222,22 @@ export default async function NakupSrebraPage({
 
       <H3>1. Fizične trgovine</H3>
       <p className="mb-5">
-        V {city.cityNameLocative} obstaja nekaj trgovin s plemenitimi kovinami.
-        Prednost: lahko vidite in primete izdelek. Slabost: pogosto višje cene
-        in omejena ponudba.
+        V {city.cityNameLocative} obstaja nekaj trgovin s plemenitimi kovinami. Prednost: lahko vidite in primete izdelek. Slabost: pogosto višje cene in omejena ponudba.
       </p>
 
       <H3>2. Spletni nakup z dostavo</H3>
       <p className="mb-5">
-        Naročite pri slovenskem ali tujem prodajalcu, dostava na vaš naslov.
-        Prednost: več izbire, pogosto boljše cene. Slabost: ne vidite izdelka
-        pred nakupom.
+        Naročite pri slovenskem ali tujem prodajalcu, dostava na vaš naslov. Prednost: več izbire, pogosto boljše cene. Slabost: ne vidite izdelka pred nakupom.
       </p>
 
       <H3>3. Nakup s hrambo v tujini</H3>
       <p className="mb-5">
-        Kupite srebro, ki ostane shranjeno v švicarskem carinskem skladišču.
-        Prednost: brez DDV (22% prihranka). Slabost: ne morete fizično prijeti
-        srebra, razen če ga izvzamete.
+        Kupite srebro, ki ostane shranjeno v švicarskem carinskem skladišču. Prednost: brez DDV (22% prihranka). Slabost: ne morete fizično prijeti srebra, razen če ga izvzamete.
       </p>
 
       <HighlightBox>
         <p>
-          <strong>Priporočilo za {city.highlightDemonym}:</strong> Če želite
-          prihraniti DDV in ne potrebujete fizičnega dostopa, je hramba v Švici
-          smiselna. Če želite srebro doma — primerjajte cene med fizičnimi
-          trgovinami in spletnimi prodajalci.
+          <strong>Priporočilo za {city.highlightDemonym}:</strong> Če želite prihraniti DDV in ne potrebujete fizičnega dostopa, je hramba v Švici smiselna. Če želite srebro doma — primerjajte cene med fizičnimi trgovinami in spletnimi prodajalci.
         </p>
       </HighlightBox>
 
@@ -255,16 +245,12 @@ export default async function NakupSrebraPage({
 
       <H3>Preverite ceno</H3>
       <p className="mb-5">
-        Primerjajte ceno s trenutno spot ceno srebra. Razumna premija za
-        kovance je 15-25%, za palice 5-15%. Če je premija bistveno višja —
-        vprašajte zakaj.
+        Primerjajte ceno s trenutno spot ceno srebra. Razumna premija za kovance je 15-25%, za palice 5-15%. Če je premija bistveno višja — vprašajte zakaj.
       </p>
 
       <H3>Preverite prodajalca</H3>
       <p className="mb-5">
-        Ali je podjetje registrirano? Ali ima preverljive kontaktne podatke?
-        Ali obstajajo ocene drugih kupcev? Ponaredki srebra obstajajo —
-        kupujte pri zaupanja vrednih virih.
+        Ali je podjetje registrirano? Ali ima preverljive kontaktne podatke? Ali obstajajo ocene drugih kupcev? Ponaredki srebra obstajajo — kupujte pri zaupanja vrednih virih.
       </p>
 
       <H3>Razumite stroške</H3>
@@ -280,40 +266,31 @@ export default async function NakupSrebraPage({
 
       <H3>Doma</H3>
       <p className="mb-5">
-        Domač sef, pritrjen v tla ali steno. Preverite, ali vaše zavarovanje
-        pokriva plemenite kovine. Ne govorite o tem, kje hranite kovine.
+        Domač sef, pritrjen v tla ali steno. Preverite, ali vaše zavarovanje pokriva plemenite kovine. Ne govorite o tem, kje hranite kovine.
       </p>
 
       <H3>Bančni sef</H3>
       <p className="mb-5">
-        Slovenske banke ponujajo najem sefov. Varno, a omejen dostop (med
-        delovnim časom). Mesečni najem.
+        Slovenske banke ponujajo najem sefov. Varno, a omejen dostop (med delovnim časom). Mesečni najem.
       </p>
 
       <H3>Profesionalni trezor v Švici</H3>
       <p className="mb-5">
-        Zavarovano, ločeno od bank, brez DDV dokler srebro ostane tam. Stroški
-        hrambe ~0,5-1% vrednosti letno.
+        Zavarovano, ločeno od bank, brez DDV dokler srebro ostane tam. Stroški hrambe ~0,5-1% vrednosti letno.
       </p>
 
       <WarningBox>
         <p>
-          <strong>Opozorilo:</strong> Ne kupujte srebra od neznanih prodajalcev
-          na sejmih, bolšjih trgih ali preko sumljivih oglasov. Ponaredki
-          obstajajo in jih je težko prepoznati brez izkušenj.
+          <strong>Opozorilo:</strong> Ne kupujte srebra od neznanih prodajalcev na sejmih, bolšjih trgih ali preko sumljivih oglasov. Ponaredki obstajajo in jih je težko prepoznati brez izkušenj.
         </p>
       </WarningBox>
 
       <H2>DDV v Sloveniji</H2>
       <p className="mb-5">
-        Nakup naložbenega srebra v Sloveniji je obdavčen z 22% DDV. To bistveno
-        poveča vstopni strošek.
+        Nakup naložbenega srebra v Sloveniji je obdavčen z 22% DDV. To bistveno poveča vstopni strošek.
       </p>
       <p className="mb-5">
-        <strong>Kako se izogniti DDV:</strong> Kupite srebro s hrambo v
-        švicarskem carinskem skladišču. DDV plačate šele, ko srebro izvzamete
-        (dostavite v Slovenijo). Če srebro prodate nazaj, ga lahko prodate
-        direktno iz skladišča — brez DDV.
+        <strong>Kako se izogniti DDV:</strong> Kupite srebro s hrambo v švicarskem carinskem skladišču. DDV plačate šele, ko srebro izvzamete (dostavite v Slovenijo). Če srebro prodate nazaj, ga lahko prodate direktno iz skladišča — brez DDV.
       </p>
 
       <H2>Zakaj vlagatelji iz {city.investorLocationText} kupujejo srebro?</H2>
@@ -329,27 +306,22 @@ export default async function NakupSrebraPage({
 
       <H3>Kje v {city.faqLocationText} kupiti srebro?</H3>
       <p className="mb-5">
-        Obstaja nekaj fizičnih trgovin, toda pogosto priporočam spletni nakup —
-        več izbire, boljše cene, možnost primerjave. Za osebno svetovanje sem
-        na voljo za pogovor.
+        Obstaja nekaj fizičnih trgovin, toda pogosto priporočamo spletni nakup — več izbire, boljše cene, možnost primerjave. Za osebno svetovanje smo vam na voljo za pogovor.
       </p>
 
       <H3>Koliko srebra naj kupim?</H3>
       <p className="mb-5">
-        Odvisno od vaših ciljev in proračuna. Začnete lahko že s 50-100&euro;
-        mesečno. Za enkratni nakup: razmislite o delu prihodkov, ki ga lahko
-        zamrznete za 5+ let.
+        Odvisno od vaših ciljev in proračuna. Začnete lahko že s 50-100&euro; mesečno. Za enkratni nakup: razmislite o delu prihodkov, ki ga lahko zamrznete za 5+ let.
       </p>
 
       <H3>Ali potrebujem osebni prevzem?</H3>
       <p className="mb-5">
-        Ne nujno. Dostava na dom je varna pri uveljavljenih prodajalcih. Lahko
-        pa tudi obiščete fizično trgovino, če vam je to ljubše.
+        Ne nujno. Dostava na dom je varna pri uveljavljenih prodajalcih. Lahko pa tudi obiščete fizično trgovino, če vam je to ljubše.
       </p>
 
       <CtaBox
         title="Potrebujete pomoč?"
-        text={`Brezplačno vam pojasnim možnosti za nakup srebra v ${city.ctaCityText}.`}
+        text={`Brezplačno vam pojasnimo možnosti za nakup srebra v ${city.ctaCityText}.`}
       />
     </ArticleLayout>
   );
