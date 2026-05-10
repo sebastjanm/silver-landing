@@ -45,12 +45,10 @@ export default function StatistikaSrebra2026Page() {
         }}
       />
 
-      {/* Update note */}
       <div className="mb-8 rounded-lg bg-green-bg p-5 text-sm text-green">
         Nazadnje posodobljeno: Februar 2026 &middot; Naslednja posodobitev: Maj 2026
       </div>
 
-      {/* Table of contents */}
       <div className="mb-12 rounded-lg bg-bg-warm px-8 py-6">
         <h4 className="mb-4 font-serif text-lg text-navy">Vsebina</h4>
         <ul className="columns-1 list-none space-y-2 p-0 sm:columns-2">
@@ -65,7 +63,6 @@ export default function StatistikaSrebra2026Page() {
         </ul>
       </div>
 
-      {/* Cene */}
       <section id="cene">
         <H2>Cene srebra</H2>
         <SectionIntro>
@@ -77,7 +74,6 @@ export default function StatistikaSrebra2026Page() {
         </SectionIntro>
       </section>
 
-      {/* Proizvodnja */}
       <section id="proizvodnja">
         <H2>Proizvodnja srebra</H2>
         <SectionIntro>Globalna proizvodnja in največji proizvajalci.</SectionIntro>
@@ -90,7 +86,6 @@ export default function StatistikaSrebra2026Page() {
         <StatCard label="Delež srebra kot stranski produkt (Zn, Pb, Cu)" value="72%" source="Vir: The Silver Institute" />
       </section>
 
-      {/* Povpraševanje */}
       <section id="povprasevanje">
         <H2>Povpraševanje</H2>
         <SectionIntro>Struktura globalnega povpraševanja po srebru.</SectionIntro>
@@ -100,7 +95,6 @@ export default function StatistikaSrebra2026Page() {
         <StatCard label="Leto zaporednega primanjkljaja" value="4. leto" source="Vir: The Silver Institute" />
       </section>
 
-      {/* Industrijska poraba */}
       <section id="industrija">
         <H2>Industrijska poraba</H2>
         <SectionIntro>Srebro v industriji — sončne celice, elektronika, medicina.</SectionIntro>
@@ -115,10 +109,9 @@ export default function StatistikaSrebra2026Page() {
 
       <CtaBox
         title="Kaj te številke pomenijo za vas?"
-        text="Brezplačno vam pojasnim, kako razumeti te podatke v kontekstu vaše naložbene strategije."
+        text="Brezplačno vam pojasnimo, kako razumeti te podatke v kontekstu vaše naložbene strategije."
       />
 
-      {/* Naložbeno povpraševanje */}
       <section id="nalozbe">
         <H2>Naložbeno povpraševanje</H2>
         <SectionIntro>Kovanci, palice in ETF skladi.</SectionIntro>
@@ -128,7 +121,6 @@ export default function StatistikaSrebra2026Page() {
         <StatCard label="Največji srebrni ETF: iShares SLV" value="~450 Moz" source="Vir: iShares" />
       </section>
 
-      {/* Zaloge */}
       <section id="zaloge">
         <H2>Zaloge</H2>
         <SectionIntro>Zaloge na borzah in v trezorjih.</SectionIntro>
@@ -138,7 +130,6 @@ export default function StatistikaSrebra2026Page() {
         <StatCard label="Ocenjene nadzemne zaloge (skupno)" value="~2.5 Mrd oz" source="Vir: CPM Group" />
       </section>
 
-      {/* Razmerje zlato/srebro */}
       <section id="razmerje">
         <H2>Razmerje zlato/srebro</H2>
         <SectionIntro>Kolikokrat je zlato dražje od srebra.</SectionIntro>
@@ -148,7 +139,6 @@ export default function StatistikaSrebra2026Page() {
         <StatCard label="Najvišje v zgodovini (2020)" value="127:1" source="Vir: Bloomberg" />
       </section>
 
-      {/* Zgodovinski podatki */}
       <section id="zgodovina">
         <H2>Zgodovinski podatki</H2>
         <SectionIntro>Ključni mejniki v zgodovini srebra.</SectionIntro>
@@ -161,28 +151,21 @@ export default function StatistikaSrebra2026Page() {
 
       <CtaBox
         title="Želite izvedeti več?"
-        text="Brezplačno vam pojasnim, kaj te statistike pomenijo za vašo situacijo."
+        text="Brezplačno vam pojasnimo, kaj te statistike pomenijo za vašo situacijo."
         buttonText="Rezerviraj brezplačen posvet →"
       />
 
-      {/* Sources footer */}
       <div className="mt-12 rounded-lg bg-bg-warm p-6 text-sm text-text-muted">
         <p className="mb-4">
-          <strong>Viri:</strong> The Silver Institute, World Silver Survey, LBMA,
-          USGS, CME Group, Kitco, Bloomberg, Macrotrends, CPM Group, CRU Group,
-          BloombergNEF.
+          <strong>Viri:</strong> The Silver Institute, World Silver Survey, LBMA, USGS, CME Group, Kitco, Bloomberg, Macrotrends, CPM Group, CRU Group, BloombergNEF.
         </p>
         <p>
-          <strong>Opomba:</strong> Podatki so informativne narave. Za naložbene
-          odločitve se posvetujte s finančnim svetovalcem. Stran se posodablja
-          kvartalno.
+          <strong>Opomba:</strong> Podatki so informativne narave. Za naložbene odločitve se posvetujte s finančnim svetovalcem. Stran se posodablja kvartalno.
         </p>
       </div>
     </ArticleLayout>
   );
 }
-
-/* ── Local components ── */
 
 function H2({ children }: { children: React.ReactNode }) {
   return (

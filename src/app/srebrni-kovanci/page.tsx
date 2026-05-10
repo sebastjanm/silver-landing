@@ -50,13 +50,10 @@ export default function SrebrniKovanciPage() {
 
       <div className="space-y-5">
         <p>
-          Srebrni kovanci so ena najpopularnejših oblik naložbenega srebra.
-          Izdajajo jih državne kovnice, imajo garantirano čistost in so
-          prepoznavni po vsem svetu.
+          Srebrni kovanci so ena najpopularnejših oblik naložbenega srebra. Izdajajo jih državne kovnice, imajo garantirano čistost in so prepoznavni po vsem svetu.
         </p>
         <p>
-          V tem vodniku pojasnjujem razlike med kovanci, na kaj paziti pri
-          nakupu in kateri kovanci so najprimernejši za vas.
+          V tem vodniku predstavljamo razlike med kovanci, na kaj paziti pri nakupu in kateri kovanci so najprimernejši za vas.
         </p>
       </div>
 
@@ -117,28 +114,22 @@ export default function SrebrniKovanciPage() {
 
       <H3>Kovanci (Coins)</H3>
       <p className="mb-5">
-        Izdani s strani državnih kovnic. Imajo nominalno vrednost (npr. 1 USD za
-        Eagle). Najvišja premija, a tudi najvišja likvidnost in prepoznavnost.
+        Izdani s strani državnih kovnic. Imajo nominalno vrednost (npr. 1 USD za Eagle). Najvišja premija, a tudi najvišja likvidnost in prepoznavnost.
       </p>
 
       <H3>Palice (Bars)</H3>
       <p className="mb-5">
-        Izdelane s strani zasebnih rafinerij (npr. PAMP, Valcambi). Nižja
-        premija, a manj prepoznavne. Primerne za večje nakupe.
+        Izdelane s strani zasebnih rafinerij (npr. PAMP, Valcambi). Nižja premija, a manj prepoznavne. Primerne za večje nakupe.
       </p>
 
       <H3>Runde (Rounds)</H3>
       <p className="mb-5">
-        Okrogle, podobne kovancem, a izdane s strani zasebnih kovnic. Nimajo
-        nominalne vrednosti. Najnižja premija, a tudi najnižja likvidnost.
+        Okrogle, podobne kovancem, a izdane s strani zasebnih kovnic. Nimajo nominalne vrednosti. Najnižja premija, a tudi najnižja likvidnost.
       </p>
 
       <HighlightBox>
         <p>
-          <strong>Priporočilo za začetnike:</strong> Začnite s kovanci (Eagle,
-          Maple, Philharmoniker). So najlažje za prodajo nazaj in najprej
-          prepoznavni. Ko imate več izkušenj, lahko dodate palice za nižje
-          premije.
+          <strong>Priporočilo za začetnike:</strong> Začnite s kovanci (Eagle, Maple, Philharmoniker). So najlažje za prodajo nazaj in najprej prepoznavni. Ko imate več izkušenj, lahko dodate palice za nižje premije.
         </p>
       </HighlightBox>
 
@@ -146,72 +137,58 @@ export default function SrebrniKovanciPage() {
 
       <H3>1. Kupujte samo od zaupanja vrednih prodajalcev</H3>
       <p className="mb-5">
-        Ponaredki obstajajo. Kupujte pri uveljavljenih trgovcih s preverljivim
-        poreklom.
+        Ponaredki obstajajo. Kupujte pri uveljavljenih trgovcih s preverljivim poreklom.
       </p>
 
       <H3>2. Preverite premijo</H3>
       <p className="mb-5">
-        Primerjajte ceno z aktualno spot ceno. Premija 15-25% je normalna za
-        kovance. Če je bistveno višja — vprašajte zakaj.
+        Primerjajte ceno z aktualno spot ceno. Premija 15-25% je normalna za kovance. Če je bistveno višja — vprašajte zakaj.
       </p>
 
       <H3>3. Stanje kovanca</H3>
       <p className="mb-5">
-        Za naložbene namene stanje ni ključno — srebro je srebro. Toda za
-        zbirateljske kovance stanje močno vpliva na vrednost.
+        Za naložbene namene stanje ni ključno — srebro je srebro. Toda za zbirateljske kovance stanje močno vpliva na vrednost.
       </p>
 
       <H3>4. Originalna embalaža</H3>
       <p className="mb-5">
-        Kovanci v tubi (tipično 20-25 kosov) so običajno cenejši na enoto kot
-        posamezni v kapsulah.
+        Kovanci v tubi (tipično 20-25 kosov) so običajno cenejši na enoto kot posamezni v kapsulah.
       </p>
 
       <WarningBox>
         <p>
-          <strong>Opozorilo:</strong> Ne kupujte srebrnih kovancev na
-          &quot;spletu&quot; po sumljivo nizkih cenah. Če je cena predobra, da bi
-          bila resnična — verjetno ni resnična.
+          <strong>Opozorilo:</strong> Ne kupujte srebrnih kovancev na &quot;spletu&quot; po sumljivo nizkih cenah. Če je cena predobra, da bi bila resnična — verjetno ni resnična.
         </p>
       </WarningBox>
 
       <H2>DDV in kovanci</H2>
       <p className="mb-5">
-        V Sloveniji je nakup srebrnih kovancev obdavčen z 22% DDV. To bistveno
-        poveča vstopni strošek.
+        V Sloveniji je nakup srebrnih kovancev obdavčen z 22% DDV. To bistveno poveča vstopni strošek.
       </p>
       <p className="mb-5">
-        <strong>Možnost brez DDV:</strong> Če kupite kovance s hrambo v
-        švicarskem carinskem skladišču, DDV ne plačate, dokler kovanci ostanejo
-        tam. Ob izvozu (dostavi domov) plačate DDV.
+        <strong>Možnost brez DDV:</strong> Če kupite kovance s hrambo v švicarskem carinskem skladišču, DDV ne plačate, dokler kovanci ostanejo tam. Ob izvozu (dostavi domov) plačate DDV.
       </p>
 
       <H2>Pogosta vprašanja</H2>
 
       <H3>Kateri kovanec je najboljši za začetek?</H3>
       <p className="mb-5">
-        Za Evropo priporočam Wiener Philharmoniker — evropski, široko
-        prepoznaven, dobra premija. American Eagle je dober, a ima pogosto višjo
-        premijo v EU.
+        Za Evropo priporočamo Wiener Philharmoniker — evropski, široko prepoznaven, dobra premija. American Eagle je dober, a ima pogosto višjo premijo v EU.
       </p>
 
       <H3>Ali se premija povrne pri prodaji?</H3>
       <p className="mb-5">
-        Delno. Odkupne cene kovancev so višje od odkupnih cen palic. Toda polno
-        premijo redko dobite nazaj — računajte na spread.
+        Delno. Odkupne cene kovancev so višje od odkupnih cen palic. Toda polno premijo redko dobite nazaj — računajte na spread.
       </p>
 
       <H3>Koliko kovancev naj kupim?</H3>
       <p className="mb-5">
-        Odvisno od vašega proračuna in ciljev. Za redno varčevanje: 1-5
-        kovancev mesečno. Za enkratni nakup: tube (20-25 kosov) imajo nižjo
-        premijo.
+        Odvisno od vašega proračuna in ciljev. Za redno varčevanje: 1-5 kovancev mesečno. Za enkratni nakup: tube (20-25 kosov) imajo nižjo premijo.
       </p>
 
       <CtaBox
         title="Potrebujete pomoč pri izbiri?"
-        text="Pomagam vam izbrati prave kovance za vašo situacijo. Brezplačen posvet, brez obveznosti."
+        text="Pomagamo vam izbrati prave kovance za vašo situacijo. Brezplačen posvet, brez obveznosti."
       />
     </ArticleLayout>
   );

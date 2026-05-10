@@ -41,7 +41,6 @@ export default function ZlatoAliSrebroPage() {
         }}
       />
 
-      {/* TL;DR box */}
       <div className="mb-12 rounded-xl bg-navy p-8 text-white">
         <h3 className="mb-4 font-serif text-xl text-gold-light">Na kratko</h3>
         <ul className="ml-5 space-y-2 text-white/90">
@@ -53,15 +52,12 @@ export default function ZlatoAliSrebroPage() {
 
       <div className="space-y-5">
         <p>
-          Vprašanje &quot;zlato ali srebro?&quot; nima enega pravega odgovora. Obe
-          kovini imata svoje prednosti in slabosti. Prava izbira je odvisna od
-          vaših ciljev, proračuna in odnosa do tveganja.
+          Vprašanje &quot;zlato ali srebro?&quot; nima enega pravega odgovora. Obe kovini imata svoje prednosti in slabosti. Prava izbira je odvisna od vaših ciljev, proračuna in odnosa do tveganja.
         </p>
       </div>
 
       <H2>Hitra primerjava</H2>
 
-      {/* Comparison cards */}
       <div className="my-8 grid gap-6 sm:grid-cols-2">
         <div className="rounded-xl border border-border border-t-4 border-t-gold-light bg-white p-7">
           <h4 className="mb-4 font-serif text-xl text-navy">🥇 Zlato</h4>
@@ -126,8 +122,7 @@ export default function ZlatoAliSrebroPage() {
 
       <H2>Razmerje zlato/srebro</H2>
       <p className="mb-5">
-        Razmerje zlato/srebro (Gold-Silver Ratio) pove, kolikokrat je zlato
-        dražje od srebra. Zgodovinsko niha med 40 in 90.
+        Razmerje zlato/srebro (Gold-Silver Ratio) pove, kolikokrat je zlato dražje od srebra. Zgodovinsko niha med 40 in 90.
       </p>
 
       <HighlightBox>
@@ -135,20 +130,17 @@ export default function ZlatoAliSrebroPage() {
           <strong>Trenutno razmerje:</strong> ~55-60 (februar 2026)
         </p>
         <p>
-          Zgodovinsko povprečje: ~55. Ko je razmerje visoko (nad 70), nekateri
-          vlagatelji menijo, da je srebro podcenjeno glede na zlato.
+          Zgodovinsko povprečje: ~55. Ko je razmerje visoko (nad 70), nekateri vlagatelji menijo, da je srebro podcenjeno glede na zlato.
         </p>
       </HighlightBox>
 
       <p className="mb-5">
-        Nekateri vlagatelji uporabljajo to razmerje za menjavo med kovinami —
-        prodajo srebro in kupijo zlato, ko je razmerje nizko, in obratno.
+        Nekateri vlagatelji uporabljajo to razmerje za menjavo med kovinami — prodajo srebro in kupijo zlato, ko je razmerje nizko, in obratno.
       </p>
 
       <H2>Zakaj ne oboje?</H2>
       <p className="mb-4">
-        Večina izkušenih vlagateljev v plemenite kovine ima{" "}
-        <strong>kombinacijo obeh</strong>. Tipična razdelitev:
+        Večina izkušenih vlagateljev v plemenite kovine ima <strong>kombinacijo obeh</strong>. Tipična razdelitev:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
         <li><strong>Konzervativni:</strong> 80% zlato, 20% srebro</li>
@@ -159,12 +151,9 @@ export default function ZlatoAliSrebroPage() {
         Zlato daje stabilnost, srebro potencial. Kombinacija vam daje oboje.
       </p>
 
-      {/* Verdict box (green variant) */}
       <div className="my-8 rounded-r-lg border-l-4 border-green bg-green-bg py-6 pr-6 pl-6">
         <p>
-          <strong>Naše mnenje:</strong> Za večino začetnikov priporočamo začetek
-          s srebrom (nižji vstopni prag), nato postopno dodajanje zlata. Če
-          imate večji proračun, začnite z zlato-srebrno kombinacijo takoj.
+          <strong>Naše mnenje:</strong> Za večino začetnikov priporočamo začetek s srebrom (nižji vstopni prag), nato postopno dodajanje zlata. Če imate večji proračun, začnite z zlato-srebrno kombinacijo takoj.
         </p>
       </div>
 
@@ -172,31 +161,27 @@ export default function ZlatoAliSrebroPage() {
 
       <H3>Ali je srebro &quot;poceni zlato&quot;?</H3>
       <p className="mb-5">
-        Ne. Srebro ima drugačne značilnosti — večjo volatilnost, več
-        industrijske uporabe. Je drugačna naložba, ne slabša verzija zlata.
+        Ne. Srebro ima drugačne značilnosti — večjo volatilnost, več industrijske uporabe. Je drugačna naložba, ne slabša verzija zlata.
       </p>
 
       <H3>Kaj je boljše za zaščito pred inflacijo?</H3>
       <p className="mb-5">
-        Zlato ima daljšo zgodovino kot zaščita pred inflacijo. Srebro lahko v
-        inflacijskih obdobjih raste hitreje, a tudi hitreje pade.
+        Zlato ima daljšo zgodovino kot zaščita pred inflacijo. Srebro lahko v inflacijskih obdobjih raste hitreje, a tudi hitreje pade.
       </p>
 
       <H3>Kaj je lažje prodati?</H3>
       <p className="mb-5">
-        Obe kovini sta visoko likvidni. Zlato je nekoliko lažje prodati zaradi
-        višje vrednosti na enoto in širše prepoznavnosti.
+        Obe kovini sta visoko likvidni. Zlato je nekoliko lažje prodati zaradi višje vrednosti na enoto in širše prepoznavnosti.
       </p>
 
       <H3>Kaj če ne vem, kaj izbrati?</H3>
       <p className="mb-5">
-        Začnite s pogovorom. Brezplačno vam pomagam razumeti, katera opcija je
-        smiselna za vašo situacijo.
+        Začnite s pogovorom. Naš svetovalec vam brezplačno razloži, katera opcija je smiselna za vašo situacijo.
       </p>
 
       <CtaBox
         title="Potrebujete pomoč pri odločitvi?"
-        text="Pogovoriva se o vaših ciljih. Pomagam vam izbrati pravo kombinacijo za vašo situacijo — brez obveznosti."
+        text="Pogovorimo se o vaših ciljih. Pomagamo vam izbrati pravo kombinacijo za vašo situacijo — brez obveznosti."
       />
     </ArticleLayout>
   );

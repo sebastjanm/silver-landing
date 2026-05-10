@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify({
           to: normalizedEmail,
           subject: "Vaš vodnik za naložbe v srebro 📘",
-          text: `Pozdravljeni,\n\nHvala za zaupanje. Tukaj je vaš brezplačen vodnik:\n\n${downloadUrl}\n\nSebastjan\nNakupSrebra.com`,
+          text: `Pozdravljeni,\n\nHvala za zaupanje. Tukaj je vaš brezplačen vodnik:\n\n${downloadUrl}\n\nEkipa NakupSrebra.com`,
           html: welcomeHtml(downloadUrl),
         }),
       }
@@ -126,9 +126,9 @@ function welcomeHtml(downloadUrl: string) {
     <table width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
       <a href="${downloadUrl}" style="display:inline-block;background:#b7791f;color:#ffffff;padding:16px 40px;border-radius:6px;text-decoration:none;font-size:18px;font-weight:600;">📥 Prenesi PDF vodnik</a>
     </td></tr></table>
-    <p style="color:#718096;font-size:14px;line-height:1.7;margin:30px 0 0;">V naslednjih dneh vam bom poslal še nekaj praktičnih nasvetov.</p>
+    <p style="color:#718096;font-size:14px;line-height:1.7;margin:30px 0 0;">V naslednjih dneh vam bomo poslali še nekaj praktičnih nasvetov.</p>
     <hr style="border:none;border-top:1px solid #e2e8f0;margin:30px 0;">
-    <p style="color:#718096;font-size:13px;margin:0;">Sebastjan<br>NakupSrebra.com</p>
+    <p style="color:#718096;font-size:13px;margin:0;">Ekipa NakupSrebra.com</p>
   </td></tr>
 </table>
 </td></tr></table>

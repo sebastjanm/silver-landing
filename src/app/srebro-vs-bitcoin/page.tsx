@@ -43,17 +43,13 @@ export default function SrebroVsBitcoinPage() {
 
       <div className="space-y-5">
         <p>
-          Srebro in bitcoin sta oba predstavljena kot alternativa
-          tradicionalnemu finančnemu sistemu. Toda to sta zelo različni naložbi
-          — z različnimi prednostmi, tveganji in nameni.
+          Srebro in bitcoin sta oba predstavljena kot alternativa tradicionalnemu finančnemu sistemu. Toda to sta zelo različni naložbi — z različnimi prednostmi, tveganji in nameni.
         </p>
         <p>
-          Ta primerjava je napisana pošteno. Predstavljam prednosti in slabosti
-          obeh, brez da bi eno prikazoval kot objektivno boljše.
+          Ta primerjava je napisana pošteno. Predstavljam prednosti in slabosti obeh, brez da bi eno prikazoval kot objektivno boljše.
         </p>
       </div>
 
-      {/* Comparison cards */}
       <div className="my-8 grid gap-6 sm:grid-cols-2">
         <div className="rounded-xl border border-border border-t-4 border-t-silver bg-white p-7">
           <h4 className="mb-4 font-serif text-xl text-navy">🥈 Srebro</h4>
@@ -101,56 +97,44 @@ export default function SrebroVsBitcoinPage() {
 
       <H3>Fizični obstoj</H3>
       <p className="mb-5">
-        Srebro je fizična kovina, ki jo lahko primete v roke. Ne more izginiti
-        zaradi tehnične napake, pozabljenega gesla ali hakerskega napada. Če
-        imate srebro v sefu — ga imate.
+        Srebro je fizična kovina, ki jo lahko primete v roke. Ne more izginiti zaradi tehnične napake, pozabljenega gesla ali hakerskega napada. Če imate srebro v sefu — ga imate.
       </p>
 
       <H3>Časovno preizkušeno</H3>
       <p className="mb-5">
-        Srebro je imelo vrednost 5.000 let. Je preživelo propad imperijev,
-        svetovni vojni, hiperinflacije. Bitcoin obstaja 15 let — kratko obdobje
-        za dolgoročno naložbo.
+        Srebro je imelo vrednost 5.000 let. Je preživelo propad imperijev, svetovni vojni, hiperinflacije. Bitcoin obstaja 15 let — kratko obdobje za dolgoročno naložbo.
       </p>
 
       <H3>Industrijska vrednost</H3>
       <p className="mb-5">
-        Približno polovica srebra gre v industrijo (elektronika, sončne celice,
-        medicina). To daje srebru temeljno vrednost — industrija ga potrebuje, ne
-        glede na naložbene trende.
+        Približno polovica srebra gre v industrijo (elektronika, sončne celice, medicina). To daje srebru temeljno vrednost — industrija ga potrebuje, ne glede na naložbene trende.
       </p>
 
       <H3>Nižja volatilnost</H3>
       <p className="mb-5">
-        Srebro je volatilno — a bistveno manj kot bitcoin. Za vlagatelje, ki ne
-        prenesejo 50%+ padcev, je srebro lažje psihološko prenašati.
+        Srebro je volatilno — a bistveno manj kot bitcoin. Za vlagatelje, ki ne prenesejo 50%+ padcev, je srebro lažje psihološko prenašati.
       </p>
 
       <H2>Prednosti bitcoina</H2>
 
       <H3>Višji potencialni donos</H3>
       <p className="mb-5">
-        Bitcoin je v zadnjem desetletju bistveno prekosil srebro. Kdor je kupil
-        bitcoin leta 2014 in držal, ima danes stokratni donos. Srebro v istem
-        obdobju: ~+100%.
+        Bitcoin je v zadnjem desetletju bistveno prekosil srebro. Kdor je kupil bitcoin leta 2014 in držal, ima danes stokratni donos. Srebro v istem obdobju: ~+100%.
       </p>
 
       <H3>Enostavnejša hramba</H3>
       <p className="mb-5">
-        Bitcoin hranite na digitalnem &quot;walletu&quot; — ni potrebe po sefu,
-        trezorju, zavarovanju. Za majhne zneske je to bistveno enostavneje.
+        Bitcoin hranite na digitalnem &quot;walletu&quot; — ni potrebe po sefu, trezorju, zavarovanju. Za majhne zneske je to bistveno enostavneje.
       </p>
 
       <H3>Prenosljivost</H3>
       <p className="mb-5">
-        Bitcoin lahko pošljete kamorkoli na svetu v minutah. Srebro morate
-        fizično prenesti ali zaupati tretji osebi.
+        Bitcoin lahko pošljete kamorkoli na svetu v minutah. Srebro morate fizično prenesti ali zaupati tretji osebi.
       </p>
 
       <H3>Delljivost</H3>
       <p className="mb-5">
-        Bitcoin lahko kupite v poljubnih zneskih (tudi 10€). Za srebro
-        potrebujete vsaj znesek za najmanjšo enoto (1 oz ~ 30€).
+        Bitcoin lahko kupite v poljubnih zneskih (tudi 10€). Za srebro potrebujete vsaj znesek za najmanjšo enoto (1 oz ~ 30€).
       </p>
 
       <H2>Tveganja srebra</H2>
@@ -170,57 +154,44 @@ export default function SrebroVsBitcoinPage() {
         <li><strong>Krajša zgodovina</strong> — 15 let ni dolgoročni test</li>
       </ul>
 
-      {/* Neutral assessment box */}
       <HighlightBox>
         <p>
-          <strong>Poštena ocena:</strong> Bitcoin je imel v zadnjih 10 letih
-          višji donos. Toda s tem je prišlo bistveno višje tveganje. Za
-          vlagatelje, ki želijo stabilnost in dolgoročno ohranjanje vrednosti, je
-          srebro bolj konzervativna izbira. Za tiste, ki sprejmejo visoko
-          tveganje za visok potencialni donos, je bitcoin možnost.
+          <strong>Poštena ocena:</strong> Bitcoin je imel v zadnjih 10 letih višji donos. Toda s tem je prišlo bistveno višje tveganje. Za vlagatelje, ki želijo stabilnost in dolgoročno ohranjanje vrednosti, je srebro bolj konzervativna izbira. Za tiste, ki sprejmejo visoko tveganje za visok potencialni donos, je bitcoin možnost.
         </p>
       </HighlightBox>
 
       <H2>Ali zakaj ne oboje?</H2>
       <p className="mb-4">
-        Srebro in bitcoin nista medsebojno izključujoča. Nekateri vlagatelji
-        imajo oboje:
+        Srebro in bitcoin nista medsebojno izključujoča. Nekateri vlagatelji imajo oboje:
       </p>
       <ul className="mb-5 ml-6 space-y-2">
         <li><strong>Srebro</strong> — Kot &quot;zavarovanje&quot; in stabilni del portfelja</li>
         <li><strong>Bitcoin</strong> — Kot špekulativni del z višjim potencialom</li>
       </ul>
       <p className="mb-5">
-        Razmerje je odvisno od vašega odnosa do tveganja. Konzervativnejši: več
-        srebra. Agresivnejši: več bitcoina.
+        Razmerje je odvisno od vašega odnosa do tveganja. Konzervativnejši: več srebra. Agresivnejši: več bitcoina.
       </p>
 
       <H2>Pogosta vprašanja</H2>
 
       <H3>Katera naložba je boljša?</H3>
       <p className="mb-5">
-        &quot;Boljša&quot; je odvisna od vaših ciljev. Če iščete stabilnost —
-        srebro. Če sprejmete visoko tveganje za visok potencialni donos —
-        bitcoin. Če ne veste — začnite konzervativno.
+        &quot;Boljša&quot; je odvisna od vaših ciljev. Če iščete stabilnost — srebro. Če sprejmete visoko tveganje za visok potencialni donos — bitcoin. Če ne veste — začnite konzervativno.
       </p>
 
       <H3>Ali bo bitcoin nadomestil srebro?</H3>
       <p className="mb-5">
-        Verjetno ne. Srebro ima industrijsko uporabo, ki je bitcoin nima.
-        Industrija potrebuje fizično srebro za elektroniko, sončne celice,
-        medicino. Bitcoin te funkcije ne more opravljati.
+        Verjetno ne. Srebro ima industrijsko uporabo, ki je bitcoin nima. Industrija potrebuje fizično srebro za elektroniko, sončne celice, medicino. Bitcoin te funkcije ne more opravljati.
       </p>
 
       <H3>Kaj če ne razumem bitcoina?</H3>
       <p className="mb-5">
-        Potem verjetno ni za vas — vsaj ne še. Zlatno pravilo vlaganja: ne
-        vlagajte v nekaj, česar ne razumete. Srebro je enostavnejše za
-        razumeti.
+        Potem verjetno ni za vas — vsaj ne še. Zlatno pravilo vlaganja: ne vlagajte v nekaj, česar ne razumete. Srebro je enostavnejše za razumeti.
       </p>
 
       <CtaBox
         title="Razmišljate o srebru?"
-        text="Pomagam vam razumeti, ali je srebro primerno za vašo situacijo. Brez obveznosti."
+        text="Pomagamo vam razumeti, ali je srebro primerno za vašo situacijo. Brez obveznosti."
       />
     </ArticleLayout>
   );
