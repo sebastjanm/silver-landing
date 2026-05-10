@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { CtaBox } from "@/components/CtaBox";
 import { HighlightBox } from "@/components/HighlightBox";
+import { ArticleJsonLd } from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Vrednost srebra — Zakaj ima srebro vrednost?",
@@ -30,21 +31,18 @@ export default function VrednostSrebraPage() {
       title="Zakaj ima srebro vrednost?"
       subtitle="5.000 let zgodovine in sodobna industrijska poraba"
     >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Vrednost srebra skozi čas",
-            description: "Kako se je vrednost srebra spreminjala skozi zgodovino.",
-            datePublished: "2026-02-01",
-            dateModified: "2026-02-01",
-            author: { "@type": "Organization", name: "NakupSrebra.com", url: "https://www.nakupsrebra.com" },
-            publisher: { "@type": "Organization", name: "NakupSrebra.com" },
-            mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.nakupsrebra.com/vrednost-srebra" },
-          }),
-        }}
+      <ArticleJsonLd
+        headline="Zakaj ima srebro vrednost? — 5.000 let zgodovine"
+        description="Kako se je vrednost srebra spreminjala skozi zgodovino, edinstvene fizikalne lastnosti in industrijska poraba."
+        url="/vrednost-srebra"
+        datePublished="2026-02-01"
+        dateModified="2026-05-10"
+        keywords={[
+          "vrednost srebra",
+          "zakaj ima srebro vrednost",
+          "srebro naložba",
+          "srebro zgodovina",
+        ]}
       />
 
       <div className="space-y-5">
