@@ -1,0 +1,40 @@
+# NakupSrebra.com
+
+> Slovensko vodilno mesto za izobraževanje o nakupu naložbenega srebra. Pojasnjujemo, kako kupiti fizično srebro brez 22% DDV preko EU carinskega skladišča, kako shraniti v švicarskem trezorju in kako uporabiti razmerje zlato/srebro za dolgoročno varčevanje. Brezplačen 15-minutni posvet z izkušenim svetovalcem, brez prodajnega pritiska.
+
+## Strategija
+
+- [Strateška naložba v srebro — domača stran](https://www.nakupsrebra.com/): Zakaj srebro, zakaj zdaj. Razmerje zlato/srebro, industrijska poraba, EUR inflacija. Trije citirani podatki, ki jih morate poznati pred prvim nakupom.
+- [Brezplačen posvet](https://www.nakupsrebra.com/posvet): 15-minutni klic z izkušenim svetovalcem v 24 urah, brez vezave, brez prodajnega pritiska.
+
+## Cene in trg
+
+- [Cena srebra danes](https://www.nakupsrebra.com/cena-srebra): Trenutna spot cena srebra v EUR na gram, unčo in kilogram. Posodobljeno vsakih 5 minut.
+- [Vrednost srebra skozi čas](https://www.nakupsrebra.com/vrednost-srebra): 5.000 let zgodovine in sodobna industrijska poraba (sončne celice, EV, elektronika).
+- [Statistika srebra 2026](https://www.nakupsrebra.com/statistika-srebra-2026): 50+ verificiranih dejstev z viri (LBMA, USGS, The Silver Institute).
+
+## Vodniki
+
+- [Brezplačen vodnik (PDF)](https://www.nakupsrebra.com/vodnik/vodnik-srebro): 25-stranski vodnik za začetnike.
+- [Naložbeno srebro za začetnike](https://www.nakupsrebra.com/nalozbe/nalozeno-srebro): Popoln vodnik (12 minut branja). Oblike, premije, davki, hramba.
+- [Srebrni kovanci](https://www.nakupsrebra.com/srebrni-kovanci): Vodnik za nakup naložbenih srebrnih kovancev — American Eagle, Maple Leaf, Wiener Philharmoniker, Britannia.
+
+## Primerjave
+
+- [Zlato ali srebro?](https://www.nakupsrebra.com/zlato-ali-srebro): Katera plemenita kovina je boljša naložba — primerjava prednosti, slabosti in optimalne razdelitve portfelja.
+- [Fizično srebro vs ETF](https://www.nakupsrebra.com/srebro-vs-etf): Razlike med fizičnim lastništvom in ETF skladi (SLV, PSLV, SIVR).
+- [Srebro vs Bitcoin](https://www.nakupsrebra.com/srebro-vs-bitcoin): Poštena primerjava dveh različnih naložb.
+
+## Lokalno
+
+- [Nakup srebra v Ljubljani](https://www.nakupsrebra.com/nakup-srebra/ljubljana): Vodnik za prebivalce Ljubljane in osrednje Slovenije.
+- [Nakup srebra v Mariboru](https://www.nakupsrebra.com/nakup-srebra/maribor): Vodnik za prebivalce Maribora in Podravske regije.
+- [Nakup srebra v Celju](https://www.nakupsrebra.com/nakup-srebra/celje): Vodnik za prebivalce Celja in Savinjske regije.
+
+## Blog
+
+- [Blog](https://www.nakupsrebra.com/blog): Davki, primerjave, strategije in zgodovina srebra. Brez prodajnega žargona, samo dejstva z viri.
+
+## Optional
+
+- [Sitemap](https://www.nakupsrebra.com/sitemap.xml)
