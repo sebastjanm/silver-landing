@@ -36,7 +36,7 @@ export default function HomePage() {
 /* ── Hero ── */
 function HeroSection() {
   return (
-    <section className="pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section className="pt-10 pb-16 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7 max-lg:text-center">
@@ -53,7 +53,7 @@ function HeroSection() {
               fizično srebro in zlato, brez DDV, v zavarovanem švicarskem
               trezorju.
             </p>
-            <p className="mx-auto mb-8 max-w-lg text-text-muted lg:mx-0">
+            <p className="mx-auto mb-8 max-w-lg text-text-muted max-sm:hidden lg:mx-0">
               Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine
               ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.
             </p>
