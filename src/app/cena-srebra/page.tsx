@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/cena-srebra" },
   openGraph: {
+    images: defaultOgImages,
     title: "Cena srebra danes — Aktualna cena v EUR",
     description:
       "Trenutna cena srebra v evrih. Zgodovinski podatki in analiza.",

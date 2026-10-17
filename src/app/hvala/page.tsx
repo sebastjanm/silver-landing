@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/hvala" },
   robots: { index: false, follow: true },
   openGraph: {
+    images: defaultOgImages,
     title: "Hvala za prijavo! | Nakup Srebra",
     description:
       "Kmalu boste prejeli brezplačen vodnik o naložbah v srebro.",

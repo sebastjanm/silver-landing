@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   keywords: ["zlato ali srebro", "srebro vs zlato", "primerjava zlato srebro", "naložba zlato srebro"],
   alternates: { canonical: "/zlato-ali-srebro" },
   openGraph: {
+    images: defaultOgImages,
     title: "Zlato ali srebro? Katera kovina je boljša naložba",
     description: "Primerjava zlata in srebra kot naložbe. Prednosti, slabosti in kdaj izbrati katero.",
     type: "article",

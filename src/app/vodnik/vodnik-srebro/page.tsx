@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import Link from "next/link";
 import { EmailCapture } from "@/components/EmailCapture";
 import { HighlightBox, WarningBox } from "@/components/HighlightBox";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Brezplačen vodnik za začetnike: kako kupiti srebro, kje hraniti, koliko vložiti. Praktični nasveti za varne naložbe v plemenite kovine.",
   alternates: { canonical: "/vodnik/vodnik-srebro" },
   openGraph: {
+    images: defaultOgImages,
     title: "Kako začeti z naložbo v srebro — Brezplačen vodnik",
     description:
       "Brezplačen vodnik za začetnike: kako kupiti srebro, kje hraniti, koliko vložiti.",

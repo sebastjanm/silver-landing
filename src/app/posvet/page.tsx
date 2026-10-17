@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { CheckIcon } from "@/components/CheckIcon";
 import { EmailCapture } from "@/components/EmailCapture";
 import { CalendlyEmbed } from "@/components/CalendlyEmbed";
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.",
   alternates: { canonical: "/posvet" },
   openGraph: {
+    images: defaultOgImages,
     title: "Brezplačen posvet | Nakup Srebra",
     description:
       "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.",

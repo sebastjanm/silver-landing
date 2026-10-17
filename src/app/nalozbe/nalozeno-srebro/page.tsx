@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/nalozbe/nalozeno-srebro" },
   openGraph: {
+    images: defaultOgImages,
     title: "Naložbeno srebro: Popoln vodnik za začetnike",
     description:
       "Vse o naložbenem srebru: kaj je, kako kupiti, kje hraniti. Nepristranski vodnik.",
