@@ -3,6 +3,7 @@ import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
 import { HighlightBox } from "@/components/HighlightBox";
+import { LiveSilverPrice } from "@/components/LiveSilverPrice";
 
 export const metadata: Metadata = {
   title: "Cena srebra danes — Aktualna cena v EUR",
@@ -50,26 +51,7 @@ export default function CenaSrebraPage() {
       />
 
       {/* Live Price Display */}
-      <div className="mb-12 rounded-2xl bg-gradient-to-br from-navy to-navy-light p-10 text-white">
-        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-          <span className="font-serif text-xl">Aktualna cena srebra</span>
-          <span className="text-sm text-white/70">Posodabljam...</span>
-        </div>
-        <div className="grid gap-6 sm:grid-cols-3">
-          <div className="text-center">
-            <div className="mb-2 text-sm text-white/70">Na gram</div>
-            <div className="font-serif text-4xl font-bold text-gold-light">&mdash;</div>
-          </div>
-          <div className="text-center">
-            <div className="mb-2 text-sm text-white/70">Na unčo (31,1g)</div>
-            <div className="font-serif text-4xl font-bold text-gold-light">&mdash;</div>
-          </div>
-          <div className="text-center">
-            <div className="mb-2 text-sm text-white/70">Na kilogram</div>
-            <div className="font-serif text-4xl font-bold text-gold-light">&mdash;</div>
-          </div>
-        </div>
-      </div>
+      <LiveSilverPrice />
 
       <HighlightBox>
         <p>

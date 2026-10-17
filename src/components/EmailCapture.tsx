@@ -35,18 +35,28 @@ export function EmailCapture() {
   return (
     <div className="mx-auto max-w-xl rounded-2xl border border-border bg-gradient-to-br from-bg-warm to-bg-warm/70 p-10 text-center">
       <div className="mb-4 text-5xl">📘</div>
-      <h3 className="mb-2 font-serif text-2xl text-navy">
+      <h2 className="mb-2 font-serif text-2xl text-navy">
         Brezplačen vodnik
-      </h3>
+      </h2>
       <p className="mb-6 text-text-muted">
         Prenesite:{" "}
         <strong>&quot;Kako začeti z naložbo v srebro&quot;</strong>
       </p>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto flex max-w-sm gap-3 max-sm:flex-col"
+        className="mx-auto max-w-sm text-left"
       >
+        <label
+          htmlFor="lead-email"
+          className="mb-2 block text-sm font-medium text-navy"
+        >
+          Vaš email naslov
+        </label>
+        <div className="flex gap-3 max-sm:flex-col">
         <input
+          id="lead-email"
+          name="email"
+          autoComplete="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -65,6 +75,7 @@ export function EmailCapture() {
               ? errorMsg
               : "Pošlji →"}
         </button>
+        </div>
       </form>
       <p className="mt-4 text-sm text-text-muted">
         <span>✓ Brez spama</span>

@@ -5,7 +5,7 @@ import { CtaBox } from "@/components/CtaBox";
 import { HighlightBox } from "@/components/HighlightBox";
 
 export const metadata: Metadata = {
-  title: "Zlato ali srebro? Katera kovina je boljša naložba | NakupSrebra.com",
+  title: "Zlato ali srebro? Katera kovina je boljša naložba",
   description:
     "Primerjava zlata in srebra kot naložbe. Katera kovina je boljša za vas? Prednosti, slabosti in kdaj izbrati katero.",
   keywords: ["zlato ali srebro", "srebro vs zlato", "primerjava zlato srebro", "naložba zlato srebro"],

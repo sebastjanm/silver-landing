@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { CheckIcon } from "@/components/CheckIcon";
 import { EmailCapture } from "@/components/EmailCapture";
+import { CalendlyEmbed } from "@/components/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Brezplačen posvet",
@@ -48,8 +48,9 @@ export default function PosvetPage() {
         }}
       />
 
+      <main>
       {/* Page header */}
-      <div className="bg-bg-warm py-16 text-center">
+      <div className="bg-bg-warm py-12 text-center">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h1 className="mb-3 font-serif text-4xl text-navy">
             Brezplačen posvet
@@ -58,22 +59,19 @@ export default function PosvetPage() {
             Izberite termin za 15-minutni pogovor o vaših ciljih in strategiji
             varčevanja v plemenitih kovinah.
           </p>
+          <ul className="mx-auto mt-6 flex max-w-xl flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-text-muted">
+            <li className="flex items-center gap-1.5"><CheckIcon /> Fizično srebro in zlato</li>
+            <li className="flex items-center gap-1.5"><CheckIcon /> Brez DDV</li>
+            <li className="flex items-center gap-1.5"><CheckIcon /> Švicarska hramba</li>
+          </ul>
         </div>
       </div>
 
       {/* Calendly section */}
       <section className="bg-bg py-10 pb-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Calendly inline widget */}
-          <div className="overflow-hidden rounded-xl shadow-md">
-            <iframe
-              src="https://calendly.com/sebom/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Rezervirajte posvet"
-            />
-          </div>
+          {/* Calendly — loaded on click to keep initial page light */}
+          <CalendlyEmbed />
 
           {/* Trust points */}
           <div className="mt-10 flex flex-wrap justify-center gap-8">
@@ -98,6 +96,7 @@ export default function PosvetPage() {
           <EmailCapture />
         </div>
       </section>
+      </main>
     </>
   );
 }
