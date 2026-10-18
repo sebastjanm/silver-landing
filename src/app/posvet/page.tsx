@@ -52,50 +52,44 @@ export default function PosvetPage() {
 
       <main>
       {/* Page header */}
-      <div className="bg-bg-warm py-12 text-center">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h1 className="mb-3 font-serif text-4xl text-navy">
+      <div className="border-b border-rule bg-bg py-12 lg:py-16">
+        <div className="mx-auto max-w-4xl px-6 text-center lg:px-8">
+          <div className="mb-6 inline-block border-b border-gold pb-2 text-xs font-semibold uppercase tracking-wider text-gold">
+            15-minutni klic
+          </div>
+          <h1 className="mb-4 font-serif text-4xl font-normal text-ink lg:text-5xl">
             Brezplačen posvet
           </h1>
-          <p className="mx-auto max-w-md text-lg text-text-muted">
-            Izberite termin za 15-minutni pogovor o vaših ciljih in strategiji
-            varčevanja v plemenitih kovinah.
+          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-text-muted">
+            Izberite termin za kratek pogovor o vaših ciljih in strategiji varčevanja v plemenitih kovinah. Brez obveznosti, brez prodajnega pritiska.
           </p>
-          <ul className="mx-auto mt-6 flex max-w-xl flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-text-muted">
-            <li className="flex items-center gap-1.5"><CheckIcon /> Fizično srebro in zlato</li>
-            <li className="flex items-center gap-1.5"><CheckIcon /> Brez DDV</li>
-            <li className="flex items-center gap-1.5"><CheckIcon /> Švicarska hramba</li>
-          </ul>
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-text-muted">
+            <span className="flex items-center gap-1.5"><CheckIcon className="text-metal" /> Fizično srebro in zlato</span>
+            <span className="flex items-center gap-1.5"><CheckIcon className="text-metal" /> Brez DDV</span>
+            <span className="flex items-center gap-1.5"><CheckIcon className="text-metal" /> Švicarska hramba</span>
+          </div>
         </div>
       </div>
 
       {/* Calendly section */}
-      <section className="bg-bg py-10 pb-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Calendly — loaded on click to keep initial page light */}
+      <section className="bg-white py-12 lg:py-16">
+        <div className="mx-auto max-w-4xl px-6 lg:px-8">
           <CalendlyEmbed />
 
-          {/* Trust points */}
-          <div className="mt-10 flex flex-wrap justify-center gap-8">
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              Brez obveznosti
-            </div>
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              Brez prodajnega pritiska
-            </div>
-            <div className="flex items-center gap-2 text-sm text-text-muted">
-              <CheckIcon />
-              15 minut vašega časa
-            </div>
+          <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-text-light">
+            <span>Brez obveznosti</span>
+            <span>·</span>
+            <span>Brez prodajnega pritiska</span>
+            <span>·</span>
+            <span>15 minut</span>
           </div>
 
-          {/* Divider */}
-          <div className="my-10 text-center text-text-muted">ali</div>
+          <div className="my-12 border-t border-rule"></div>
 
-          {/* Email capture */}
-          <EmailCapture />
+          <div className="text-center">
+            <p className="mb-6 text-text-muted">Ali prenesite brezplačen vodnik</p>
+            <EmailCapture />
+          </div>
         </div>
       </section>
       </main>
