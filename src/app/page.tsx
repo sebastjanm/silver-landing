@@ -106,12 +106,15 @@ function HeroSection() {
               <div className="text-sm font-medium uppercase tracking-wider text-text-subtle">
                 Kam gre vaš denar?
               </div>
-              <div className="mt-1 text-text-muted">Primerjava zadnjih 20 let</div>
+              <div className="mt-1 text-text-muted">Primerjava v EUR (zlato 20 let, srebro 10 let)</div>
             </div>
             <div className="space-y-4">
-              <ComparisonRow icon={Coins} label="V zlatu" value="+450%" positive />
-              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+300%" positive />
-              <ComparisonRow icon={Building2} label="Na banki" value="−35%" positive={false} />
+              <ComparisonRow icon={Coins} label="V zlatu" value="+699%" positive />
+              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+241%" positive />
+              <ComparisonRow icon={Building2} label="Na banki" value="−44%" positive={false} />
+            </div>
+            <div className="mt-4 text-center text-xs text-text-subtle">
+              Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato), okt. 2016–okt. 2026 (srebro); HICP inflacija 1999–2026 (banka). Podatki na dan 18. 10. 2026.
             </div>
             <div className="mt-6 rounded-xl border border-green-bg bg-green-bg p-4 text-center">
               <div className="flex items-center justify-center gap-2 text-sm font-semibold text-green">
@@ -187,7 +190,7 @@ function WhyPhysicalSection() {
               icon: Banknote,
               title: "Fiat denar (EUR)",
               text: "Papir, ki ga tiskajo centralne banke. Vrednost temelji na zaupanju v državo. Ko zaupanje pade — pade tudi vrednost.",
-              badge: "−85% od 1971",
+              badge: "−44% kupne moči od 1999",
               badgeColor: "border-red-bg bg-red-bg text-red",
             },
             {
@@ -200,7 +203,7 @@ function WhyPhysicalSection() {
             {
               icon: CircleDollarSign,
               title: "Fizično srebro",
-              text: "Opријемljiva kovina z maso in zgodovino. Primete jo lahko v roke. Cene nihajo, a srebro ostaja. 5.000 let brez bankrota.",
+              text: "Oprijemljiva kovina z maso in zgodovino. Primete jo lahko v roke. Cene nihajo, a srebro ostaja. 5.000 let brez bankrota.",
               badge: "Fizično. Vaše.",
               badgeColor: "border-green-bg bg-green-bg text-green",
               highlight: true,
@@ -256,7 +259,7 @@ function HowItWorksSection() {
               icon: TrendingUp,
               num: "02",
               title: "Preverjena zgodovina",
-              text: "Zlato in srebro sta preživela vse: rimski propad, svetovne vojne, hiperinflacije. V zadnjih 20 letih: +450% (zlato) in +300% (srebro).",
+              text: "Zlato in srebro sta preživela vse: rimski propad, svetovne vojne, hiperinflacije. Zlato +699% v 20 letih, srebro +241% v 10 letih (v EUR).",
             },
             {
               icon: Lock,
@@ -346,15 +349,18 @@ function DataCardSection() {
           <div className="divide-y divide-border">
             {[
               { label: "Srebro nikoli ni šlo na 0", value: "5.000 let" },
-              { label: "Zlato v zadnjih 20 letih", value: "+450%" },
-              { label: "Srebro v zadnjih 10 letih", value: "+85%" },
-              { label: "EUR izguba kupne moči (1971-danes)", value: "−85%" },
+              { label: "Zlato v zadnjih 20 letih (v EUR)", value: "+699%" },
+              { label: "Srebro v zadnjih 10 letih (v EUR)", value: "+241%" },
+              { label: "EUR izguba kupne moči (1999–2026)", value: "−44%" },
             ].map((item, i) => (
               <div key={i} className="flex items-center justify-between px-8 py-5">
                 <span className="font-medium text-text">{item.label}</span>
                 <span className="text-2xl font-bold tracking-tight text-green">{item.value}</span>
               </div>
             ))}
+          </div>
+          <div className="px-8 py-4 text-center text-xs text-text-subtle border-t border-border">
+            Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato), okt. 2016–okt. 2026 (srebro); HICP inflacija 1999–2026 (EUR). Podatki na dan 18. 10. 2026.
           </div>
         </div>
       </div>
