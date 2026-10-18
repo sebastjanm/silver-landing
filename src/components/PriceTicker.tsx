@@ -30,25 +30,25 @@ export function PriceTicker() {
   }, []);
 
   return (
-    <div className="bg-navy py-3 text-sm text-white">
+    <div className="border-b border-rule/40 bg-ink py-2.5 text-sm text-white">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 px-6 lg:px-8">
-        <span className="text-white/70 max-sm:hidden">Trenutne cene:</span>
+        <span className="text-xs uppercase tracking-wider text-white/50 max-sm:hidden">Trenutne cene:</span>
         <span className="flex items-center gap-2">
-          <span className="font-medium">🥈 Srebro</span>
-          <span className="font-serif text-lg font-bold text-gold-light">
+          <span className="text-xs font-medium uppercase tracking-wider text-white/70">Srebro</span>
+          <span className="font-serif text-base font-bold text-gold-light">
             {silver}
           </span>
-          <span className="text-xs text-white/70">€/oz</span>
+          <span className="text-xs text-white/50">€/oz</span>
         </span>
         <span className="flex items-center gap-2">
-          <span className="font-medium">🥇 Zlato</span>
-          <span className="font-serif text-lg font-bold text-gold-light">
+          <span className="text-xs font-medium uppercase tracking-wider text-white/70">Zlato</span>
+          <span className="font-serif text-base font-bold text-gold-light">
             {gold}
           </span>
-          <span className="text-xs text-white/70">€/oz</span>
+          <span className="text-xs text-white/50">€/oz</span>
         </span>
         {updated && (
-          <span className="text-xs text-white/70">{updated}</span>
+          <span className="text-xs text-white/40">{updated}</span>
         )}
       </div>
     </div>

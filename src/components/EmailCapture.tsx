@@ -33,22 +33,22 @@ export function EmailCapture() {
   }
 
   return (
-    <div className="mx-auto max-w-xl rounded-2xl border border-border bg-gradient-to-br from-bg-warm to-bg-warm/70 p-10 text-center">
-      <div className="mb-4 text-5xl">📘</div>
-      <h2 className="mb-2 font-serif text-2xl text-navy">
-        Brezplačen vodnik
-      </h2>
-      <p className="mb-6 text-text-muted">
-        Prenesite:{" "}
-        <strong>&quot;Kako začeti z naložbo v srebro&quot;</strong>
-      </p>
+    <div className="border border-rule bg-white p-10">
+      <div className="mb-8 text-center">
+        <h2 className="mb-3 font-serif text-2xl text-ink">
+          Brezplačen vodnik
+        </h2>
+        <p className="text-text-muted">
+          Prenesite: <strong className="text-ink">&quot;Kako začeti z naložbo v srebro&quot;</strong>
+        </p>
+      </div>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto max-w-sm text-left"
+        className="mx-auto max-w-md"
       >
         <label
           htmlFor="lead-email"
-          className="mb-2 block text-sm font-medium text-navy"
+          className="mb-2 block text-sm font-medium text-ink"
         >
           Vaš email naslov
         </label>
@@ -60,26 +60,25 @@ export function EmailCapture() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Vaš email"
+          placeholder="vas@email.com"
           required
-          className="flex-1 rounded-lg border border-border bg-white px-4 py-3.5 font-sans text-base transition-all focus:border-gold focus:ring-2 focus:ring-gold/10 focus:outline-none"
+          className="flex-1 border border-rule bg-white px-4 py-3 font-sans text-base transition-all focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="cursor-pointer whitespace-nowrap rounded-lg bg-gold px-6 py-3.5 font-sans font-semibold text-white transition-all hover:-translate-y-px hover:bg-gold-light disabled:opacity-60"
+          className="cursor-pointer whitespace-nowrap bg-gold px-6 py-3 font-sans font-semibold text-white transition-all hover:bg-gold-light disabled:opacity-60"
         >
           {status === "sending"
             ? "Pošiljam..."
             : status === "error"
               ? errorMsg
-              : "Pošlji →"}
+              : "Prenesite"}
         </button>
         </div>
       </form>
-      <p className="mt-4 text-sm text-text-muted">
-        <span>✓ Brez spama</span>
-        <span className="mx-2">✓ Odjava kadarkoli</span>
+      <p className="mt-4 text-center text-xs text-text-light">
+        Brez spama · Odjava kadarkoli
       </p>
     </div>
   );

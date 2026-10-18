@@ -1,27 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Colors ── */
-  --color-bg: #fdfcfa;
-  --color-bg-warm: #f8f6f1;
+  /* ── Editorial Palette ── */
+  --color-bg: #fdfbf7;
+  --color-bg-warm: #f9f7f4;
   --color-bg-card: #ffffff;
-  --color-navy: #1a365d;
-  --color-navy-light: #2c5282;
-  --color-text: #2d3748;
-  --color-text-muted: #5a6778;
-  --color-gold: #92650f;
-  --color-gold-light: #d69e2e;
-  --color-gold-bg: #faf5eb;
-  --color-green: #276749;
-  --color-green-light: #48bb78;
-  --color-green-bg: #f0fff4;
-  --color-red: #c53030;
-  --color-red-bg: #fff5f5;
-  --color-border: #e2e8f0;
-  --color-silver: #c0c0c0;
-  --color-blue: #4285f4;
+  --color-ink: #1a1a1a;
+  --color-navy: #1e2936;
+  --color-navy-light: #374151;
+  --color-text: #374151;
+  --color-text-muted: #6b7280;
+  --color-text-light: #9ca3af;
+  --color-metal: #8b8d93;
+  --color-metal-light: #b8bac0;
+  --color-gold: #a67c2e;
+  --color-gold-light: #c9983e;
+  --color-gold-bg: #faf8f3;
+  --color-green: #1e6b47;
+  --color-green-light: #2d8659;
+  --color-green-bg: #f0fdf7;
+  --color-red: #b91c1c;
+  --color-red-bg: #fef2f2;
+  --color-border: #e5e7eb;
+  --color-rule: #d1d5db;
+  --color-silver: #b8bac0;
+  --color-blue: #2563eb;
   --color-bitcoin: #f7931a;
-  --color-subtle: #f7fafc;
+  --color-subtle: #f9fafb;
 
   /* ── Fonts ── */
   --font-serif: "Libre Baskerville", Georgia, serif;
@@ -29,33 +34,34 @@
 
   /* ── Font sizes (rem) ── */
   --text-xs: 0.75rem;
-  --text-sm: 0.85rem;
+  --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-md: 1.05rem;
-  --text-lg: 1.15rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.125rem;
   --text-xl: 1.25rem;
-  --text-2xl: 1.4rem;
-  --text-3xl: 1.6rem;
-  --text-4xl: 2.2rem;
-  --text-5xl: 2.4rem;
-  --text-hero: 3.2rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-hero: 3.5rem;
 
   /* ── Shadows ── */
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 20px 40px -15px rgba(26, 54, 93, 0.15);
-  --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.08);
-  --shadow-nav-cta: 0 2px 8px rgba(26, 54, 93, 0.25);
-  --shadow-nav-cta-hover: 0 4px 12px rgba(26, 54, 93, 0.3);
-  --shadow-mobile-cta: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-default: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
+  --shadow-nav-cta: 0 2px 8px rgba(166, 124, 46, 0.3);
+  --shadow-nav-cta-hover: 0 4px 12px rgba(166, 124, 46, 0.4);
+  --shadow-mobile-cta: 0 -4px 16px rgba(0, 0, 0, 0.08);
 
   /* ── Breakpoints ── */
-  --breakpoint-xs: 30rem;    /* 480px */
-  --breakpoint-sm: 37.5rem;  /* 600px */
-  --breakpoint-md: 50rem;    /* 800px */
-  --breakpoint-lg: 56.25rem; /* 900px */
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
 }
 
 /* ── Reset legacy wrappers inside article prose ── */
@@ -74,8 +80,10 @@ body {
   font-family: var(--font-sans);
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.7;
+  line-height: 1.65;
   font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /*

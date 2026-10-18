@@ -16,16 +16,13 @@ export default function HomePage() {
     <>
       <SchemaOrg />
       <PriceTicker />
-      <main>
+      <main className="min-h-screen">
         <HeroSection />
-        <ProcessSection />
-        <SolutionSection />
-        <MidCta />
-        <PhysicalSection />
-        <ProblemSection />
-        <TrustSection />
+        <WhySilverSection />
+        <StrategySection />
+        <ComparisonSection />
+        <GuideSection />
         <FaqSection />
-        <EmailSection />
         <FinalCtaSection />
       </main>
       <MobileCta />
@@ -36,77 +33,43 @@ export default function HomePage() {
 /* ── Hero ── */
 function HeroSection() {
   return (
-    <section className="pt-10 pb-16 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid items-center gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7 max-lg:text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-green/20 bg-green-bg px-4 py-2 text-sm font-medium text-green">
-              ✓ Brezplačen posvet
-            </div>
-            <h1 className="mb-6 font-serif text-4xl font-normal leading-tight text-navy lg:text-hero">
-              Srebro in zlato še nikoli nista izgubila{" "}
-              <em className="text-gold">vrednosti.</em>
-            </h1>
-            <p className="mx-auto mb-4 max-w-lg text-lg text-text-muted lg:mx-0">
-              Brezplačen posvet za varne naložbe v plemenite kovine po
-              strategiji <strong className="text-navy">Elementum</strong>:
-              fizično srebro in zlato, brez DDV, v zavarovanem švicarskem
-              trezorju.
-            </p>
-            <p className="mx-auto mb-8 max-w-lg text-text-muted max-sm:hidden lg:mx-0">
-              Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine
-              ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.
-            </p>
-            <div className="flex flex-wrap gap-3 max-lg:justify-center">
-              <Link
-                href="/posvet"
-                className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
-              >
-                Brezplačen posvet →
-              </Link>
-              <a
-                href="#vodnik"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-white px-8 py-4 font-semibold text-navy transition-all hover:border-navy hover:bg-bg-warm"
-              >
-                📘 Brezplačen vodnik
-              </a>
-            </div>
-            <div className="mt-8 flex gap-6 text-sm text-text-muted max-lg:flex-wrap max-lg:justify-center">
-              <span className="flex items-center gap-1.5">
-                <CheckIcon /> Brez prodajnega pritiska
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckIcon /> Odgovor v 24 urah
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckIcon /> Brez vezave
-              </span>
-            </div>
+    <section className="border-b border-rule bg-bg py-16 lg:py-24">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+        <div className="mb-8 text-center">
+          <div className="mb-6 inline-block border-b border-gold pb-2 text-xs font-semibold uppercase tracking-wider text-gold">
+            Posvetovanje za naložbe v srebro
           </div>
-
-          {/* Hero Card */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-border bg-white p-9 shadow-lg">
-              <div className="mb-6 flex items-center gap-3 border-b border-border pb-5">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-gold-bg text-2xl">
-                  🛡️
-                </div>
-                <div>
-                  <div className="font-serif text-lg text-navy">
-                    Kam gre vaš denar?
-                  </div>
-                  <div className="text-sm text-text-muted">
-                    Primerjava v 20 letih
-                  </div>
-                </div>
-              </div>
-              <StatRow label="V zlatu" value="+450%" positive />
-              <StatRow label="V srebru" value="+300%" positive />
-              <StatRow label="Na banki" value="−35%" positive={false} last />
-              <div className="mt-5 rounded-lg bg-green-bg p-4 text-center text-sm font-medium text-green">
-                🏛️ Srebro in zlato: 5.000 let brez propada
-              </div>
-            </div>
+          <h1 className="mb-6 font-serif text-5xl font-normal leading-tight tracking-tight text-ink lg:text-hero">
+            Srebro in zlato še nikoli{" "}
+            <span className="italic">nista izgubila</span> vrednosti
+          </h1>
+          <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-text-muted">
+            Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine ohranjajo vrednost. Brezplačen posvet za varne naložbe po strategiji Elementum: fizično srebro in zlato, brez DDV, v zavarovanem švicarskem trezorju.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/posvet"
+              className="inline-flex items-center gap-2 bg-gold px-8 py-3 font-semibold text-white shadow-nav-cta transition-all hover:bg-gold-light hover:shadow-nav-cta-hover"
+            >
+              Brezplačen posvet
+            </Link>
+            <a
+              href="#vodnik"
+              className="inline-flex items-center gap-2 border border-rule bg-white px-8 py-3 font-semibold text-ink transition-all hover:border-ink"
+            >
+              Brezplačen vodnik
+            </a>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-text-muted">
+            <span className="flex items-center gap-1.5">
+              <CheckIcon className="text-metal" /> Brez prodajnega pritiska
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckIcon className="text-metal" /> Brez vezave
+            </span>
+            <span className="flex items-center gap-1.5">
+              <CheckIcon className="text-metal" /> Prodate kadarkoli
+            </span>
           </div>
         </div>
       </div>
@@ -114,346 +77,189 @@ function HeroSection() {
   );
 }
 
-function StatRow({
-  label,
-  value,
-  positive,
-  last = false,
-}: {
-  label: string;
-  value: string;
-  positive: boolean;
-  last?: boolean;
-}) {
+/* ── Why Silver (Editorial Essay) ── */
+function WhySilverSection() {
   return (
-    <div
-      className={`flex items-center justify-between py-4 ${last ? "" : "border-b border-border"}`}
-    >
-      <span className="text-sm text-text-muted">{label}</span>
-      <span
-        className={`font-serif text-xl font-bold ${positive ? "text-green" : "text-red"}`}
-      >
-        {value}
-      </span>
-    </div>
-  );
-}
-
-/* ── Problem ── */
-function ProblemSection() {
-  return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid items-start gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-7">
-            <SectionLabel>Pravo tveganje</SectionLabel>
-            <SectionTitle>
-              Nevarnost ni v srebru. Nevarnost je{" "}
-              <em className="text-gold">v nedelovanju.</em>
-            </SectionTitle>
-            <p className="max-w-lg text-lg text-text-muted">
-              Denar na banki ni &quot;varen&quot; — tiho izgublja vrednost.
-              Plemenite kovine so preživele vsako krizo, vojno in propad valut v
-              zgodovini človeštva.
-            </p>
-          </div>
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-border bg-white p-8">
-              {problemData.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between border-b border-border py-5 first:pt-0 last:border-0"
-                >
-                  <span className="text-sm">{item.label}</span>
-                  <span
-                    className={`font-serif text-xl font-bold ${item.negative ? "text-red" : "text-green"}`}
-                  >
-                    {item.value}
-                  </span>
-                </div>
-              ))}
-              <div className="-mx-8 -mb-8 mt-5 flex items-center justify-between rounded-b-2xl bg-gold-bg px-8 py-6">
-                <span className="font-semibold text-navy">
-                  Plemenite kovine v 5.000 letih
-                </span>
-                <span className="font-serif text-2xl font-bold text-green">
-                  0 bankrotov
-                </span>
-              </div>
-            </div>
-          </div>
+    <section className="border-b border-rule bg-white py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mb-12 border-l-4 border-gold pl-8">
+          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">I.</div>
+          <h2 className="mb-6 font-serif text-3xl font-normal leading-tight text-ink lg:text-4xl">
+            Zakaj fizično srebro?
+          </h2>
         </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Physical vs Paper ── */
-function PhysicalSection() {
-  return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <SectionLabel>Ključna razlika</SectionLabel>
-          <SectionTitle>
-            Papir, koda ali <em className="text-gold">fizična kovina?</em>
-          </SectionTitle>
-          <p className="mx-auto text-lg text-text-muted">
-            Denar in bitcoin obstajata samo na papirju in v računalnikih. Srebro
-            lahko primete v roke.
+        <div className="prose-editorial space-y-6 text-md leading-relaxed text-text">
+          <p>
+            Denar na banki ni varen. Tiho izgublja vrednost. V zadnjih 10 letih je 10.000 evrov na banki izgubilo približno 29% realne vrednosti zaradi inflacije. Isti denar, vložen v srebro, je pridobil 85%. V zlatu 125%.
+          </p>
+          <p>
+            Srebro je fizična kovina. Primete jo lahko v roke. Ne temelji na zaupanju v državo, banko ali algoritem. Obstaja. Ima težo. Vrednost. In zgodovino — 5.000 let zgodovine, v kateri srebro in zlato še nikoli nista šla na nič.
+          </p>
+          <div className="my-10 border-y border-rule py-8 text-center">
+            <blockquote className="font-serif text-xl italic leading-relaxed text-navy">
+              "Plemenite kovine so preživele vsako krizo, vojno in propad valut v zgodovini človeštva."
+            </blockquote>
+          </div>
+          <p>
+            Denar in bitcoin obstajata samo na papirju in v računalnikih. Srebro lahko primete v roke. To je ključna razlika med spekulacijo in zaščito premoženja.
           </p>
         </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {physicalCards.map((card, i) => (
-            <div
-              key={i}
-              className={`rounded-2xl p-8 ${card.highlight ? "border-2 border-gold bg-white" : "border border-border bg-white"}`}
-            >
-              <div className="mb-4 text-4xl">{card.icon}</div>
-              <h3 className="mb-3 font-serif text-xl text-navy">
-                {card.title}
-              </h3>
-              <p className="mb-4 text-sm leading-relaxed text-text-muted">
-                {card.text}
-              </p>
-              <span
-                className={`inline-block rounded px-3 py-1.5 text-xs font-semibold ${card.tagColor}`}
-              >
-                {card.tag}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-8 text-center text-sm text-text-muted">
-          Cene srebra na borzah manipulirajo z &quot;paper silver&quot; —
-          papirnatimi pogodbami brez kritja.
-          <br />A to ne spremeni dejstva: fizično srebro ima težo, vrednost in
-          zgodovino.
-        </p>
       </div>
     </section>
   );
 }
 
-/* ── Social Proof ──
- * TODO(Sebastjan): the previous "Tisoče družin že varuje prihodnost…" band was removed
- * because it is not backed by a verifiable fact. Add REAL trust facts here (number of
- * clients served, years of experience, Elementum partner status/link, verified reviews)
- * and render them in the TrustSection. Do not add placeholder testimonials.
- */
-
-/* ── Mid-page CTA ── */
-function MidCta() {
+/* ── Strategy (Numbered Editorial) ── */
+function StrategySection() {
   return (
-    <section className="border-t border-border bg-navy py-12">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
-        <p className="font-serif text-2xl text-white">
-          Pogovoriva se. Brezplačno, brez obveznosti.
-        </p>
-        <PrimaryCta>Rezerviraj brezplačen posvet →</PrimaryCta>
-      </div>
-    </section>
-  );
-}
-
-function PrimaryCta({ children }: { children: React.ReactNode }) {
-  return (
-    <Link
-      href="/posvet"
-      className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
-    >
-      {children}
-    </Link>
-  );
-}
-
-/* ── Solution ── */
-function SolutionSection() {
-  return (
-    <section id="strategija" className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28 scroll-mt-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <SectionLabel>Strategija Elementum</SectionLabel>
-          <SectionTitle>
-            Ohranite vrednost.{" "}
-            <em className="text-gold">In jo povečajte.</em>
-          </SectionTitle>
-          <p className="mx-auto text-lg text-text-muted">
-            Plemenite kovine niso špekulacija — so zavarovanje. A s pravo
-            strategijo prinašajo tudi dobiček.
-          </p>
+    <section className="border-b border-rule bg-bg-warm py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mb-12 border-l-4 border-gold pl-8">
+          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">II.</div>
+          <h2 className="mb-6 font-serif text-3xl font-normal leading-tight text-ink lg:text-4xl">
+            Kako deluje strategija Elementum
+          </h2>
         </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {pillars.map((pillar, i) => (
-            <div
-              key={i}
-              className="rounded-2xl border border-border bg-white p-8 transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="mb-5 flex size-14 items-center justify-center rounded-xl bg-gold-bg text-3xl">
-                {pillar.icon}
-              </div>
-              <h3 className="mb-3 font-serif text-xl font-normal text-navy">
-                {pillar.title}
-              </h3>
-              <p className="mb-4 text-sm leading-relaxed text-text-muted">
-                {pillar.text}
-              </p>
-              <span className="inline-block rounded bg-green-bg px-3 py-1.5 text-xs font-semibold text-green">
-                {pillar.tag}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Trust ── */
-function TrustSection() {
-  return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <SectionLabel>Zakaj zaupati?</SectionLabel>
-          <SectionTitle>
-            Brez skritih stroškov.{" "}
-            <em className="text-gold">Brez presenečenj.</em>
-          </SectionTitle>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {trustCards.map((card, i) => (
-            <div key={i} className="rounded-xl border border-border bg-white p-8 text-center">
-              <div className="mb-4 text-4xl">{card.icon}</div>
-              <h3 className="mb-2 font-serif text-lg font-normal text-navy">
-                {card.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-text-muted">
-                {card.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Process ── */
-function ProcessSection() {
-  return (
-    <section id="kako" className="scroll-mt-24 border-t border-border bg-bg-warm pt-16 pb-20 lg:pt-20 lg:pb-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <SectionLabel>Kako deluje</SectionLabel>
-          <SectionTitle>
-            Kako <em className="text-gold">začeti?</em> V treh korakih.
-          </SectionTitle>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-3">
-          {steps.map((step) => (
-            <div
-              key={step.num}
-              className="rounded-xl border border-border bg-white p-7 text-center"
-            >
-              <div className="mx-auto mb-4 flex size-11 items-center justify-center rounded-full bg-navy font-bold text-white">
+        <div className="space-y-12">
+          {strategySteps.map((step) => (
+            <div key={step.num} className="relative pl-16">
+              <div className="absolute left-0 top-0 flex size-10 items-center justify-center border-2 border-gold font-serif text-xl font-bold text-gold">
                 {step.num}
               </div>
-              <h3 className="mb-2 font-serif text-md font-normal text-navy">
-                {step.title}
-              </h3>
-              <p className="text-sm text-text-muted">{step.text}</p>
+              <h3 className="mb-3 font-serif text-xl text-ink">{step.title}</h3>
+              <p className="leading-relaxed text-text-muted">{step.text}</p>
             </div>
           ))}
         </div>
-        <div className="mt-10 text-center">
-          <PrimaryCta>Brezplačen posvet →</PrimaryCta>
+        <div className="mt-16 border-t border-rule pt-8 text-center">
+          <Link
+            href="/posvet"
+            className="inline-flex items-center gap-2 bg-gold px-8 py-3 font-semibold text-white shadow-nav-cta transition-all hover:bg-gold-light hover:shadow-nav-cta-hover"
+          >
+            Pogovoriva se
+          </Link>
+          <p className="mt-4 text-sm text-text-muted">Brezplačno, brez obveznosti</p>
         </div>
       </div>
     </section>
   );
 }
+
+/* ── Comparison (Facts Only) ── */
+function ComparisonSection() {
+  return (
+    <section className="border-b border-rule bg-white py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mb-12 border-l-4 border-gold pl-8">
+          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">III.</div>
+          <h2 className="mb-6 font-serif text-3xl font-normal leading-tight text-ink lg:text-4xl">
+            Primerjava: Kam gre vaš denar?
+          </h2>
+        </div>
+        <div className="overflow-hidden border border-rule">
+          <table className="w-full">
+            <thead className="bg-ink text-white">
+              <tr>
+                <th className="px-6 py-4 text-left font-sans text-sm font-semibold uppercase tracking-wider">Naložba</th>
+                <th className="px-6 py-4 text-right font-sans text-sm font-semibold uppercase tracking-wider">10 let</th>
+                <th className="px-6 py-4 text-right font-sans text-sm font-semibold uppercase tracking-wider">20 let</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-rule bg-white">
+              {comparisonData.map((row, i) => (
+                <tr key={i} className="transition-colors hover:bg-subtle">
+                  <td className="px-6 py-4 text-sm font-medium text-ink">{row.asset}</td>
+                  <td className={`px-6 py-4 text-right font-serif text-lg font-bold ${row.positive10 ? 'text-green' : 'text-red'}`}>
+                    {row.years10}
+                  </td>
+                  <td className={`px-6 py-4 text-right font-serif text-lg font-bold ${row.positive20 ? 'text-green' : 'text-red'}`}>
+                    {row.years20}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="mt-8 border-l-4 border-green bg-green-bg px-6 py-5">
+          <p className="text-sm font-semibold text-green">
+            Plemenite kovine v 5.000 letih: 0 bankrotov
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── Guide Lead Magnet ── */
+function GuideSection() {
+  return (
+    <section id="vodnik" className="scroll-mt-24 border-b border-rule bg-bg-warm py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl">
+          <EmailCapture />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 /* ── FAQ ── */
 function FaqSection() {
   return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid items-start gap-16 lg:grid-cols-12">
-          <div className="lg:col-span-4">
-            <SectionLabel>Pogosta vprašanja</SectionLabel>
-            <SectionTitle>
-              Stvari, ki vas{" "}
-              <em className="text-gold">verjetno skrbijo</em>
-            </SectionTitle>
-          </div>
-          <div className="lg:col-span-8">
-            {faqItems.map((item, i) => (
-              <details key={i} className="group border-b border-border">
-                <summary className="flex cursor-pointer items-center justify-between py-6 text-md font-medium text-navy [&::-webkit-details-marker]:hidden">
-                  {item.q}
-                  <span className="ml-4 text-2xl font-normal text-gold transition-transform group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="pb-6 leading-relaxed text-text-muted">
-                  {item.a}
-                </p>
-              </details>
-            ))}
-          </div>
+    <section className="border-b border-rule bg-white py-16 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 lg:px-8">
+        <div className="mb-12 border-l-4 border-gold pl-8">
+          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-gold">IV.</div>
+          <h2 className="mb-6 font-serif text-3xl font-normal leading-tight text-ink lg:text-4xl">
+            Pogosta vprašanja
+          </h2>
+        </div>
+        <div className="divide-y divide-rule">
+          {faqItems.map((item, i) => (
+            <details key={i} className="group py-6">
+              <summary className="flex cursor-pointer items-start justify-between gap-4 font-medium text-ink [&::-webkit-details-marker]:hidden">
+                <span className="flex-1">{item.q}</span>
+                <span className="mt-0.5 text-lg text-gold transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-4 leading-relaxed text-text-muted">
+                {item.a}
+              </p>
+            </details>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-/* ── Email Capture ── */
-function EmailSection() {
-  return (
-    <section id="vodnik" className="scroll-mt-24 border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <EmailCapture />
-      </div>
-    </section>
-  );
-}
 
 /* ── Final CTA ── */
 function FinalCtaSection() {
   return (
-    <section className="border-t border-border bg-bg-warm pt-16 pb-20 lg:pt-24 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-        <div className="mx-auto max-w-lg">
-          <SectionLabel>Naslednji korak</SectionLabel>
-          <SectionTitle>
-            Pravo tveganje je <em className="text-gold">nedelovanje.</em>
-          </SectionTitle>
-          <p className="mb-9 text-lg text-text-muted">
-            Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti,
-            kako zaščititi prihranke — in jih povečati.
-          </p>
-          <Link
-            href="/posvet"
-            className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
-          >
-            Rezerviraj brezplačen posvet →
-          </Link>
-          <div className="mt-8 flex flex-wrap justify-center gap-8">
-            {guarantees.map((text, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-2 text-sm text-text-muted"
-              >
-                <CheckIcon /> {text}
-              </div>
-            ))}
-          </div>
+    <section className="border-b border-rule bg-ink py-16 text-center lg:py-20">
+      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+        <h2 className="mb-6 font-serif text-3xl font-normal leading-tight text-white lg:text-4xl">
+          Pravo tveganje je nedelovanje
+        </h2>
+        <p className="mb-8 text-lg leading-relaxed text-white/80">
+          Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti, kako zaščititi prihranke — in jih povečati.
+        </p>
+        <Link
+          href="/posvet"
+          className="inline-flex items-center gap-2 bg-gold px-8 py-3 font-semibold text-white shadow-nav-cta transition-all hover:bg-gold-light hover:shadow-nav-cta-hover"
+        >
+          Rezerviraj brezplačen posvet
+        </Link>
+        <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white/60">
+          <span>Brez vezave</span>
+          <span>·</span>
+          <span>Prodate kadarkoli</span>
+          <span>·</span>
+          <span>Srebro nikoli ni šlo na 0</span>
         </div>
       </div>
     </section>
@@ -463,33 +269,17 @@ function FinalCtaSection() {
 /* ── Mobile Sticky CTA ── */
 function MobileCta() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 hidden border-t border-border bg-white p-4 shadow-mobile-cta max-sm:block">
+    <div className="fixed inset-x-0 bottom-0 z-50 hidden border-t border-rule bg-white/95 p-4 shadow-mobile-cta backdrop-blur-sm max-sm:block">
       <Link
         href="/posvet"
-        className="flex w-full items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white"
+        className="flex w-full items-center justify-center gap-2 bg-gold px-8 py-3 font-semibold text-white shadow-nav-cta"
       >
-        Brezplačen posvet →
+        Brezplačen posvet
       </Link>
     </div>
   );
 }
 
-/* ── Shared section components ── */
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">
-      {children}
-    </div>
-  );
-}
-
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="mb-5 font-serif text-4xl font-normal leading-tight text-navy">
-      {children}
-    </h2>
-  );
-}
 
 /* ── Schema.org ── */
 function SchemaOrg() {
@@ -532,72 +322,16 @@ function SchemaOrg() {
 }
 
 /* ── Data ── */
-const problemData = [
-  { label: "€10.000 na banki (10 let)", value: "−29%", negative: true },
-  { label: "€10.000 v srebru (10 let)", value: "+85%", negative: false },
-  { label: "€10.000 v zlatu (10 let)", value: "+125%", negative: false },
+const strategySteps = [
+  { num: 1, title: "Pogovor", text: "Kratek 15-minutni klic. Poveste mi o svoji situaciji, ciljih in skrbeh. Brez obveznosti, brez prodajnega pritiska." },
+  { num: 2, title: "Načrt", text: "Pripravim predlog, ki ustreza vaši družini. Fizično srebro in zlato, brez DDV, v zavarovanem švicarskem trezorju." },
+  { num: 3, title: "Izvedba", text: "Vodim vas skozi vsak korak. Kovine so vaše, zavarovane, in prodate jih kadarkoli brez vezave." },
 ];
 
-const physicalCards = [
-  {
-    icon: "💶",
-    title: "Denar (EUR)",
-    text: "Papir, ki ga tiskajo centralne banke. Vrednost temelji na zaupanju v državo. Ko zaupanje pade — pade tudi vrednost.",
-    tag: "−85% od 1971",
-    tagColor: "bg-red-bg text-red",
-    highlight: false,
-  },
-  {
-    icon: "₿",
-    title: "Bitcoin",
-    text: "Koda v računalniku. Ne morete ga prijeti. Če pozabite geslo ali vam ukradejo dostop — je za vedno izgubljen.",
-    tag: "Volatilen",
-    tagColor: "bg-gold-bg text-gold",
-    highlight: false,
-  },
-  {
-    icon: "🥈",
-    title: "Srebro",
-    text: "Fizična kovina z težo. Primete jo lahko v roke. Cene manipulirajo — a srebro samo ostaja. 5.000 let in šteje.",
-    tag: "Fizično. Vaše.",
-    tagColor: "bg-green-bg text-green",
-    highlight: true,
-  },
-];
-
-
-const pillars = [
-  {
-    icon: "🔒",
-    title: "Zaščitena vrednost",
-    text: "Vaše kovine so v zavarovanem švicarskem trezorju. Brez DDV, z volumskimi popusti. Fizično premoženje, ki ga nobena banka ne more zamrzniti.",
-    tag: "100% vaše",
-  },
-  {
-    icon: "📊",
-    title: "Preverjena zgodovina",
-    text: "Zlato in srebro sta preživela vse: rimski propad, svetovna vojna, hiperinflacije. V zadnjih 20 letih: +450% (zlato) in +300% (srebro).",
-    tag: "5.000 let dokazov",
-  },
-  {
-    icon: "💰",
-    title: "Potencial za dobiček",
-    text: "S strategijo menjave zlato/srebro lahko povečate količino kovin brez dodatnega denarja. Trenutno razmerje je zgodovinsko ugodno.",
-    tag: "do +40% več",
-  },
-];
-
-const trustCards = [
-  { icon: "👀", title: "Brez majhnega tiska", text: "Veste točno, kaj plačate. Brez skritih provizij, brez presenečenj po podpisu." },
-  { icon: "🇨🇭", title: "Švicarski trezor", text: "Vaše kovine so fizično v Švici — najvarnejši državi za hrambo. Zavarovano." },
-  { icon: "🚪", title: "Izstopite kadarkoli", text: "Ni vezave. Potrebujete denar nazaj? V nekaj dneh je na vašem računu." },
-  { icon: "💬", title: "Osebni kontakt", text: "Nisem korporacija. Sem oseba. Pokličete, dobite mene — ne klicnega centra." },
-];
-
-const steps = [
-  { num: 1, title: "Pogovoriva se", text: "Kratek 15-minutni klic — poveste mi o svoji situaciji, ciljih in skrbeh. Brez obveznosti." },
-  { num: 2, title: "Načrt za vas", text: "Pripravim predlog, ki ustreza vaši družini — ne generično rešitev. Fizično srebro in zlato, brez DDV." },
-  { num: 3, title: "Ob vas sem", text: "Vodim vas skozi vsak korak. Kovine so v švicarskem trezorju, prodate kadarkoli." },
+const comparisonData = [
+  { asset: "10.000 € v zlatu", years10: "+125%", positive10: true, years20: "+450%", positive20: true },
+  { asset: "10.000 € v srebru", years10: "+85%", positive10: true, years20: "+300%", positive20: true },
+  { asset: "10.000 € na banki", years10: "−29%", positive10: false, years20: "−35%", positive20: false },
 ];
 
 const faqItems = [
@@ -629,10 +363,4 @@ const faqItems = [
     q: "Ali me boste pritiskali, da kupim več?",
     a: 'Ne. Kupite toliko, kolikor vam ustreza, ko vam ustreza. Brez prodajnega pritiska, brez "omejenih ponudb". Sem tu za dolgoročno svetovanje — ne za enkratno prodajo.',
   },
-];
-
-const guarantees = [
-  "Srebro nikoli ni šlo na 0",
-  "Brez vezave",
-  "Prodate kadarkoli",
 ];
