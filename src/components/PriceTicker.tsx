@@ -1,3 +1,8 @@
+/**
+ * Live price ticker - Modern trust-first redesign
+ * Displays current silver and gold prices via API
+ */
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -18,9 +23,7 @@ export function PriceTicker() {
           setSilver((1 / data.rates.XAG).toFixed(2));
           setGold((1 / data.rates.XAU).toFixed(0));
           const date = new Date(data.timestamp * 1000);
-          setUpdated(
-            "Posodobljeno: " + date.toLocaleDateString("sl-SI")
-          );
+          setUpdated(date.toLocaleDateString("sl-SI"));
         }
       } catch {
         // Silently fail — prices stay as "--"
@@ -30,26 +33,20 @@ export function PriceTicker() {
   }, []);
 
   return (
-    <div className="border-b border-rule/40 bg-ink py-2.5 text-sm text-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-6 px-6 lg:px-8">
-        <span className="text-xs uppercase tracking-wider text-white/50 max-sm:hidden">Trenutne cene:</span>
-        <span className="flex items-center gap-2">
-          <span className="text-xs font-medium uppercase tracking-wider text-white/70">Srebro</span>
-          <span className="font-serif text-base font-bold text-gold-light">
-            {silver}
-          </span>
-          <span className="text-xs text-white/50">€/oz</span>
+    <div className="border-b border-border-subtle bg-navy py-3.5 text-sm text-white">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-6 lg:px-8">
+        <span className="text-white/60 max-sm:hidden">Trenutne cene:</span>
+        <span className="flex items-center gap-2.5">
+          <span className="font-medium">Srebro</span>
+          <span className="text-xl font-bold tracking-tight text-accent-light">{silver}</span>
+          <span className="text-xs text-white/60">€/oz</span>
         </span>
-        <span className="flex items-center gap-2">
-          <span className="text-xs font-medium uppercase tracking-wider text-white/70">Zlato</span>
-          <span className="font-serif text-base font-bold text-gold-light">
-            {gold}
-          </span>
-          <span className="text-xs text-white/50">€/oz</span>
+        <span className="flex items-center gap-2.5">
+          <span className="font-medium">Zlato</span>
+          <span className="text-xl font-bold tracking-tight text-accent-light">{gold}</span>
+          <span className="text-xs text-white/60">€/oz</span>
         </span>
-        {updated && (
-          <span className="text-xs text-white/40">{updated}</span>
-        )}
+        {updated && <span className="text-xs text-white/60">Posodobljeno: {updated}</span>}
       </div>
     </div>
   );

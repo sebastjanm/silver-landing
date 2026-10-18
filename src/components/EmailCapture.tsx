@@ -1,6 +1,12 @@
+/**
+ * Email capture form for guide lead magnet - Modern trust-first redesign
+ * Submits to /api/capture, redirects to /hvala on success
+ */
+
 "use client";
 
 import { useState } from "react";
+import { CheckCircle2, BookOpen } from "lucide-react";
 
 export function EmailCapture() {
   const [email, setEmail] = useState("");
@@ -33,53 +39,49 @@ export function EmailCapture() {
   }
 
   return (
-    <div className="border border-rule bg-white p-10">
-      <div className="mb-8 text-center">
-        <h2 className="mb-3 font-serif text-2xl text-ink">
-          Brezplačen vodnik
-        </h2>
-        <p className="text-text-muted">
-          Prenesite: <strong className="text-ink">&quot;Kako začeti z naložbo v srebro&quot;</strong>
-        </p>
+    <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-gradient-to-br from-white to-bg-soft p-10 text-center shadow-card">
+      <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-xl bg-accent-bg">
+        <BookOpen className="size-8 text-accent" />
       </div>
-      <form
-        onSubmit={handleSubmit}
-        className="mx-auto max-w-md"
-      >
-        <label
-          htmlFor="lead-email"
-          className="mb-2 block text-sm font-medium text-ink"
-        >
-          Vaš email naslov
-        </label>
-        <div className="flex gap-3 max-sm:flex-col">
-        <input
-          id="lead-email"
-          name="email"
-          autoComplete="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="vas@email.com"
-          required
-          className="flex-1 border border-rule bg-white px-4 py-3 font-sans text-base transition-all focus:border-gold focus:ring-1 focus:ring-gold focus:outline-none"
-        />
-        <button
-          type="submit"
-          disabled={status === "sending"}
-          className="cursor-pointer whitespace-nowrap bg-gold px-6 py-3 font-sans font-semibold text-white transition-all hover:bg-gold-light disabled:opacity-60"
-        >
-          {status === "sending"
-            ? "Pošiljam..."
-            : status === "error"
-              ? errorMsg
-              : "Prenesite"}
-        </button>
+      <h3 className="mb-3 text-2xl font-bold text-navy">Brezplačen vodnik</h3>
+      <p className="mb-8 text-text-muted">
+        Prenesite: <strong>&quot;Kako začeti z naložbo v srebro&quot;</strong>
+      </p>
+      <form onSubmit={handleSubmit} className="mx-auto max-w-md">
+        <div className="mb-3 text-left">
+          <label htmlFor="email-input" className="mb-2 block text-sm font-medium text-text">
+            Vaš email naslov
+          </label>
+          <div className="flex gap-3 max-sm:flex-col">
+            <input
+              id="email-input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="ime@primer.si"
+              required
+              className="flex-1 rounded-lg border border-border bg-white px-5 py-3.5 text-base transition-all placeholder:text-text-subtle focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            />
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="cursor-pointer whitespace-nowrap rounded-lg bg-accent px-7 py-3.5 font-semibold text-white shadow-sm transition-all hover:bg-accent-light disabled:opacity-60"
+            >
+              {status === "sending" ? "Pošiljam..." : status === "error" ? errorMsg : "Pošlji"}
+            </button>
+          </div>
         </div>
       </form>
-      <p className="mt-4 text-center text-xs text-text-light">
-        Brez spama · Odjava kadarkoli
-      </p>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
+        <span className="flex items-center gap-2">
+          <CheckCircle2 className="size-4 text-green" />
+          Brez spama
+        </span>
+        <span className="flex items-center gap-2">
+          <CheckCircle2 className="size-4 text-green" />
+          Odjava kadarkoli
+        </span>
+      </div>
     </div>
   );
 }
