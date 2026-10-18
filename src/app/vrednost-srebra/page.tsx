@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { CtaBox } from "@/components/CtaBox";
 import { HighlightBox } from "@/components/HighlightBox";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/vrednost-srebra" },
   openGraph: {
+    images: defaultOgImages,
     title: "Vrednost srebra skozi čas | NakupSrebra.com",
     description:
       "Kako se je vrednost srebra spreminjala skozi zgodovino in zakaj je pomembna naložba.",

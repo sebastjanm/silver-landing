@@ -16,16 +16,18 @@ export default function HomePage() {
     <>
       <SchemaOrg />
       <PriceTicker />
-      <HeroSection />
-      <ProblemSection />
-      <PhysicalSection />
-      <ProofSection />
-      <SolutionSection />
-      <TrustSection />
-      <ProcessSection />
-      <FaqSection />
-      <EmailSection />
-      <FinalCtaSection />
+      <main>
+        <HeroSection />
+        <ProcessSection />
+        <SolutionSection />
+        <MidCta />
+        <PhysicalSection />
+        <ProblemSection />
+        <TrustSection />
+        <FaqSection />
+        <EmailSection />
+        <FinalCtaSection />
+      </main>
       <MobileCta />
     </>
   );
@@ -34,7 +36,7 @@ export default function HomePage() {
 /* ── Hero ── */
 function HeroSection() {
   return (
-    <section className="pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section className="pt-10 pb-16 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7 max-lg:text-center">
@@ -45,7 +47,13 @@ function HeroSection() {
               Srebro in zlato še nikoli nista izgubila{" "}
               <em className="text-gold">vrednosti.</em>
             </h1>
-            <p className="mx-auto mb-8 max-w-lg text-lg text-text-muted lg:mx-0">
+            <p className="mx-auto mb-4 max-w-lg text-lg text-text-muted lg:mx-0">
+              Brezplačen posvet za varne naložbe v plemenite kovine po
+              strategiji <strong className="text-navy">Elementum</strong>:
+              fizično srebro in zlato, brez DDV, v zavarovanem švicarskem
+              trezorju.
+            </p>
+            <p className="mx-auto mb-8 max-w-lg text-text-muted max-sm:hidden lg:mx-0">
               Medtem ko valute propadajo in banke bankrotirajo, plemenite kovine
               ohranjajo vrednost — in v pravih trenutkih prinašajo dobiček.
             </p>
@@ -57,10 +65,10 @@ function HeroSection() {
                 Brezplačen posvet →
               </Link>
               <a
-                href="#kako"
+                href="#vodnik"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-white px-8 py-4 font-semibold text-navy transition-all hover:border-navy hover:bg-bg-warm"
               >
-                Kako deluje?
+                📘 Brezplačen vodnik
               </a>
             </div>
             <div className="mt-8 flex gap-6 text-sm text-text-muted max-lg:flex-wrap max-lg:justify-center">
@@ -69,6 +77,9 @@ function HeroSection() {
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckIcon /> Odgovor v 24 urah
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckIcon /> Brez vezave
               </span>
             </div>
           </div>
@@ -226,36 +237,45 @@ function PhysicalSection() {
   );
 }
 
-/* ── Social Proof ── */
-function ProofSection() {
+/* ── Social Proof ──
+ * TODO(Sebastjan): the previous "Tisoče družin že varuje prihodnost…" band was removed
+ * because it is not backed by a verifiable fact. Add REAL trust facts here (number of
+ * clients served, years of experience, Elementum partner status/link, verified reviews)
+ * and render them in the TrustSection. Do not add placeholder testimonials.
+ */
+
+/* ── Mid-page CTA ── */
+function MidCta() {
   return (
     <section className="border-t border-border bg-navy py-12">
-      <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
-        <p className="mb-6 text-sm text-white/70">
-          Tisoče družin že varuje prihodnost s plemenitimi kovinami
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-5 px-6 text-center lg:px-8">
+        <p className="font-serif text-2xl text-white">
+          Pogovoriva se. Brezplačno, brez obveznosti.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-10">
-          {audiences.map((item, i) => (
-            <span
-              key={i}
-              className="whitespace-nowrap font-serif text-sm text-white/80"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+        <PrimaryCta>Rezerviraj brezplačen posvet →</PrimaryCta>
       </div>
     </section>
+  );
+}
+
+function PrimaryCta({ children }: { children: React.ReactNode }) {
+  return (
+    <Link
+      href="/posvet"
+      className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-gold-light hover:shadow-lg"
+    >
+      {children}
+    </Link>
   );
 }
 
 /* ── Solution ── */
 function SolutionSection() {
   return (
-    <section id="kako" className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28 scroll-mt-24">
+    <section id="strategija" className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28 scroll-mt-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-2xl text-center">
-          <SectionLabel>Vaša zaščita</SectionLabel>
+          <SectionLabel>Strategija Elementum</SectionLabel>
           <SectionTitle>
             Ohranite vrednost.{" "}
             <em className="text-gold">In jo povečajte.</em>
@@ -309,9 +329,9 @@ function TrustSection() {
           {trustCards.map((card, i) => (
             <div key={i} className="rounded-xl border border-border bg-white p-8 text-center">
               <div className="mb-4 text-4xl">{card.icon}</div>
-              <h4 className="mb-2 font-serif text-lg font-normal text-navy">
+              <h3 className="mb-2 font-serif text-lg font-normal text-navy">
                 {card.title}
-              </h4>
+              </h3>
               <p className="text-sm leading-relaxed text-text-muted">
                 {card.text}
               </p>
@@ -326,16 +346,16 @@ function TrustSection() {
 /* ── Process ── */
 function ProcessSection() {
   return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section id="kako" className="scroll-mt-24 border-t border-border bg-bg-warm pt-16 pb-20 lg:pt-20 lg:pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <SectionLabel>Preprosto</SectionLabel>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <SectionLabel>Kako deluje</SectionLabel>
           <SectionTitle>
-            Kako <em className="text-gold">začeti?</em>
+            Kako <em className="text-gold">začeti?</em> V treh korakih.
           </SectionTitle>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-3">
           {steps.map((step) => (
             <div
               key={step.num}
@@ -344,12 +364,15 @@ function ProcessSection() {
               <div className="mx-auto mb-4 flex size-11 items-center justify-center rounded-full bg-navy font-bold text-white">
                 {step.num}
               </div>
-              <h4 className="mb-2 font-serif text-md font-normal text-navy">
+              <h3 className="mb-2 font-serif text-md font-normal text-navy">
                 {step.title}
-              </h4>
+              </h3>
               <p className="text-sm text-text-muted">{step.text}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <PrimaryCta>Brezplačen posvet →</PrimaryCta>
         </div>
       </div>
     </section>
@@ -393,7 +416,7 @@ function FaqSection() {
 /* ── Email Capture ── */
 function EmailSection() {
   return (
-    <section className="border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
+    <section id="vodnik" className="scroll-mt-24 border-t border-border pt-16 pb-20 lg:pt-24 lg:pb-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <EmailCapture />
       </div>
@@ -542,13 +565,6 @@ const physicalCards = [
   },
 ];
 
-const audiences = [
-  "👨‍👩‍👧 Družine",
-  "👵 Stari starši",
-  "👩‍💼 Podjetnice",
-  "🏠 Gospodinje",
-  "👩‍🏫 Učiteljice",
-];
 
 const pillars = [
   {
@@ -579,10 +595,9 @@ const trustCards = [
 ];
 
 const steps = [
-  { num: 1, title: "Pogovoriva se", text: "Kratek klic — poveste mi o svoji situaciji. Brez obveznosti." },
-  { num: 2, title: "Poslušam", text: "Kaj vas skrbi? Kakšni so vaši cilji? Skupaj najdeva pot." },
-  { num: 3, title: "Načrt za vas", text: "Pripravim predlog, ki ustreza vaši družini — ne generično rešitev." },
-  { num: 4, title: "Ob vas sem", text: "Vodim vas skozi vsak korak. Vprašanja? Dvomi? Tu sem." },
+  { num: 1, title: "Pogovoriva se", text: "Kratek 15-minutni klic — poveste mi o svoji situaciji, ciljih in skrbeh. Brez obveznosti." },
+  { num: 2, title: "Načrt za vas", text: "Pripravim predlog, ki ustreza vaši družini — ne generično rešitev. Fizično srebro in zlato, brez DDV." },
+  { num: 3, title: "Ob vas sem", text: "Vodim vas skozi vsak korak. Kovine so v švicarskem trezorju, prodate kadarkoli." },
 ];
 
 const faqItems = [
@@ -597,6 +612,10 @@ const faqItems = [
   {
     q: "Kaj pa, če bom nekoč nujno potrebovala ta denar?",
     a: "Prodate kadarkoli. Brez vezave, brez kazni, brez čakanja. V nekaj dneh je denar na vašem računu. Vaše srebro je vaše — in do njega imate dostop, ko ga potrebujete.",
+  },
+  {
+    q: "Kako prodam srebro nazaj?",
+    a: "Pri Elementumu je odkupna cena 2 % pod borzno, izplačilo pa v tednu dni. Brez vezave — prodate, ko vam ustreza.",
   },
   {
     q: "Zakaj srebro namesto zlata?",

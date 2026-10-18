@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   keywords: ["srebro vs ETF", "srebrni ETF", "fizično srebro", "SLV", "iShares Silver"],
   alternates: { canonical: "/srebro-vs-etf" },
   openGraph: {
+    images: defaultOgImages,
     title: "Fizično srebro ali ETF: Kaj je boljša naložba?",
     description: "Primerjava fizičnega srebra in ETF skladov. Prednosti in slabosti obeh pristopov.",
     type: "article",

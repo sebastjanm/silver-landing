@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import Link from "next/link";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { CtaBox } from "@/components/CtaBox";
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/statistika-srebra-2026" },
   openGraph: {
+    images: defaultOgImages,
     title: "Statistika srebra 2026 — 50+ dejstev",
     description:
       "Celovita statistika o srebru. Cene, povpraševanje, proizvodnja. 50+ dejstev z viri.",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPublishedSlugs } from "@/lib/blog/actions";
 import { sanitizeBlogContent } from "@/lib/blog/sanitize";
@@ -30,7 +31,7 @@ export async function generateMetadata({
       description: post.metaDescription,
       type: "article",
       url: `/blog/${post.slug}`,
-      ...(post.ogImage && { images: [post.ogImage] }),
+      images: post.ogImage ? [post.ogImage] : defaultOgImages,
     },
     alternates: {
       canonical: post.canonicalUrl ?? `/blog/${post.slug}`,

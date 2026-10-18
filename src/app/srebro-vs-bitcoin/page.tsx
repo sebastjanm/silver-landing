@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   keywords: ["srebro vs bitcoin", "bitcoin ali srebro", "primerjava srebro bitcoin", "naložba bitcoin srebro"],
   alternates: { canonical: "/srebro-vs-bitcoin" },
   openGraph: {
+    images: defaultOgImages,
     title: "Srebro ali Bitcoin: Primerjava naložb | NakupSrebra.com",
     description: "Podrobna primerjava srebra in Bitcoina kot naložbenih sredstev.",
     type: "article",

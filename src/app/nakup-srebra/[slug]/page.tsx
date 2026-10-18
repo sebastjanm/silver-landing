@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArticleLayout } from "@/components/ArticleLayout";
@@ -155,6 +156,7 @@ export async function generateMetadata({
     keywords: city.keywords,
     alternates: { canonical: city.canonical },
     openGraph: {
+    images: defaultOgImages,
       title: city.title,
       description: city.description,
       type: "article",

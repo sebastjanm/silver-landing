@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { ArticleLayout } from "@/components/ArticleLayout";
 import { ComparisonTable } from "@/components/ComparisonTable";
 import { CtaBox } from "@/components/CtaBox";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/srebrni-kovanci" },
   openGraph: {
+    images: defaultOgImages,
     title: "Srebrni kovanci za naložbo | NakupSrebra.com",
     description:
       "Vse o srebrnih kovancih: kateri so najboljši za naložbo, kje kupiti, na kaj paziti.",
