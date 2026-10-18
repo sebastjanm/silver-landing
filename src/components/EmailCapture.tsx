@@ -6,7 +6,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, BookOpen } from "lucide-react";
 
 export function EmailCapture() {
   const [email, setEmail] = useState("");
@@ -40,28 +40,37 @@ export function EmailCapture() {
 
   return (
     <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-gradient-to-br from-white to-bg-soft p-10 text-center shadow-card">
-      <div className="mb-5 text-5xl">📘</div>
+      <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-xl bg-accent-bg">
+        <BookOpen className="size-8 text-accent" />
+      </div>
       <h3 className="mb-3 text-2xl font-bold text-navy">Brezplačen vodnik</h3>
       <p className="mb-8 text-text-muted">
         Prenesite: <strong>&quot;Kako začeti z naložbo v srebro&quot;</strong>
       </p>
-      <form onSubmit={handleSubmit} className="mx-auto flex max-w-md gap-3 max-sm:flex-col">
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Vaš email"
-          required
-          aria-label="Email naslov"
-          className="flex-1 rounded-lg border border-border bg-white px-5 py-3.5 text-base transition-all placeholder:text-text-subtle focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
-        />
-        <button
-          type="submit"
-          disabled={status === "sending"}
-          className="cursor-pointer whitespace-nowrap rounded-lg bg-accent px-7 py-3.5 font-semibold text-white shadow-sm transition-all hover:bg-accent-light disabled:opacity-60"
-        >
-          {status === "sending" ? "Pošiljam..." : status === "error" ? errorMsg : "Pošlji"}
-        </button>
+      <form onSubmit={handleSubmit} className="mx-auto max-w-md">
+        <div className="mb-3 text-left">
+          <label htmlFor="email-input" className="mb-2 block text-sm font-medium text-text">
+            Vaš email naslov
+          </label>
+          <div className="flex gap-3 max-sm:flex-col">
+            <input
+              id="email-input"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="ime@primer.si"
+              required
+              className="flex-1 rounded-lg border border-border bg-white px-5 py-3.5 text-base transition-all placeholder:text-text-subtle focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+            />
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="cursor-pointer whitespace-nowrap rounded-lg bg-accent px-7 py-3.5 font-semibold text-white shadow-sm transition-all hover:bg-accent-light disabled:opacity-60"
+            >
+              {status === "sending" ? "Pošiljam..." : status === "error" ? errorMsg : "Pošlji"}
+            </button>
+          </div>
+        </div>
       </form>
       <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
         <span className="flex items-center gap-2">

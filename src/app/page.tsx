@@ -6,7 +6,24 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Shield, TrendingUp, Lock, Award, CheckCircle2, ArrowRight, ChevronDown } from "lucide-react";
+import { 
+  Shield, 
+  TrendingUp, 
+  Lock, 
+  Award, 
+  CheckCircle2, 
+  ArrowRight, 
+  ChevronDown,
+  Coins,
+  CircleDollarSign,
+  Landmark,
+  Banknote,
+  Bitcoin,
+  FileText,
+  DoorOpen,
+  MessageCircle,
+  Building2
+} from "lucide-react";
 import { PriceTicker } from "@/components/PriceTicker";
 import { EmailCapture } from "@/components/EmailCapture";
 import { TrustLegal } from "@/components/TrustLegal";
@@ -92,13 +109,14 @@ function HeroSection() {
               <div className="mt-1 text-text-muted">Primerjava zadnjih 20 let</div>
             </div>
             <div className="space-y-4">
-              <ComparisonRow label="💰 V zlatu" value="+450%" positive />
-              <ComparisonRow label="🥈 V srebru" value="+300%" positive />
-              <ComparisonRow label="🏦 Na banki" value="−35%" positive={false} />
+              <ComparisonRow icon={Coins} label="V zlatu" value="+450%" positive />
+              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+300%" positive />
+              <ComparisonRow icon={Building2} label="Na banki" value="−35%" positive={false} />
             </div>
             <div className="mt-6 rounded-xl border border-green-bg bg-green-bg p-4 text-center">
-              <div className="text-sm font-semibold text-green">
-                🏛️ Srebro in zlato: 5.000 let brez bankrota
+              <div className="flex items-center justify-center gap-2 text-sm font-semibold text-green">
+                <Landmark className="size-4" />
+                Srebro in zlato: 5.000 let brez bankrota
               </div>
             </div>
           </div>
@@ -108,10 +126,13 @@ function HeroSection() {
   );
 }
 
-function ComparisonRow({ label, value, positive }: { label: string; value: string; positive: boolean }) {
+function ComparisonRow({ icon: Icon, label, value, positive }: { icon: any; label: string; value: string; positive: boolean }) {
   return (
     <div className="flex items-center justify-between rounded-lg border border-border-subtle bg-bg-soft px-5 py-4">
-      <span className="font-medium text-text">{label}</span>
+      <span className="flex items-center gap-2 font-medium text-text">
+        <Icon className="size-4 text-text-muted" />
+        {label}
+      </span>
       <span className={`text-2xl font-bold tracking-tight ${positive ? "text-green" : "text-red"}`}>
         {value}
       </span>
@@ -163,23 +184,23 @@ function WhyPhysicalSection() {
         <div className="grid gap-6 md:grid-cols-3">
           {[
             {
-              icon: "💶",
+              icon: Banknote,
               title: "Fiat denar (EUR)",
               text: "Papir, ki ga tiskajo centralne banke. Vrednost temelji na zaupanju v državo. Ko zaupanje pade — pade tudi vrednost.",
               badge: "−85% od 1971",
               badgeColor: "border-red-bg bg-red-bg text-red",
             },
             {
-              icon: "₿",
+              icon: Bitcoin,
               title: "Bitcoin",
               text: "Digitalna koda v računalniku. Ne morete ga prijeti. Če pozabite geslo ali vam ukradejo dostop — je za vedno izgubljen.",
               badge: "Volatilen",
               badgeColor: "border-accent-bg bg-accent-bg text-accent",
             },
             {
-              icon: "🥈",
+              icon: CircleDollarSign,
               title: "Fizično srebro",
-              text: "Oprijemljiva kovina z maso in zgodovino. Primete jo lahko v roke. Cene nihajo, a srebro ostaja. 5.000 let brez bankrota.",
+              text: "Opријемljiva kovina z maso in zgodovino. Primete jo lahko v roke. Cene nihajo, a srebro ostaja. 5.000 let brez bankrota.",
               badge: "Fizično. Vaše.",
               badgeColor: "border-green-bg bg-green-bg text-green",
               highlight: true,
@@ -191,7 +212,9 @@ function WhyPhysicalSection() {
                 card.highlight ? "border-green/20 ring-2 ring-green/10" : "border-border"
               }`}
             >
-              <div className="mb-5 text-5xl">{card.icon}</div>
+              <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-bg-soft">
+                <card.icon className="size-6 text-accent" />
+              </div>
               <h3 className="mb-3 text-xl font-bold text-navy">{card.title}</h3>
               <p className="mb-5 text-sm leading-relaxed text-text-muted">{card.text}</p>
               <span
@@ -276,28 +299,30 @@ function SecuritySection() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
-              icon: "🇨🇭",
+              icon: Shield,
               title: "Švicarska hramba",
               text: "Vaše kovine so fizično v Švici — najvarnejši državi za hrambo. Zavarovano.",
             },
             {
-              icon: "📄",
+              icon: FileText,
               title: "Lastništvo na vaše ime",
               text: "Dobite certifikat lastništva. Kadarkoli preverite stanje. Če želite, vam kovine pošljemo domov.",
             },
             {
-              icon: "🚪",
+              icon: DoorOpen,
               title: "Brez vezave",
               text: "Potrebujete denar nazaj? V nekaj dneh je na vašem računu. Brez kazni, brez skritih stroškov.",
             },
             {
-              icon: "💬",
+              icon: MessageCircle,
               title: "Osebni kontakt",
               text: "Nisem korporacija. Sem oseba. Pokličete, dobite mene — ne klicnega centra.",
             },
           ].map((card, i) => (
             <div key={i} className="rounded-xl border border-border bg-white p-6 text-center shadow-card">
-              <div className="mb-4 text-4xl">{card.icon}</div>
+              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-xl bg-accent-bg">
+                <card.icon className="size-6 text-accent" />
+              </div>
               <h4 className="mb-2 text-base font-bold text-navy">{card.title}</h4>
               <p className="text-sm leading-relaxed text-text-muted">{card.text}</p>
             </div>

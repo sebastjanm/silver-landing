@@ -3,25 +3,16 @@
  * Lazy Calendly embed with modern fintech styling
  */
 
+"use client";
+
 import type { Metadata } from "next";
-import { CheckCircle2 } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle2, Calendar, ExternalLink } from "lucide-react";
 import { EmailCapture } from "@/components/EmailCapture";
 
-export const metadata: Metadata = {
-  title: "Brezplačen posvet",
-  description:
-    "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato. Brez obveznosti, brez prodajnega pritiska.",
-  alternates: { canonical: "/posvet" },
-  openGraph: {
-    title: "Brezplačen posvet | NakupSrebra.com",
-    description:
-      "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro in zlato.",
-    type: "website",
-    url: "/posvet",
-  },
-};
-
 export default function PosvetPage() {
+  const [showCalendly, setShowCalendly] = useState(false);
+
   return (
     <>
       <script
@@ -71,17 +62,45 @@ export default function PosvetPage() {
       {/* Calendly section */}
       <section className="bg-bg py-16">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
-          {/* Calendly iframe */}
-          <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-card">
-            <iframe
-              src="https://calendly.com/sebom/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Rezervirajte posvet"
-              className="block"
-            />
-          </div>
+          {/* Calendly lazy loading */}
+          {!showCalendly ? (
+            <div className="overflow-hidden rounded-2xl border border-border bg-white p-12 text-center shadow-card">
+              <Calendar className="mx-auto mb-6 size-16 text-accent" />
+              <h2 className="mb-4 text-2xl font-bold text-navy">Rezervirajte termin</h2>
+              <p className="mb-8 text-text-muted">
+                Kliknite za odpiranje koledarja in izbiro prostega termina
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <button
+                  onClick={() => setShowCalendly(true)}
+                  className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-semibold text-white shadow-md transition-all hover:bg-accent-light hover:shadow-lg"
+                >
+                  <Calendar className="size-5" />
+                  Izberite termin posveta
+                </button>
+                <a
+                  href="https://calendly.com/sebom/new-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-8 py-4 text-base font-semibold text-navy shadow-sm transition-all hover:border-navy/30 hover:shadow-md"
+                >
+                  Odpri v novi zavihku
+                  <ExternalLink className="size-4" />
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-card">
+              <iframe
+                src="https://calendly.com/sebom/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                title="Rezervirajte posvet"
+                className="block"
+              />
+            </div>
+          )}
 
           {/* Trust points */}
           <div className="mt-8 flex flex-wrap justify-center gap-8 text-sm text-text-muted">
