@@ -1,36 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Editorial Palette ── */
-  --color-bg: #fdfbf7;
-  --color-bg-warm: #f9f7f4;
+  /* ── Modern Fintech Colors ── */
+  --color-bg: #fafaf9;
+  --color-bg-soft: #f5f5f4;
   --color-bg-card: #ffffff;
-  --color-ink: #1a1a1a;
-  --color-navy: #1e2936;
-  --color-navy-light: #374151;
-  --color-text: #374151;
+  --color-navy: #0a2540;
+  --color-navy-light: #1a3d5f;
+  --color-text: #1a1a1a;
   --color-text-muted: #6b7280;
-  --color-text-light: #9ca3af;
-  --color-metal: #8b8d93;
-  --color-metal-light: #b8bac0;
-  --color-gold: #a67c2e;
-  --color-gold-light: #c9983e;
-  --color-gold-bg: #faf8f3;
-  --color-green: #1e6b47;
-  --color-green-light: #2d8659;
-  --color-green-bg: #f0fdf7;
-  --color-red: #b91c1c;
-  --color-red-bg: #fef2f2;
+  --color-text-subtle: #9ca3af;
+  --color-green: #166534;
+  --color-green-light: #22c55e;
+  --color-green-bg: #f0fdf4;
+  --color-accent: #f97316;
+  --color-accent-light: #fb923c;
+  --color-accent-bg: #fff7ed;
+  --color-platinum: #e5e7eb;
+  --color-silver: #d1d5db;
   --color-border: #e5e7eb;
-  --color-rule: #d1d5db;
-  --color-silver: #b8bac0;
-  --color-blue: #2563eb;
-  --color-bitcoin: #f7931a;
-  --color-subtle: #f9fafb;
+  --color-border-subtle: #f3f4f6;
+  --color-red: #dc2626;
+  --color-red-bg: #fef2f2;
 
   /* ── Fonts ── */
-  --font-serif: "Libre Baskerville", Georgia, serif;
-  --font-sans: "Source Sans 3", -apple-system, system-ui, sans-serif;
+  --font-sans: "Geist Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* ── Font sizes (rem) ── */
   --text-xs: 0.75rem;
@@ -43,25 +37,51 @@
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
-  --text-hero: 3.5rem;
+  --text-hero: 3.75rem;
 
-  /* ── Shadows ── */
+  /* ── Shadows (soft fintech style) ── */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
-  --shadow-default: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-card-hover: 0 12px 32px rgba(0, 0, 0, 0.1);
-  --shadow-nav-cta: 0 2px 8px rgba(166, 124, 46, 0.3);
-  --shadow-nav-cta-hover: 0 4px 12px rgba(166, 124, 46, 0.4);
-  --shadow-mobile-cta: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.08);
+  --shadow-nav: 0 1px 0 rgba(0, 0, 0, 0.05);
+  --shadow-mobile-cta: 0 -4px 20px rgba(0, 0, 0, 0.08);
 
   /* ── Breakpoints ── */
   --breakpoint-xs: 30rem;
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 80rem;
+  --breakpoint-sm: 37.5rem;
+  --breakpoint-md: 50rem;
+  --breakpoint-lg: 56.25rem;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* ── Reset legacy wrappers inside article prose ── */
@@ -71,36 +91,22 @@
   padding: 0;
 }
 
-/* ── Base ── */
-html {
-  scroll-behavior: smooth;
+/* Article prose styles (legacy blog content) - keep serif for articles only */
+.article-prose {
+  font-family: "Source Sans 3", -apple-system, system-ui, sans-serif;
 }
 
-body {
-  font-family: var(--font-sans);
-  background: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/*
- * Article prose — styles for raw HTML blog content stored in DB.
- * Supports both legacy template patterns.
- */
 .article-prose h2 {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: var(--text-3xl);
   color: var(--color-navy);
   margin: 2.5rem 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-gold);
+  border-bottom: 2px solid var(--color-accent);
 }
 
 .article-prose h3 {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: var(--text-xl);
   color: var(--color-navy);
   margin: 1.5rem 0 0.75rem;
@@ -144,7 +150,7 @@ body {
 }
 
 .article-prose .highlight-box h3 {
-  color: var(--color-gold-light);
+  color: var(--color-accent-light);
   margin-top: 0;
 }
 
@@ -200,7 +206,7 @@ body {
 .article-prose .stat-item .number {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-gold-light);
+  color: var(--color-accent-light);
 }
 
 .article-prose .stat-item .label {
@@ -230,15 +236,15 @@ body {
 }
 
 .article-prose .comparison-table tr:nth-child(even) {
-  background: var(--color-subtle);
+  background: var(--color-bg-soft);
 }
 
 .article-prose .comparison-table .winner {
-  color: var(--color-gold-light);
+  color: var(--color-accent-light);
   font-weight: bold;
 }
 
-/* CTA section (both .cta-section and .cta-box legacy patterns) */
+/* CTA section */
 .article-prose .cta-section,
 .article-prose .cta-box {
   background: linear-gradient(135deg, var(--color-navy), var(--color-navy-light));
@@ -264,7 +270,7 @@ body {
 
 .article-prose .cta-button {
   display: inline-block;
-  background: var(--color-gold);
+  background: var(--color-accent);
   color: white;
   padding: 1rem 2.5rem;
   border-radius: 0.5rem;
@@ -274,7 +280,7 @@ body {
 }
 
 .article-prose .cta-button:hover {
-  background: var(--color-gold-light);
+  background: var(--color-accent-light);
 }
 
 /* FAQ details */
@@ -286,7 +292,7 @@ body {
 }
 
 .article-prose details[open] {
-  background: var(--color-subtle);
+  background: var(--color-bg-soft);
 }
 
 .article-prose summary {
@@ -302,7 +308,7 @@ body {
 .article-prose summary::before {
   content: "▶ ";
   font-size: 0.8rem;
-  color: var(--color-gold-light);
+  color: var(--color-accent-light);
 }
 
 .article-prose details[open] summary::before {
@@ -316,7 +322,7 @@ body {
 
 /* Sources */
 .article-prose .sources {
-  background: var(--color-subtle);
+  background: var(--color-bg-soft);
   padding: 2rem;
   border-radius: 0.5rem;
   margin-top: 3rem;
@@ -335,10 +341,9 @@ body {
   word-break: break-all;
 }
 
-/* Info box variants */
 .article-prose .info-box h4 {
   margin: 0 0 0.5rem;
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   color: var(--color-navy);
 }
 
@@ -353,8 +358,8 @@ body {
 }
 
 .article-prose .info-box.warning {
-  background: var(--color-gold-bg);
-  border-left-color: var(--color-gold);
+  background: var(--color-accent-bg);
+  border-left-color: var(--color-accent);
 }
 
 .article-prose .info-box.danger {
@@ -370,20 +375,20 @@ body {
   margin-bottom: 0;
 }
 
-/* Stat highlight (single stat callout) */
+/* Stat highlight */
 .article-prose .stat-highlight {
   text-align: center;
   padding: 2rem;
   margin: 2rem 0;
-  background: var(--color-bg-warm);
+  background: var(--color-bg-soft);
   border-radius: 0.75rem;
 }
 
 .article-prose .stat-highlight .stat-number {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 3rem;
   font-weight: bold;
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .article-prose .stat-highlight .stat-label {
@@ -392,7 +397,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Stat card (alternative stat grid item) */
 .article-prose .stat-card {
   background: white;
   padding: 1.5rem;
@@ -402,10 +406,10 @@ body {
 }
 
 .article-prose .stat-card .stat-number {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .article-prose .stat-card .stat-label {
@@ -414,7 +418,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Data table (alternative to comparison-table) */
 .article-prose .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -435,12 +438,11 @@ body {
 }
 
 .article-prose .data-table tr:nth-child(even) {
-  background: var(--color-subtle);
+  background: var(--color-bg-soft);
 }
 
-/* Number cell (highlighted table cell) */
 .article-prose .number-cell {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: bold;
   color: var(--color-navy);
 }
@@ -453,7 +455,6 @@ body {
   color: var(--color-red);
 }
 
-/* FAQ items (div-based, not <details>) */
 .article-prose .faq-item {
   border-bottom: 1px solid var(--color-border);
   padding: 1.5rem 0;
@@ -473,7 +474,6 @@ body {
   color: var(--color-text-muted);
 }
 
-/* Timeline */
 .article-prose .timeline-item {
   position: relative;
   padding-left: 2rem;
@@ -488,13 +488,13 @@ body {
   top: 0.5rem;
   width: 8px;
   height: 8px;
-  background: var(--color-gold);
+  background: var(--color-accent);
   border-radius: 50%;
 }
 
 .article-prose .timeline-year,
 .article-prose .timeline-date {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: bold;
   color: var(--color-navy);
   margin-bottom: 0.25rem;
@@ -506,7 +506,6 @@ body {
   color: var(--color-text-muted);
 }
 
-/* Bar chart */
 .article-prose .bar-container {
   margin: 1.5rem 0;
 }
@@ -525,56 +524,50 @@ body {
 
 .article-prose .bar-fill {
   height: 100%;
-  background: var(--color-gold);
+  background: var(--color-accent);
   border-radius: 0.25rem;
 }
 
-/* Lesson cards */
 .article-prose .lesson-card {
-  background: var(--color-bg-warm);
+  background: var(--color-bg-soft);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin: 1rem 0;
 }
 
 .article-prose .lesson-number {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: bold;
-  color: var(--color-gold);
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
-/* Calculation steps */
 .article-prose .calculation-step {
-  background: var(--color-subtle);
+  background: var(--color-bg-soft);
   border-left: 3px solid var(--color-navy);
   padding: 1rem 1.5rem;
   margin: 1rem 0;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* Citations */
 .article-prose .citation {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   font-style: italic;
 }
 
-/* Value cells in tables */
 .article-prose .value {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-weight: bold;
 }
 
-/* Winner cells */
 .article-prose .winner {
-  color: var(--color-gold);
+  color: var(--color-accent);
   font-weight: bold;
 }
 
-/* H4 inside article prose */
 .article-prose h4 {
-  font-family: var(--font-serif);
+  font-family: "Libre Baskerville", Georgia, serif;
   font-size: var(--text-lg);
   color: var(--color-navy);
   margin: 1.5rem 0 0.5rem;
