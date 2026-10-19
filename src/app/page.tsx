@@ -106,15 +106,15 @@ function HeroSection() {
               <div className="text-sm font-medium uppercase tracking-wider text-text-subtle">
                 Kam gre vaš denar?
               </div>
-              <div className="mt-1 text-text-muted">Primerjava v EUR (zlato 20 let, srebro 10 let)</div>
+              <div className="mt-1 text-text-muted">Primerjava zadnjih 20 let v EUR (okt. 2006 – okt. 2026)</div>
             </div>
             <div className="space-y-4">
               <ComparisonRow icon={Coins} label="V zlatu" value="+699%" positive />
-              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+241%" positive />
-              <ComparisonRow icon={Building2} label="Na banki" value="−44%" positive={false} />
+              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+489%" positive />
+              <ComparisonRow icon={Building2} label="Na banki" value="−35%" positive={false} />
             </div>
             <div className="mt-4 text-center text-xs text-text-subtle">
-              Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato), okt. 2016–okt. 2026 (srebro); HICP inflacija 1999–2026 (banka). Podatki na dan 18. 10. 2026.
+              Vir: LBMA cene v EUR, okt. 2006–okt. 2026; HICP inflacija izguba kupne moči, okt. 2006–sep. 2026. Podatki na dan 19. 10. 2026.
             </div>
             <div className="mt-6 rounded-xl border border-green-bg bg-green-bg p-4 text-center">
               <div className="flex items-center justify-center gap-2 text-sm font-semibold text-green">
@@ -259,7 +259,7 @@ function HowItWorksSection() {
               icon: TrendingUp,
               num: "02",
               title: "Preverjena zgodovina",
-              text: "Zlato in srebro sta preživela vse: rimski propad, svetovne vojne, hiperinflacije. Zlato +699% v 20 letih, srebro +241% v 10 letih (v EUR).",
+              text: "Zlato in srebro sta preživela vse: rimski propad, svetovne vojne, hiperinflacije. Zlato +699%, srebro +489% v zadnjih 20 letih (v EUR).",
             },
             {
               icon: Lock,
@@ -350,8 +350,8 @@ function DataCardSection() {
             {[
               { label: "Srebro nikoli ni šlo na 0", value: "5.000 let" },
               { label: "Zlato v zadnjih 20 letih (v EUR)", value: "+699%" },
-              { label: "Srebro v zadnjih 10 letih (v EUR)", value: "+241%" },
-              { label: "EUR izguba kupne moči (1999–2026)", value: "−44%" },
+              { label: "Srebro v zadnjih 20 letih (v EUR)", value: "+489%" },
+              { label: "EUR izguba kupne moči od 1999", value: "−44%" },
             ].map((item, i) => (
               <div key={i} className="flex items-center justify-between px-8 py-5">
                 <span className="font-medium text-text">{item.label}</span>
@@ -360,7 +360,7 @@ function DataCardSection() {
             ))}
           </div>
           <div className="px-8 py-4 text-center text-xs text-text-subtle border-t border-border">
-            Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato), okt. 2016–okt. 2026 (srebro); HICP inflacija 1999–2026 (EUR). Podatki na dan 18. 10. 2026.
+            Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato in srebro 20 let); HICP inflacija 1999–sep. 2026 (EUR izguba). Podatki na dan 19. 10. 2026.
           </div>
         </div>
       </div>
