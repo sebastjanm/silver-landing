@@ -1,20 +1,28 @@
 /**
- * Root layout with modern fintech design system.
- * Updated: Modern trust-first redesign - Geist Sans, refined nav/footer
+ * Root layout - Editorial redesign Oct 2026
+ * Added Libre Baskerville serif font for editorial headlines
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GeistSans } from "geist/font/sans";
+import { Libre_Baskerville } from "next/font/google";
 import "./globals.css";
+
+const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "NakupSrebra.com | Varne naložbe v srebro in zlato",
+    default: "Domače srebro | Varčevanje v srebrnih kovancih",
     template: "%s | NakupSrebra.com",
   },
   description:
-    "Zaščitite svojo prihodnost s fizičnim srebrom in zlatom. Brezplačen posvet, švicarska hramba, brez DDV. Resno, transparentno, zaupanja vredno.",
+    "Srebro kot tiha, oprijemljiva varnost za vašo družino. Shranite doma, ne v banki. Začnite z enim kovincem. Brezplačen posvet.",
   metadataBase: new URL("https://www.nakupsrebra.com"),
   openGraph: {
     type: "website",
@@ -32,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sl" className={GeistSans.className}>
+    <html lang="sl" className={`${GeistSans.className} ${libreBaskerville.variable}`}>
       <body className="pt-16">
         <Nav />
         <main>{children}</main>
