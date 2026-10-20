@@ -16,7 +16,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { HeroImagePlaceholder, HomeSilverImagePlaceholder } from "@/components/ImagePlaceholders";
 import { 
   Shield, 
   TrendingUp, 
@@ -122,18 +122,9 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image - TODO: Replace placeholder with verified silver-only image */}
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-silver/20 shadow-lg">
-              <Image
-                src="/images/hero-silver-coins-hand.jpg"
-                alt="Srebrni kovanci v rokah"
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+            <HeroImagePlaceholder />
             <div className="absolute -bottom-6 -right-6 max-lg:hidden">
               <div className="rounded-xl border border-border bg-white p-6 shadow-lg">
                 <div className="text-sm font-medium uppercase tracking-wider text-text-subtle">
@@ -207,15 +198,8 @@ function HomeSilverConceptSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-silver/20 shadow-md">
-              <Image
-                src="/images/home-silver-wood.jpg"
-                alt="Srebrni kovanci na leseni površini - domača hramba"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+            {/* TODO: Replace placeholder with verified image of silver in calm home setting */}
+            <HomeSilverImagePlaceholder />
           </div>
           <div className="order-1 lg:order-2">
             <div className="mb-4 text-sm font-medium uppercase tracking-wider text-accent">
