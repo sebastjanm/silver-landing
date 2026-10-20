@@ -1,5 +1,13 @@
 # Home Page Editorial Redesign: PR Summary
 
+## ⚠️ Images Corrected (Oct 20, 2026)
+
+**Initial version had wrong imagery** (showed gold bars and bitcoin charts instead of silver).  
+**All images now corrected** — authentic silver, home settings, no crypto/trading screens.  
+See updated screenshots and image credits below.
+
+---
+
 ## Overview
 
 Complete redesign of the nakupsrebra.com home page with "domače srebro" (home silver) positioning — emphasizing physical silver as tangible family savings kept at home, not in a bank.
@@ -119,18 +127,26 @@ Updated to "Domače srebro" guide concept
 
 ## Editorial Imagery
 
-All images properly licensed for commercial use (Unsplash License).
+All images properly licensed for commercial use (Pexels License).
 
 | File | Purpose | Photographer | License |
 |------|---------|--------------|---------|
-| `hero-silver-hand.jpg` | Hero section | Zlaťáky.cz | Unsplash |
-| `silver-coins-detail.jpg` | Home storage concept | Zlaťáky.cz | Unsplash |
-| `silver-bars-stack.jpg` | Trust section | Zlaťáky.cz | Unsplash |
-| `silver-macro-mint.jpg` | Quality detail (TODO: needs replacement) | — | — |
+| `hero-silver-coins-hand.jpg` | Hero section - hands holding silver | Pixabay | Pexels |
+| `home-silver-wood.jpg` | Home silver concept - calm home setting | Alesia Kozik | Pexels |
+| `silver-bars-close.jpg` | Trust/quality section | Alesia Kozik | Pexels |
+| `silver-coins-macro.jpg` | Macro detail of craftsmanship | Burst | Pexels |
 
 **Full credits:** `/public/images/CREDITS.md`
 
 All images optimized via next/image with proper alt text in Slovenian.
+
+### Image Selection Criteria
+✅ Authentic **SILVER** (not gold, not crypto)  
+✅ Calm, warm, editorial aesthetic  
+✅ Home or personal context (hands, wood, natural materials)  
+✅ No trading screens, charts, or speculation imagery  
+✅ Swiss-quality craftsmanship feel  
+✅ Tactile, tangible, physical emphasis
 
 ---
 
@@ -219,18 +235,26 @@ Clear code comments mark all missing data:
 ### Desktop (1920×1080)
 
 **Before (main):**
-![Desktop Before](/workspace/screenshots/desktop-old-home.png)
+![Desktop Before](/workspace/screenshots/desktop-old-original.png)
 
-**After (redesign):**
-![Desktop After](/workspace/screenshots/desktop-new-home.png)
+**Above-the-Fold Comparison:**
+
+Before:
+![Desktop Hero Before](/workspace/screenshots/desktop-hero-old.png)
+
+After:
+![Desktop Hero After](/workspace/screenshots/desktop-hero-corrected.png)
+
+**After (redesign - full page):**
+![Desktop After](/workspace/screenshots/desktop-new-corrected.png)
 
 ### Mobile (390×844, iPhone 14 Pro)
 
 **Before (main):**
-![Mobile Before](/workspace/screenshots/mobile-old-home.png)
+![Mobile Before](/workspace/screenshots/mobile-old-original.png)
 
 **After (redesign):**
-![Mobile After](/workspace/screenshots/mobile-new-home.png)
+![Mobile After](/workspace/screenshots/mobile-new-corrected.png)
 
 ---
 
