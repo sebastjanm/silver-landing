@@ -1,10 +1,20 @@
 # Home Page Editorial Redesign: PR Summary
 
-## ⚠️ Images Corrected (Oct 20, 2026)
+## ⚠️ Images: Editorial Placeholders (Oct 20, 2026)
 
-**Initial version had wrong imagery** (showed gold bars and bitcoin charts instead of silver).  
-**All images now corrected** — authentic silver, home settings, no crypto/trading screens.  
-See updated screenshots and image credits below.
+**Current status:** Using CSS/SVG editorial placeholders (no photo imagery).
+
+**Why?** Initial attempts to source silver images resulted in Bitcoin/crypto imagery being used unintentionally. All four "corrected" images were actually:
+- Bitcoin coins on US dollars
+- Cryptocurrency trading app screens  
+- Gold Bitcoin tokens with charts
+- Tax paperwork with dollar bills
+
+**Solution:** Deleted all wrong images. Created tasteful silver-toned CSS gradient placeholders with fine rules and minimal typography. Better to use professional placeholders than wrong imagery that contradicts positioning.
+
+**What's needed:** Verified silver-only images per requirements in `/public/images/CREDITS.md`
+
+See PR comments and `IMAGERY_CORRECTION.md` for full details.
 
 ---
 
@@ -127,26 +137,37 @@ Updated to "Domače srebro" guide concept
 
 ## Editorial Imagery
 
-All images properly licensed for commercial use (Pexels License).
+**Current Status:** CSS/SVG editorial placeholders (no photo imagery)
 
-| File | Purpose | Photographer | License |
-|------|---------|--------------|---------|
-| `hero-silver-coins-hand.jpg` | Hero section - hands holding silver | Pixabay | Pexels |
-| `home-silver-wood.jpg` | Home silver concept - calm home setting | Alesia Kozik | Pexels |
-| `silver-bars-close.jpg` | Trust/quality section | Alesia Kozik | Pexels |
-| `silver-coins-macro.jpg` | Macro detail of craftsmanship | Burst | Pexels |
+All image areas currently use tasteful silver-toned gradient placeholders with fine rules and minimal typography. This approach was chosen after initial attempts to source silver images resulted in Bitcoin/crypto imagery being used unintentionally.
 
-**Full credits:** `/public/images/CREDITS.md`
+### Placeholder Design
+- Silver-toned CSS gradients (`from-platinum via-silver/20 to-bg`)
+- Fine horizontal rules (1px, `border-silver/30`)
+- Minimal typography: "SLIKA" + brief description
+- Professional, calm, matches editorial aesthetic
+- Clear TODOs in code
 
-All images optimized via next/image with proper alt text in Slovenian.
+### What's Needed
+See detailed requirements in `/public/images/CREDITS.md`:
+
+1. **Hero:** Hands holding silver bullion coin (American Eagle, Maple Leaf, etc.)
+2. **Home silver:** Silver coins/bars on wood or linen in calm home setting
+
+**Critical:** All images must be visually verified to show ONLY physical silver (no Bitcoin, no crypto logos, no paper currency, no trading screens).
+
+**Suggested sources:**
+- Wikimedia Commons (CC0/CC-BY/CC-BY-SA with attribution)
+- Owner's product photography
+- Unsplash/Pexels (must verify before use)
 
 ### Image Selection Criteria
-✅ Authentic **SILVER** (not gold, not crypto)  
-✅ Calm, warm, editorial aesthetic  
-✅ Home or personal context (hands, wood, natural materials)  
-✅ No trading screens, charts, or speculation imagery  
-✅ Swiss-quality craftsmanship feel  
-✅ Tactile, tangible, physical emphasis
+✅ Authentic **SILVER** bullion/coins  
+✅ Calm, warm, home or personal context  
+❌ NO Bitcoin (₿) or crypto symbols  
+❌ NO US dollars, Euro notes, or paper currency  
+❌ NO trading screens, charts, or apps  
+❌ NO gold presented as silver
 
 ---
 
@@ -232,29 +253,31 @@ Clear code comments mark all missing data:
 
 ## Before/After Screenshots
 
-### Desktop (1920×1080)
+### Current State: Editorial Placeholders
 
-**Before (main):**
-![Desktop Before](/workspace/screenshots/desktop-old-original.png)
+**Desktop Hero:**
+![Desktop Hero with Placeholders](/workspace/screenshots/desktop-hero-placeholders.png)
 
-**Above-the-Fold Comparison:**
+Shows: Editorial placeholder (silver-toned gradient) with clear messaging, data card showing +489% silver performance.  
+**Verified clean:** NO Bitcoin, NO crypto, NO gold, NO dollars visible.
 
-Before:
-![Desktop Hero Before](/workspace/screenshots/desktop-hero-old.png)
+**Desktop "Domače Srebro" Section:**
+![Desktop Home Silver Section](/workspace/screenshots/desktop-home-silver-section.png)
 
-After:
-![Desktop Hero After](/workspace/screenshots/desktop-hero-corrected.png)
+Shows: "DOMAČE SREBRO" heading with editorial placeholder for home silver imagery.  
+**Verified clean:** NO Bitcoin, NO crypto, NO gold, NO dollars visible.
 
-**After (redesign - full page):**
-![Desktop After](/workspace/screenshots/desktop-new-corrected.png)
+**Mobile Full Page:**
+![Mobile with Placeholders](/workspace/screenshots/mobile-placeholders.png)
 
-### Mobile (390×844, iPhone 14 Pro)
+Shows: Complete mobile layout with editorial placeholders throughout.  
+**Verified clean:** NO Bitcoin, NO crypto, NO gold, NO dollars visible anywhere on page.
 
-**Before (main):**
-![Mobile Before](/workspace/screenshots/mobile-old-original.png)
+---
 
-**After (redesign):**
-![Mobile After](/workspace/screenshots/mobile-new-corrected.png)
+### Note on Images
+
+Original plan included photography, but all sourced images turned out to be Bitcoin/crypto/tax imagery despite filenames suggesting silver content. Current approach uses professional CSS/SVG placeholders until verified silver-only images can be sourced per requirements in `/public/images/CREDITS.md`.
 
 ---
 
