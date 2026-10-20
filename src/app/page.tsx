@@ -126,7 +126,7 @@ function HeroSection() {
           <div className="relative">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-silver/20 shadow-lg">
               <Image
-                src="/images/hero-silver-hand.jpg"
+                src="/images/hero-silver-coins-hand.jpg"
                 alt="Srebrni kovanci v rokah"
                 fill
                 className="object-cover"
@@ -209,8 +209,8 @@ function HomeSilverConceptSection() {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-silver/20 shadow-md">
               <Image
-                src="/images/silver-coins-detail.jpg"
-                alt="Srebrni kovanci detajl"
+                src="/images/home-silver-wood.jpg"
+                alt="Srebrni kovanci na leseni površini - domača hramba"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
