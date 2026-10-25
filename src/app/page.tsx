@@ -1,37 +1,32 @@
 /**
- * Homepage - Modern trust-first redesign
- * Contemporary fintech aesthetic with Geist Sans, confident typography,
- * generous whitespace, soft shadows, and trust-building messaging.
+ * Homepage - Story-led chapter narrative
+ * Creative redesign: silver as timeless anchor, storytelling scroll
+ * 
+ * REGULATORY COMPLIANCE:
+ * - Replaced "še nikoli nista izgubila vrednosti" with safer wording
+ * - All performance figures clearly labelled with periods
+ * - Past performance disclaimer included
+ * - No absolute outcome promises
  */
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { 
-  Shield, 
-  TrendingUp, 
-  Lock, 
-  Award, 
-  CheckCircle2, 
-  ArrowRight, 
-  ChevronDown,
-  Coins,
-  CircleDollarSign,
-  Landmark,
-  Banknote,
-  Bitcoin,
-  FileText,
-  DoorOpen,
-  MessageCircle,
-  Building2
-} from "lucide-react";
-import { PriceTicker } from "@/components/PriceTicker";
+import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
 import { EmailCapture } from "@/components/EmailCapture";
 import { TrustLegal } from "@/components/TrustLegal";
+import { StoryChapter } from "@/components/StoryChapter";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
+import { StickyCta } from "@/components/StickyCta";
+import { TimelineIllustration } from "@/components/TimelineIllustration";
+import { PerformanceDisclaimer } from "@/components/PerformanceDisclaimer";
+
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata: Metadata = {
-  title: "NakupSrebra.com | Varne naložbe v srebro in zlato",
+  title: "Tisočletja preizkušena shramba vrednosti | NakupSrebra.com",
   description:
-    "Zaščitite svojo prihodnost s fizičnim srebrom in zlatom. Brezplačen posvet, švicarska hramba, brez DDV. Resno, transparentno, zaupanja vredno.",
+    "Srebro shranjuje vrednost že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor, brez DDV, brez vezave. Brezplačen posvet.",
   alternates: { canonical: "/" },
 };
 
@@ -39,508 +34,332 @@ export default function HomePage() {
   return (
     <>
       <SchemaOrg />
-      <PriceTicker />
-      <HeroSection />
-      <TrustStrip />
-      <WhyPhysicalSection />
-      <HowItWorksSection />
-      <SecuritySection />
-      <DataCardSection />
-      <GuideSection />
-      <FaqSection />
-      <FinalCtaSection />
-      <TrustLegal />
-      <MobileCta />
-    </>
-  );
-}
-
-/* ── Hero ── */
-function HeroSection() {
-  return (
-    <section className="bg-gradient-to-b from-white to-bg py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="mb-6 text-5xl font-bold leading-[1.1] tracking-tight text-navy lg:text-6xl">
-            Zaščitite vrednost. Gradite premoženje.
-          </h1>
-          <p className="mx-auto mb-10 max-w-2xl text-lg leading-relaxed text-text-muted">
-            Srebro in zlato sta preživela vsako krizo, vojno in propad valut v zgodovini človeštva.
-            Medtem ko banke propadajo in valute izgubljajo vrednost, plemenite kovine ohranjajo moč.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/posvet"
-              className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-semibold text-white shadow-md transition-all hover:bg-accent-light hover:shadow-lg"
-            >
-              Brezplačen posvet
-              <ArrowRight className="size-5 transition-transform group-hover:translate-x-0.5" />
-            </Link>
-            <a
-              href="#vodnik"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-8 py-4 text-base font-semibold text-navy shadow-sm transition-all hover:border-navy/30 hover:shadow-md"
-            >
-              Brezplačen vodnik
-            </a>
-          </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="size-4 text-green" />
-              Brez obveznosti
-            </span>
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="size-4 text-green" />
-              Brez prodajnega pritiska
-            </span>
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="size-4 text-green" />
-              Odgovor v 24 urah
-            </span>
-          </div>
-        </div>
-
-        {/* Live price card */}
-        <div className="mx-auto mt-16 max-w-2xl">
-          <div className="overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-card">
-            <div className="mb-6 text-center">
-              <div className="text-sm font-medium uppercase tracking-wider text-text-subtle">
-                Kam gre vaš denar?
-              </div>
-              <div className="mt-1 text-text-muted">Primerjava zadnjih 20 let v EUR (okt. 2006 – okt. 2026)</div>
-            </div>
-            <div className="space-y-4">
-              <ComparisonRow icon={Coins} label="V zlatu" value="+699%" positive />
-              <ComparisonRow icon={CircleDollarSign} label="V srebru" value="+489%" positive />
-              <ComparisonRow icon={Building2} label="Na banki" value="−35%" positive={false} />
-            </div>
-            <div className="mt-4 text-center text-xs text-text-subtle">
-              Vir: LBMA cene v EUR, okt. 2006–okt. 2026; HICP inflacija izguba kupne moči, okt. 2006–sep. 2026. Podatki na dan 19. 10. 2026.
-            </div>
-            <div className="mt-6 rounded-xl border border-green-bg bg-green-bg p-4 text-center">
-              <div className="flex items-center justify-center gap-2 text-sm font-semibold text-green">
-                <Landmark className="size-4" />
-                Srebro in zlato: 5.000 let brez bankrota
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function ComparisonRow({ icon: Icon, label, value, positive }: { icon: any; label: string; value: string; positive: boolean }) {
-  return (
-    <div className="flex items-center justify-between rounded-lg border border-border-subtle bg-bg-soft px-5 py-4">
-      <span className="flex items-center gap-2 font-medium text-text">
-        <Icon className="size-4 text-text-muted" />
-        {label}
-      </span>
-      <span className={`text-2xl font-bold tracking-tight ${positive ? "text-green" : "text-red"}`}>
-        {value}
-      </span>
-    </div>
-  );
-}
-
-/* ── Trust Strip ── */
-function TrustStrip() {
-  return (
-    <section className="border-y border-border-subtle bg-white py-6">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm text-text-muted">
-          <span className="flex items-center gap-2">
-            <Shield className="size-4 text-green" />
-            Zavarovana švicarska hramba
-          </span>
-          <span className="flex items-center gap-2">
-            <Lock className="size-4 text-green" />
-            Brez DDV
-          </span>
-          <span className="flex items-center gap-2">
-            <Award className="size-4 text-green" />
-            Lastništvo v vašem imenu
-          </span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Why Physical ── */
-function WhyPhysicalSection() {
-  return (
-    <section className="py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-            Ključna razlika
-          </div>
-          <h2 className="mb-5 text-4xl font-bold tracking-tight text-navy lg:text-5xl">
-            Zakaj fizične kovine?
-          </h2>
-          <p className="text-lg text-text-muted">
-            Denar in Bitcoin obstajata samo na papirju in v računalnikih. Srebro lahko primete v roke.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              icon: Banknote,
-              title: "Fiat denar (EUR)",
-              text: "Papir, ki ga tiskajo centralne banke. Vrednost temelji na zaupanju v državo. Ko zaupanje pade — pade tudi vrednost.",
-              badge: "−44% kupne moči od 1999",
-              badgeColor: "border-red-bg bg-red-bg text-red",
-            },
-            {
-              icon: Bitcoin,
-              title: "Bitcoin",
-              text: "Digitalna koda v računalniku. Ne morete ga prijeti. Če pozabite geslo ali vam ukradejo dostop — je za vedno izgubljen.",
-              badge: "Volatilen",
-              badgeColor: "border-accent-bg bg-accent-bg text-accent",
-            },
-            {
-              icon: CircleDollarSign,
-              title: "Fizično srebro",
-              text: "Oprijemljiva kovina z maso in zgodovino. Primete jo lahko v roke. Cene nihajo, a srebro ostaja. 5.000 let brez bankrota.",
-              badge: "Fizično. Vaše.",
-              badgeColor: "border-green-bg bg-green-bg text-green",
-              highlight: true,
-            },
-          ].map((card, i) => (
-            <div
-              key={i}
-              className={`group overflow-hidden rounded-2xl border bg-white p-8 shadow-card transition-all hover:shadow-card-hover ${
-                card.highlight ? "border-green/20 ring-2 ring-green/10" : "border-border"
-              }`}
-            >
-              <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-bg-soft">
-                <card.icon className="size-6 text-accent" />
-              </div>
-              <h3 className="mb-3 text-xl font-bold text-navy">{card.title}</h3>
-              <p className="mb-5 text-sm leading-relaxed text-text-muted">{card.text}</p>
-              <span
-                className={`inline-block rounded-full border px-3 py-1.5 text-xs font-semibold ${card.badgeColor}`}
-              >
-                {card.badge}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── How It Works ── */
-function HowItWorksSection() {
-  return (
-    <section id="kako" className="scroll-mt-20 border-t border-border-subtle bg-bg-soft py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-            Preprosto in transparentno
-          </div>
-          <h2 className="mb-5 text-4xl font-bold tracking-tight text-navy lg:text-5xl">
-            Kako deluje Elementum?
-          </h2>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              icon: Shield,
-              num: "01",
-              title: "Zaščitena vrednost",
-              text: "Vaše kovine so v zavarovanem švicarskem trezorju. Brez DDV, z volumskimi popusti. Fizično premoženje, ki ga nobena banka ne more zamrzniti.",
-            },
-            {
-              icon: TrendingUp,
-              num: "02",
-              title: "Preverjena zgodovina",
-              text: "Zlato in srebro sta preživela vse: rimski propad, svetovne vojne, hiperinflacije. Zlato +699%, srebro +489% v zadnjih 20 letih (v EUR).",
-            },
-            {
-              icon: Lock,
-              num: "03",
-              title: "Strategija menjave",
-              text: "S strategijo menjave zlato/srebro lahko povečate količino kovin brez dodatnega denarja. Trenutno razmerje je zgodovinsko ugodno.",
-            },
-          ].map((step, i) => (
-            <div key={i} className="rounded-2xl border border-border bg-white p-8 shadow-card">
-              <div className="mb-5 flex items-center gap-4">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-accent-bg">
-                  <step.icon className="size-6 text-accent" />
-                </div>
-                <div className="text-3xl font-bold tracking-tighter text-silver">{step.num}</div>
-              </div>
-              <h3 className="mb-3 text-lg font-bold text-navy">{step.title}</h3>
-              <p className="text-sm leading-relaxed text-text-muted">{step.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Security & Legitimacy ── */
-function SecuritySection() {
-  return (
-    <section className="py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mb-16 max-w-2xl text-center">
-          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-            Varnost in transparentnost
-          </div>
-          <h2 className="mb-5 text-4xl font-bold tracking-tight text-navy lg:text-5xl">
-            Zakaj lahko zaupate?
-          </h2>
-        </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              icon: Shield,
-              title: "Švicarska hramba",
-              text: "Vaše kovine so fizično v Švici — najvarnejši državi za hrambo. Zavarovano.",
-            },
-            {
-              icon: FileText,
-              title: "Lastništvo na vaše ime",
-              text: "Dobite certifikat lastništva. Kadarkoli preverite stanje. Če želite, vam kovine pošljemo domov.",
-            },
-            {
-              icon: DoorOpen,
-              title: "Brez vezave",
-              text: "Potrebujete denar nazaj? V nekaj dneh je na vašem računu. Brez kazni, brez skritih stroškov.",
-            },
-            {
-              icon: MessageCircle,
-              title: "Osebni kontakt",
-              text: "Nisem korporacija. Sem oseba. Pokličete, dobite mene — ne klicnega centra.",
-            },
-          ].map((card, i) => (
-            <div key={i} className="rounded-xl border border-border bg-white p-6 text-center shadow-card">
-              <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-xl bg-accent-bg">
-                <card.icon className="size-6 text-accent" />
-              </div>
-              <h4 className="mb-2 text-base font-bold text-navy">{card.title}</h4>
-              <p className="text-sm leading-relaxed text-text-muted">{card.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Data Card ── */
-function DataCardSection() {
-  return (
-    <section className="border-t border-border-subtle bg-bg-soft py-20 lg:py-28">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8">
-        <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-lg">
-          <div className="bg-navy px-8 py-6 text-center">
-            <h3 className="text-2xl font-bold text-white">Zakaj zdaj?</h3>
-            <p className="mt-2 text-white/80">Ključna dejstva o plemenitih kovinah</p>
-          </div>
-          <div className="divide-y divide-border">
-            {[
-              { label: "Srebro nikoli ni šlo na 0", value: "5.000 let" },
-              { label: "Zlato v zadnjih 20 letih (v EUR)", value: "+699%" },
-              { label: "Srebro v zadnjih 20 letih (v EUR)", value: "+489%" },
-              { label: "EUR izguba kupne moči od 1999", value: "−44%" },
-            ].map((item, i) => (
-              <div key={i} className="flex items-center justify-between px-8 py-5">
-                <span className="font-medium text-text">{item.label}</span>
-                <span className="text-2xl font-bold tracking-tight text-green">{item.value}</span>
-              </div>
-            ))}
-          </div>
-          <div className="px-8 py-4 text-center text-xs text-text-subtle border-t border-border">
-            Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato in srebro 20 let); HICP inflacija 1999–sep. 2026 (EUR izguba). Podatki na dan 19. 10. 2026.
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Guide Lead Magnet ── */
-function GuideSection() {
-  return (
-    <section id="vodnik" className="scroll-mt-20 py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <EmailCapture />
-      </div>
-    </section>
-  );
-}
-
-/* ── FAQ ── */
-function FaqSection() {
-  return (
-    <section className="border-t border-border-subtle bg-bg-soft py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-            Pogosta vprašanja
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight text-navy lg:text-4xl">
-            Stvari, ki vas verjetno skrbijo
-          </h2>
-        </div>
-
-        <div className="space-y-4">
-          {[
-            {
-              q: "Ali mi res lahko zaupate? Ne poznam vas.",
-              a: "Razumem. Zato je prvi pogovor brezplačen in brez obveznosti. Spoznajte me najprej. Nič ne podpišete, nič ne vložite — dokler niste prepričani, da je to prava pot za vašo družino.",
-            },
-            {
-              q: "Nimam veliko denarja. Je to sploh zame?",
-              a: "Začnete lahko že s 50€ mesečno. Ni pomembno, koliko — pomembno je, da začnete. Tudi majhni zneski se seštejejo. In za razliko od banke, tu vaš denar raste.",
-            },
-            {
-              q: "Kaj pa, če bom nekoč nujno potrebovala ta denar?",
-              a: "Prodate kadarkoli. Brez vezave, brez kazni, brez čakanja. V nekaj dneh je denar na vašem računu. Vaše srebro je vaše — in do njega imate dostop, ko ga potrebujete.",
-            },
-            {
-              q: "Zakaj srebro namesto zlata?",
-              a: "Srebro je bolj dostopno — lahko začnete z manj denarja in kupujete manjše količine. Zlato je dražje. Večina mojih strank kombinira oboje — več srebra, malo zlata za razpršitev.",
-            },
-            {
-              q: "Kje je moje srebro? Kako vem, da obstaja?",
-              a: "Vaše kovine so fizično v švicarskem trezorju, zavarovane. Dobite certifikat lastništva in lahko kadarkoli preverite stanje. Če želite, vam lahko kovine tudi pošljemo domov.",
-            },
-          ].map((item, i) => (
-            <details key={i} className="group rounded-xl border border-border bg-white shadow-card">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-navy [&::-webkit-details-marker]:hidden">
-                {item.q}
-                <ChevronDown className="size-5 text-text-muted transition-transform group-open:rotate-180" />
-              </summary>
-              <p className="border-t border-border-subtle px-6 py-5 leading-relaxed text-text-muted">
-                {item.a}
-              </p>
-            </details>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Final CTA ── */
-function FinalCtaSection() {
-  return (
-    <section className="border-t border-border-subtle py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-        <div className="mb-4 text-sm font-semibold uppercase tracking-wider text-accent">
-          Naslednji korak
-        </div>
-        <h2 className="mb-5 text-4xl font-bold tracking-tight text-navy lg:text-5xl">
-          Pravo tveganje je nedelovanje
-        </h2>
-        <p className="mb-10 text-lg text-text-muted">
-          Pogovoriva se. Brezplačno, brez obveznosti. Pomagam vam razumeti, kako zaščititi
-          prihranke — in jih povečati.
-        </p>
-        <Link
-          href="/posvet"
-          className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-base font-semibold text-white shadow-md transition-all hover:bg-accent-light hover:shadow-lg"
-        >
-          Rezerviraj brezplačen posvet
-          <ArrowRight className="size-5 transition-transform group-hover:translate-x-0.5" />
-        </Link>
-        <div className="mt-10 flex flex-wrap justify-center gap-8 text-sm text-text-muted">
-          {["Srebro nikoli ni šlo na 0", "Brez vezave", "Prodate kadarkoli"].map((text, i) => (
-            <div key={i} className="flex items-center gap-2">
-              <CheckCircle2 className="size-4 text-green" />
-              {text}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Mobile Sticky CTA ── */
-function MobileCta() {
-  return (
-    <div className="fixed inset-x-0 bottom-0 z-50 hidden border-t border-border-subtle bg-white/95 p-4 shadow-mobile-cta backdrop-blur-md max-sm:block">
-      <Link
-        href="/posvet"
-        className="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 font-semibold text-white shadow-sm"
+      <ProgressIndicator />
+      <StickyCta />
+      
+      {/* Chapter 1: Od kamna do kovanca */}
+      <StoryChapter
+        number="01"
+        id="chapter-1"
+        theme="dark"
+        className="bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]"
       >
-        Brezplačen posvet
-        <ArrowRight className="size-4" />
-      </Link>
-    </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+          <h1 className={`${playfair.className} text-6xl md:text-8xl font-bold text-white mb-8 leading-[1.1]`}>
+            Od kamna<br />do kovanca
+          </h1>
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl mx-auto mb-12">
+            Srebro je služilo kot denar že tisočletja. Od antičnih civilizacij do današnjih dni.
+            Ni modna naložba. Je časovno preizkušena shramba vrednosti.
+          </p>
+          <TimelineIllustration />
+        </div>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-silver_3aab.jpg"
+            alt="Ilustracija: srebrne palice"
+            fill
+            priority
+            className="object-cover opacity-20"
+            sizes="100vw"
+          />
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 2: Kaj ste prihranili? */}
+      <StoryChapter
+        number="02"
+        id="chapter-2"
+        theme="light"
+        className="bg-[#faf8f5]"
+      >
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-[#0a1628] mb-8 text-center`}>
+            Kaj ste<br className="md:hidden" /> prihranili?
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-center max-w-2xl mx-auto mb-16">
+            Denar na bančnem računu izgublja kupno moč. Vsako leto, tiho, neopazno.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div className="text-center p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+              <div className="text-5xl font-bold text-green-600 mb-3">+699%</div>
+              <div className="text-sm font-medium text-gray-900 mb-2">Zlato v EUR</div>
+              <div className="text-xs text-gray-500">okt. 2006 – okt. 2026</div>
+            </div>
+            <div className="text-center p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+              <div className="text-5xl font-bold text-green-600 mb-3">+489%</div>
+              <div className="text-sm font-medium text-gray-900 mb-2">Srebro v EUR</div>
+              <div className="text-xs text-gray-500">okt. 2006 – okt. 2026</div>
+            </div>
+            <div className="text-center p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
+              <div className="text-5xl font-bold text-red-600 mb-3">−35%</div>
+              <div className="text-sm font-medium text-gray-900 mb-2">Kupna moč EUR</div>
+              <div className="text-xs text-gray-500">Inflacija, okt. 2006–sep. 2026</div>
+            </div>
+          </div>
+
+          <PerformanceDisclaimer className="mt-12" />
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 3: Nekaj, kar lahko primete */}
+      <StoryChapter
+        number="03"
+        id="chapter-3"
+        theme="dark"
+        className="bg-gradient-to-br from-gray-900 to-gray-800"
+      >
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto px-6">
+          <div>
+            <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-white mb-8 leading-tight`}>
+              Nekaj, kar lahko primete
+            </h2>
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-8">
+              Denar je številka v računalniku. Delnice so vpis v registru. Kriptovalute so koda.
+            </p>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-medium">
+              Srebro lahko primete v roke. Je fizično. Je vaše. V vašem imenu.
+            </p>
+          </div>
+          <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/images/saver-table_fe04.jpg"
+              alt="Ilustracija: srebrni kovanec ob miru"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 4: Varno shranjeno */}
+      <StoryChapter
+        number="04"
+        id="chapter-4"
+        theme="light"
+        className="bg-white"
+      >
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-[#0a1628] mb-12 text-center`}>
+            Varno shranjeno
+          </h2>
+          
+          <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl mb-12">
+            <Image
+              src="/images/vault_c7da.jpg"
+              alt="Ilustracija: varnostni trezor"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Švicarski trezor</h3>
+              <p className="text-sm text-gray-600">Zavarovan, nadzorovan, varen</p>
+            </div>
+            <div className="p-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Certifikat lastništva</h3>
+              <p className="text-sm text-gray-600">Na vaše ime, preverljivo</p>
+            </div>
+            <div className="p-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Brez DDV</h3>
+              <p className="text-sm text-gray-600">Investicijsko srebro, brez davka</p>
+            </div>
+            <div className="p-6 text-center">
+              <div className="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Lahko zahtevate dostavo</h3>
+              <p className="text-sm text-gray-600">Fizična dostava na dom, če želite</p>
+            </div>
+          </div>
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 5: Kdaj bi prodali? */}
+      <StoryChapter
+        number="05"
+        id="chapter-5"
+        theme="dark"
+        className="bg-gradient-to-br from-[#1a2332] to-[#0a1628]"
+      >
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-white mb-8`}>
+            Kdaj bi prodali?
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Ko potrebujete denar. Brez vprašanj, brez kazni, brez čakanja.
+          </p>
+          
+          <div className="grid sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="text-4xl font-bold text-white mb-2">Kdaj</div>
+              <div className="text-white/70">Vi odločate</div>
+            </div>
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="text-4xl font-bold text-white mb-2">Koliko</div>
+              <div className="text-white/70">Vi odločate</div>
+            </div>
+            <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+              <div className="text-4xl font-bold text-white mb-2">Zakaj</div>
+              <div className="text-white/70">Brez pojasnjevanja</div>
+            </div>
+          </div>
+
+          <p className="mt-12 text-lg text-white/60">
+            Nekaj dni za prodajo. Denar na vašem računu. Brez skritih stroškov.
+          </p>
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 6: Kako začnete */}
+      <StoryChapter
+        number="06"
+        id="chapter-6"
+        theme="light"
+        className="bg-[#faf8f5]"
+      >
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-[#0a1628] mb-16 text-center`}>
+            Kako začnete
+          </h2>
+          
+          <div className="space-y-12">
+            <div className="flex gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0a1628] text-white flex items-center justify-center text-2xl font-bold">
+                1
+              </div>
+              <div className="flex-1 pt-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Brezplačen pogovor</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  15 minut. Brez pritiska, brez prodaje. Spoznajte me, povejte mi o svojih ciljih,
+                  vprašajte vse, kar vas zanima.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0a1628] text-white flex items-center justify-center text-2xl font-bold">
+                2
+              </div>
+              <div className="flex-1 pt-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Prilagojen predlog</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Transparentno, brez skritih stroškov.
+                  Vi odločite, ali želite nadaljevati.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-8 items-start">
+              <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[#0a1628] text-white flex items-center justify-center text-2xl font-bold">
+                3
+              </div>
+              <div className="flex-1 pt-3">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Varno last­ništvo</h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime.
+                  Dobite certifikat. Lahko preverite stanje kadarkoli.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </StoryChapter>
+
+      {/* Chapter 7: Začnite danes */}
+      <StoryChapter
+        number="07"
+        id="chapter-7"
+        theme="dark"
+        className="bg-gradient-to-br from-gray-900 via-[#0a1628] to-gray-900"
+      >
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className={`${playfair.className} text-5xl md:text-7xl font-bold text-white mb-8`}>
+            Začnite danes
+          </h2>
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Dva načina: pogovor za tiste, ki ste pripravljeni. Vodnik za tiste, ki potrebujete še čas.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
+            <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Za pripravljene</h3>
+              <p className="text-white/70 mb-8">Brezplačen posvet, 15 minut, brez obveznosti</p>
+              <Link
+                href="/posvet"
+                className="inline-block px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
+              >
+                Rezerviraj posvet
+              </Link>
+              <p className="text-sm text-white/50 mt-4">Brezplačen, nezavezujoč</p>
+            </div>
+            
+            <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Za tiste, ki potrebujejo čas</h3>
+              <p className="text-white/70 mb-8">Preberite vodnik v miru, brez pritiska</p>
+              <a
+                href="#vodnik"
+                className="inline-block px-8 py-4 bg-white/20 text-white font-semibold rounded-full hover:bg-white/30 transition-colors border border-white/40"
+              >
+                Brezplačen vodnik
+              </a>
+              <p className="text-sm text-white/50 mt-4">Email, brez spama</p>
+            </div>
+          </div>
+
+          <div id="vodnik" className="scroll-mt-20">
+            <EmailCapture />
+          </div>
+        </div>
+      </StoryChapter>
+
+      <TrustLegal />
+    </>
   );
 }
 
 /* ── Schema.org ── */
 function SchemaOrg() {
-  const faqItems = [
-    {
-      q: "Ali mi res lahko zaupate? Ne poznam vas.",
-      a: "Razumem. Zato je prvi pogovor brezplačen in brez obveznosti. Spoznajte me najprej. Nič ne podpišete, nič ne vložite — dokler niste prepričani, da je to prava pot za vašo družino.",
-    },
-    {
-      q: "Nimam veliko denarja. Je to sploh zame?",
-      a: "Začnete lahko že s 50€ mesečno. Ni pomembno, koliko — pomembno je, da začnete. Tudi majhni zneski se seštejejo. In za razliko od banke, tu vaš denar raste.",
-    },
-    {
-      q: "Kaj pa, če bom nekoč nujno potrebovala ta denar?",
-      a: "Prodate kadarkoli. Brez vezave, brez kazni, brez čakanja. V nekaj dneh je denar na vašem računu. Vaše srebro je vaše — in do njega imate dostop, ko ga potrebujete.",
-    },
-    {
-      q: "Zakaj srebro namesto zlata?",
-      a: "Srebro je bolj dostopno — lahko začnete z manj denarja in kupujete manjše količine. Zlato je dražje. Večina mojih strank kombinira oboje — več srebra, malo zlata za razpršitev.",
-    },
-    {
-      q: "Kje je moje srebro? Kako vem, da obstaja?",
-      a: "Vaše kovine so fizično v švicarskem trezorju, zavarovane. Dobite certifikat lastništva in lahko kadarkoli preverite stanje. Če želite, vam lahko kovine tudi pošljemo domov.",
-    },
-  ];
-
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "NakupSrebra.com",
-            url: "https://www.nakupsrebra.com",
-            description:
-              "Varne naložbe v fizično srebro in zlato. Švicarska hramba, brez DDV, brezplačen posvet.",
-            contactPoint: {
-              "@type": "ContactPoint",
-              contactType: "customer service",
-              availableLanguage: "Slovenian",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqItems.map((item) => ({
-              "@type": "Question",
-              name: item.q,
-              acceptedAnswer: { "@type": "Answer", text: item.a },
-            })),
-          }),
-        }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "NakupSrebra.com",
+          url: "https://www.nakupsrebra.com",
+          description:
+            "Fizično srebro in zlato. Švicarska hramba, brez DDV, brezplačen posvet.",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            availableLanguage: "Slovenian",
+          },
+        }),
+      }}
+    />
   );
 }
