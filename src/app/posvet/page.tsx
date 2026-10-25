@@ -6,10 +6,7 @@
 "use client";
 
 import { useState } from "react";
-import { Playfair_Display } from "next/font/google";
 import { EmailCapture } from "@/components/EmailCapture";
-
-const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function PosvetPage() {
   const [showCalendly, setShowCalendly] = useState(false);
@@ -50,7 +47,7 @@ export default function PosvetPage() {
           <div className="mb-4 text-xs font-mono uppercase tracking-widest text-gray-500">
             Začnite zdaj
           </div>
-          <h1 className={`${playfair.className} mb-6 text-5xl lg:text-6xl font-bold tracking-tight text-gray-900`}>
+          <h1 className="mb-6 text-5xl lg:text-6xl font-bold tracking-tight text-gray-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             Brezplačen posvet
           </h1>
           <p className="mx-auto max-w-xl text-lg text-gray-600 leading-relaxed">
@@ -79,7 +76,7 @@ export default function PosvetPage() {
                   d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
                 />
               </svg>
-              <h2 className={`${playfair.className} mb-4 text-3xl font-bold text-gray-900`}>
+              <h2 className="mb-4 text-3xl font-bold text-gray-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 Rezervirajte termin
               </h2>
               <p className="mb-10 text-gray-600 max-w-md mx-auto">
