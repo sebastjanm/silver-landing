@@ -33,17 +33,17 @@ export function PriceTicker() {
   }, []);
 
   return (
-    <div className="border-b border-border-subtle bg-navy py-3.5 text-sm text-white">
+    <div className="border-b border-gray-200 bg-gray-900 py-3 text-sm text-white">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-8 px-6 lg:px-8">
         <span className="text-white/60 max-sm:hidden">Trenutne cene:</span>
         <span className="flex items-center gap-2.5">
           <span className="font-medium">Srebro</span>
-          <span className="text-xl font-bold tracking-tight text-accent-light">{silver}</span>
+          <span className="text-xl font-bold tracking-tight text-white">{silver}</span>
           <span className="text-xs text-white/60">€/oz</span>
         </span>
         <span className="flex items-center gap-2.5">
           <span className="font-medium">Zlato</span>
-          <span className="text-xl font-bold tracking-tight text-accent-light">{gold}</span>
+          <span className="text-xl font-bold tracking-tight text-white">{gold}</span>
           <span className="text-xs text-white/60">€/oz</span>
         </span>
         {updated && <span className="text-xs text-white/60">Posodobljeno: {updated}</span>}

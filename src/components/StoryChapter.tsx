@@ -59,12 +59,12 @@ export function StoryChapter({ number, id, theme, className = "", children }: St
         {number}
       </div>
 
-      {/* Content with reveal animation */}
+      {/* Content with subtle reveal animation (no opacity change for LCP) */}
       <div
-        className={`w-full transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        className={`w-full transition-transform duration-1000 ${
+          isVisible ? "translate-y-0" : "translate-y-6"
         }`}
-        style={{ transitionDelay: "200ms" }}
+        style={{ transitionDelay: "100ms" }}
       >
         {children}
       </div>

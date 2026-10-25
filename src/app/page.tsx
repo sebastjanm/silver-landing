@@ -15,6 +15,7 @@ import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 import { EmailCapture } from "@/components/EmailCapture";
 import { TrustLegal } from "@/components/TrustLegal";
+import { PriceTicker } from "@/components/PriceTicker";
 import { StoryChapter } from "@/components/StoryChapter";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
 import { StickyCta } from "@/components/StickyCta";
@@ -36,6 +37,7 @@ export default function HomePage() {
       <SchemaOrg />
       <ProgressIndicator />
       <StickyCta />
+      <PriceTicker />
       
       {/* Chapter 1: Od kamna do kovanca */}
       <StoryChapter
@@ -95,7 +97,7 @@ export default function HomePage() {
             <div className="text-center p-8 rounded-2xl bg-white shadow-sm border border-gray-100">
               <div className="text-5xl font-bold text-red-600 mb-3">−35%</div>
               <div className="text-sm font-medium text-gray-900 mb-2">Kupna moč EUR</div>
-              <div className="text-xs text-gray-500">Inflacija, okt. 2006–sep. 2026</div>
+              <div className="text-xs text-gray-500">Inflacija, 1999–sep. 2026</div>
             </div>
           </div>
 

@@ -103,7 +103,7 @@ export default function PosvetPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-8 py-4 text-base font-semibold text-gray-900 transition-all hover:border-gray-400"
                 >
-                  Odpri v novi zavihku
+                  Odpri v novem zavihku
                   <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
