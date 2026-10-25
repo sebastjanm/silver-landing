@@ -192,8 +192,8 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Lahko zahtevate dostavo</h3>
-              <p className="text-sm text-gray-600">Fizična dostava na dom, če želite</p>
+              <h3 className="font-semibold text-gray-900 mb-2">Dostava na zahtevo</h3>
+              <p className="text-sm text-gray-600">Fizična dostava na dom po želji</p>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
             </div>
             <div className="p-8 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
               <div className="text-4xl font-bold text-white mb-2">Zakaj</div>
-              <div className="text-white/70">Brez pojasnjevanja</div>
+              <div className="text-white/70">Brez obrazložitve</div>
             </div>
           </div>
 
@@ -279,7 +279,7 @@ export default function HomePage() {
                 3
               </div>
               <div className="flex-1 pt-3">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Varno last­ništvo</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Varno lastništvo</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime.
                   Dobite certifikat. Lahko preverite stanje kadarkoli.
@@ -313,7 +313,7 @@ export default function HomePage() {
                 href="/posvet"
                 className="inline-block px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
               >
-                Rezerviraj posvet
+                Rezervirajte posvet
               </Link>
               <p className="text-sm text-white/50 mt-4">Brezplačen, nezavezujoč</p>
             </div>

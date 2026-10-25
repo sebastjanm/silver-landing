@@ -50,7 +50,7 @@ export function EmailCapture() {
       <form onSubmit={handleSubmit} className="mx-auto max-w-md">
         <div className="mb-3 text-left">
           <label htmlFor="email-input" className="mb-2 block text-sm font-medium text-gray-900">
-            Vaš email naslov
+            Vaš e-poštni naslov
           </label>
           <div className="flex gap-3 max-sm:flex-col">
             <input
@@ -79,7 +79,7 @@ export function EmailCapture() {
         </span>
         <span className="flex items-center gap-2">
           <CheckCircle2 className="size-4 text-green-600" />
-          Odjava kadarkoli
+          Kadarkoli se lahko odjavite
         </span>
       </div>
     </div>
