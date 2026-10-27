@@ -1,17 +1,25 @@
 /**
- * Email capture form for guide lead magnet - Modern trust-first redesign
- * Submits to /api/capture, redirects to /hvala on success
+ * Email capture form for guide lead magnet
+ * Supports both SL and EN via content prop
  */
 
 "use client";
 
 import { useState } from "react";
 import { CheckCircle2, BookOpen } from "lucide-react";
+import type { Content } from "@/content/sl";
+import type { Locale } from "@/lib/i18n";
 
-export function EmailCapture() {
+interface EmailCaptureProps {
+  content: Content;
+  locale: Locale;
+}
+
+export function EmailCapture({ content, locale }: EmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const c = content.emailCapture;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -27,12 +35,12 @@ export function EmailCapture() {
       if (resp.ok && data.success) {
         window.location.href = "/hvala";
       } else {
-        setErrorMsg(data.error || "Napaka. Poskusite znova.");
+        setErrorMsg(data.error || c.buttonError);
         setStatus("error");
         setTimeout(() => setStatus("idle"), 3000);
       }
     } catch {
-      setErrorMsg("Napaka. Poskusite znova.");
+      setErrorMsg(c.buttonError);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
     }
@@ -43,14 +51,14 @@ export function EmailCapture() {
       <div className="mx-auto mb-5 flex size-16 items-center justify-center rounded-xl bg-gray-100">
         <BookOpen className="size-8 text-gray-700" />
       </div>
-      <h3 className="mb-3 text-2xl font-bold text-gray-900">Brezplačen vodnik</h3>
+      <h3 className="mb-3 text-2xl font-bold text-gray-900">{c.headline}</h3>
       <p className="mb-8 text-gray-600">
-        Prenesite: <strong>&quot;Kako začeti z naložbo v srebro&quot;</strong>
+        {c.description}
       </p>
       <form onSubmit={handleSubmit} className="mx-auto max-w-md">
         <div className="mb-3 text-left">
           <label htmlFor="email-input" className="mb-2 block text-sm font-medium text-gray-900">
-            Vaš e-poštni naslov
+            {c.label}
           </label>
           <div className="flex gap-3 max-sm:flex-col">
             <input
@@ -58,7 +66,7 @@ export function EmailCapture() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="ime@primer.si"
+              placeholder={c.placeholder}
               required
               className="flex-1 rounded-lg border border-gray-300 bg-white px-5 py-3.5 text-base transition-all placeholder:text-gray-400 focus:border-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900/20"
             />
@@ -67,7 +75,7 @@ export function EmailCapture() {
               disabled={status === "sending"}
               className="cursor-pointer whitespace-nowrap rounded-lg bg-gray-900 px-7 py-3.5 font-semibold text-white shadow-sm transition-all hover:bg-gray-800 disabled:opacity-60"
             >
-              {status === "sending" ? "Pošiljam..." : status === "error" ? errorMsg : "Pošlji"}
+              {status === "sending" ? c.buttonSending : status === "error" ? errorMsg : c.buttonIdle}
             </button>
           </div>
         </div>
@@ -75,11 +83,11 @@ export function EmailCapture() {
       <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-gray-600">
         <span className="flex items-center gap-2">
           <CheckCircle2 className="size-4 text-green-600" />
-          Brez spama
+          {c.trustPoint1}
         </span>
         <span className="flex items-center gap-2">
           <CheckCircle2 className="size-4 text-green-600" />
-          Kadarkoli se lahko odjavite
+          {c.trustPoint2}
         </span>
       </div>
     </div>

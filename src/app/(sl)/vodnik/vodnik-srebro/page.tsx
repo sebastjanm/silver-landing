@@ -3,6 +3,7 @@ import { defaultOgImages } from "@/lib/og";
 import Link from "next/link";
 import { EmailCapture } from "@/components/EmailCapture";
 import { HighlightBox, WarningBox } from "@/components/HighlightBox";
+import { sl } from "@/content/sl";
 
 export const metadata: Metadata = {
   title: "Kako začeti z naložbo v srebro — Brezplačen vodnik",
@@ -179,7 +180,7 @@ export default function VodnikSrebroPage() {
           </p>
         </div>
 
-        <EmailCapture />
+        <EmailCapture content={sl} locale="sl" />
 
         {/* Additional CTA */}
         <div className="mt-16 text-center">

@@ -1,14 +1,21 @@
 /**
  * TimelineIllustration - SVG timeline from ancient coin to modern bar
+ * Supports both SL and EN via content prop
  */
 
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { Content } from "@/content/sl";
 
-export function TimelineIllustration() {
+interface TimelineIllustrationProps {
+  content: Content;
+}
+
+export function TimelineIllustration({ content }: TimelineIllustrationProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const c = content.timeline;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -47,12 +54,7 @@ export function TimelineIllustration() {
 
       {/* Timeline points */}
       <div className="relative flex justify-between items-center">
-        {[
-          { label: "Antika", year: "3000 pr. n. št." },
-          { label: "Rimski imperij", year: "100 n. št." },
-          { label: "Srednji vek", year: "1200" },
-          { label: "Danes", year: "2026" },
-        ].map((point, i) => (
+        {c.points.map((point, i) => (
           <div
             key={i}
             className={`flex flex-col items-center transition-all duration-700 ${
@@ -79,7 +81,7 @@ export function TimelineIllustration() {
         }`}
         style={{ transitionDelay: "1400ms" }}
       >
-        Tisočletja kasneje srebro še vedno ohranja vrednost
+        {content.chapter1.timelineCaption}
       </p>
     </div>
   );

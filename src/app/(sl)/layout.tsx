@@ -1,22 +1,25 @@
 /**
- * Root layout - Creative story-led redesign
- * Modern editorial aesthetic with refined typography
+ * Slovenian root layout (route group)
+ * Complete layout with html, body, Nav, Footer for all Slovenian pages
  */
 
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import Link from "next/link";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Tisočletja preizkušena shramba vrednosti | NakupSrebra.com",
+    default: "Fizično srebro, shranjeno na vaše ime | NakupSrebra.com",
     template: "%s | NakupSrebra.com",
   },
   description:
-    "Srebro shranjuje vrednost že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor, brez DDV, brez vezave. Brezplačen posvet.",
+    "Fizično srebro na vaše ime, v zavarovanem švicarskem trezorju. Brezplačen posvet.",
   metadataBase: new URL("https://www.nakupsrebra.com"),
   openGraph: {
     type: "website",
@@ -28,15 +31,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SlLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="sl" className={inter.className}>
       <body className="antialiased">
         <Nav />
+        <ProgressIndicator />
         <main>{children}</main>
         <Footer />
       </body>
@@ -54,31 +54,34 @@ function Nav() {
         >
           NakupSrebra
         </Link>
-        <div className="flex items-center gap-8 max-sm:gap-4">
-          <Link
-            href="/cena-srebra"
-            className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-sm:hidden"
-          >
-            Cena
-          </Link>
-          <Link
-            href="/blog"
-            className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/vodnik/vodnik-srebro"
-            className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-md:hidden"
-          >
-            Vodnik
-          </Link>
-          <Link
-            href="/posvet"
-            className="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white no-underline transition-all hover:bg-gray-800"
-          >
-            Posvet
-          </Link>
+        <div className="flex items-center gap-6 max-sm:gap-4">
+          <div className="flex items-center gap-6 max-sm:gap-3">
+            <Link
+              href="/cena-srebra"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-sm:hidden"
+            >
+              Cena
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/vodnik/vodnik-srebro"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-md:hidden"
+            >
+              Vodnik
+            </Link>
+            <Link
+              href="/posvet"
+              className="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white no-underline transition-all hover:bg-gray-800"
+            >
+              Posvet
+            </Link>
+          </div>
+          <LanguageSwitcher currentLocale="sl" />
         </div>
       </div>
     </nav>
@@ -90,8 +93,11 @@ function Footer() {
     <footer className="border-t border-gray-200 bg-gray-50 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between gap-6 max-sm:flex-col max-sm:text-center">
-          <div className="text-sm text-gray-600">
-            © {new Date().getFullYear()} NakupSrebra.com
+          <div className="flex items-center gap-4">
+            <div className="text-sm text-gray-600">
+              © {new Date().getFullYear()} NakupSrebra.com
+            </div>
+            <LanguageSwitcher currentLocale="sl" className="max-sm:hidden" />
           </div>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 max-sm:flex-col">
             <Link href="/cena-srebra" className="no-underline hover:text-gray-900 transition-colors">
@@ -108,6 +114,9 @@ function Footer() {
         <p className="mt-6 text-center text-xs text-gray-500">
           Informacije na tej strani niso finančni nasvet. Posvetujte se s strokovnjakom.
         </p>
+        <div className="mt-4 text-center sm:hidden">
+          <LanguageSwitcher currentLocale="sl" />
+        </div>
       </div>
     </footer>
   );

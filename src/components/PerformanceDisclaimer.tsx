@@ -1,21 +1,25 @@
 /**
  * PerformanceDisclaimer - Regulatory compliance for past performance figures
  * REQUIRED: Must accompany all historical performance data
+ * Supports both SL and EN via content prop
  */
 
+import type { Content } from "@/content/sl";
+
 interface PerformanceDisclaimerProps {
+  content: Content;
   className?: string;
 }
 
-export function PerformanceDisclaimer({ className = "" }: PerformanceDisclaimerProps) {
+export function PerformanceDisclaimer({ content, className = "" }: PerformanceDisclaimerProps) {
+  const c = content.disclaimer;
+  
   return (
     <div className={`text-center ${className}`}>
       <p className="text-xs text-gray-500 leading-relaxed max-w-2xl mx-auto">
-        <strong>Vir:</strong> LBMA cene v EUR, okt. 2006–okt. 2026 (zlato in srebro 20 let); 
-        HICP inflacija 1999–sep. 2026 (EUR izguba kupne moči). Podatki na dan 19. 10. 2026.
+        <strong>{c.source.split(":")[0]}:</strong> {c.source.split(": ")[1]}
         <br />
-        <strong>Pravno obvestilo:</strong> Pretekli donosi ne zagotavljajo prihodnjih rezultatov. 
-        Cene plemenitih kovin nihajo in lahko padejo ter zrastejo.
+        <strong>{c.legal.split(":")[0]}:</strong> {c.legal.split(": ")[1]}
       </p>
     </div>
   );

@@ -17,7 +17,7 @@ export default async function BlogPage() {
   const posts = await getPublishedPosts();
 
   return (
-    <main className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <div className="border-b border-border py-16 text-center">
         <h1 className="font-serif text-5xl text-navy">Blog</h1>
         <p className="mt-3 text-lg text-text-muted">
@@ -27,6 +27,6 @@ export default async function BlogPage() {
       <div className="py-16">
         <BlogContent posts={posts} />
       </div>
-    </main>
+    </div>
   );
 }
