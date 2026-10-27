@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <>
       <ArticleJsonLd post={post} />
-      <main className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-3xl">
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-text-muted">
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </p>
         </footer>
       </div>
-      </main>
+      </div>
     </>
   );
 }

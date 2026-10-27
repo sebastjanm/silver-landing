@@ -14,7 +14,7 @@ export function ArticleLayout({
   children,
 }: ArticleLayoutProps) {
   return (
-    <main className="mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-8">
+    <div className="mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-8">
       <div className="mx-auto max-w-3xl">
         <nav className="mb-8 text-sm text-text-muted">
           <Link href="/" className="text-text-muted no-underline hover:underline">
@@ -35,6 +35,6 @@ export function ArticleLayout({
 
         {children}
       </div>
-    </main>
+    </div>
   );
 }
