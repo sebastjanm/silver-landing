@@ -4,10 +4,12 @@ import { supabase } from "@/lib/supabase/client";
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.nakupsrebra.com";
 
-  // Static pages
+  // Static pages (Slovenian + English)
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
+    { url: `${baseUrl}/en`, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${baseUrl}/posvet`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/en/consultation`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/cena-srebra`, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/blog`, changeFrequency: "daily", priority: 0.8 },
   ];

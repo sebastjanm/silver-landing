@@ -1,14 +1,23 @@
 /**
  * StickyCta - Quiet sticky CTA button
+ * Supports both SL and EN via content prop
  */
 
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import type { Content } from "@/content/sl";
+import type { Locale } from "@/lib/i18n";
 
-export function StickyCta() {
+interface StickyCtaProps {
+  content: Content;
+  locale: Locale;
+}
+
+export function StickyCta({ content, locale }: StickyCtaProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const c = content.stickyCta;
 
   useEffect(() => {
     function handleScroll() {
@@ -22,6 +31,8 @@ export function StickyCta() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const consultationPath = locale === "en" ? "/en/consultation" : "/posvet";
+
   return (
     <div
       className={`fixed bottom-8 right-8 z-40 transition-all duration-300 ${
@@ -29,10 +40,10 @@ export function StickyCta() {
       }`}
     >
       <Link
-        href="/posvet"
+        href={consultationPath}
         className="block px-6 py-3 bg-gray-900 text-white text-sm font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-colors backdrop-blur-sm"
       >
-        Posvet
+        {c.text}
       </Link>
     </div>
   );
