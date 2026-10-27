@@ -1,20 +1,21 @@
 /**
- * Root layout - Creative story-led redesign
- * Modern editorial aesthetic with refined typography
+ * Slovenian root layout (route group)
+ * Complete layout with html, body, Nav, Footer for all Slovenian pages
  */
 
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import type { Locale } from "@/lib/i18n";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Tisočletja preizkušena shramba vrednosti | NakupSrebra.com",
+    default: "Fizično srebro, shranjeno na vaše ime | NakupSrebra.com",
     template: "%s | NakupSrebra.com",
   },
   description:
@@ -30,31 +31,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SlLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="sl" className={inter.className}>
       <body className="antialiased">
-        <Nav locale="sl" />
+        <Nav />
+        <ProgressIndicator />
         <main>{children}</main>
-        <Footer locale="sl" />
+        <Footer />
       </body>
     </html>
   );
 }
 
-function Nav({ locale }: { locale: Locale }) {
-  const isEn = locale === "en";
-  const pathPrefix = isEn ? "/en" : "";
-  
+function Nav() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-gray-200/80 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link
-          href={pathPrefix || "/"}
+          href="/"
           className="text-lg font-bold tracking-tight text-gray-900 no-underline transition-opacity hover:opacity-70"
         >
           NakupSrebra
@@ -86,17 +81,14 @@ function Nav({ locale }: { locale: Locale }) {
               Posvet
             </Link>
           </div>
-          <LanguageSwitcher currentLocale={locale} />
+          <LanguageSwitcher currentLocale="sl" />
         </div>
       </div>
     </nav>
   );
 }
 
-function Footer({ locale }: { locale: Locale }) {
-  const isEn = locale === "en";
-  const pathPrefix = isEn ? "/en" : "";
-  
+function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-gray-50 py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -105,7 +97,7 @@ function Footer({ locale }: { locale: Locale }) {
             <div className="text-sm text-gray-600">
               © {new Date().getFullYear()} NakupSrebra.com
             </div>
-            <LanguageSwitcher currentLocale={locale} className="max-sm:hidden" />
+            <LanguageSwitcher currentLocale="sl" className="max-sm:hidden" />
           </div>
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 max-sm:flex-col">
             <Link href="/cena-srebra" className="no-underline hover:text-gray-900 transition-colors">
@@ -120,10 +112,10 @@ function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
         <p className="mt-6 text-center text-xs text-gray-500">
-          {isEn ? "Information on this page is not financial advice. Consult a professional." : "Informacije na tej strani niso finančni nasvet. Posvetujte se s strokovnjakom."}
+          Informacije na tej strani niso finančni nasvet. Posvetujte se s strokovnjakom.
         </p>
         <div className="mt-4 text-center sm:hidden">
-          <LanguageSwitcher currentLocale={locale} />
+          <LanguageSwitcher currentLocale="sl" />
         </div>
       </div>
     </footer>

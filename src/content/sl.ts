@@ -23,15 +23,15 @@ export const sl = {
 
   // Homepage metadata
   home: {
-    title: "Tisočletja preizkušena shramba vrednosti | NakupSrebra.com",
+    title: "Fizično srebro, shranjeno na vaše ime | NakupSrebra.com",
     description: "Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.",
   },
 
   // Chapter 1
   chapter1: {
     headline: "Od surove rude do kovanca",
-    subheadline: "Srebro je bilo denar že tisočletja, od antike do danes. Preizkušena shramba vrednosti skozi zgodovino.",
-    timelineCaption: "Tisočletja pozneje srebro še vedno ohranja vrednost",
+    subheadline: "Srebro je bilo denar že tisočletja, od antike do danes. Skozi zgodovino so ga ljudje uporabljali za ohranjanje vrednosti.",
+    timelineCaption: "Tisočletja pozneje srebro še vedno cenimo",
     imageAlt: "Ilustracija: srebrne palice",
   },
 
@@ -52,8 +52,8 @@ export const sl = {
 
   // Chapter 3
   chapter3: {
-    headline: "Nekaj, kar lahko primete",
-    body1: "Denar je številka na zaslonu. Delnice so vpis v registru. Kriptovalute so koda v omrežju.",
+    headline: "Nekaj resničnega",
+    body1: "Večina premoženja danes obstaja le kot zapis na zaslonu.",
     body2: "Srebro je fizična kovina, vpisana na vaše ime.",
     imageAlt: "Ilustracija: srebrni kovanec ob miru",
   },
@@ -66,10 +66,8 @@ export const sl = {
     pillar1Description: "Zavarovan in nadzorovan",
     pillar2Title: "Certifikat lastništva",
     pillar2Description: "Na vaše ime, preverljivo",
-    pillar3Title: "Varna hramba",
-    pillar3Description: "Varnostni protokoli",
-    pillar4Title: "Dostava na zahtevo",
-    pillar4Description: "Fizična dostava na dom po želji",
+    pillar3Title: "Dostava na zahtevo",
+    pillar3Description: "Fizična dostava na dom po želji",
   },
 
   // Chapter 5
@@ -89,25 +87,25 @@ export const sl = {
   chapter6: {
     headline: "Kako začnete",
     step1Title: "Brezplačen pogovor",
-    step1Description: "15-minutni pogovor brez obveznosti. Spoznajte me, povejte mi, kaj želite doseči, vprašajte vse, kar vas zanima.",
+    step1Description: "15-minutni pogovor brez obveznosti. Povejte mi, kaj želite doseči, in vprašajte, kar vas zanima.",
     step2Title: "Prilagojen predlog",
     step2Description: "Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Vi odločite, ali želite nadaljevati.",
     step3Title: "Varno lastništvo",
-    step3Description: "Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime. Dobite certifikat. Stanje lahko preverite kadarkoli.",
+    step3Description: "Ko se odločite, uredimo nakup. Kovine shranimo v švicarski trezor na vaše ime, vi pa prejmete certifikat o lastništvu.",
   },
 
   // Chapter 7
   chapter7: {
     headline: "Kako naprej",
-    subheadline: "Dva načina. Pogovor za tiste, ki ste pripravljeni. Vodnik za tiste, ki potrebujete še čas.",
+    subheadline: "Če ste pripravljeni, se pogovoriva; če potrebujete še čas, začnite z vodnikom.",
     readyTitle: "Pripravljeni na pogovor?",
     readyDescription: "Brezplačen posvet, 15 minut, brez obveznosti",
     readyCta: "Rezervirajte posvet",
     readyFooter: "Brezplačen, nezavezujoč",
-    notReadyTitle: "Za tiste, ki potrebujejo čas",
+    notReadyTitle: "Potrebujete še čas?",
     notReadyDescription: "Preberite vodnik v miru, brez pritiska",
     notReadyCta: "Brezplačen vodnik",
-    notReadyFooter: "E-pošta, brez nezaželene pošte",
+    notReadyFooter: "Pošljemo po e-pošti",
   },
 
   // Email capture
@@ -127,17 +125,16 @@ export const sl = {
   consultation: {
     title: "Brezplačen posvet | NakupSrebra.com",
     description: "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro.",
-    eyebrow: "Začnite zdaj",
+    eyebrow: "Brezplačen posvet",
     headline: "Brezplačen posvet",
-    subheadline: "15-minutni pogovor o vaših ciljih in načrtu varčevanja v plemenitih kovinah. Brez pritiska. Brez obveznosti.",
+    subheadline: "15-minutni pogovor o vaših ciljih in načrtu varčevanja v plemenitih kovinah. Pogovor je brez obveznosti.",
     widgetHeadline: "Rezervirajte termin",
     widgetDescription: "Izberite prosti termin, ki vam ustreza",
     cta1: "Izberite termin za posvet",
     cta2: "Odpri v novem zavihku",
     iframeTitle: "Rezervirajte posvet",
-    trustPoint1: "Brez obveznosti",
-    trustPoint2: "Brez prodajnega pritiska",
-    trustPoint3: "15 minut vašega časa",
+    trustPoint1: "Brezplačen",
+    trustPoint2: "15 minut",
     divider: "ali",
   },
 

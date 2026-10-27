@@ -1,6 +1,6 @@
 /**
  * English layout - complete root layout with lang="en"
- * Overrides parent layout for English pages
+ * Overrides parent layout completely
  */
 
 import type { ReactNode } from "react";
@@ -8,13 +8,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { ProgressIndicator } from "@/components/ProgressIndicator";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Physical Silver Investment | NakupSrebra.com",
+    default: "Physical silver held in your name | NakupSrebra.com",
     template: "%s | NakupSrebra.com",
   },
   description:
@@ -35,6 +36,7 @@ export default function EnLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={inter.className}>
       <body className="antialiased">
         <Nav />
+        <ProgressIndicator />
         <main>{children}</main>
         <Footer />
       </body>

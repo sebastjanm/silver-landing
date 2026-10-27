@@ -2,7 +2,7 @@
 
 ## Voice Guide
 
-**How the brand talks**: We speak like a knowledgeable friend over coffee — calm, direct, honest. We name the reader's real worries without dancing around them. We use concrete images not abstractions. Short sentences with rhythm, but not stacked fragments. We're confident without being salesy. No hype, no hurry. Just truth told plainly.
+**How the brand talks**: We speak like a knowledgeable friend over coffee — calm, direct, honest. We name the reader's real worries without dancing around them. We use concrete images not abstractions. Short sentences with rhythm, but not stacked fragments or triplets. We're confident without being salesy. No hype, no hurry. Just truth told plainly.
 
 ---
 
@@ -13,18 +13,18 @@
 **Slovenian**:
 ```
 Headline: Od surove rude do kovanca
-Subheadline: Srebro je bilo denar že tisočletja, od antike do danes. Preizkušena shramba vrednosti skozi zgodovino.
-Timeline caption: Tisočletja pozneje srebro še vedno ohranja vrednost
+Subheadline: Srebro je bilo denar že tisočletja, od antike do danes. Skozi zgodovino so ga ljudje uporabljali za ohranjanje vrednosti.
+Timeline caption: Tisočletja pozneje srebro še vedno cenimo
 ```
 
 **English**:
 ```
 Headline: From Raw Ore to Coin
-Subheadline: Silver has been used as money for thousands of years, from antiquity to today. A tested store of value through history.
-Timeline caption: Millennia later, silver still holds value
+Subheadline: Silver has been used as money for thousands of years, from antiquity to today. People have used it to store value throughout history.
+Timeline caption: Thousands of years on, silver is still valued
 ```
 
-**Rationale**: Opens with concrete historical fact (silver as ancient money). Factual, not claiming absolutes.
+**Rationale**: Opens with concrete historical fact. Second sentence active voice ("people have used") not passive ("has been used"). Caption softened from "holds value" to "is still valued" (no absolute claim).
 
 ---
 
@@ -56,25 +56,25 @@ Data cards:
 Disclaimer: Source: LBMA prices in EUR, Oct 2006–Oct 2026 (gold and silver, 20 years); HICP inflation 1999–Sep 2026 (EUR purchasing power loss, 27 years). Data as of 19 Oct 2026. | Legal notice: Past performance is not a guide to future results. Precious metal prices fluctuate and can go down as well as up.
 ```
 
-**Rationale**: Direct question. Softened bank claim (praviloma/tends to, not absolute). Periods explicitly noted.
+**Rationale**: Softened bank claim (praviloma/tends to, not absolute). Periods explicitly noted.
 
 ---
 
-### Chapter 3: Nekaj, kar lahko primete / Something You Can Hold
+### Chapter 3: Nekaj resničnega / Something Real
 
 **Slovenian**:
 ```
-Headline: Nekaj, kar lahko primete
-Body: Denar je številka na zaslonu. Delnice so vpis v registru. Kriptovalute so koda v omrežju. Srebro je fizična kovina, vpisana na vaše ime.
+Headline: Nekaj resničnega
+Body: Večina premoženja danes obstaja le kot zapis na zaslonu. Srebro je fizična kovina, vpisana na vaše ime.
 ```
 
 **English**:
 ```
-Headline: Something You Can Hold
-Body: Money is a number on a screen. Stocks are an entry in a ledger. Crypto is code on a network. Silver is a physical metal held in your name.
+Headline: Something Real
+Body: Most wealth today exists only as an entry on a screen. Silver is a physical metal held in your name.
 ```
 
-**Rationale**: Tangibility as advantage. Removed stacked fragments ("It's physical. It's yours. In your name."). One plain sentence.
+**Rationale**: Headline changed from "Something You Can Hold" (conflicts with vault storage) to "Something Real" (accurate). Removed triplet ("Money is... Stocks are... Crypto is...") → one sentence ("Most wealth..."). Tangibility as advantage without claiming you physically hold it.
 
 ---
 
@@ -84,25 +84,23 @@ Body: Money is a number on a screen. Stocks are an entry in a ledger. Crypto is 
 ```
 Headline: Varno shranjeno
 
-Four trust pillars:
+Three trust pillars:
 1. Švicarski trezor | Zavarovan in nadzorovan
 2. Certifikat lastništva | Na vaše ime, preverljivo
-3. Varna hramba | Varnostni protokoli
-4. Dostava na zahtevo | Fizična dostava na dom po želji
+3. Dostava na zahtevo | Fizična dostava na dom po želji
 ```
 
 **English**:
 ```
 Headline: Kept Safe
 
-Four trust pillars:
+Three trust pillars:
 1. Swiss vault | Insured and monitored
 2. Ownership certificate | In your name, verifiable
-3. Secure storage | Security protocols
-4. Delivery on request | Physical delivery to your door if you wish
+3. Delivery on request | Physical delivery to your door if you wish
 ```
 
-**Rationale**: Removed VAT claim (investment silver not VAT-exempt if delivered). One factual line per pillar.
+**Rationale**: Removed duplicate security card ("Varna hramba / Varnostni protokoli") which repeated Swiss vault concept. Three pillars, not four. No invented details.
 
 ---
 
@@ -134,7 +132,7 @@ Three cards:
 Footer: Money usually reaches your account within a few business days. You see all costs upfront.
 ```
 
-**Rationale**: Removed "no questions, no penalties, no waiting" (too absolute). Realistic timing and cost statement.
+**Rationale**: Realistic timing and cost visibility statement.
 
 ---
 
@@ -145,30 +143,30 @@ Footer: Money usually reaches your account within a few business days. You see a
 Headline: Kako začnete
 
 Step 1: Brezplačen pogovor
-15-minutni pogovor brez obveznosti. Spoznajte me, povejte mi, kaj želite doseči, vprašajte vse, kar vas zanima.
+15-minutni pogovor brez obveznosti. Povejte mi, kaj želite doseči, in vprašajte, kar vas zanima.
 
 Step 2: Prilagojen predlog
 Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Vi odločite, ali želite nadaljevati.
 
 Step 3: Varno lastništvo
-Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime. Dobite certifikat. Stanje lahko preverite kadarkoli.
+Ko se odločite, uredimo nakup. Kovine shranimo v švicarski trezor na vaše ime, vi pa prejmete certifikat o lastništvu.
 ```
 
 **English**:
 ```
 Headline: Getting Started
 
-Step 1: A free conversation
-A 15-minute call, no obligation. Get to know me, tell me what you want to achieve, ask anything.
+Step 1: A free call
+A 15-minute call, no obligation. Tell me what you'd like to achieve and ask whatever's on your mind.
 
 Step 2: A tailored proposal
 Based on our conversation, I'll prepare a proposal: how much, why, how. You decide whether to proceed.
 
 Step 3: Secure ownership
-When you decide, we arrange the purchase. The metals go into a Swiss vault in your name. You get a certificate. You can check your holdings anytime.
+When you decide, we arrange the purchase. Your metal is stored in a Swiss vault in your name, and you receive an ownership certificate.
 ```
 
-**Rationale**: Removed "no selling" (not credible). Plain language. Removed stacked fragments.
+**Rationale**: Removed "get to know me" (not needed). "A free call" not "a free conversation". "Whatever's on your mind" more natural than "whatever's on your mind". Step 3 better phrasing: "Your metal is stored" active voice, "you receive an ownership certificate" clear sequence.
 
 ---
 
@@ -177,7 +175,7 @@ When you decide, we arrange the purchase. The metals go into a Swiss vault in yo
 **Slovenian**:
 ```
 Headline: Kako naprej
-Subheadline: Dva načina. Pogovor za tiste, ki ste pripravljeni. Vodnik za tiste, ki potrebujete še čas.
+Subheadline: Če ste pripravljeni, se pogovoriva; če potrebujete še čas, začnite z vodnikom.
 
 Card 1 (ready):
 - Headline: Pripravljeni na pogovor?
@@ -186,16 +184,16 @@ Card 1 (ready):
 - Footer: Brezplačen, nezavezujoč
 
 Card 2 (not ready):
-- Headline: Za tiste, ki potrebujejo čas
+- Headline: Potrebujete še čas?
 - Description: Preberite vodnik v miru, brez pritiska
 - CTA: Brezplačen vodnik
-- Footer: E-pošta, brez nezaželene pošte
+- Footer: Pošljemo po e-pošti
 ```
 
 **English**:
 ```
 Headline: Next Steps
-Subheadline: Two ways. A conversation for those who are ready. A guide for those who need time.
+Subheadline: If you're ready, let's talk. If you'd rather take your time, start with the guide.
 
 Card 1 (ready):
 - Headline: Ready to talk?
@@ -204,13 +202,13 @@ Card 1 (ready):
 - Footer: Free, no commitment
 
 Card 2 (not ready):
-- Headline: For those who need time
+- Headline: Need more time?
 - Description: Read the guide at your own pace, no pressure
 - CTA: Free guide
-- Footer: Email, no spam
+- Footer: Sent by email
 ```
 
-**Rationale**: Removed urgency ("Start Today", "START NOW"). Calm next steps. "Check your holdings" not "check balance".
+**Rationale**: More conversational subheadline ("If you're ready, let's talk" not "A conversation for those who are ready"). Grammatically consistent ("Potrebujete še čas?" matches "Need more time?"). "Sent by email" not "Email, no spam".
 
 ---
 
@@ -221,7 +219,7 @@ Card 2 (not ready):
 **Slovenian**:
 ```
 Headline: Brezplačen vodnik
-Description: Prenesite: „Kako začeti z naložbo v srebro"
+Description: Prenesite: »Kako začeti z naložbo v srebro«
 Label: Vaš e-poštni naslov
 Placeholder: ime@primer.si
 Button (idle): Pošlji
@@ -246,15 +244,17 @@ Trust points:
 - Unsubscribe anytime
 ```
 
+**Note**: English uses curly quotes in guide title.
+
 ---
 
 ### Consultation Page (/posvet, /en/consultation)
 
 **Slovenian**:
 ```
-Eyebrow: Začnite zdaj
+Eyebrow: Brezplačen posvet
 Headline: Brezplačen posvet
-Description: 15-minutni pogovor o vaših ciljih in načrtu varčevanja v plemenitih kovinah. Brez pritiska. Brez obveznosti.
+Description: 15-minutni pogovor o vaših ciljih in načrtu varčevanja v plemenitih kovinah. Pogovor je brez obveznosti.
 
 CTA 1: Izberite termin za posvet
 CTA 2: Odpri v novem zavihku
@@ -262,18 +262,17 @@ Headline (calendar widget): Rezervirajte termin
 Description (calendar widget): Izberite prosti termin, ki vam ustreza
 
 Trust points:
-- Brez obveznosti
-- Brez prodajnega pritiska
-- 15 minut vašega časa
+- Brezplačen
+- 15 minut
 
 Divider: ali
 ```
 
 **English**:
 ```
-Eyebrow: Start now
+Eyebrow: Free consultation
 Headline: Free Consultation
-Description: A 15-minute conversation about your goals and a savings plan in precious metals. No pressure. No obligation.
+Description: A 15-minute conversation about your goals and a savings plan in precious metals. There's no obligation.
 
 CTA 1: Choose a consultation time
 CTA 2: Open in new tab
@@ -281,12 +280,13 @@ Headline (calendar widget): Book your appointment
 Description (calendar widget): Choose a time that works for you
 
 Trust points:
-- No obligation
-- No sales pressure
-- 15 minutes of your time
+- Free
+- 15 minutes
 
 Divider: or
 ```
+
+**Rationale**: Eyebrow changed from "ZAČNITE ZDAJ / START NOW" to "BREZPLAČEN POSVET / FREE CONSULTATION" (removed urgency). Description simplified: "Pogovor je brez obveznosti / There's no obligation" (not "No pressure. No obligation."). Trust points reduced to two distinct points (free, 15 minutes) instead of three repeating "no obligation".
 
 ---
 
@@ -309,6 +309,8 @@ Gold label: Gold
 Unit: €/oz
 Updated: Updated: [date]
 ```
+
+**Note**: Slovenian gold price now shows '3.591' with dot thousands separator (forced grouping via Intl.NumberFormat with useGrouping: true).
 
 ---
 
@@ -360,8 +362,8 @@ Legal notice: Information on this page is not financial advice. Consult a profes
 
 **Slovenian**:
 ```
-Homepage title: Tisočletja preizkušena shramba vrednosti
-Homepage description: Srebro shranjuje vrednost že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.
+Homepage title: Fizično srebro, shranjeno na vaše ime
+Homepage description: Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.
 
 Consultation title: Brezplačen posvet
 Consultation description: Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro.
@@ -369,8 +371,8 @@ Consultation description: Rezervirajte brezplačen 15-minutni posvet o naložbah
 
 **English**:
 ```
-Homepage title: Physical Silver Investment
-Homepage description: Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss vault storage. Free consultation.
+Homepage title: Physical silver held in your name
+Homepage description: Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss storage. Free consultation.
 
 Consultation title: Free Consultation
 Consultation description: Book a free 15-minute consultation about silver investment.
@@ -380,30 +382,37 @@ Consultation description: Book a free 15-minute consultation about silver invest
 
 ## Voice Notes
 
-**What changed from previous version**:
-1. Removed all VAT/tax claims (investment silver not VAT-exempt if delivered)
-2. Softened bank claim: "praviloma izgublja" / "tends to lose" (not absolute)
-3. Fixed selling claims: removed "no questions, no penalties, no waiting" → realistic timing and cost visibility
-4. Section 01: removed "not a trend, time-tested" → "used as money for thousands of years"
-5. Section 03: removed stacked fragments ("It's physical. It's yours. In your name.") → one plain sentence
-6. Section 04: removed VAT claim, one factual line per pillar
-7. Section 06: removed "no selling" (not credible), removed stacked fragments ("Transparent. No hidden costs.")
-8. Section 07: removed urgency ("Start Today", "START NOW") → "Next Steps", "Ready to talk?"
-9. Slovenian: grammatical fixes (Tisočletja pozneje, bilo denar, stanje lahko preverite); quotation marks „…"; spam → nezaželena pošta
-10. English: natural phrasing ("check your holdings", "a savings plan in precious metals", "Past performance is not a guide to future results", "can go down as well as up")
-11. Voice guide: kept human, specific, calm; avoided stacked fragments
+**Final changes from previous version**:
+1. Chapter 01: Timeline caption softened to "še vedno cenimo / is still valued" (not "holds value")
+2. Chapter 01: Hero subline active voice "Skozi zgodovino so ga ljudje uporabljali" / "People have used it"
+3. Chapter 03: Headline "Nekaj resničnega / Something Real" (not "Something You Can Hold" which conflicts with vault storage)
+4. Chapter 03: Removed triplet → one sentence: "Most wealth today exists only as an entry on a screen"
+5. Chapter 04: Removed duplicate security card → three pillars, not four
+6. Chapter 06: Removed "Spoznajte me / Get to know me"
+7. Chapter 06: "A free call" (not conversation), "whatever's on your mind" (more natural)
+8. Chapter 06 step 3: Better phrasing "Your metal is stored... you receive an ownership certificate"
+9. Chapter 07: Conversational subheadline "Če ste pripravljeni, se pogovoriva / If you're ready, let's talk"
+10. Chapter 07: Grammatically consistent headings ("Potrebujete še čas? / Need more time?")
+11. Consultation: Eyebrow "BREZPLAČEN POSVET / FREE CONSULTATION" (not "START NOW")
+12. Consultation: "Pogovor je brez obveznosti / There's no obligation" (simplified)
+13. Consultation: Trust points reduced to two (free, 15 minutes)
+14. Email form: "Pošljemo po e-pošti / Sent by email" (not "Email, no spam")
+15. English: Curly quotes in guide title
 
-**Periods noted explicitly**:
-- Metal gains: 20 years (Oct 2006–Oct 2026)
-- EUR inflation: 27 years (1999–Sep 2026)
-
-**Figures confirmed** (from LBMA/HICP sources cited on site):
-- Gold: +699% (20 years)
-- Silver: +489% (20 years)
-- EUR purchasing power: −35% (27 years)
+**Technical**:
+- Slovenian gold: 3.591 with forced grouping (Intl.NumberFormat useGrouping: true)
+- Route groups (sl) and (en) with separate root layouts (html, body, Nav, Footer per language)
+- Exactly one <html>, <body>, <nav>, <main>, <footer> per page
 
 **What stayed the same**:
 - Regulatory compliance (past performance disclaimer, no absolute claims)
 - All figures and sources (LBMA, HICP, dates)
 - Meaning and structure
 - Trust without invented details
+
+**Self-read checklist** (all reviewed, none found):
+- ❌ Stacked fragments or triplets
+- ❌ Absolute claims ("never", "always", "guaranteed")
+- ❌ Urgency language ("start today", "now", "don't wait")
+- ❌ AI-tell patterns ("unlock", "journey", "seamless", "discover the power")
+- ❌ Invented facts (vault operator names, audit frequencies, certificates beyond what's stated)

@@ -37,10 +37,18 @@ export function PriceTicker({ content, locale }: PriceTickerProps) {
             ? silverValue.toFixed(2).replace(".", ",")
             : silverValue.toFixed(2)
           );
-          setGold(locale === "sl"
-            ? goldValue.toLocaleString("sl-SI")
-            : goldValue.toLocaleString("en-US")
-          );
+          
+          // Slovenian: force grouping with dot separator (sl-SI skips grouping for 4-digit numbers by default)
+          if (locale === "sl") {
+            const formatter = new Intl.NumberFormat("sl-SI", { 
+              useGrouping: true,
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0
+            });
+            setGold(formatter.format(goldValue));
+          } else {
+            setGold(goldValue.toLocaleString("en-US"));
+          }
           
           // Slovenian: 27. 10. 2026; English: 27 Oct 2026
           const date = new Date(data.timestamp * 1000);

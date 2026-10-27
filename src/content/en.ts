@@ -25,15 +25,15 @@ export const en: Content = {
 
   // Homepage metadata
   home: {
-    title: "Physical Silver Investment | NakupSrebra.com",
+    title: "Physical silver held in your name | NakupSrebra.com",
     description: "Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss storage. Free consultation.",
   },
 
   // Chapter 1
   chapter1: {
     headline: "From Raw Ore to Coin",
-    subheadline: "Silver has been used as money for thousands of years, from antiquity to today. A tested store of value through history.",
-    timelineCaption: "Millennia later, silver still holds value",
+    subheadline: "Silver has been used as money for thousands of years, from antiquity to today. People have used it to store value throughout history.",
+    timelineCaption: "Thousands of years on, silver is still valued",
     imageAlt: "Illustration: silver bars",
   },
 
@@ -54,8 +54,8 @@ export const en: Content = {
 
   // Chapter 3
   chapter3: {
-    headline: "Something You Can Hold",
-    body1: "Money is a number on a screen. Stocks are an entry in a ledger. Crypto is code on a network.",
+    headline: "Something Real",
+    body1: "Most wealth today exists only as an entry on a screen.",
     body2: "Silver is a physical metal held in your name.",
     imageAlt: "Illustration: silver coin at rest",
   },
@@ -68,10 +68,8 @@ export const en: Content = {
     pillar1Description: "Insured and monitored",
     pillar2Title: "Ownership certificate",
     pillar2Description: "In your name, verifiable",
-    pillar3Title: "Secure storage",
-    pillar3Description: "Security protocols",
-    pillar4Title: "Delivery on request",
-    pillar4Description: "Physical delivery to your door if you wish",
+    pillar3Title: "Delivery on request",
+    pillar3Description: "Physical delivery to your door if you wish",
   },
 
   // Chapter 5
@@ -90,26 +88,26 @@ export const en: Content = {
   // Chapter 6
   chapter6: {
     headline: "Getting Started",
-    step1Title: "A free conversation",
-    step1Description: "A 15-minute call, no obligation. Get to know me, tell me what you want to achieve, ask anything.",
+    step1Title: "A free call",
+    step1Description: "A 15-minute call, no obligation. Tell me what you'd like to achieve and ask whatever's on your mind.",
     step2Title: "A tailored proposal",
     step2Description: "Based on our conversation, I'll prepare a proposal: how much, why, how. You decide whether to proceed.",
     step3Title: "Secure ownership",
-    step3Description: "When you decide, we arrange the purchase. The metals go into a Swiss vault in your name. You get a certificate. You can check your holdings anytime.",
+    step3Description: "When you decide, we arrange the purchase. Your metal is stored in a Swiss vault in your name, and you receive an ownership certificate.",
   },
 
   // Chapter 7
   chapter7: {
     headline: "Next Steps",
-    subheadline: "Two ways. A conversation for those who are ready. A guide for those who need time.",
+    subheadline: "If you're ready, let's talk. If you'd rather take your time, start with the guide.",
     readyTitle: "Ready to talk?",
     readyDescription: "Free consultation, 15 minutes, no obligation",
     readyCta: "Book a consultation",
     readyFooter: "Free, no commitment",
-    notReadyTitle: "For those who need time",
+    notReadyTitle: "Need more time?",
     notReadyDescription: "Read the guide at your own pace, no pressure",
     notReadyCta: "Free guide",
-    notReadyFooter: "Email, no spam",
+    notReadyFooter: "Sent by email",
   },
 
   // Email capture
@@ -129,17 +127,16 @@ export const en: Content = {
   consultation: {
     title: "Free Consultation | NakupSrebra.com",
     description: "Book a free 15-minute consultation about silver investment.",
-    eyebrow: "Start now",
+    eyebrow: "Free consultation",
     headline: "Free Consultation",
-    subheadline: "A 15-minute conversation about your goals and a savings plan in precious metals. No pressure. No obligation.",
+    subheadline: "A 15-minute conversation about your goals and a savings plan in precious metals. There's no obligation.",
     widgetHeadline: "Book your appointment",
     widgetDescription: "Choose a time that works for you",
     cta1: "Choose a consultation time",
     cta2: "Open in new tab",
     iframeTitle: "Book your consultation",
-    trustPoint1: "No obligation",
-    trustPoint2: "No sales pressure",
-    trustPoint3: "15 minutes of your time",
+    trustPoint1: "Free",
+    trustPoint2: "15 minutes",
     divider: "or",
   },
 
