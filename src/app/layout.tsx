@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | NakupSrebra.com",
   },
   description:
-    "Srebro shranjuje vrednost že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor, brez DDV, brez vezave. Brezplačen posvet.",
+    "Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.",
   metadataBase: new URL("https://www.nakupsrebra.com"),
   openGraph: {
     type: "website",
@@ -35,16 +35,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Detect locale from path (simple approach: check if path starts with /en)
-  // In a real app, this would use middleware or a context
-  const locale: Locale = "sl"; // Default, overridden by segment layout
-
   return (
-    <html lang={locale} className={inter.className}>
+    <html lang="sl" className={inter.className}>
       <body className="antialiased">
-        <Nav locale={locale} />
+        <Nav locale="sl" />
         <main>{children}</main>
-        <Footer locale={locale} />
+        <Footer locale="sl" />
       </body>
     </html>
   );
@@ -65,27 +61,29 @@ function Nav({ locale }: { locale: Locale }) {
         </Link>
         <div className="flex items-center gap-6 max-sm:gap-4">
           <div className="flex items-center gap-6 max-sm:gap-3">
-            {!isEn && (
-              <Link
-                href="/cena-srebra"
-                className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-sm:hidden"
-              >
-                Cena
-              </Link>
-            )}
-            {!isEn && (
-              <Link
-                href="/blog"
-                className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900"
-              >
-                Blog
-              </Link>
-            )}
             <Link
-              href={isEn ? "/en/consultation" : "/posvet"}
+              href="/cena-srebra"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-sm:hidden"
+            >
+              Cena
+            </Link>
+            <Link
+              href="/blog"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/vodnik/vodnik-srebro"
+              className="text-sm font-medium text-gray-600 no-underline transition-colors hover:text-gray-900 max-md:hidden"
+            >
+              Vodnik
+            </Link>
+            <Link
+              href="/posvet"
               className="rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white no-underline transition-all hover:bg-gray-800"
             >
-              {isEn ? "Consultation" : "Posvet"}
+              Posvet
             </Link>
           </div>
           <LanguageSwitcher currentLocale={locale} />
@@ -109,16 +107,17 @@ function Footer({ locale }: { locale: Locale }) {
             </div>
             <LanguageSwitcher currentLocale={locale} className="max-sm:hidden" />
           </div>
-          {!isEn && (
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 max-sm:flex-col">
-              <Link href="/cena-srebra" className="no-underline hover:text-gray-900 transition-colors">
-                Cena srebra
-              </Link>
-              <Link href="/blog" className="no-underline hover:text-gray-900 transition-colors">
-                Blog
-              </Link>
-            </div>
-          )}
+          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 max-sm:flex-col">
+            <Link href="/cena-srebra" className="no-underline hover:text-gray-900 transition-colors">
+              Cena srebra
+            </Link>
+            <Link href="/blog" className="no-underline hover:text-gray-900 transition-colors">
+              Blog
+            </Link>
+            <Link href="/vodnik/vodnik-srebro" className="no-underline hover:text-gray-900 transition-colors">
+              Vodnik
+            </Link>
+          </div>
         </div>
         <p className="mt-6 text-center text-xs text-gray-500">
           {isEn ? "Information on this page is not financial advice. Consult a professional." : "Informacije na tej strani niso finančni nasvet. Posvetujte se s strokovnjakom."}

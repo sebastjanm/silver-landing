@@ -32,7 +32,7 @@ export function HomePage({ content, locale }: HomePageProps) {
       <SchemaOrg content={c} locale={locale} />
       <ProgressIndicator />
       <StickyCta content={c} locale={locale} />
-      <PriceTicker content={c} />
+      <PriceTicker content={c} locale={locale} />
       
       {/* Chapter 1 */}
       <StoryChapter number="01" id="chapter-1" theme="dark" className="bg-gradient-to-br from-[#0a1628] via-[#0f1f3a] to-[#0a1628]">

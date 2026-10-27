@@ -1,18 +1,21 @@
 /**
  * Live price ticker
  * Supports both SL and EN via content prop
+ * Formats numbers correctly per locale (SL: 47,78 and 3.589; EN: 47.78 and 3,589)
  */
 
 "use client";
 
 import { useEffect, useState } from "react";
 import type { Content } from "@/content/sl";
+import type { Locale } from "@/lib/i18n";
 
 interface PriceTickerProps {
   content: Content;
+  locale: Locale;
 }
 
-export function PriceTicker({ content }: PriceTickerProps) {
+export function PriceTicker({ content, locale }: PriceTickerProps) {
   const [silver, setSilver] = useState("--");
   const [gold, setGold] = useState("--");
   const [updated, setUpdated] = useState("");
@@ -26,17 +29,32 @@ export function PriceTicker({ content }: PriceTickerProps) {
         );
         const data = await resp.json();
         if (data.success) {
-          setSilver((1 / data.rates.XAG).toFixed(2));
-          setGold((1 / data.rates.XAU).toFixed(0));
+          const silverValue = 1 / data.rates.XAG;
+          const goldValue = Math.round(1 / data.rates.XAU);
+          
+          // Slovenian: 47,78 and 3.589; English: 47.78 and 3,589
+          setSilver(locale === "sl" 
+            ? silverValue.toFixed(2).replace(".", ",")
+            : silverValue.toFixed(2)
+          );
+          setGold(locale === "sl"
+            ? goldValue.toLocaleString("sl-SI")
+            : goldValue.toLocaleString("en-US")
+          );
+          
+          // Slovenian: 27. 10. 2026; English: 27 Oct 2026
           const date = new Date(data.timestamp * 1000);
-          setUpdated(date.toLocaleDateString("sl-SI"));
+          const dateFormatter = locale === "sl"
+            ? new Intl.DateTimeFormat("sl-SI", { day: "numeric", month: "numeric", year: "numeric" })
+            : new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", year: "numeric" });
+          setUpdated(dateFormatter.format(date));
         }
       } catch {
         // Silently fail — prices stay as "--"
       }
     }
     fetchPrices();
-  }, []);
+  }, [locale]);
 
   return (
     <div className="border-b border-gray-200 bg-gray-900 py-3 text-sm text-white">

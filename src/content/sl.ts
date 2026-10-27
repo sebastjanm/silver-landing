@@ -24,37 +24,37 @@ export const sl = {
   // Homepage metadata
   home: {
     title: "Tisočletja preizkušena shramba vrednosti | NakupSrebra.com",
-    description: "Srebro shranjuje vrednost že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor, brez DDV, brez vezave. Brezplačen posvet.",
+    description: "Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.",
   },
 
   // Chapter 1
   chapter1: {
-    headline: "Od kamna do kovanca",
-    subheadline: "Srebro je služilo kot denar že tisočletja. Od antičnih civilizacij do današnjih dni. Ni modna naložba. Je časovno preizkušena shramba vrednosti.",
-    timelineCaption: "Tisočletja kasneje srebro še vedno ohranja vrednost",
+    headline: "Od surove rude do kovanca",
+    subheadline: "Srebro je bilo denar že tisočletja, od antike do danes. Preizkušena shramba vrednosti skozi zgodovino.",
+    timelineCaption: "Tisočletja pozneje srebro še vedno ohranja vrednost",
     imageAlt: "Ilustracija: srebrne palice",
   },
 
   // Chapter 2
   chapter2: {
     headline: "Kaj ste prihranili?",
-    subheadline: "Denar na bančnem računu izgublja kupno moč. Vsako leto. Tiho. Neopazno.",
+    subheadline: "Denar, ki miruje na računu, z leti praviloma izgublja kupno moč.",
     goldLabel: "Zlato",
     goldValue: "+699%",
-    goldPeriod: "okt. 2006 – okt. 2026",
+    goldPeriod: "20 let (okt. 2006–okt. 2026)",
     silverLabel: "Srebro",
     silverValue: "+489%",
-    silverPeriod: "okt. 2006 – okt. 2026",
+    silverPeriod: "20 let (okt. 2006–okt. 2026)",
     eurLabel: "Kupna moč EUR",
     eurValue: "−35%",
-    eurPeriod: "Inflacija, 1999–sep. 2026",
+    eurPeriod: "27 let (1999–sep. 2026)",
   },
 
   // Chapter 3
   chapter3: {
     headline: "Nekaj, kar lahko primete",
-    body1: "Denar je številka v računalniku. Delnice so vpis v registru. Kriptovalute so koda.",
-    body2: "Srebro lahko primete v roke. Je fizično. Je vaše. V vašem imenu.",
+    body1: "Denar je številka na zaslonu. Delnice so vpis v registru. Kriptovalute so koda v omrežju.",
+    body2: "Srebro je fizična kovina, vpisana na vaše ime.",
     imageAlt: "Ilustracija: srebrni kovanec ob miru",
   },
 
@@ -63,11 +63,11 @@ export const sl = {
     headline: "Varno shranjeno",
     imageAlt: "Ilustracija: varnostni trezor",
     pillar1Title: "Švicarski trezor",
-    pillar1Description: "Zavarovan, nadzorovan, varen",
+    pillar1Description: "Zavarovan in nadzorovan",
     pillar2Title: "Certifikat lastništva",
     pillar2Description: "Na vaše ime, preverljivo",
-    pillar3Title: "Brez DDV",
-    pillar3Description: "Investicijsko srebro, brez davka",
+    pillar3Title: "Varna hramba",
+    pillar3Description: "Varnostni protokoli",
     pillar4Title: "Dostava na zahtevo",
     pillar4Description: "Fizična dostava na dom po želji",
   },
@@ -75,51 +75,51 @@ export const sl = {
   // Chapter 5
   chapter5: {
     headline: "Kdaj bi prodali?",
-    subheadline: "Ko potrebujete denar. Brez vprašanj. Brez kazni. Brez čakanja.",
+    subheadline: "Ko potrebujete denar. Prodate lahko kadarkoli, v delih ali v celoti.",
     whenLabel: "Kdaj",
     whenValue: "Vi odločate",
     howMuchLabel: "Koliko",
     howMuchValue: "Vi odločate",
     whyLabel: "Zakaj",
-    whyValue: "Brez obrazložitve",
-    footer: "Nekaj dni za prodajo. Denar na vašem računu. Brez skritih stroškov.",
+    whyValue: "Vaša odločitev",
+    footer: "Denar je običajno na računu v nekaj delovnih dneh. Vse stroške vidite vnaprej.",
   },
 
   // Chapter 6
   chapter6: {
     headline: "Kako začnete",
     step1Title: "Brezplačen pogovor",
-    step1Description: "15 minut. Brez pritiska. Brez prodaje. Spoznajte me, povejte mi o svojih ciljih, vprašajte vse, kar vas zanima.",
+    step1Description: "15-minutni pogovor brez obveznosti. Spoznajte me, povejte mi, kaj želite doseči, vprašajte vse, kar vas zanima.",
     step2Title: "Prilagojen predlog",
-    step2Description: "Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Transparentno. Brez skritih stroškov. Vi odločite, ali želite nadaljevati.",
+    step2Description: "Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Vi odločite, ali želite nadaljevati.",
     step3Title: "Varno lastništvo",
-    step3Description: "Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime. Dobite certifikat. Lahko preverite stanje kadarkoli.",
+    step3Description: "Ko se odločite, uredimo nakup. Kovine gredo v švicarski trezor na vaše ime. Dobite certifikat. Stanje lahko preverite kadarkoli.",
   },
 
   // Chapter 7
   chapter7: {
-    headline: "Začnite danes",
+    headline: "Kako naprej",
     subheadline: "Dva načina. Pogovor za tiste, ki ste pripravljeni. Vodnik za tiste, ki potrebujete še čas.",
-    readyTitle: "Za pripravljene",
+    readyTitle: "Pripravljeni na pogovor?",
     readyDescription: "Brezplačen posvet, 15 minut, brez obveznosti",
     readyCta: "Rezervirajte posvet",
     readyFooter: "Brezplačen, nezavezujoč",
     notReadyTitle: "Za tiste, ki potrebujejo čas",
     notReadyDescription: "Preberite vodnik v miru, brez pritiska",
     notReadyCta: "Brezplačen vodnik",
-    notReadyFooter: "E-pošta, brez spama",
+    notReadyFooter: "E-pošta, brez nezaželene pošte",
   },
 
   // Email capture
   emailCapture: {
     headline: "Brezplačen vodnik",
-    description: "Prenesite: \"Kako začeti z naložbo v srebro\"",
+    description: "Prenesite: »Kako začeti z naložbo v srebro«",
     label: "Vaš e-poštni naslov",
     placeholder: "ime@primer.si",
     buttonIdle: "Pošlji",
     buttonSending: "Pošiljam...",
     buttonError: "Napaka. Poskusite znova.",
-    trustPoint1: "Brez spama",
+    trustPoint1: "Brez nezaželene pošte",
     trustPoint2: "Kadarkoli se lahko odjavite",
   },
 
@@ -129,7 +129,7 @@ export const sl = {
     description: "Rezervirajte brezplačen 15-minutni posvet o naložbah v srebro.",
     eyebrow: "Začnite zdaj",
     headline: "Brezplačen posvet",
-    subheadline: "15-minutni pogovor o vaših ciljih in strategiji varčevanja v plemenitih kovinah. Brez pritiska. Brez obveznosti.",
+    subheadline: "15-minutni pogovor o vaših ciljih in načrtu varčevanja v plemenitih kovinah. Brez pritiska. Brez obveznosti.",
     widgetHeadline: "Rezervirajte termin",
     widgetDescription: "Izberite prosti termin, ki vam ustreza",
     cta1: "Izberite termin za posvet",
@@ -157,8 +157,8 @@ export const sl = {
 
   // Performance disclaimer
   disclaimer: {
-    source: "Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato in srebro 20 let); HICP inflacija 1999–sep. 2026 (EUR izguba kupne moči). Podatki na dan 19. 10. 2026.",
-    legal: "Pravno obvestilo: Pretekli donosi ne zagotavljajo prihodnjih rezultatov. Cene plemenitih kovin nihajo in lahko padejo ter zrastejo.",
+    source: "Vir: LBMA cene v EUR, okt. 2006–okt. 2026 (zlato in srebro 20 let); HICP inflacija 1999–sep. 2026 (EUR izguba kupne moči, 27 let). Podatki na dan 19. 10. 2026.",
+    legal: "Pravno obvestilo: Pretekli donosi niso vodilo za prihodnje rezultate. Cene plemenitih kovin nihajo in lahko padejo ali zrastejo.",
   },
 
   // Timeline
@@ -173,7 +173,7 @@ export const sl = {
 
   // Schema.org
   schema: {
-    description: "Fizično srebro in zlato. Švicarska hramba, brez DDV, brezplačen posvet.",
+    description: "Fizično srebro in zlato. Švicarska hramba, brezplačen posvet.",
     consultationHeadline: "Brezplačen posvet o naložbah v srebro",
     consultationDescription: "Rezervirajte brezplačen 15-minutni posvet.",
   },

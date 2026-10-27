@@ -8,7 +8,7 @@ import { HomePage } from "@/components/home/HomePage";
 import { en } from "@/content/en";
 
 export const metadata: Metadata = {
-  title: en.home.title,
+  title: "Physical Silver Investment",
   description: en.home.description,
   alternates: {
     canonical: "/en",

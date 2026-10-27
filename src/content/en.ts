@@ -25,14 +25,14 @@ export const en: Content = {
 
   // Homepage metadata
   home: {
-    title: "Millennia-Tested Store of Value | NakupSrebra.com",
-    description: "Silver has held value for millennia. Physical, tangible, yours. Secure Swiss vault, VAT-free, no lock-in. Free consultation.",
+    title: "Physical Silver Investment | NakupSrebra.com",
+    description: "Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss storage. Free consultation.",
   },
 
   // Chapter 1
   chapter1: {
-    headline: "From Stone to Coin",
-    subheadline: "Silver served as money for millennia. From ancient civilizations to today. It's not a trend. It's a time-tested store of value.",
+    headline: "From Raw Ore to Coin",
+    subheadline: "Silver has been used as money for thousands of years, from antiquity to today. A tested store of value through history.",
     timelineCaption: "Millennia later, silver still holds value",
     imageAlt: "Illustration: silver bars",
   },
@@ -40,23 +40,23 @@ export const en: Content = {
   // Chapter 2
   chapter2: {
     headline: "What Have You Saved?",
-    subheadline: "Money in a bank account loses purchasing power. Every year. Quietly. Unnoticed.",
+    subheadline: "Money left sitting in an account tends to lose purchasing power over time.",
     goldLabel: "Gold",
     goldValue: "+699%",
-    goldPeriod: "Oct 2006 – Oct 2026",
+    goldPeriod: "20 years (Oct 2006–Oct 2026)",
     silverLabel: "Silver",
     silverValue: "+489%",
-    silverPeriod: "Oct 2006 – Oct 2026",
+    silverPeriod: "20 years (Oct 2006–Oct 2026)",
     eurLabel: "EUR purchasing power",
     eurValue: "−35%",
-    eurPeriod: "Inflation, 1999–Sep 2026",
+    eurPeriod: "27 years (1999–Sep 2026)",
   },
 
   // Chapter 3
   chapter3: {
     headline: "Something You Can Hold",
-    body1: "Money is a number on a screen. Stocks are an entry in a ledger. Crypto is code.",
-    body2: "Silver, you can hold in your hands. It's physical. It's yours. In your name.",
+    body1: "Money is a number on a screen. Stocks are an entry in a ledger. Crypto is code on a network.",
+    body2: "Silver is a physical metal held in your name.",
     imageAlt: "Illustration: silver coin at rest",
   },
 
@@ -65,11 +65,11 @@ export const en: Content = {
     headline: "Kept Safe",
     imageAlt: "Illustration: security vault",
     pillar1Title: "Swiss vault",
-    pillar1Description: "Insured, monitored, secure",
+    pillar1Description: "Insured and monitored",
     pillar2Title: "Ownership certificate",
     pillar2Description: "In your name, verifiable",
-    pillar3Title: "VAT-free",
-    pillar3Description: "Investment silver, no tax",
+    pillar3Title: "Secure storage",
+    pillar3Description: "Security protocols",
     pillar4Title: "Delivery on request",
     pillar4Description: "Physical delivery to your door if you wish",
   },
@@ -77,32 +77,32 @@ export const en: Content = {
   // Chapter 5
   chapter5: {
     headline: "When Would You Sell?",
-    subheadline: "When you need the money. No questions. No penalties. No waiting.",
+    subheadline: "When you need the money. You can sell any time, all or part.",
     whenLabel: "When",
     whenValue: "You decide",
     howMuchLabel: "How much",
     howMuchValue: "You decide",
     whyLabel: "Why",
-    whyValue: "No explanation needed",
-    footer: "A few days to sell. Money in your account. No hidden costs.",
+    whyValue: "Your decision",
+    footer: "Money usually reaches your account within a few business days. You see all costs upfront.",
   },
 
   // Chapter 6
   chapter6: {
-    headline: "How You Start",
+    headline: "Getting Started",
     step1Title: "A free conversation",
-    step1Description: "15 minutes. No pressure. No selling. Get to know me, tell me about your goals, ask anything.",
+    step1Description: "A 15-minute call, no obligation. Get to know me, tell me what you want to achieve, ask anything.",
     step2Title: "A tailored proposal",
-    step2Description: "Based on our conversation, I'll prepare a proposal: how much, why, how. Transparent. No hidden costs. You decide whether to proceed.",
+    step2Description: "Based on our conversation, I'll prepare a proposal: how much, why, how. You decide whether to proceed.",
     step3Title: "Secure ownership",
-    step3Description: "When you decide, we arrange the purchase. The metals go into a Swiss vault in your name. You get a certificate. You can check the balance anytime.",
+    step3Description: "When you decide, we arrange the purchase. The metals go into a Swiss vault in your name. You get a certificate. You can check your holdings anytime.",
   },
 
   // Chapter 7
   chapter7: {
-    headline: "Start Today",
+    headline: "Next Steps",
     subheadline: "Two ways. A conversation for those who are ready. A guide for those who need time.",
-    readyTitle: "For those ready",
+    readyTitle: "Ready to talk?",
     readyDescription: "Free consultation, 15 minutes, no obligation",
     readyCta: "Book a consultation",
     readyFooter: "Free, no commitment",
@@ -131,7 +131,7 @@ export const en: Content = {
     description: "Book a free 15-minute consultation about silver investment.",
     eyebrow: "Start now",
     headline: "Free Consultation",
-    subheadline: "A 15-minute conversation about your goals and precious metals saving strategy. No pressure. No obligation.",
+    subheadline: "A 15-minute conversation about your goals and a savings plan in precious metals. No pressure. No obligation.",
     widgetHeadline: "Book your appointment",
     widgetDescription: "Choose a time that works for you",
     cta1: "Choose a consultation time",
@@ -159,8 +159,8 @@ export const en: Content = {
 
   // Performance disclaimer
   disclaimer: {
-    source: "Source: LBMA prices in EUR, Oct 2006–Oct 2026 (gold and silver, 20 years); HICP inflation 1999–Sep 2026 (EUR purchasing power loss). Data as of 19 Oct 2026.",
-    legal: "Legal notice: Past returns do not guarantee future results. Precious metal prices fluctuate and can fall or rise.",
+    source: "Source: LBMA prices in EUR, Oct 2006–Oct 2026 (gold and silver, 20 years); HICP inflation 1999–Sep 2026 (EUR purchasing power loss, 27 years). Data as of 19 Oct 2026.",
+    legal: "Legal notice: Past performance is not a guide to future results. Precious metal prices fluctuate and can go down as well as up.",
   },
 
   // Timeline
@@ -175,7 +175,7 @@ export const en: Content = {
 
   // Schema.org
   schema: {
-    description: "Physical silver and gold. Swiss storage, VAT-free, free consultation.",
+    description: "Physical silver and gold. Swiss storage, free consultation.",
     consultationHeadline: "Free consultation about silver investment",
     consultationDescription: "Book a free 15-minute consultation.",
   },

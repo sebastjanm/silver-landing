@@ -8,7 +8,7 @@ import { ConsultationPage } from "@/components/ConsultationPage";
 import { sl } from "@/content/sl";
 
 export const metadata: Metadata = {
-  title: sl.consultation.title,
+  title: "Brezplačen posvet",
   description: sl.consultation.description,
   alternates: {
     canonical: "/posvet",
