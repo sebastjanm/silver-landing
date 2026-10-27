@@ -9,7 +9,7 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { ProgressIndicator } from "@/components/ProgressIndicator";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | NakupSrebra.com",
   },
   description:
-    "Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.",
+    "Fizično srebro na vaše ime, v zavarovanem švicarskem trezorju. Brezplačen posvet.",
   metadataBase: new URL("https://www.nakupsrebra.com"),
   openGraph: {
     type: "website",

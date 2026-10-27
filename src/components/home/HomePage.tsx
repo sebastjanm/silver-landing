@@ -162,7 +162,7 @@ export function HomePage({ content, locale }: HomePageProps) {
               <Link href={locale === "en" ? "/en/consultation" : "/posvet"} className="inline-block px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-colors">
                 {c.chapter7.readyCta}
               </Link>
-              <p className="text-sm text-white/50 mt-4">{c.chapter7.readyFooter}</p>
+              {c.chapter7.readyFooter && <p className="text-sm text-white/50 mt-4">{c.chapter7.readyFooter}</p>}
             </div>
             
             <div className="p-10 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 text-center">

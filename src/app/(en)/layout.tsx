@@ -1,6 +1,6 @@
 /**
- * English layout - complete root layout with lang="en"
- * Overrides parent layout completely
+ * English root layout (route group)
+ * Complete independent layout with html, body, Nav, Footer for /en routes
  */
 
 import type { ReactNode } from "react";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | NakupSrebra.com",
   },
   description:
-    "Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss storage. Free consultation.",
+    "Physical silver in your name, in an insured Swiss vault. Free consultation.",
   metadataBase: new URL("https://www.nakupsrebra.com"),
   openGraph: {
     type: "website",

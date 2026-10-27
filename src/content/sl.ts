@@ -24,7 +24,7 @@ export const sl = {
   // Homepage metadata
   home: {
     title: "Fizično srebro, shranjeno na vaše ime | NakupSrebra.com",
-    description: "Srebro je bilo denar že tisočletja. Fizično, oprijemljivo, vaše. Zavarovan švicarski trezor. Brezplačen posvet.",
+    description: "Fizično srebro na vaše ime, v zavarovanem švicarskem trezorju. Brezplačen posvet.",
   },
 
   // Chapter 1
@@ -89,7 +89,7 @@ export const sl = {
     step1Title: "Brezplačen pogovor",
     step1Description: "15-minutni pogovor brez obveznosti. Povejte mi, kaj želite doseči, in vprašajte, kar vas zanima.",
     step2Title: "Prilagojen predlog",
-    step2Description: "Na podlagi pogovora pripravim predlog: koliko, zakaj, kako. Vi odločite, ali želite nadaljevati.",
+    step2Description: "Na podlagi pogovora pripravim predlog, prilagojen vašim ciljem. Vi odločite, ali želite nadaljevati.",
     step3Title: "Varno lastništvo",
     step3Description: "Ko se odločite, uredimo nakup. Kovine shranimo v švicarski trezor na vaše ime, vi pa prejmete certifikat o lastništvu.",
   },
@@ -97,11 +97,11 @@ export const sl = {
   // Chapter 7
   chapter7: {
     headline: "Kako naprej",
-    subheadline: "Če ste pripravljeni, se pogovoriva; če potrebujete še čas, začnite z vodnikom.",
+    subheadline: "Če ste pripravljeni, se pogovorimo; če potrebujete še čas, začnite z vodnikom.",
     readyTitle: "Pripravljeni na pogovor?",
-    readyDescription: "Brezplačen posvet, 15 minut, brez obveznosti",
+    readyDescription: "Brezplačen 15-minutni posvet",
     readyCta: "Rezervirajte posvet",
-    readyFooter: "Brezplačen, nezavezujoč",
+    readyFooter: "",
     notReadyTitle: "Potrebujete še čas?",
     notReadyDescription: "Preberite vodnik v miru, brez pritiska",
     notReadyCta: "Brezplačen vodnik",

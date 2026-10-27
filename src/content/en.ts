@@ -26,7 +26,7 @@ export const en: Content = {
   // Homepage metadata
   home: {
     title: "Physical silver held in your name | NakupSrebra.com",
-    description: "Silver has been used as money for thousands of years. Physical, tangible, yours. Secure Swiss storage. Free consultation.",
+    description: "Physical silver in your name, in an insured Swiss vault. Free consultation.",
   },
 
   // Chapter 1
@@ -91,7 +91,7 @@ export const en: Content = {
     step1Title: "A free call",
     step1Description: "A 15-minute call, no obligation. Tell me what you'd like to achieve and ask whatever's on your mind.",
     step2Title: "A tailored proposal",
-    step2Description: "Based on our conversation, I'll prepare a proposal: how much, why, how. You decide whether to proceed.",
+    step2Description: "Based on our conversation, I'll prepare a proposal that fits your goals. You decide whether to proceed.",
     step3Title: "Secure ownership",
     step3Description: "When you decide, we arrange the purchase. Your metal is stored in a Swiss vault in your name, and you receive an ownership certificate.",
   },
@@ -101,9 +101,9 @@ export const en: Content = {
     headline: "Next Steps",
     subheadline: "If you're ready, let's talk. If you'd rather take your time, start with the guide.",
     readyTitle: "Ready to talk?",
-    readyDescription: "Free consultation, 15 minutes, no obligation",
+    readyDescription: "A free 15-minute consultation",
     readyCta: "Book a consultation",
-    readyFooter: "Free, no commitment",
+    readyFooter: "",
     notReadyTitle: "Need more time?",
     notReadyDescription: "Read the guide at your own pace, no pressure",
     notReadyCta: "Free guide",
@@ -113,7 +113,7 @@ export const en: Content = {
   // Email capture
   emailCapture: {
     headline: "Free Guide",
-    description: "Download: \"How to Start Investing in Silver\"",
+    description: "Download: \u201cHow to Start Investing in Silver\u201d",
     label: "Your email address",
     placeholder: "name@example.com",
     buttonIdle: "Send",
