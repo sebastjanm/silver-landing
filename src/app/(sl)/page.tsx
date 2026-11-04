@@ -4,11 +4,12 @@
  */
 
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { HomePage } from "@/components/home/HomePage";
 import { sl } from "@/content/sl";
 
 export const metadata: Metadata = {
-  title: "Fizično srebro, shranjeno na vaše ime",
+  title: sl.home.title,
   description: sl.home.description,
   alternates: {
     canonical: "/",
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
       "en": "/en",
       "x-default": "/",
     },
+  },
+  openGraph: {
+    type: "website",
+    locale: "sl_SI",
+    siteName: "NakupSrebra.com",
+    title: sl.home.title,
+    description: sl.home.description,
+    url: "/",
+    images: defaultOgImages,
   },
 };
 

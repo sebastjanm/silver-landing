@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "NakupSrebra.com — Brezplačen posvet za naložbe v srebro in zlato";
+export const alt = "NakupSrebra.com: srebro brez 22 % DDV, brezplačen pogovor";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -23,10 +23,10 @@ export default function OgImage() {
       >
         <div style={{ fontSize: 36, color: "#d69e2e", marginBottom: 24 }}>NakupSrebra.com</div>
         <div style={{ fontSize: 68, lineHeight: 1.15, marginBottom: 32 }}>
-          Srebro in zlato še nikoli nista izgubila vrednosti.
+          Srebro brez 22 % DDV. Razložimo vam, kako to deluje.
         </div>
         <div style={{ fontSize: 32, opacity: 0.85 }}>
-          Brezplačen posvet · Brez DDV · Švicarska hramba
+          Brezplačen pogovor. Ničesar ne prodajamo.
         </div>
       </div>
     ),
