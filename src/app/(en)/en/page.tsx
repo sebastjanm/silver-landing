@@ -4,11 +4,12 @@
  */
 
 import type { Metadata } from "next";
+import { defaultOgImages } from "@/lib/og";
 import { HomePage } from "@/components/home/HomePage";
 import { en } from "@/content/en";
 
 export const metadata: Metadata = {
-  title: "Physical silver held in your name",
+  title: en.home.title,
   description: en.home.description,
   alternates: {
     canonical: "/en",
@@ -17,6 +18,15 @@ export const metadata: Metadata = {
       "en": "/en",
       "x-default": "/",
     },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "NakupSrebra.com",
+    title: en.home.title,
+    description: en.home.description,
+    url: "/en",
+    images: defaultOgImages,
   },
 };
 

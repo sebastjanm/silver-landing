@@ -21,8 +21,9 @@ export function StickyCta({ content, locale }: StickyCtaProps) {
 
   useEffect(() => {
     function handleScroll() {
-      // Show after scrolling past first chapter (roughly 100vh)
-      setIsVisible(window.scrollY > window.innerHeight * 0.5);
+      // Show after the hero, hide near the end where the closing CTA and footer sit
+      const nearEnd = window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 700;
+      setIsVisible(window.scrollY > window.innerHeight * 0.5 && !nearEnd);
     }
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -35,13 +36,13 @@ export function StickyCta({ content, locale }: StickyCtaProps) {
 
   return (
     <div
-      className={`fixed bottom-8 right-8 z-40 transition-all duration-300 ${
+      className={`fixed z-40 transition-all duration-300 max-sm:inset-x-0 max-sm:bottom-0 max-sm:border-t max-sm:border-gray-200 max-sm:bg-white max-sm:p-3 sm:bottom-8 sm:right-8 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >
       <Link
         href={consultationPath}
-        className="block px-6 py-3 bg-gray-900 text-white text-sm font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-colors backdrop-blur-sm"
+        className="block px-6 py-3 bg-gray-900 text-center text-white text-base sm:text-sm font-semibold rounded-full shadow-lg hover:bg-gray-800 transition-colors backdrop-blur-sm"
       >
         {c.text}
       </Link>
